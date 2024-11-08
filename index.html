@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دليل تراخيص المنشآت الغذائية</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -31,22 +31,21 @@
             position: relative;
         }
 
-        header {
-            background-color: #2e8b57;
-            color: white;
-            padding: 8px 8px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            text-align: center;
-            position: relative;
-            margin-top: 100px;
-        }
+   header {
+        background-color: #2e8b57; /* اللون الأخضر للرأس */
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+        position: relative;
+    }
 
-        #pageTitle {
-            margin: 0;
-            font-size: 1rem;
-            padding-top: 20px;
-        }
+    #pageTitle {
+        margin: 0;
+        font-size: 0.6rem;
+        padding-top: 20px; /* مسافة إضافية أسفل الشعار */
+    }
 
         .section-title {
             font-size: 1.2rem;
@@ -107,22 +106,31 @@
         .icon-section i:hover {
             color: #6b5e40;
         }
+    footer {
+      background-color: rgb(213, 201, 155) !important;
+        color: BLACK;
+        text-align: center;
+        padding: 10px;
+        margin-top: 30px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+    }
 
-        footer {
-            background-color: rgb(213, 201, 155) !important;
-            color: BLACK;
-            text-align: center;
-            padding: 10px;
-            margin-top: 30px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-        }
+    .social-icons {
+        margin-top: 10px;
+    }
 
-        .social-icons {
-            margin-top: 10px;
-        }
+    .social-icons i {
+        font-size: 1.2rem;
+        margin: 0 10px;
+        transition: color 0.3s;
+        color: #8b785a;
+    }
 
-        .social-icons i {
+    .social-icons i:hover {
+        color: #6b5e40;
+    }
+       .social-icons i {
             font-size: 1.2rem;
             margin: 0 10px;
             transition: color 0.3s;
@@ -131,9 +139,7 @@
 
         .social-icons i:hover {
             color: #6b5e40;
-        }
-
-        .fees-and-spaces {
+        }        .fees-and-spaces {
             margin-top: 20px;
             padding: 15px;
             background-color: #f9f8f7;
@@ -149,153 +155,151 @@
             text-align: center;
         }
 
-        .language-toggle button {
-            padding: 5px 10px;
-            font-size: 0.9rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #2e8b57;
-            color: white;
-            transition: background-color 0.3s;
-            display: flex;
-            align-items: center;
-        }
+      .language-toggle {
+        position: absolute;
+        top: 10px; /* وضع الزر أعلى الرأس */
+        right: 20px;
+        text-align: center;
+        z-index: 1;
+    }
 
-        .language-toggle button i {
-            margin-left: 5px;
-        }
+    .language-toggle button {
+        padding: 5px 10px; /* تصغير حجم الزر */
+        font-size: 0.9rem; /* حجم الخط أصغر */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #2e8b57; /* نفس لون رأس الصفحة */
+        color: white;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+    }
 
-        .logo-section {
-            position: absolute;
-            top: 0;
-            left: 0;
-            text-align: left;
-            margin-top: 8px;
-            margin-left: 10px;
-            padding: 1px 2px;
-            z-index: 999;
-        }
+    /* إعدادات الأيقونة داخل زر تغيير اللغة */
+    .language-toggle button i {
+        margin-left: 5px;
+    }
 
-        .logo {
-            width: 100%;
-            height: auto;
-            max-width: 120px;  /* تعديل الحد الأقصى للعرض */
-            max-height: 60px;  /* تعديل الحد الأقصى للارتفاع */
-            margin-bottom: 10px;
-        }
-
-        .services-section {
-            margin-top: 30px;
-            padding: 15px;
-            background-color: #f9f8f7;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
+.logo {
+    position: absolute;
+    top: -10px; /* وضع الشعار أعلى من مستوى الـ header */
+    left: 0; /* تثبيت الشعار إلى أقصى اليسار */
+    width: 65px; /* العرض المناسب للشعار */
+    height: 75px; /* ارتفاع مناسب للشعار */
+    
+    /* خلفية بيضاء حول الشعار لتوضيحه */
+    background-color: white;
+    padding: 5px; /* مسافة داخلية حول الشعار */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* تظليل خفيف */
+    
+    /* جعل الحواف مربعة ليكون واضح كخلفية */
+    border-radius: 5px;
+}
+</style>
     </style>
-    <script>
+       <script>
         function toggleDescription(serviceId) {
             const description = document.getElementById(serviceId);
             description.style.display = description.style.display === 'none' || description.style.display === '' ? 'block' : 'none';
         }
+// دالة لتغيير اللغة بين العربية والإنجليزية
+function switchLanguage(lang) {
+    // ضبط اللغة في عنصر الـ HTML الرئيسي
+    document.documentElement.setAttribute('lang', lang);
+    
+    // ضبط اتجاه الصفحة بناءً على اللغة
+    document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
 
-        function switchLanguage(lang) {
-            document.documentElement.setAttribute('lang', lang);
-            document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+    // تغيير المحاذاة لجميع الأقسام الأساسية في الصفحة
+    document.querySelectorAll('.section-title, .section-content,.activity-selection, .fees-and-spaces, .icon-section, #stepsContent').forEach(element => {
+        element.style.textAlign = lang === 'ar' ? 'right' : 'left';
+    });
 
-            document.querySelectorAll('.section-title, .section-content, .activity-selection, .fees-and-spaces, .icon-section, #stepsContent').forEach(element => {
-                element.style.textAlign = lang === 'ar' ? 'right' : 'left';
-            });
+    // تحديث النصوص باستخدام data-ar و data-en لجميع العناصر القابلة للتغيير
+    document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
+        element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+    });
 
-            document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
-                element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-            });
+    // تحديث محتويات الخيارات في القائمة المنسدلة
+    document.querySelectorAll('#activity option').forEach(option => {
+        option.textContent = lang === 'ar' ? option.getAttribute('data-ar') : option.getAttribute('data-en');
+    });
 
-            document.querySelectorAll('#activity option').forEach(option => {
-                option.textContent = lang === 'ar' ? option.getAttribute('data-ar') : option.getAttribute('data-en');
-            });
+    // إعادة تحميل محتوى الأقسام الديناميكية مثل الاشتراطات والخطوات باللغة المطلوبة
+    showSteps(); // تأكد من عرض المحتوى باللغة الحالية عند تغيير النشاط
+}
 
-            showSteps();
-        }
 
-        function toggleLanguage() {
-            const currentLang = document.documentElement.getAttribute('lang');
-            const newLang = currentLang === 'ar' ? 'en' : 'ar';
-            switchLanguage(newLang);
-        }
+// دالة لتبديل اللغة عند الضغط على الزر
+function toggleLanguage() {
+    const currentLang = document.documentElement.getAttribute('lang');
+    const newLang = currentLang === 'ar' ? 'en' : 'ar';
+    switchLanguage(newLang);
+}
 
-        document.addEventListener("DOMContentLoaded", function() {
-            switchLanguage('ar');
-        });
+// تحميل اللغة الافتراضية عند تحميل الصفحة
+document.addEventListener("DOMContentLoaded", function() {
+    switchLanguage('ar'); // اللغة الافتراضية العربية
+});
     </script>
 </head>
 <body>
-<div class="container">
-    <div class="logo-section">
-        <img src='https://zmohd1987.github.io/FCSM/ShjLogo.png' alt='شعار بلدية مدينة الشارقة' class="logo">
-    </div>
-    <div class="language-toggle">
-        <button onclick="toggleLanguage()">
-            <i class="fas fa-language"></i>
-            <span id="languageButton" data-ar="عربي" data-en="English">عربي</span>
-        </button>
-    </div>
+    <div class="container">
+        <header>
+   <img src="C:\Users\mahmoud.mohd\Desktop\البرامج\الحصر\ShjLogo.png" alt="Logo" class="logo">
+                  <h1 id="pageTitle" data-ar="دليل تراخيص المنشآت الغذائية" data-en="Food Establishment Licensing Guide">دليل تراخيص المنشآت الغذائية</h1>
+        </header>
 
-    <header>
-        <h1 id="pageTitle" data-ar="دليل تراخيص المنشآت الغذائية" data-en="Food Establishment Licensing Guide">دليل تراخيص المنشآت الغذائية</h1>
-    </header>
+<div class="language-toggle">
+    <button onclick="toggleLanguage()">
+        <i class="fas fa-language"></i>
+        <span id="languageButton" data-ar="عربي" data-en="English">عربي</span>
+    </button>
+</div>
 
-    <div class="section-title" onclick="toggleSection('introSection')" data-ar="مقدمة" data-en="Introduction">مقدمة</div>
-    <div id="introSection" class="section-content">
-        <p data-ar="هذه الصفحة تقدم دليلًا لإجراءات تراخيص المنشآت الغذائية." data-en="This page provides a guide to the licensing procedures for food establishments.">
-            هذه الصفحة تقدم دليلًا لإجراءات تراخيص المنشآت الغذائية.
-        </p>
-    </div>
 
-    <div class="section-title" onclick="toggleSection('goalSection')" data-ar="الهدف من الدليل" data-en="Purpose of the Guide">الهدف من الدليل</div>
-    <div id="goalSection" class="section-content">
-        <p data-ar="يهدف هذا الدليل إلى توجيه المنشآت الغذائية من خلال إجراءات تراخيصها." data-en="This guide aims to guide food establishments through their licensing procedures.">
-            يهدف هذا الدليل إلى توجيه المنشآت الغذائية من خلال إجراءات تراخيصها.
-        </p>
-    </div>
+<div class="section-title" onclick="toggleSection('introSection')" data-ar="مقدمة" data-en="Introduction">مقدمة</div>
+<div id="introSection" class="section-content">
+    <p data-ar="هذه الصفحة تقدم دليلًا لإجراءات تراخيص المنشآت الغذائية." data-en="This page provides a guide to the licensing procedures for food establishments.">
+        هذه الصفحة تقدم دليلًا لإجراءات تراخيص المنشآت الغذائية.
+    </p>
+</div>
 
-    <div class="section-title" onclick="toggleSection('rolesSection')" data-ar="الأدوار والمسؤوليات لقسم الرقابة الغذائية" data-en="Roles and Responsibilities of the Food Control Department">الأدوار والمسؤوليات لقسم الرقابة الغذائية</div>
-    <div id="rolesSection" class="section-content">
-        <p data-ar="يتناول هذا القسم دور قسم الرقابة الغذائية في عملية الترخيص." data-en="This section discusses the role of the Food Control Department in the licensing process.">
-            يتناول هذا القسم دور قسم الرقابة الغذائية في عملية الترخيص.
-        </p>
-    </div>
+<div class="section-title" onclick="toggleSection('goalSection')" data-ar="الهدف من الدليل" data-en="Purpose of the Guide">الهدف من الدليل</div>
+<div id="goalSection" class="section-content">
+    <p data-ar="يهدف هذا الدليل إلى توجيه المنشآت الغذائية من خلال إجراءات تراخيصها." data-en="This guide aims to guide food establishments through their licensing procedures.">
+        يهدف هذا الدليل إلى توجيه المنشآت الغذائية من خلال إجراءات تراخيصها.
+    </p>
+</div>
 
-    <div class="section-title" onclick="toggleSection('scopeSection')" data-ar="مجال التطبيق" data-en="Scope of Application">مجال التطبيق</div>
-    <div id="scopeSection" class="section-content">
-        <p data-ar="يغطي هذا الدليل جميع الأنشطة الغذائية في السوق المحلي." data-en="This guide covers all food activities in the local market.">
-            يغطي هذا الدليل جميع الأنشطة الغذائية في السوق المحلي.
-        </p>
-    </div>
+<div class="section-title" onclick="toggleSection('rolesSection')" data-ar="الأدوار والمسؤوليات لقسم الرقابة الغذائية" data-en="Roles and Responsibilities of the Food Control Department">الأدوار والمسؤوليات لقسم الرقابة الغذائية</div>
+<div id="rolesSection" class="section-content">
+    <p data-ar="يتناول هذا القسم دور قسم الرقابة الغذائية في عملية الترخيص." data-en="This section discusses the role of the Food Control Department in the licensing process.">
+        يتناول هذا القسم دور قسم الرقابة الغذائية في عملية الترخيص.
+    </p>
+</div>
 
-    <div class="section-title" onclick="toggleSection('definitionSection')" data-ar="المصطلحات والتعريفات" data-en="Definitions">المصطلحات والتعريفات</div>
-    <div id="definitionSection" class="section-content">
-        <p data-ar="يشمل هذا الدليل كافة المنشآت التي تتطلب تراخيص خاصة." data-en="This guide includes all establishments that require special licenses.">
-            يشمل هذا الدليل كافة المنشآت التي تتطلب تراخيص خاصة.
-        </p>
-    </div>
+<div class="section-title" onclick="toggleSection('scopeSection')" data-ar="مجال التطبيق" data-en="Scope of Application">مجال التطبيق</div>
+<div id="scopeSection" class="section-content">
+    <p data-ar="يغطي هذا الدليل جميع الأنشطة الغذائية في السوق المحلي." data-en="This guide covers all food activities in the local market.">
+        يغطي هذا الدليل جميع الأنشطة الغذائية في السوق المحلي.
+    </p>
+</div>
 
-    <div class="section-title" onclick="toggleSection('infrastructureSection')" data-ar="اشتراطات البنية التحتية" data-en="Infrastructure Requirements">اشتراطات البنية التحتية</div>
-    <div id="infrastructureSection" class="section-content">
-        <p data-ar="يتناول هذا القسم الاشتراطات اللازمة للبنية التحتية للمنشآت الغذائية." data-en="This section discusses the infrastructure requirements for food establishments.">
-            يتناول هذا القسم الاشتراطات اللازمة للبنية التحتية للمنشآت الغذائية.
-        </p>
-    </div>
+<div class="section-title" onclick="toggleSection('definitionSection')" data-ar="المصطلحات والتعريفات" data-en="Definitions">المصطلحات والتعريفات</div>
+<div id="definitionSection" class="section-content">
+    <p data-ar="يشمل هذا الدليل كافة المنشآت التي تتطلب تراخيص خاصة." data-en="This guide includes all establishments that require special licenses.">
+        يشمل هذا الدليل كافة المنشآت التي تتطلب تراخيص خاصة.
+    </p>
+</div>
 
-    <!-- قسم الخدمات الجديد -->
-    <div class="services-section">
-        <div class="section-title" onclick="toggleSection('servicesSection')" data-ar="الخدمات" data-en="Services">الخدمات</div>
-        <div id="servicesSection" class="section-content">
-            <p data-ar="يقدم هذا القسم معلومات حول الخدمات المتاحة للمنشآت الغذائية." data-en="This section provides information about the services available for food establishments.">
-                يقدم هذا القسم معلومات حول الخدمات المتاحة للمنشآت الغذائية.
-            </p>
-        </div>
-
+<div class="section-title" onclick="toggleSection('infrastructureSection')" data-ar="اشتراطات البنية التحتية" data-en="Infrastructure Requirements">اشتراطات البنية التحتية</div>
+<div id="infrastructureSection" class="section-content">
+    <p data-ar="يتناول هذا القسم الاشتراطات اللازمة للبنية التحتية للمنشآت الغذائية." data-en="This section discusses the infrastructure requirements for food establishments.">
+        يتناول هذا القسم الاشتراطات اللازمة للبنية التحتية للمنشآت الغذائية.
+    </p>
+</div>
  <div class="activity-selection">
     <label for="activity" data-ar="اختر النشاط:" data-en="Choose Activity:">اختر النشاط:</label>
     <select id="activity" onchange="showSteps()">
@@ -382,19 +386,14 @@
     <a href="tel:+123456789"><i class="fas fa-phone-alt" style="color: #8b785a;"></i></a>
     <a href="mailto:info@example.com"><i class="fas fa-envelope" style="color: #8b785a;"></i></a>
 </div>
-
-
-    <footer>
-        <p data-ar="جميع الحقوق محفوظة لقسم الرقابة الغذائية © 2024" data-en="All rights reserved to the Food Control Department © 2024">
-            جميع الحقوق محفوظة لقسم الرقابة الغذائية © 2024
-        </p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
-             <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube-square"></i></a>
-            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </footer>
+<footer>
+    <p data-ar="جميع الحقوق محفوظة © 2024" data-en="All rights reserved © 2024">جميع الحقوق محفوظة © 2024</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a>
+    </div>
+</footer>
 <script>
 <script>
     const licenseSteps = {
