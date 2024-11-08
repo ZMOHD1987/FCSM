@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دليل تراخيص المنشآت الغذائية</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -23,7 +23,7 @@
         .container {
             width: 90%;
             max-width: 700px;
-            padding: 20px;
+            padding: 10px;
             background-color: #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
@@ -31,21 +31,22 @@
             position: relative;
         }
 
-   header {
-        background-color: #2e8b57; /* اللون الأخضر للرأس */
-        color: white;
-        padding: 15px 20px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        text-align: center;
-        position: relative;
-    }
+        header {
+            background-color: #2e8b57;
+            color: white;
+            padding: 15px 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+            position: relative;
+            margin-top: 100px;
+        }
 
-    #pageTitle {
-        margin: 0;
-        font-size: 0.6rem;
-        padding-top: 20px; /* مسافة إضافية أسفل الشعار */
-    }
+        #pageTitle {
+            margin: 0;
+            font-size: 1rem;
+            padding-top: 20px;
+        }
 
         .section-title {
             font-size: 1.2rem;
@@ -106,31 +107,22 @@
         .icon-section i:hover {
             color: #6b5e40;
         }
-    footer {
-      background-color: rgb(213, 201, 155) !important;
-        color: BLACK;
-        text-align: center;
-        padding: 10px;
-        margin-top: 30px;
-        border-radius: 8px;
-        font-size: 0.8rem;
-    }
 
-    .social-icons {
-        margin-top: 10px;
-    }
+        footer {
+            background-color: rgb(213, 201, 155) !important;
+            color: BLACK;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+        }
 
-    .social-icons i {
-        font-size: 1.2rem;
-        margin: 0 10px;
-        transition: color 0.3s;
-        color: #8b785a;
-    }
+        .social-icons {
+            margin-top: 10px;
+        }
 
-    .social-icons i:hover {
-        color: #6b5e40;
-    }
-       .social-icons i {
+        .social-icons i {
             font-size: 1.2rem;
             margin: 0 10px;
             transition: color 0.3s;
@@ -139,7 +131,9 @@
 
         .social-icons i:hover {
             color: #6b5e40;
-        }        .fees-and-spaces {
+        }
+
+        .fees-and-spaces {
             margin-top: 20px;
             padding: 15px;
             background-color: #f9f8f7;
@@ -155,151 +149,261 @@
             text-align: center;
         }
 
-      .language-toggle {
-        position: absolute;
-        top: 10px; /* وضع الزر أعلى الرأس */
-        right: 20px;
-        text-align: center;
-        z-index: 1;
-    }
+        .language-toggle button {
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #2e8b57;
+            color: white;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+        }
 
-    .language-toggle button {
-        padding: 5px 10px; /* تصغير حجم الزر */
-        font-size: 0.9rem; /* حجم الخط أصغر */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: #2e8b57; /* نفس لون رأس الصفحة */
-        color: white;
-        transition: background-color 0.3s;
-        display: flex;
-        align-items: center;
-    }
+        .language-toggle button i {
+            margin-left: 5px;
+        }
 
-    /* إعدادات الأيقونة داخل زر تغيير اللغة */
-    .language-toggle button i {
-        margin-left: 5px;
-    }
+        .logo-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: left;
+            margin-top: 8px;
+            margin-left: 10px;
+            padding: 1px 2px;
+            z-index: 999;
+        }
 
-.logo {
-    position: absolute;
-    top: -10px; /* وضع الشعار أعلى من مستوى الـ header */
-    left: 0; /* تثبيت الشعار إلى أقصى اليسار */
-    width: 65px; /* العرض المناسب للشعار */
-    height: 75px; /* ارتفاع مناسب للشعار */
-    
-    /* خلفية بيضاء حول الشعار لتوضيحه */
-    background-color: white;
-    padding: 5px; /* مسافة داخلية حول الشعار */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* تظليل خفيف */
-    
-    /* جعل الحواف مربعة ليكون واضح كخلفية */
-    border-radius: 5px;
+        .logo {
+            width: 100%;
+            height: auto;
+            max-width: 150px;  /* تعديل الحد الأقصى للعرض */
+            max-height: 80px;  /* تعديل الحد الأقصى للارتفاع */
+            margin-bottom: 10px;
+        }
+
+        .services-section {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f9f8f7;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* مسافة بين الأيقونات والجملة */
+    color: green; /* جعل لون النص متناسقًا مع لون الأيقونة */
 }
-</style>
+
+.contact-info i {
+    color: green; /* تغيير لون الأيقونة إلى الأخضر */
+    margin-right: 5px; /* مسافة بين الأيقونة وعلامة / */
+}
+
+.contact-info span.separator {
+    margin: 0 5px; /* مسافة على يمين ويسار علامة / */
+    color: green; /* تغيير لون علامة / ليطابق لون الأيقونة والنص */
+}
+
+.contact-info a {
+    text-decoration: none; /* إزالة خط تحت الرابط */
+    color: inherit; /* استخدام لون النص الحالي */
+}
+
+    .section-content p {
+        font-size: 14px; /* تكبير بسيط للخط */
+    }
+
+    .section-title {
+        font-size: 20px; /* تكبير الخط للعنوان */
+    }
+
+    .apply-button {
+        background-color: #28a745;
+        color: #fff;
+        padding: 5px 10px; /* حجم صغير للزر */
+        border: none;
+        cursor: pointer;
+        font-size: 14px; /* حجم الخط للزر */
+        display: inline-flex;
+        align-items: center;
+        margin-top: 5px;
+    }
+    .apply-button .icon {
+        margin-right: 5px;
+    }
+    .apply-button:hover {
+        background-color: #218838;
+    }
+
     </style>
-       <script>
+    <script>
         function toggleDescription(serviceId) {
             const description = document.getElementById(serviceId);
             description.style.display = description.style.display === 'none' || description.style.display === '' ? 'block' : 'none';
         }
-// دالة لتغيير اللغة بين العربية والإنجليزية
-function switchLanguage(lang) {
-    // ضبط اللغة في عنصر الـ HTML الرئيسي
-    document.documentElement.setAttribute('lang', lang);
-    
-    // ضبط اتجاه الصفحة بناءً على اللغة
-    document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
 
-    // تغيير المحاذاة لجميع الأقسام الأساسية في الصفحة
-    document.querySelectorAll('.section-title, .section-content,.activity-selection, .fees-and-spaces, .icon-section, #stepsContent').forEach(element => {
-        element.style.textAlign = lang === 'ar' ? 'right' : 'left';
-    });
+        function switchLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang);
+            document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
 
-    // تحديث النصوص باستخدام data-ar و data-en لجميع العناصر القابلة للتغيير
-    document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
-        element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-    });
+            document.querySelectorAll('.section-title, .section-content, .activity-selection, .fees-and-spaces, .icon-section, #stepsContent').forEach(element => {
+                element.style.textAlign = lang === 'ar' ? 'right' : 'left';
+            });
 
-    // تحديث محتويات الخيارات في القائمة المنسدلة
-    document.querySelectorAll('#activity option').forEach(option => {
-        option.textContent = lang === 'ar' ? option.getAttribute('data-ar') : option.getAttribute('data-en');
-    });
+            document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
+                element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+            });
 
-    // إعادة تحميل محتوى الأقسام الديناميكية مثل الاشتراطات والخطوات باللغة المطلوبة
-    showSteps(); // تأكد من عرض المحتوى باللغة الحالية عند تغيير النشاط
-}
+            document.querySelectorAll('#activity option').forEach(option => {
+                option.textContent = lang === 'ar' ? option.getAttribute('data-ar') : option.getAttribute('data-en');
+            });
 
+            showSteps();
+        }
 
-// دالة لتبديل اللغة عند الضغط على الزر
-function toggleLanguage() {
-    const currentLang = document.documentElement.getAttribute('lang');
-    const newLang = currentLang === 'ar' ? 'en' : 'ar';
-    switchLanguage(newLang);
-}
+        function toggleLanguage() {
+            const currentLang = document.documentElement.getAttribute('lang');
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            switchLanguage(newLang);
+        }
 
-// تحميل اللغة الافتراضية عند تحميل الصفحة
-document.addEventListener("DOMContentLoaded", function() {
-    switchLanguage('ar'); // اللغة الافتراضية العربية
-});
+        document.addEventListener("DOMContentLoaded", function() {
+            switchLanguage('ar');
+        });
     </script>
 </head>
 <body>
-    <div class="container">
-        <header>
-   <img src="C:\Users\mahmoud.mohd\Desktop\البرامج\الحصر\ShjLogo.png" alt="Logo" class="logo">
-                  <h1 id="pageTitle" data-ar="دليل تراخيص المنشآت الغذائية" data-en="Food Establishment Licensing Guide">دليل تراخيص المنشآت الغذائية</h1>
-        </header>
+<div class="container">
+    <div class="logo-section">
+        <img src='https://zmohd1987.github.io/FCSM/ShjLogo.png' alt='شعار بلدية مدينة الشارقة' class="logo">
+    </div>
+    <div class="language-toggle">
+        <button onclick="toggleLanguage()">
+            <i class="fas fa-language"></i>
+            <span id="languageButton" data-ar="عربي" data-en="English">عربي</span>
+        </button>
+    </div>
 
-<div class="language-toggle">
-    <button onclick="toggleLanguage()">
-        <i class="fas fa-language"></i>
-        <span id="languageButton" data-ar="عربي" data-en="English">عربي</span>
-    </button>
+    <header>
+        <h1 id="pageTitle" data-ar="دليل تراخيص المنشآت الغذائية" data-en="Food Establishment Licensing Guide">دليل تراخيص المنشآت الغذائية</h1>
+    </header>
+
+    <div class="section-title" onclick="toggleSection('introSection')" data-ar="مقدمة" data-en="Introduction">مقدمة</div>
+    <div id="introSection" class="section-content">
+        <p data-ar="هذه الصفحة تقدم دليلًا لإجراءات تراخيص المنشآت الغذائية." data-en="This page provides a guide to the licensing procedures for food establishments.">
+            هذه الصفحة تقدم دليلًا لإجراءات تراخيص المنشآت الغذائية.
+        </p>
+    </div>
+
+    <div class="section-title" onclick="toggleSection('goalSection')" data-ar="الهدف من الدليل" data-en="Purpose of the Guide">الهدف من الدليل</div>
+    <div id="goalSection" class="section-content">
+        <p data-ar="يهدف هذا الدليل إلى توجيه المنشآت الغذائية من خلال إجراءات تراخيصها." data-en="This guide aims to guide food establishments through their licensing procedures.">
+            يهدف هذا الدليل إلى توجيه المنشآت الغذائية من خلال إجراءات تراخيصها.
+        </p>
+    </div>
+
+    <div class="section-title" onclick="toggleSection('rolesSection')" data-ar="الأدوار والمسؤوليات لقسم الرقابة الغذائية" data-en="Roles and Responsibilities of the Food Control Department">الأدوار والمسؤوليات لقسم الرقابة الغذائية</div>
+    <div id="rolesSection" class="section-content">
+        <p data-ar="يتناول هذا القسم دور قسم الرقابة الغذائية في عملية الترخيص." data-en="This section discusses the role of the Food Control Department in the licensing process.">
+            يتناول هذا القسم دور قسم الرقابة الغذائية في عملية الترخيص.
+        </p>
+    </div>
+
+    <div class="section-title" onclick="toggleSection('scopeSection')" data-ar="مجال التطبيق" data-en="Scope of Application">مجال التطبيق</div>
+    <div id="scopeSection" class="section-content">
+        <p data-ar="يغطي هذا الدليل جميع الأنشطة الغذائية في السوق المحلي." data-en="This guide covers all food activities in the local market.">
+            يغطي هذا الدليل جميع الأنشطة الغذائية في السوق المحلي.
+        </p>
+    </div>
+
+    <div class="section-title" onclick="toggleSection('definitionSection')" data-ar="المصطلحات والتعريفات" data-en="Definitions">المصطلحات والتعريفات</div>
+    <div id="definitionSection" class="section-content">
+        <p data-ar="يشمل هذا الدليل كافة المنشآت التي تتطلب تراخيص خاصة." data-en="This guide includes all establishments that require special licenses.">
+            يشمل هذا الدليل كافة المنشآت التي تتطلب تراخيص خاصة.
+        </p>
+    </div>
+
+    <div class="section-title" onclick="toggleSection('infrastructureSection')" data-ar="اشتراطات البنية التحتية" data-en="Infrastructure Requirements">اشتراطات البنية التحتية</div>
+    <div id="infrastructureSection" class="section-content">
+        <p data-ar="يتناول هذا القسم الاشتراطات اللازمة للبنية التحتية للمنشآت الغذائية." data-en="This section discusses the infrastructure requirements for food establishments.">
+            يتناول هذا القسم الاشتراطات اللازمة للبنية التحتية للمنشآت الغذائية.
+        </p>
+    </div>
+
+ 
+
+<div class="services-section">
+    <div class="section-title" onclick="toggleSection('servicesSection')" data-ar="الخدمات" data-en="Services">الخدمات</div>
+    <div id="servicesSection" class="section-content">
+
+        <!-- 1 - المعاينات -->
+        <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="1 - المعاينات: معاينة موقع" data-en="1 - Inspections: Site Inspection">1 - المعاينات: معاينة موقع</p>
+        <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)" 
+           data-en="Required Documents (Trade Name or Trade License - Title Deed - Land Map - Building Engineering Plan - Proposed Plan)">
+           المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)
+        </p>
+        <button class="apply-button" onclick="applyForService('معاينة موقع', 'Site Inspection')">
+            <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
+        </button>
+
+        <!-- 2 - إصدار تقرير نهائي للمنشآت الغذائية -->
+        <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="2 - إصدار تقرير نهائي للمنشآت الغذائية" data-en="2 - Final Report Issuance for Food Establishments">2 - إصدار تقرير نهائي للمنشآت الغذائية</p>
+        <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)" 
+           data-en="Required Documents (Trade Name or Trade License - Title Deed - Land Map - Building Engineering Plan - Proposed Plan)">
+           المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)
+        </p>
+        <button class="apply-button" onclick="applyForService('إصدار تقرير نهائي للمنشآت الغذائية', 'Final Report Issuance for Food Establishments')">
+            <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
+        </button>
+
+        <!-- 3 - اعتماد مخطط تعديل موقع -->
+        <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="3 - اعتماد مخطط تعديل موقع" data-en="3 - Site Modification Plan Approval">3 - اعتماد مخطط تعديل موقع</p>
+        <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط المعتمد من قسم الرقابة الغذائية - المخطط المقترح)" 
+           data-en="Required Documents (Trade Name or Trade License - Title Deed - Land Map - Approved Plan from Food Control Department - Proposed Plan)">
+           المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط المعتمد من قسم الرقابة الغذائية - المخطط المقترح)
+        </p>
+        <button class="apply-button" onclick="applyForService('اعتماد مخطط تعديل موقع', 'Site Modification Plan Approval')">
+            <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
+        </button>
+
+        <!-- 4 - شهادة التقييم الغذائي -->
+        <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="4 - شهادة التقييم الغذائي" data-en="4 - Food Evaluation Certificate">4 - شهادة التقييم الغذائي</p>
+        <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الرخصة التجارية - المخطط المعتمد من قسم الرقابة الغذائية - أرقام التواصل - عدد العمال بالمنشأة)" 
+           data-en="Required Documents (Trade License - Approved Plan from Food Control Department - Contact Numbers - Number of Employees in Establishment)">
+           المستندات المطلوبة (الرخصة التجارية - المخطط المعتمد من قسم الرقابة الغذائية - أرقام التواصل - عدد العمال بالمنشأة)
+        </p>
+        <button class="apply-button" onclick="applyForService('شهادة التقييم الغذائي', 'Food Evaluation Certificate')">
+            <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
+        </button>
+
+    </div>
 </div>
 
+<script>
+function applyForService(serviceAr, serviceEn) {
+    const lang = document.documentElement.lang || "ar";
+    const service = lang === "ar" ? serviceAr : serviceEn;
+    const message = lang === "ar"
+        ? "يجب إرسال المستندات بصيغة PDF كملف واحد عالي الجودة."
+        : "Documents must be sent as a single high-quality PDF file.";
 
-<div class="section-title" onclick="toggleSection('introSection')" data-ar="مقدمة" data-en="Introduction">مقدمة</div>
-<div id="introSection" class="section-content">
-    <p data-ar="هذه الصفحة تقدم دليلًا لإجراءات تراخيص المنشآت الغذائية." data-en="This page provides a guide to the licensing procedures for food establishments.">
-        هذه الصفحة تقدم دليلًا لإجراءات تراخيص المنشآت الغذائية.
-    </p>
-</div>
+    alert(message + " " + "البريد الإلكتروني: phls.shjmun.gov.ae");
+    window.location.href = `mailto:phls.shjmun.gov.ae?subject=${lang === "ar" ? "التقديم على خدمة " + service : "Application for Service: " + service}&body=${message}`;
+}
+</script>
 
-<div class="section-title" onclick="toggleSection('goalSection')" data-ar="الهدف من الدليل" data-en="Purpose of the Guide">الهدف من الدليل</div>
-<div id="goalSection" class="section-content">
-    <p data-ar="يهدف هذا الدليل إلى توجيه المنشآت الغذائية من خلال إجراءات تراخيصها." data-en="This guide aims to guide food establishments through their licensing procedures.">
-        يهدف هذا الدليل إلى توجيه المنشآت الغذائية من خلال إجراءات تراخيصها.
-    </p>
-</div>
 
-<div class="section-title" onclick="toggleSection('rolesSection')" data-ar="الأدوار والمسؤوليات لقسم الرقابة الغذائية" data-en="Roles and Responsibilities of the Food Control Department">الأدوار والمسؤوليات لقسم الرقابة الغذائية</div>
-<div id="rolesSection" class="section-content">
-    <p data-ar="يتناول هذا القسم دور قسم الرقابة الغذائية في عملية الترخيص." data-en="This section discusses the role of the Food Control Department in the licensing process.">
-        يتناول هذا القسم دور قسم الرقابة الغذائية في عملية الترخيص.
-    </p>
-</div>
 
-<div class="section-title" onclick="toggleSection('scopeSection')" data-ar="مجال التطبيق" data-en="Scope of Application">مجال التطبيق</div>
-<div id="scopeSection" class="section-content">
-    <p data-ar="يغطي هذا الدليل جميع الأنشطة الغذائية في السوق المحلي." data-en="This guide covers all food activities in the local market.">
-        يغطي هذا الدليل جميع الأنشطة الغذائية في السوق المحلي.
-    </p>
-</div>
 
-<div class="section-title" onclick="toggleSection('definitionSection')" data-ar="المصطلحات والتعريفات" data-en="Definitions">المصطلحات والتعريفات</div>
-<div id="definitionSection" class="section-content">
-    <p data-ar="يشمل هذا الدليل كافة المنشآت التي تتطلب تراخيص خاصة." data-en="This guide includes all establishments that require special licenses.">
-        يشمل هذا الدليل كافة المنشآت التي تتطلب تراخيص خاصة.
-    </p>
-</div>
 
-<div class="section-title" onclick="toggleSection('infrastructureSection')" data-ar="اشتراطات البنية التحتية" data-en="Infrastructure Requirements">اشتراطات البنية التحتية</div>
-<div id="infrastructureSection" class="section-content">
-    <p data-ar="يتناول هذا القسم الاشتراطات اللازمة للبنية التحتية للمنشآت الغذائية." data-en="This section discusses the infrastructure requirements for food establishments.">
-        يتناول هذا القسم الاشتراطات اللازمة للبنية التحتية للمنشآت الغذائية.
-    </p>
-</div>
+
+
+
  <div class="activity-selection">
     <label for="activity" data-ar="اختر النشاط:" data-en="Choose Activity:">اختر النشاط:</label>
     <select id="activity" onchange="showSteps()">
@@ -318,32 +422,183 @@ document.addEventListener("DOMContentLoaded", function() {
 <div id="stepsContent"></div> <!-- سيتم عرض محتوى الخطوات هنا -->
 
 <script>
-    const licenseSteps = {
-        commercial: [
-            { ar: "التقدم بطلب للحصول على الترخيص التجاري.", en: "Apply for a commercial license." },
-            { ar: "اجتياز التفتيش الدوري للموقع.", en: "Pass the routine site inspection." }
-        ],
-        professional: [
-            { ar: "تقديم المستندات المطلوبة للتسجيل.", en: "Submit the required documents for registration." },
-            { ar: "اجتياز اختبار الامتثال المهني.", en: "Pass the professional compliance check." }
-        ],
-        industrial: [
-            { ar: "تقديم المستندات المطلوبة للترخيص الصناعي.", en: "Submit the required documents for an industrial license." },
-            { ar: "اجتياز التفتيش الصناعي للمنشأة.", en: "Pass the industrial facility inspection." }
-        ]
-    };
+  const licenseSteps = {
+    commercial: [
+        { 
+            ar: "استخراج الاسم التجاري: مراجعة دائرة التنمية الاقتصادية واستخراج الاسم التجاري.", 
+            en: "Trade Name Extraction: Review the Department of Economic Development and obtain the trade name." 
+        },
+        { 
+            ar: "التفتيش علي المنشآه: بعد حجز موعد للتفتيش، يقوم مفتش لجنة التراخيص بالتواصل مع صاحب المنشأة لتحديد موعد الزيارة، بحضور صاحب المنشأة أو من ينوب عنه، يتم في هذه الزيارة معاينة المنشأة المراد ترخيصها ميدانيًا من قبل مفتش لجنة التراخيص.", 
+            en: "Facility Inspection: After booking an inspection appointment, a licensing committee inspector contacts the facility owner to schedule a visit, with the presence of the facility owner or a representative. During this visit, the licensing committee inspector conducts an on-site inspection of the facility for licensing purposes." 
+        },
+        { 
+            ar: "رسم مخطط مفصل للمنشأة : في حال استيفاء المنشأة للاشتراطات الصحية بما يتعلق بالمساحة والموقع، يتم رسم مخطط توضيحي لاقسام المنشأة الداخلية وجميع التجهيزات والمعدات والأدوات اللازمة لممارسة النشاط.", 
+            en: "Facility Layout Drawing: If the facility meets health requirements regarding space and location, a detailed layout is prepared, outlining internal facility sections and all necessary equipment, tools, and setups for business operations." 
+        },
+        { 
+            ar: "التوقيع علي تعهد: يتم توقيع صاحب المنشأة أو من ينوب عنه قانونيًا على تعهد يتضمن: 1- الالتزام بالمخطط المعتمد. 2- في حالة التغيير، مراجعة القسم قبل التنفيذ. 3- مراجعة جهات الاختصاص كما موضح بالموافقة. 4- عدم ممارسة النشاط إلا بعد المراجعة النهائية.", 
+            en: "Signing a Commitment: The facility owner or legal representative signs a commitment that includes: 1- Adherence to the approved layout. 2- Consulting the department before making any changes. 3- Reviewing relevant authorities as outlined in the approval. 4- Not commencing business activity until after the final inspection." 
+        },
+        { 
+            ar: "إصدار الموافقة النهائية: بعد استيفاء المتطلبات الضرورية لترخيص المنشأة، يتم إصدار الموافقة النهائية وتحديد جهات الاختصاص الأخرى المعنية. يُجرى استعراض شامل لجميع المستندات والإيصالات المتعلقة بدفع رسوم المعاينات المبدئية والنهائية كجزء من العملية.", 
+            en: "Final Approval Issuance: After all requirements for facility licensing are met, the final approval is issued, identifying other relevant authorities. A thorough review of all documents and receipts related to the initial and final inspection fees is conducted as part of the process." 
+        },
+        { 
+            ar: "إلغاء التعهد: بعد الانتهاء من التجهيزات بالمنشأة ومراجعة جميع جهات الاختصاص المعنية، يتم طلب معاينة على المنشأة. يتم فيها الكشف النهائي على المنشأة، وفي حالة الاستيفاء للشروط يتم إلغاء التعهد واعتماد المخطط وتحرير شهادة التقييم الغذائي للمنشأة، أما في حالة عدم الاستيفاء، يقوم مسؤول المنشأة بإنهاء النواقص وطلب معاينة مرة أخرى.", 
+            en: "Commitment Revocation: After completing the facility's preparations and reviewing all relevant authorities, a final inspection is requested. During this inspection, the facility undergoes a final review. If requirements are met, the commitment is revoked, the layout is approved, and the food evaluation certificate is issued for the facility. If requirements are not met, the facility manager addresses the deficiencies and requests another inspection." 
+        }
+    ],
 
-    const activityRequirements = {
+    professional: [
+        { 
+            ar: "استخراج الاسم التجاري: مراجعة دائرة التنمية الاقتصادية واستخراج الاسم التجاري.", 
+            en: "Trade Name Extraction: Review the Department of Economic Development and obtain the trade name." 
+        },
+        { 
+            ar: "التفتيش علي المنشآه: بعد حجز موعد للتفتيش، يقوم مفتش لجنة التراخيص بالتواصل مع صاحب المنشأة لتحديد موعد الزيارة، بحضور صاحب المنشأة أو من ينوب عنه، يتم في هذه الزيارة معاينة المنشأة المراد ترخيصها ميدانيًا من قبل مفتش لجنة التراخيص.", 
+            en: "Facility Inspection: After booking an inspection appointment, a licensing committee inspector contacts the facility owner to schedule a visit, with the presence of the facility owner or a representative. During this visit, the licensing committee inspector conducts an on-site inspection of the facility for licensing purposes." 
+        },
+        { 
+            ar: "رسم مخطط مفصل للمنشأة : في حال استيفاء المنشأة للاشتراطات الصحية بما يتعلق بالمساحة والموقع، يتم رسم مخطط توضيحي لاقسام المنشأة الداخلية وجميع التجهيزات والمعدات والأدوات اللازمة لممارسة النشاط.", 
+            en: "Facility Layout Drawing: If the facility meets health requirements regarding space and location, a detailed layout is prepared, outlining internal facility sections and all necessary equipment, tools, and setups for business operations." 
+        },
+        { 
+            ar: "التوقيع علي تعهد: يتم توقيع صاحب المنشأة أو من ينوب عنه قانونيًا على تعهد يتضمن: 1- الالتزام بالمخطط المعتمد. 2- في حالة التغيير، مراجعة القسم قبل التنفيذ. 3- مراجعة جهات الاختصاص كما موضح بالموافقة. 4- عدم ممارسة النشاط إلا بعد المراجعة النهائية.", 
+            en: "Signing a Commitment: The facility owner or legal representative signs a commitment that includes: 1- Adherence to the approved layout. 2- Consulting the department before making any changes. 3- Reviewing relevant authorities as outlined in the approval. 4- Not commencing business activity until after the final inspection." 
+        },
+        { 
+            ar: "إصدار الموافقة النهائية: بعد استيفاء المتطلبات الضرورية لترخيص المنشأة، يتم إصدار الموافقة النهائية وتحديد جهات الاختصاص الأخرى المعنية. يُجرى استعراض شامل لجميع المستندات والإيصالات المتعلقة بدفع رسوم المعاينات المبدئية والنهائية كجزء من العملية.", 
+            en: "Final Approval Issuance: After all requirements for facility licensing are met, the final approval is issued, identifying other relevant authorities. A thorough review of all documents and receipts related to the initial and final inspection fees is conducted as part of the process." 
+        },
+        { 
+            ar: "إلغاء التعهد: بعد الانتهاء من التجهيزات بالمنشأة ومراجعة جميع جهات الاختصاص المعنية، يتم طلب معاينة على المنشأة. يتم فيها الكشف النهائي على المنشأة، وفي حالة الاستيفاء للشروط يتم إلغاء التعهد واعتماد المخطط وتحرير شهادة التقييم الغذائي للمنشأة، أما في حالة عدم الاستيفاء، يقوم مسؤول المنشأة بإنهاء النواقص وطلب معاينة مرة أخرى.", 
+            en: "Commitment Revocation: After completing the facility's preparations and reviewing all relevant authorities, a final inspection is requested. During this inspection, the facility undergoes a final review. If requirements are met, the commitment is revoked, the layout is approved, and the food evaluation certificate is issued for the facility. If requirements are not met, the facility manager addresses the deficiencies and requests another inspection." 
+        }
+    ],
+
+
+    industrial: [
+        { 
+            ar: "استخراج الاسم التجاري: مراجعة دائرة التنمية الاقتصادية واستخراج الاسم التجاري.", 
+            en: "Trade Name Extraction: Review the Department of Economic Development and obtain the trade name." 
+        },
+        { 
+            ar: "التفتيش علي المنشآه: بعد حجز موعد للتفتيش، يقوم مفتش لجنة التراخيص بالتواصل مع صاحب المنشأة لتحديد موعد الزيارة، بحضور صاحب المنشأة أو من ينوب عنه، يتم في هذه الزيارة معاينة المنشأة المراد ترخيصها ميدانيًا من قبل مفتش لجنة التراخيص.", 
+            en: "Facility Inspection: After booking an inspection appointment, a licensing committee inspector contacts the facility owner to schedule a visit, with the presence of the facility owner or a representative. During this visit, the licensing committee inspector conducts an on-site inspection of the facility for licensing purposes." 
+        },
+        { 
+            ar: "رسم مخطط مفصل للمنشأة من شركة استشارية معتمدة: في حال استيفاء المنشأة للاشتراطات الصحية بما يتعلق بالمساحة والموقع، يتم رسم مخطط توضيحي للمنشأة من قبل شركة استشارية معتمدة من بلدية مدينة الشارقة. يتضمن المخطط التوضيحي تقسيمات المنشأة الداخلية وخطوط الإنتاج وجميع التجهيزات والمعدات والأدوات اللازمة لممارسة النشاط.", 
+            en: "Detailed Facility Layout from an Accredited Consulting Firm: If the facility meets the health requirements regarding space and location, a detailed layout of the facility is prepared by an accredited consulting firm approved by the Sharjah Municipality. The layout includes the internal divisions of the facility, production lines, and all necessary equipment and tools for operational activities." 
+        },
+        { 
+            ar: "مناقشة واعتماد المخطط المقترح مع لجنة التراخيص: يتم مناقشة المخطط من الناحية الصحية وتسلسل العملية التصنيعية. في حال استيفاء المخطط للاشتراطات الصحية، يتم اعتماد المخطط المبدئي وتوجيه لتنفيذه بالإضافة إلى مراجعة جهات الاختصاص الأخرى. أما في حال عدم الاستيفاء، يُطلب من الاستشاري تعديل المخطط المقترح لتلبية المعايير الصحية المطلوبة.", 
+            en: "Discuss and Approve the Proposed Layout with the Licensing Committee: The layout is reviewed in terms of health and manufacturing process sequence. If the layout meets health requirements, preliminary approval is granted for implementation, along with a review by other concerned authorities. If requirements are not met, the consultant is asked to modify the proposed layout to meet the necessary health standards." 
+        },
+        { 
+            ar: "التوقيع علي تعهد: يتم توقيع صاحب المنشأة أو من ينوب عنه قانونيًا على تعهد يتضمن: 1- الالتزام بالمخطط المعتمد. 2- في حالة التغيير، مراجعة القسم قبل التنفيذ. 3- مراجعة جهات الاختصاص كما موضح بالموافقة. 4- عدم ممارسة النشاط إلا بعد المراجعة النهائية.", 
+            en: "Signing a Commitment: The facility owner or legal representative signs a commitment that includes: 1- Adhering to the approved layout. 2- Consulting the department before any changes. 3- Reviewing relevant authorities as stated in the approval. 4- Not commencing activities until final inspection approval." 
+        },
+        { 
+            ar: "إصدار الموافقة النهائية: بعد استيفاء المتطلبات الضرورية لترخيص المنشأة، يتم إصدار الموافقة النهائية وتحديد جهات الاختصاص الأخرى المعنية. يُجرى استعراض شامل لجميع المستندات والإيصالات المتعلقة بدفع رسوم المعاينات المبدئية والنهائية كجزء من العملية.", 
+            en: "Final Approval Issuance: After meeting all necessary requirements for facility licensing, the final approval is issued, along with identifying other relevant authorities. A comprehensive review of all documents and receipts for initial and final inspection fees is conducted as part of the process." 
+        },
+        { 
+            ar: "إلغاء التعهد: بعد الانتهاء من التجهيزات بالمنشأة ومراجعة جميع جهات الاختصاص المعنية، يتم طلب معاينة على المنشأة. يتم فيها الكشف النهائي على المنشأة، وفي حالة الاستيفاء للشروط يتم إلغاء التعهد واعتماد المخطط وتحرير شهادة التقييم الغذائي للمنشأة، أما في حالة عدم الاستيفاء، يقوم مسؤول المنشأة بإنهاء النواقص وطلب معاينة مرة أخرى.", 
+            en: "Commitment Revocation: After completing the facility's preparations and reviewing all relevant authorities, a final inspection is requested. During this inspection, the facility undergoes a final review, and if it meets the requirements, the commitment is revoked, the layout is approved, and the food evaluation certificate is issued for the facility. If requirements are not met, the facility manager addresses the deficiencies and requests another inspection." 
+        }
+    ]};
+const activityRequirements = {
         restaurant: [
             { ar: "يجب توفير معدات السلامة الغذائية.", en: "Must provide food safety equipment." },
             { ar: "توفير مساحات مناسبة لتناول الطعام.", en: "Provide suitable dining areas." }
         ],
         cafeteria: [
-            { ar: "الالتزام بمعايير النظافة.", en: "Adherence to hygiene standards." },
-            { ar: "تقديم قوائم تحتوي على معلومات غذائية.", en: "Provide menus with nutritional information." }
-        ]
+            { ar: "يجب توفير معدات السلامة الغذائية.", en: "Must provide food safety equipment." },
+            { ar: "توفير مساحات مناسبة لتناول الطعام.", en: "Provide suitable dining areas." }
+        ],
+
+"grocery": [
+    { 
+        "ar": "يجب أن تكون المساحة الكلية للموقع (30) متر مربع كحد أدنى.", 
+        "en": "The total area of the site must be at least 30 m²." 
+    },
+    { 
+        "ar": "يجب أن تكون الأرضية من السيراميك فاتح اللون بقياس 60 سم × 60 سم.", 
+        "en": "The floor must be light-colored ceramic with dimensions of 60 cm × 60 cm." 
+    },
+    { 
+        "ar": "يجب أن تكون الجدران ملساء وخالية من الشقوق ومطلية بمادة زيتية بيضاء.", 
+        "en": "The walls must be smooth, free of cracks, and painted with white oil-based paint." 
+    },
+    { 
+        "ar": "يجب أن يكون سقف الموقع من مادة ثابتة (أسمنتية) أو سقف مزدوج (ساندويتش بانل).", 
+        "en": "The ceiling must be made of solid material (cement) or a double ceiling (sandwich panel)." 
+    },
+    { 
+        "ar": "توفير سقف مستعار لا يقل ارتفاعه عن ثلاثة أمتار أو سقف مدهون بمادة زيتية بيضاء اللون.", 
+        "en": "Provide a suspended ceiling with a minimum height of three meters or a ceiling painted with white oil-based paint." 
+    },
+    { 
+        "ar": "توفير وسيلة تهوية مناسبة وكافية موزعة حسب مساحة الموقع (تكيف مركزي أو اسبليت).", 
+        "en": "Provide adequate and appropriate ventilation distributed according to the site's area (central air conditioning or split units)." 
+    },
+    { 
+        "ar": "توفير الإضاءة الكافية حسب مساحة الموقع من نوع النيون الأبيض.", 
+        "en": "Provide sufficient lighting according to the site area with white neon lights." 
+    },
+    { 
+        "ar": "يجب أن تكون واجهة المحل من الزجاج مع توفير قاطع هوائي على مدخل المحل. الواجهة الزجاجية يجب ألا تحمل أي ملصق إعلاني.", 
+        "en": "The shop's facade must be glass with an air curtain at the entrance. The glass facade should not carry any advertising stickers." 
+    },
+    { 
+        "ar": "توفير أرفف معدنية (استيل) لا يزيد عرضها عن 40 سم.", 
+        "en": "Provide metal (stainless steel) shelves with a width not exceeding 40 cm." 
+    },
+    { 
+        "ar": "توفير أرفف معدنية (استيل) مستقلة لمنتجات المخابز.", 
+        "en": "Provide independent metal (stainless steel) shelves for bakery products." 
+    },
+    { 
+        "ar": "يجب أن تكون المسافة بين الأرفف (الممرات) بمساحة كافية.", 
+        "en": "The distance between shelves (aisles) should be sufficient." 
+    },
+    { 
+        "ar": "لا يزيد ارتفاع الأرفف بوسط المحل عن 160 سم والجانبية عن 250 سم.", 
+        "en": "The height of the shelves in the center of the shop should not exceed 160 cm, and on the sides, it should not exceed 250 cm." 
+    },
+    { 
+        "ar": "يجب ألا يزيد ارتفاع الأشغالات خلف الواجهة الزجاجية بالمحل عن متر واحد.", 
+        "en": "The height of the obstructions behind the shop's glass facade should not exceed one meter." 
+    },
+    { 
+        "ar": "توفير برادات بنظام فتح الأبواب لعرض الخضار والعصائر والألبان، ويجب أن تحتوي على حاويات من المعدن (استيل) للخضروات.", 
+        "en": "Provide refrigerators with door-opening systems to display vegetables, juices, and dairy products. They should contain metal (stainless steel) containers for vegetables." 
+    },
+    { 
+        "ar": "يجب أن تكون جميع البرادات على قواعد من المعدن (استيل) بارتفاع 25 سم.", 
+        "en": "All refrigerators should be placed on metal (stainless steel) bases with a height of 25 cm." 
+    },
+    { 
+        "ar": "توفير أرفف شبكية معدنية لعبوات المياه (5 جالون)، ولا يسمح بالتصريح إلا بعد التأكد من توفير مساحة كافية بالموقع.", 
+        "en": "Provide metal mesh shelves for water containers (5 gallons), and permits will only be granted after ensuring sufficient space at the site." 
+    },
+    { 
+        "ar": "ترك أسفل الرف الأول مساحة دون تخزين لسهولة التنظيف أسفل الأرفف.", 
+        "en": "Leave space beneath the first shelf without storage to facilitate cleaning under the shelves." 
+    },
+    { 
+        "ar": "توفير مصائد للحشرات.", 
+        "en": "Provide insect traps." 
+    },
+    { 
+        "ar": "يجب أن يكون المبنى غير مجاور لمنشآت ذات خطورة على الصحة العامة.", 
+        "en": "The building must not be adjacent to facilities that pose a health hazard." 
+    }
+]
         // أضف اشتراطات أخرى إذا لزم الأمر
     };
+
 
     function getLicenseType(activity) {
         switch (activity) {
@@ -365,12 +620,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 </script>
-
 <div id="feesContent" class="fees-and-spaces">
     <h3 data-ar="الرسوم" data-en="Fees">الرسوم</h3>
     <p data-ar="تتضمن الرسوم المطلوبة للحصول على التراخيص المطلوبة." data-en="Includes the fees required to obtain the necessary licenses.">
         تتضمن الرسوم المطلوبة للحصول على التراخيص المطلوبة.
     </p>
+    <ul>
+        <li data-ar="رسوم المعاينات للمنشآت الغذائية: 250 درهم لكل معاينة" 
+            data-en="Inspection fees for food establishments: 250 AED per inspection">
+            رسوم المعاينات للمنشآت الغذائية: 250 درهم لكل معاينة
+        </li>
+        <li data-ar="رسوم التقرير النهائي: متغير حسب المساحات الإجمالية للمنشآت من 1 متر مربع إلى 50 متر مربع: 250 درهم، من 50 متر مربع وأكبر: 500 درهم" 
+            data-en="Final report fees: Variable based on total area of establishments  1 to 50 square meters: 250 AED, 50 square meters and above: 500 AED">
+            رسوم التقرير النهائي: متغير حسب المساحات الإجمالية للمنشآت - من 1 متر مربع إلى 50 متر مربع: 250 درهم، من 50 متر مربع وأكبر: 500 درهم
+        </li>
+        <li data-ar="رسوم التصريح الصحي: حسب نوع الترخيص - الترخيص التجاري: 500 درهم، الترخيص المهني: 250 درهم، الترخيص الصناعي: 1000 درهم" 
+            data-en="Health permit fees: Based on license type - Commercial license: 500 AED, Professional license: 250 AED, Industrial license: 1000 AED">
+            رسوم التصريح الصحي: حسب نوع الترخيص - الترخيص التجاري: 500 درهم، الترخيص المهني: 250 درهم، الترخيص الصناعي: 1000 درهم
+        </li>
+    </ul>
 </div>
 
 <div id="spacesContent" class="fees-and-spaces">
@@ -378,68 +646,121 @@ document.addEventListener("DOMContentLoaded", function() {
     <p data-ar="يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار." data-en="Appropriate spaces must be provided for the establishment according to the selected activity.">
         يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار.
     </p>
+    <ul>
+        <li data-ar="مساحة مطعم: مطلوب 25 متر مربع للمطبخ و10 متر مربع للمستودع" 
+            data-en="Restaurant Space: 25 m² for the kitchen and 10 m² for storage">
+            مساحة مطعم: مطلوب 25 متر مربع للمطبخ و10 متر مربع للمستودع
+        </li>
+        <li data-ar="مساحة كافتيريا:  15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط" 
+            data-en="Cafeteria Space: 15 m² for the kitchen; additional 5 m² per extra activity like shawarma">
+            مساحة كافتيريا:  15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط
+        </li>
+        <li data-ar="مساحة مطبخ شعبي: مطلوب مساحة 150 متر مربع في الاماكن الصناعية والتجارية فقط" 
+            data-en="Traditional Kitchen Space: 150 m² required in industrial and commercial areas only">
+            مساحة مطبخ شعبي: مطلوب مساحة 150 متر مربع في الاماكن الصناعية والتجارية فقط
+        </li>
+        <li data-ar="مساحة مقهي: مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)" 
+            data-en="Cafe Space: 10 m² required (minimum display area of 10 m²)">
+            مساحة مقهي: مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)
+        </li>
+        <li data-ar="مساحة طهي وشوي الأسماك : مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الاسماك تحتاج مساحة عرض الاسماك 5م² وتصبح المساحة المطلوبة 35 م²" 
+            data-en="Fish Grilling Space: 30 m² (25 m² for kitchen + 5 m² for storage); if displaying fish, add 5 m² for display area (total 35 m²)">
+            مساحة طهي وشوي الأسماك: مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الاسماك تحتاج مساحة عرض الاسماك 5م² وتصبح المساحة المطلوبة 35 م²
+        </li>
+        <li data-ar="مساحة مشاوي على الفحم: مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)" 
+            data-en="Charcoal Grill Space: 30 m² (20 m² kitchen + 5 m² storage + 5 m² grill area)">
+            مساحة مشاوي على الفحم:  مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)
+        </li>
+        <li data-ar="مساحة تجهيز المعجنات والفطائر:  مطلوب مساحة 20م² لموقع التحضير والتجهيز" 
+            data-en="Pastry Preparation Space: 20 m² for preparation and setup area">
+            مساحة تجهيز المعجنات والفطائر:  مطلوب مساحة 20م² لموقع التحضير والتجهيز
+        </li>
+        <li data-ar="سوبر ماركت:  مساحة 60م² بدون ملحمة ومسمكة في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²" 
+            data-en="Supermarket: 60 m² without butcher or fish section; add 20 m² for butcher and 16 m² for fish section">
+            سوبر ماركت:  مطلوب مساحة 60م² بدون ملحمة ومسمكة في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²
+        </li>
+        <li data-ar="مساحة بيع المثلجات:  مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض" 
+            data-en="Ice Cream Selling Space: 15 m² for selling only; 50 m² for preparation, selling, and display">
+            مساحة بيع المثلجات:  مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض
+        </li>
+        <li data-ar="مساحة بيع الحلويات بالتجزئة: مطلوب مساحة 15م²" 
+            data-en="Retail Sweets Selling Space: 15 m²">
+            مساحة بيع الحلويات بالتجزئة:  مطلوب مساحة 15م²
+        </li>
+        <li data-ar="مساحة بيع الشوكولاتة بالتجزئة:  مطلوب مساحة 15م²" 
+            data-en="Retail Chocolate Selling Space: 15 m²">
+            مساحة بيع الشوكولاتة بالتجزئة مطلوب مساحة 15م²
+        </li>
+        <li data-ar="مساحة بيع البن بالتجزئة:  مطلوب مساحة 15م²" 
+            data-en="Retail Coffee Selling Space: 15 m²">
+            مساحة بيع البن بالتجزئة:  بالتجزئة مطلوب مساحة 15م²
+        </li>
+        <li data-ar="مساحة بيع التوابل والبهارات بالتجزئة:  مطلوب مساحة 15م²" 
+            data-en="Retail Spices Selling Space: 15 m²">
+            مساحة بيع التوابل والبهارات بالتجزئة:  مطلوب مساحة 15م²
+        </li>
+        <li data-ar="مساحة طحن و بيع البهارات:  مطلوب مساحة 40م²" 
+            data-en="Spices Grinding and Selling Space: 40 m²">
+            مساحة طحن و بيع البهارات:  مطلوب مساحة 40م²
+        </li>
+        <li data-ar="مساحة بقالة:  مطلوب مساحة 30 م²" 
+            data-en="Grocery Space: 30 m²">
+            مساحة بقالة:  مطلوب مساحة 30 م²
+        </li>
+        <li data-ar="مساحة بيع المواد الغذائية بالتجزئة:  مطلوب مساحة 20 متر مربع" 
+            data-en="Retail Food Selling Space: 20 m²">
+            مساحة بيع المواد الغذائية بالتجزئة:  مطلوب مساحة 20 متر مربع
+        </li>
+       <li data-ar="مساحة بيع المواد الغذائية بالجملة: مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية" 
+          data-en="Wholesale Food Selling Space: 70 m², and it must be in industrial areas">
+          مساحة بيع المواد الغذائية بالجملة: مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية
+        </li>
+
+        <li data-ar="مساحة تحضير وتجهيز الحلويات:  مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع 50 متر مربع" 
+            data-en="Sweets Preparation and Setup Space: 40 m² for kitchen and 10 m² for storage (total 50 m²)">
+            مساحة تحضير وتجهيز الحلويات: مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع 50 متر مربع
+        </li>
+
+        <li data-ar="مساحة مصانع الأغذية:  مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الانتاج المستخدمة" 
+            data-en="Food Factory Space: 200 m², depending on activity, equipment, and production lines used">
+            مساحة مصانع الأغذية:  مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الانتاج المستخدمة
+        </li>
+
+    </ul>
 </div>
 
 <div class="icon-section">
     <i class="fas fa-coins" onclick="toggleFees()"></i>
     <i class="fas fa-ruler-combined" onclick="toggleSpaces()"></i>
-    <a href="tel:+123456789"><i class="fas fa-phone-alt" style="color: #8b785a;"></i></a>
-    <a href="mailto:info@example.com"><i class="fas fa-envelope" style="color: #8b785a;"></i></a>
+    <a href="tel:971565338013"><i class="fas fa-phone-alt" style="color: #8b785a;"></i></a>
+<a href="mailto:Phls@shjmun.gov.ae"><i class="fas fa-envelope" style="color: #8b785a;"></i>
+</a>
 </div>
+
+
 <footer>
-    <p data-ar="جميع الحقوق محفوظة © 2024" data-en="All rights reserved © 2024">جميع الحقوق محفوظة © 2024</p>
+    <p data-ar="جميع الحقوق محفوظة لقسم الرقابة الغذائية © 2024" data-en="All rights reserved to the Food Control Department © 2024">
+        جميع الحقوق محفوظة لقسم الرقابة الغذائية © 2024
+    </p>
     <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        <a href="https://www.facebook.com/ShjMunicipality?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/shjmunicipality?igsh=ajhvam1rangyeDM1" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        <a href="https://youtube.com/@shjmun?si=g9Gdpy6U6LzML0BR" target="_blank"><i class="fab fa-youtube-square"></i></a>
+        <a href="https://www.linkedin.com/company/shjmunicipality" target="_blank"><i class="fab fa-linkedin"></i></a> <!-- أيقونة لينكد إن -->
+        <a href="https://www.snapchat.com/add/shjmunicipality" target="_blank"><i class="fab fa-snapchat-square"></i></a> <!-- أيقونة سناب شات -->
+        <a href="https://x.com/ShjMunicipality?s=08" target="_blank"><i class="fab fa-x"></i></a> <!-- أيقونة تويتر (X) -->
+    </div>
+ <div class="contact-info">
+        <a href="tel:993"><i class="fas fa-phone-alt"></i></a> <!-- أيقونة الهاتف كزر اتصال -->
+        <span id="contact-description" data-ar="مركز الاتصال للشكاوي والاستفسارات" data-en="Contact center for complaints and inquiries">
+            مركز الاتصال 993
+        </span>
     </div>
 </footer>
 <script>
 <script>
-    const licenseSteps = {
-        commercial: [
-            { ar: "التقدم بطلب للحصول على الترخيص التجاري.", en: "Apply for a commercial license." },
-            { ar: "اجتياز التفتيش الدوري للموقع.", en: "Pass the routine site inspection." }
-        ],
-        professional: [
-            { ar: "تقديم المستندات المطلوبة للتسجيل.", en: "Submit the required documents for registration." },
-            { ar: "اجتياز اختبار الامتثال المهني.", en: "Pass the professional compliance check." }
-        ],
-        industrial: [
-            { ar: "تقديم المستندات المطلوبة للترخيص الصناعي.", en: "Submit the required documents for an industrial license." },
-            { ar: "اجتياز التفتيش الصناعي للمنشأة.", en: "Pass the industrial facility inspection." }
-        ]
-    };
 
-    const activityRequirements = {
-        restaurant: [
-            { ar: "يجب توفير معدات السلامة الغذائية.", en: "Must provide food safety equipment." },
-            { ar: "توفير مساحات مناسبة لتناول الطعام.", en: "Provide suitable dining areas." }
-        ],
-        cafeteria: [
-            { ar: "الالتزام بمعايير النظافة.", en: "Adherence to hygiene standards." },
-            { ar: "تقديم قوائم تحتوي على معلومات غذائية.", en: "Provide menus with nutritional information." }
-        ]
-        // أضف اشتراطات أخرى إذا لزم الأمر
-    };
 
-    function getLicenseType(activity) {
-        switch (activity) {
-            case 'restaurant':
-            case 'cafeteria':
-            case 'grocery':
-            case 'supermarket':
-            case 'food_sales':
-                return 'commercial';
-            case 'butcher':
-            case 'fishery':
-                return 'professional';
-            case 'factory':
-                return 'industrial';
-            default:
-                return 'commercial';
-        }
-    }
 
 function showSteps() {
     const activity = document.getElementById("activity").value;
@@ -484,10 +805,7 @@ function showSteps() {
 
 
 </script>
-
-  
-
-
+ 
 <script>
         function toggleDescription(serviceId) {
             const description = document.getElementById(serviceId);
