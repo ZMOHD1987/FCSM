@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دليل تراخيص المنشآت الغذائية</title>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
- </head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -32,22 +31,22 @@
             position: relative;
         }
 
-   header {
-        background-color: #2e8b57; /* اللون الأخضر للرأس */
-        color: white;
-        padding: 8px 8px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        text-align: center;
-        position: relative;
-         margin-top: 100px; /* مسافة بين رأس الصفحة وبقية المحتوى */
-    }
+        header {
+            background-color: #2e8b57;
+            color: white;
+            padding: 8px 8px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+            position: relative;
+            margin-top: 100px;
+        }
 
-    #pageTitle {
-        margin: 0;
-        font-size: 1rem;
-        padding-top: 20px; /* مسافة إضافية أسفل الشعار */
-    }
+        #pageTitle {
+            margin: 0;
+            font-size: 1rem;
+            padding-top: 20px;
+        }
 
         .section-title {
             font-size: 1.2rem;
@@ -108,31 +107,22 @@
         .icon-section i:hover {
             color: #6b5e40;
         }
-    footer {
-      background-color: rgb(213, 201, 155) !important;
-        color: BLACK;
-        text-align: center;
-        padding: 10px;
-        margin-top: 30px;
-        border-radius: 8px;
-        font-size: 0.8rem;
-    }
 
-    .social-icons {
-        margin-top: 10px;
-    }
+        footer {
+            background-color: rgb(213, 201, 155) !important;
+            color: BLACK;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+        }
 
-    .social-icons i {
-        font-size: 1.2rem;
-        margin: 0 10px;
-        transition: color 0.3s;
-        color: #8b785a;
-    }
+        .social-icons {
+            margin-top: 10px;
+        }
 
-    .social-icons i:hover {
-        color: #6b5e40;
-    }
-       .social-icons i {
+        .social-icons i {
             font-size: 1.2rem;
             margin: 0 10px;
             transition: color 0.3s;
@@ -141,7 +131,9 @@
 
         .social-icons i:hover {
             color: #6b5e40;
-        }        .fees-and-spaces {
+        }
+
+        .fees-and-spaces {
             margin-top: 20px;
             padding: 15px;
             background-color: #f9f8f7;
@@ -157,110 +149,91 @@
             text-align: center;
         }
 
-      .language-toggle {
-        position: absolute;
-        top: 10px; /* وضع الزر أعلى الرأس */
-        right: 20px;
-        text-align: center;
-        z-index: 1;
-    }
+        .language-toggle button {
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #2e8b57;
+            color: white;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+        }
 
-    .language-toggle button {
-        padding: 5px 10px; /* تصغير حجم الزر */
-        font-size: 0.9rem; /* حجم الخط أصغر */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: #2e8b57; /* نفس لون رأس الصفحة */
-        color: white;
-        transition: background-color 0.3s;
-        display: flex;
-        align-items: center;
-    }
+        .language-toggle button i {
+            margin-left: 5px;
+        }
 
-    /* إعدادات الأيقونة داخل زر تغيير اللغة */
-    .language-toggle button i {
-        margin-left: 5px;
-    }
+        .logo-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: left;
+            margin-top: 8px;
+            margin-left: 10px;
+            padding: 1px 2px;
+            z-index: 999;
+        }
 
+        .logo {
+            width: 100%;
+            height: auto;
+            max-width: 120px;  /* تعديل الحد الأقصى للعرض */
+            max-height: 60px;  /* تعديل الحد الأقصى للارتفاع */
+            margin-bottom: 10px;
+        }
 
-/* تنسيق القسم الذي يحتوي على الشعار والعنوان */
-/* تنسيق قسم الشعار */
-.logo-section {
-    position: absolute;  /* تحديد الموقع بالنسبة للصفحة */
-    top: 0;              /* تحديد المسافة من الأعلى */
-    left: 0;             /* تحديد المسافة من اليسار */
-    text-align: left;    /* محاذاة الشعار والعنوان إلى اليسار */
-    margin-top: 8px;     /* تقليل المسافة من الأعلى */
-    margin-left: 10px;   /* إضافة مسافة من اليسار */
-    padding: 1px 2px;
-    z-index: 999;        /* التأكد من أن الشعار فوق أي محتوى آخر */
-}
-
-/* تنسيق الشعار */
-.logo {
-    width: 100%;         /* العرض يتكيف حسب الحاوية الأم */
-    height: auto;        /* الحفاظ على نسبة الارتفاع والعرض */
-    max-width: 150px;    /* تحديد الحد الأقصى للعرض */
-    max-height: 80px;    /* تحديد الحد الأقصى للارتفاع */
-    margin-bottom: 10px; /* مسافة بين الشعار والعنوان */
-}
-
-</style>
+        .services-section {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f9f8f7;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
     </style>
-       <script>
+    <script>
         function toggleDescription(serviceId) {
             const description = document.getElementById(serviceId);
             description.style.display = description.style.display === 'none' || description.style.display === '' ? 'block' : 'none';
         }
-// دالة لتغيير اللغة بين العربية والإنجليزية
-function switchLanguage(lang) {
-    // ضبط اللغة في عنصر الـ HTML الرئيسي
-    document.documentElement.setAttribute('lang', lang);
-    
-    // ضبط اتجاه الصفحة بناءً على اللغة
-    document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
 
-    // تغيير المحاذاة لجميع الأقسام الأساسية في الصفحة
-    document.querySelectorAll('.section-title, .section-content,.activity-selection, .fees-and-spaces, .icon-section, #stepsContent').forEach(element => {
-        element.style.textAlign = lang === 'ar' ? 'right' : 'left';
-    });
+        function switchLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang);
+            document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
 
-    // تحديث النصوص باستخدام data-ar و data-en لجميع العناصر القابلة للتغيير
-    document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
-        element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-    });
+            document.querySelectorAll('.section-title, .section-content, .activity-selection, .fees-and-spaces, .icon-section, #stepsContent').forEach(element => {
+                element.style.textAlign = lang === 'ar' ? 'right' : 'left';
+            });
 
-    // تحديث محتويات الخيارات في القائمة المنسدلة
-    document.querySelectorAll('#activity option').forEach(option => {
-        option.textContent = lang === 'ar' ? option.getAttribute('data-ar') : option.getAttribute('data-en');
-    });
+            document.querySelectorAll('[data-ar][data-en]').forEach(function(element) {
+                element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+            });
 
-    // إعادة تحميل محتوى الأقسام الديناميكية مثل الاشتراطات والخطوات باللغة المطلوبة
-    showSteps(); // تأكد من عرض المحتوى باللغة الحالية عند تغيير النشاط
-}
+            document.querySelectorAll('#activity option').forEach(option => {
+                option.textContent = lang === 'ar' ? option.getAttribute('data-ar') : option.getAttribute('data-en');
+            });
 
+            showSteps();
+        }
 
-// دالة لتبديل اللغة عند الضغط على الزر
-function toggleLanguage() {
-    const currentLang = document.documentElement.getAttribute('lang');
-    const newLang = currentLang === 'ar' ? 'en' : 'ar';
-    switchLanguage(newLang);
-}
+        function toggleLanguage() {
+            const currentLang = document.documentElement.getAttribute('lang');
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            switchLanguage(newLang);
+        }
 
-// تحميل اللغة الافتراضية عند تحميل الصفحة
-document.addEventListener("DOMContentLoaded", function() {
-    switchLanguage('ar'); // اللغة الافتراضية العربية
-});
-</script>
+        document.addEventListener("DOMContentLoaded", function() {
+            switchLanguage('ar');
+        });
+    </script>
 </head>
 <body>
 <div class="container">
-    <!-- قسم لعرض الشعار والعنوان في أعلى يسار الصفحة -->
-<div class="logo-section">
-   <img src='https://zmohd1987.github.io/FCSM/ShjLogo.png' alt='شعار بلدية مدينة الشارقة'>
-</div>
-    <!-- قسم لتبديل اللغة -->
+    <div class="logo-section">
+        <img src='https://zmohd1987.github.io/FCSM/ShjLogo.png' alt='شعار بلدية مدينة الشارقة' class="logo">
+    </div>
     <div class="language-toggle">
         <button onclick="toggleLanguage()">
             <i class="fas fa-language"></i>
@@ -268,12 +241,10 @@ document.addEventListener("DOMContentLoaded", function() {
         </button>
     </div>
 
-    <!-- رأس الصفحة (header) -->
     <header>
         <h1 id="pageTitle" data-ar="دليل تراخيص المنشآت الغذائية" data-en="Food Establishment Licensing Guide">دليل تراخيص المنشآت الغذائية</h1>
     </header>
 
-    <!-- بقية الأقسام -->
     <div class="section-title" onclick="toggleSection('introSection')" data-ar="مقدمة" data-en="Introduction">مقدمة</div>
     <div id="introSection" class="section-content">
         <p data-ar="هذه الصفحة تقدم دليلًا لإجراءات تراخيص المنشآت الغذائية." data-en="This page provides a guide to the licensing procedures for food establishments.">
@@ -316,8 +287,14 @@ document.addEventListener("DOMContentLoaded", function() {
         </p>
     </div>
 
-  
-
+    <!-- قسم الخدمات الجديد -->
+    <div class="services-section">
+        <div class="section-title" onclick="toggleSection('servicesSection')" data-ar="الخدمات" data-en="Services">الخدمات</div>
+        <div id="servicesSection" class="section-content">
+            <p data-ar="يقدم هذا القسم معلومات حول الخدمات المتاحة للمنشآت الغذائية." data-en="This section provides information about the services available for food establishments.">
+                يقدم هذا القسم معلومات حول الخدمات المتاحة للمنشآت الغذائية.
+            </p>
+        </div>
 
  <div class="activity-selection">
     <label for="activity" data-ar="اختر النشاط:" data-en="Choose Activity:">اختر النشاط:</label>
