@@ -118,6 +118,12 @@
             font-size: 0.8rem;
         }
 
+        .key {
+            color: green; /* لون مفتاح */
+            font-weight: bold;
+            display: block; /* يجعل المفتاح في سطر منفصل */
+        }
+
         .social-icons {
             margin-top: 10px;
         }
@@ -132,16 +138,14 @@
         .social-icons i:hover {
             color: #6b5e40;
         }
-
         .fees-and-spaces {
             margin-top: 20px;
             padding: 15px;
-            background-color: #f9f8f7;
+            background-color: #f9f8f7; /* لون خلفية فاتح */
             border-radius: 8px;
             border: 1px solid #ddd;
-            display: none;
+            display: none; /* تبدأ المخفية */
         }
-
         .language-toggle {
             position: absolute;
             top: 20px;
@@ -389,15 +393,16 @@ function applyForService(serviceAr, serviceEn) {
     const lang = document.documentElement.lang || "ar";
     const service = lang === "ar" ? serviceAr : serviceEn;
     const message = lang === "ar"
-        ? "يجب إرسال المستندات بصيغة PDF كملف واحد عالي الجودة."
+        ? "يجب إرسال المستندات بصيغة بي دي اف كملف واحد عالي الجودة."
         : "Documents must be sent as a single high-quality PDF file.";
 
-    alert(message + " " + "البريد الإلكتروني: phls.shjmun.gov.ae");
-    window.location.href = `mailto:phls.shjmun.gov.ae?subject=${lang === "ar" ? "التقديم على خدمة " + service : "Application for Service: " + service}&body=${message}`;
+    // بناء رابط البريد الإلكتروني مع الموضوع والنص
+    const mailtoLink = `mailto:phls.shjmun.gov.ae?subject=${lang === "ar" ? "التقديم على خدمة " + service : "Application for Service: " + service}&body=${message}`;
+    
+    // فتح تطبيق البريد الإلكتروني
+    window.location.href = mailtoLink;
 }
 </script>
-
-
 
 
 
@@ -422,92 +427,91 @@ function applyForService(serviceAr, serviceEn) {
 <div id="stepsContent"></div> <!-- سيتم عرض محتوى الخطوات هنا -->
 
 <script>
-  const licenseSteps = {
-    commercial: [
-        { 
-            ar: "استخراج الاسم التجاري: مراجعة دائرة التنمية الاقتصادية واستخراج الاسم التجاري.", 
-            en: "Trade Name Extraction: Review the Department of Economic Development and obtain the trade name." 
-        },
-        { 
-            ar: "التفتيش علي المنشآه: بعد حجز موعد للتفتيش، يقوم مفتش لجنة التراخيص بالتواصل مع صاحب المنشأة لتحديد موعد الزيارة، بحضور صاحب المنشأة أو من ينوب عنه، يتم في هذه الزيارة معاينة المنشأة المراد ترخيصها ميدانيًا من قبل مفتش لجنة التراخيص.", 
-            en: "Facility Inspection: After booking an inspection appointment, a licensing committee inspector contacts the facility owner to schedule a visit, with the presence of the facility owner or a representative. During this visit, the licensing committee inspector conducts an on-site inspection of the facility for licensing purposes." 
-        },
-        { 
-            ar: "رسم مخطط مفصل للمنشأة : في حال استيفاء المنشأة للاشتراطات الصحية بما يتعلق بالمساحة والموقع، يتم رسم مخطط توضيحي لاقسام المنشأة الداخلية وجميع التجهيزات والمعدات والأدوات اللازمة لممارسة النشاط.", 
-            en: "Facility Layout Drawing: If the facility meets health requirements regarding space and location, a detailed layout is prepared, outlining internal facility sections and all necessary equipment, tools, and setups for business operations." 
-        },
-        { 
-            ar: "التوقيع علي تعهد: يتم توقيع صاحب المنشأة أو من ينوب عنه قانونيًا على تعهد يتضمن: 1- الالتزام بالمخطط المعتمد. 2- في حالة التغيير، مراجعة القسم قبل التنفيذ. 3- مراجعة جهات الاختصاص كما موضح بالموافقة. 4- عدم ممارسة النشاط إلا بعد المراجعة النهائية.", 
-            en: "Signing a Commitment: The facility owner or legal representative signs a commitment that includes: 1- Adherence to the approved layout. 2- Consulting the department before making any changes. 3- Reviewing relevant authorities as outlined in the approval. 4- Not commencing business activity until after the final inspection." 
-        },
-        { 
-            ar: "إصدار الموافقة النهائية: بعد استيفاء المتطلبات الضرورية لترخيص المنشأة، يتم إصدار الموافقة النهائية وتحديد جهات الاختصاص الأخرى المعنية. يُجرى استعراض شامل لجميع المستندات والإيصالات المتعلقة بدفع رسوم المعاينات المبدئية والنهائية كجزء من العملية.", 
-            en: "Final Approval Issuance: After all requirements for facility licensing are met, the final approval is issued, identifying other relevant authorities. A thorough review of all documents and receipts related to the initial and final inspection fees is conducted as part of the process." 
-        },
-        { 
-            ar: "إلغاء التعهد: بعد الانتهاء من التجهيزات بالمنشأة ومراجعة جميع جهات الاختصاص المعنية، يتم طلب معاينة على المنشأة. يتم فيها الكشف النهائي على المنشأة، وفي حالة الاستيفاء للشروط يتم إلغاء التعهد واعتماد المخطط وتحرير شهادة التقييم الغذائي للمنشأة، أما في حالة عدم الاستيفاء، يقوم مسؤول المنشأة بإنهاء النواقص وطلب معاينة مرة أخرى.", 
-            en: "Commitment Revocation: After completing the facility's preparations and reviewing all relevant authorities, a final inspection is requested. During this inspection, the facility undergoes a final review. If requirements are met, the commitment is revoked, the layout is approved, and the food evaluation certificate is issued for the facility. If requirements are not met, the facility manager addresses the deficiencies and requests another inspection." 
-        }
-    ],
-
-    professional: [
-        { 
-            ar: "استخراج الاسم التجاري: مراجعة دائرة التنمية الاقتصادية واستخراج الاسم التجاري.", 
-            en: "Trade Name Extraction: Review the Department of Economic Development and obtain the trade name." 
-        },
-        { 
-            ar: "التفتيش علي المنشآه: بعد حجز موعد للتفتيش، يقوم مفتش لجنة التراخيص بالتواصل مع صاحب المنشأة لتحديد موعد الزيارة، بحضور صاحب المنشأة أو من ينوب عنه، يتم في هذه الزيارة معاينة المنشأة المراد ترخيصها ميدانيًا من قبل مفتش لجنة التراخيص.", 
-            en: "Facility Inspection: After booking an inspection appointment, a licensing committee inspector contacts the facility owner to schedule a visit, with the presence of the facility owner or a representative. During this visit, the licensing committee inspector conducts an on-site inspection of the facility for licensing purposes." 
-        },
-        { 
-            ar: "رسم مخطط مفصل للمنشأة : في حال استيفاء المنشأة للاشتراطات الصحية بما يتعلق بالمساحة والموقع، يتم رسم مخطط توضيحي لاقسام المنشأة الداخلية وجميع التجهيزات والمعدات والأدوات اللازمة لممارسة النشاط.", 
-            en: "Facility Layout Drawing: If the facility meets health requirements regarding space and location, a detailed layout is prepared, outlining internal facility sections and all necessary equipment, tools, and setups for business operations." 
-        },
-        { 
-            ar: "التوقيع علي تعهد: يتم توقيع صاحب المنشأة أو من ينوب عنه قانونيًا على تعهد يتضمن: 1- الالتزام بالمخطط المعتمد. 2- في حالة التغيير، مراجعة القسم قبل التنفيذ. 3- مراجعة جهات الاختصاص كما موضح بالموافقة. 4- عدم ممارسة النشاط إلا بعد المراجعة النهائية.", 
-            en: "Signing a Commitment: The facility owner or legal representative signs a commitment that includes: 1- Adherence to the approved layout. 2- Consulting the department before making any changes. 3- Reviewing relevant authorities as outlined in the approval. 4- Not commencing business activity until after the final inspection." 
-        },
-        { 
-            ar: "إصدار الموافقة النهائية: بعد استيفاء المتطلبات الضرورية لترخيص المنشأة، يتم إصدار الموافقة النهائية وتحديد جهات الاختصاص الأخرى المعنية. يُجرى استعراض شامل لجميع المستندات والإيصالات المتعلقة بدفع رسوم المعاينات المبدئية والنهائية كجزء من العملية.", 
-            en: "Final Approval Issuance: After all requirements for facility licensing are met, the final approval is issued, identifying other relevant authorities. A thorough review of all documents and receipts related to the initial and final inspection fees is conducted as part of the process." 
-        },
-        { 
-            ar: "إلغاء التعهد: بعد الانتهاء من التجهيزات بالمنشأة ومراجعة جميع جهات الاختصاص المعنية، يتم طلب معاينة على المنشأة. يتم فيها الكشف النهائي على المنشأة، وفي حالة الاستيفاء للشروط يتم إلغاء التعهد واعتماد المخطط وتحرير شهادة التقييم الغذائي للمنشأة، أما في حالة عدم الاستيفاء، يقوم مسؤول المنشأة بإنهاء النواقص وطلب معاينة مرة أخرى.", 
-            en: "Commitment Revocation: After completing the facility's preparations and reviewing all relevant authorities, a final inspection is requested. During this inspection, the facility undergoes a final review. If requirements are met, the commitment is revoked, the layout is approved, and the food evaluation certificate is issued for the facility. If requirements are not met, the facility manager addresses the deficiencies and requests another inspection." 
-        }
-    ],
-
-
-    industrial: [
-        { 
-            ar: "استخراج الاسم التجاري: مراجعة دائرة التنمية الاقتصادية واستخراج الاسم التجاري.", 
-            en: "Trade Name Extraction: Review the Department of Economic Development and obtain the trade name." 
-        },
-        { 
-            ar: "التفتيش علي المنشآه: بعد حجز موعد للتفتيش، يقوم مفتش لجنة التراخيص بالتواصل مع صاحب المنشأة لتحديد موعد الزيارة، بحضور صاحب المنشأة أو من ينوب عنه، يتم في هذه الزيارة معاينة المنشأة المراد ترخيصها ميدانيًا من قبل مفتش لجنة التراخيص.", 
-            en: "Facility Inspection: After booking an inspection appointment, a licensing committee inspector contacts the facility owner to schedule a visit, with the presence of the facility owner or a representative. During this visit, the licensing committee inspector conducts an on-site inspection of the facility for licensing purposes." 
-        },
-        { 
-            ar: "رسم مخطط مفصل للمنشأة من شركة استشارية معتمدة: في حال استيفاء المنشأة للاشتراطات الصحية بما يتعلق بالمساحة والموقع، يتم رسم مخطط توضيحي للمنشأة من قبل شركة استشارية معتمدة من بلدية مدينة الشارقة. يتضمن المخطط التوضيحي تقسيمات المنشأة الداخلية وخطوط الإنتاج وجميع التجهيزات والمعدات والأدوات اللازمة لممارسة النشاط.", 
-            en: "Detailed Facility Layout from an Accredited Consulting Firm: If the facility meets the health requirements regarding space and location, a detailed layout of the facility is prepared by an accredited consulting firm approved by the Sharjah Municipality. The layout includes the internal divisions of the facility, production lines, and all necessary equipment and tools for operational activities." 
-        },
-        { 
-            ar: "مناقشة واعتماد المخطط المقترح مع لجنة التراخيص: يتم مناقشة المخطط من الناحية الصحية وتسلسل العملية التصنيعية. في حال استيفاء المخطط للاشتراطات الصحية، يتم اعتماد المخطط المبدئي وتوجيه لتنفيذه بالإضافة إلى مراجعة جهات الاختصاص الأخرى. أما في حال عدم الاستيفاء، يُطلب من الاستشاري تعديل المخطط المقترح لتلبية المعايير الصحية المطلوبة.", 
-            en: "Discuss and Approve the Proposed Layout with the Licensing Committee: The layout is reviewed in terms of health and manufacturing process sequence. If the layout meets health requirements, preliminary approval is granted for implementation, along with a review by other concerned authorities. If requirements are not met, the consultant is asked to modify the proposed layout to meet the necessary health standards." 
-        },
-        { 
-            ar: "التوقيع علي تعهد: يتم توقيع صاحب المنشأة أو من ينوب عنه قانونيًا على تعهد يتضمن: 1- الالتزام بالمخطط المعتمد. 2- في حالة التغيير، مراجعة القسم قبل التنفيذ. 3- مراجعة جهات الاختصاص كما موضح بالموافقة. 4- عدم ممارسة النشاط إلا بعد المراجعة النهائية.", 
-            en: "Signing a Commitment: The facility owner or legal representative signs a commitment that includes: 1- Adhering to the approved layout. 2- Consulting the department before any changes. 3- Reviewing relevant authorities as stated in the approval. 4- Not commencing activities until final inspection approval." 
-        },
-        { 
-            ar: "إصدار الموافقة النهائية: بعد استيفاء المتطلبات الضرورية لترخيص المنشأة، يتم إصدار الموافقة النهائية وتحديد جهات الاختصاص الأخرى المعنية. يُجرى استعراض شامل لجميع المستندات والإيصالات المتعلقة بدفع رسوم المعاينات المبدئية والنهائية كجزء من العملية.", 
-            en: "Final Approval Issuance: After meeting all necessary requirements for facility licensing, the final approval is issued, along with identifying other relevant authorities. A comprehensive review of all documents and receipts for initial and final inspection fees is conducted as part of the process." 
-        },
-        { 
-            ar: "إلغاء التعهد: بعد الانتهاء من التجهيزات بالمنشأة ومراجعة جميع جهات الاختصاص المعنية، يتم طلب معاينة على المنشأة. يتم فيها الكشف النهائي على المنشأة، وفي حالة الاستيفاء للشروط يتم إلغاء التعهد واعتماد المخطط وتحرير شهادة التقييم الغذائي للمنشأة، أما في حالة عدم الاستيفاء، يقوم مسؤول المنشأة بإنهاء النواقص وطلب معاينة مرة أخرى.", 
-            en: "Commitment Revocation: After completing the facility's preparations and reviewing all relevant authorities, a final inspection is requested. During this inspection, the facility undergoes a final review, and if it meets the requirements, the commitment is revoked, the layout is approved, and the food evaluation certificate is issued for the facility. If requirements are not met, the facility manager addresses the deficiencies and requests another inspection." 
-        }
-    ]};
+const licenseSteps = {
+  commercial: [
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>استخراج الاسم التجاري:</span> مراجعة دائرة التنمية الاقتصادية واستخراج الاسم التجاري.", 
+      en: "<span style='color: green; font-weight: bold;'>Trade Name Extraction:</span> Review the Department of Economic Development and obtain the trade name." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>التفتيش علي المنشآه:</span> بعد حجز موعد للتفتيش، يقوم مفتش لجنة التراخيص بالتواصل مع صاحب المنشأة لتحديد موعد الزيارة، بحضور صاحب المنشأة أو من ينوب عنه، يتم في هذه الزيارة معاينة المنشأة المراد ترخيصها ميدانيًا من قبل مفتش لجنة التراخيص.", 
+      en: "<span style='color: green; font-weight: bold;'>Facility Inspection:</span> After booking an inspection appointment, a licensing committee inspector contacts the facility owner to schedule a visit, with the presence of the facility owner or a representative. During this visit, the licensing committee inspector conducts an on-site inspection of the facility for licensing purposes." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>رسم مخطط مفصل للمنشأة:</span> في حال استيفاء المنشأة للاشتراطات الصحية بما يتعلق بالمساحة والموقع، يتم رسم مخطط توضيحي لاقسام المنشأة الداخلية وجميع التجهيزات والمعدات والأدوات اللازمة لممارسة النشاط.", 
+      en: "<span style='color: green; font-weight: bold;'>Facility Layout Drawing:</span> If the facility meets health requirements regarding space and location, a detailed layout is prepared, outlining internal facility sections and all necessary equipment, tools, and setups for business operations." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>التوقيع علي تعهد:</span> يتم توقيع صاحب المنشأة أو من ينوب عنه قانونيًا على تعهد يتضمن: 1- الالتزام بالمخطط المعتمد. 2- في حالة التغيير، مراجعة القسم قبل التنفيذ. 3- مراجعة جهات الاختصاص كما موضح بالموافقة. 4- عدم ممارسة النشاط إلا بعد المراجعة النهائية.", 
+      en: "<span style='color: green; font-weight: bold;'>Signing a Commitment:</span> The facility owner or legal representative signs a commitment that includes: 1- Adherence to the approved layout. 2- Consulting the department before making any changes. 3- Reviewing relevant authorities as outlined in the approval. 4- Not commencing business activity until after the final inspection." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>إصدار الموافقة النهائية:</span> بعد استيفاء المتطلبات الضرورية لترخيص المنشأة، يتم إصدار الموافقة النهائية وتحديد جهات الاختصاص الأخرى المعنية. يُجرى استعراض شامل لجميع المستندات والإيصالات المتعلقة بدفع رسوم المعاينات المبدئية والنهائية كجزء من العملية.", 
+      en: "<span style='color: green; font-weight: bold;'>Final Approval Issuance:</span> After all requirements for facility licensing are met, the final approval is issued, identifying other relevant authorities. A thorough review of all documents and receipts related to the initial and final inspection fees is conducted as part of the process." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>إلغاء التعهد:</span> بعد الانتهاء من التجهيزات بالمنشأة ومراجعة جميع جهات الاختصاص المعنية، يتم طلب معاينة على المنشأة. يتم فيها الكشف النهائي على المنشأة، وفي حالة الاستيفاء للشروط يتم إلغاء التعهد واعتماد المخطط وتحرير شهادة التقييم الغذائي للمنشأة، أما في حالة عدم الاستيفاء، يقوم مسؤول المنشأة بإنهاء النواقص وطلب معاينة مرة أخرى.", 
+      en: "<span style='color: green; font-weight: bold;'>Commitment Revocation:</span> After completing the facility's preparations and reviewing all relevant authorities, a final inspection is requested. During this inspection, the facility undergoes a final review. If requirements are met, the commitment is revoked, the layout is approved, and the food evaluation certificate is issued for the facility. If requirements are not met, the facility manager addresses the deficiencies and requests another inspection." 
+    }
+  ],
+  
+  professional: [
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>استخراج الاسم التجاري:</span> مراجعة دائرة التنمية الاقتصادية واستخراج الاسم التجاري.", 
+      en: "<span style='color: green; font-weight: bold;'>Trade Name Extraction:</span> Review the Department of Economic Development and obtain the trade name." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>التفتيش علي المنشآه:</span> بعد حجز موعد للتفتيش، يقوم مفتش لجنة التراخيص بالتواصل مع صاحب المنشأة لتحديد موعد الزيارة، بحضور صاحب المنشأة أو من ينوب عنه، يتم في هذه الزيارة معاينة المنشأة المراد ترخيصها ميدانيًا من قبل مفتش لجنة التراخيص.", 
+      en: "<span style='color: green; font-weight: bold;'>Facility Inspection:</span> After booking an inspection appointment, a licensing committee inspector contacts the facility owner to schedule a visit, with the presence of the facility owner or a representative. During this visit, the licensing committee inspector conducts an on-site inspection of the facility for licensing purposes." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>رسم مخطط مفصل للمنشأة:</span> في حال استيفاء المنشأة للاشتراطات الصحية بما يتعلق بالمساحة والموقع، يتم رسم مخطط توضيحي لاقسام المنشأة الداخلية وجميع التجهيزات والمعدات والأدوات اللازمة لممارسة النشاط.", 
+      en: "<span style='color: green; font-weight: bold;'>Facility Layout Drawing:</span> If the facility meets health requirements regarding space and location, a detailed layout is prepared, outlining internal facility sections and all necessary equipment, tools, and setups for business operations." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>التوقيع علي تعهد:</span> يتم توقيع صاحب المنشأة أو من ينوب عنه قانونيًا على تعهد يتضمن: 1- الالتزام بالمخطط المعتمد. 2- في حالة التغيير، مراجعة القسم قبل التنفيذ. 3- مراجعة جهات الاختصاص كما موضح بالموافقة. 4- عدم ممارسة النشاط إلا بعد المراجعة النهائية.", 
+      en: "<span style='color: green; font-weight: bold;'>Signing a Commitment:</span> The facility owner or legal representative signs a commitment that includes: 1- Adherence to the approved layout. 2- Consulting the department before making any changes. 3- Reviewing relevant authorities as outlined in the approval. 4- Not commencing business activity until after the final inspection." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>إصدار الموافقة النهائية:</span> بعد استيفاء المتطلبات الضرورية لترخيص المنشأة، يتم إصدار الموافقة النهائية وتحديد جهات الاختصاص الأخرى المعنية. يُجرى استعراض شامل لجميع المستندات والإيصالات المتعلقة بدفع رسوم المعاينات المبدئية والنهائية كجزء من العملية.", 
+      en: "<span style='color: green; font-weight: bold;'>Final Approval Issuance:</span> After all requirements for facility licensing are met, the final approval is issued, identifying other relevant authorities. A thorough review of all documents and receipts related to the initial and final inspection fees is conducted as part of the process." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>إلغاء التعهد:</span> بعد الانتهاء من التجهيزات بالمنشأة ومراجعة جميع جهات الاختصاص المعنية، يتم طلب معاينة على المنشأة. يتم فيها الكشف النهائي على المنشأة، وفي حالة الاستيفاء للشروط يتم إلغاء التعهد واعتماد المخطط وتحرير شهادة التقييم الغذائي للمنشأة، أما في حالة عدم الاستيفاء، يقوم مسؤول المنشأة بإنهاء النواقص وطلب معاينة مرة أخرى.", 
+      en: "<span style='color: green; font-weight: bold;'>Commitment Revocation:</span> After completing the facility's preparations and reviewing all relevant authorities, a final inspection is requested. During this inspection, the facility undergoes a final review. If requirements are met, the commitment is revoked, the layout is approved, and the food evaluation certificate is issued for the facility. If requirements are not met, the facility manager addresses the deficiencies and requests another inspection." 
+    }
+  ],
+  industrial: [
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>استخراج الاسم التجاري:</span> مراجعة دائرة التنمية الاقتصادية واستخراج الاسم التجاري.", 
+      en: "<span style='color: green; font-weight: bold;'>Trade Name Extraction:</span> Review the Department of Economic Development and obtain the trade name." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>التفتيش علي المنشآه:</span> بعد حجز موعد للتفتيش، يقوم مفتش لجنة التراخيص بالتواصل مع صاحب المنشأة لتحديد موعد الزيارة، بحضور صاحب المنشأة أو من ينوب عنه، يتم في هذه الزيارة معاينة المنشأة المراد ترخيصها ميدانيًا من قبل مفتش لجنة التراخيص.", 
+      en: "<span style='color: green; font-weight: bold;'>Facility Inspection:</span> After booking an inspection appointment, a licensing committee inspector contacts the facility owner to schedule a visit, with the presence of the facility owner or a representative. During this visit, the licensing committee inspector conducts an on-site inspection of the facility for licensing purposes." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>رسم مخطط مفصل للمنشأة من شركة استشارية معتمدة:</span> في حال استيفاء المنشأة للاشتراطات الصحية بما يتعلق بالمساحة والموقع، يتم رسم مخطط توضيحي للمنشأة من قبل شركة استشارية معتمدة من بلدية مدينة الشارقة. يتضمن المخطط التوضيحي تقسيمات المنشأة الداخلية وخطوط الإنتاج وجميع التجهيزات والمعدات والأدوات اللازمة لممارسة النشاط.", 
+      en: "<span style='color: green; font-weight: bold;'>Detailed Facility Layout from an Accredited Consulting Firm:</span> If the facility meets the health requirements regarding space and location, a detailed layout of the facility is prepared by an accredited consulting firm approved by the Sharjah Municipality. The layout includes the internal divisions of the facility, production lines, and all necessary equipment and tools for operational activities." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>مناقشة واعتماد المخطط المقترح مع لجنة التراخيص:</span> يتم مناقشة المخطط من الناحية الصحية وتسلسل العملية التصنيعية. في حال استيفاء المخطط للاشتراطات الصحية، يتم اعتماد المخطط المبدئي وتوجيه لتنفيذه بالإضافة إلى مراجعة جهات الاختصاص الأخرى. أما في حال عدم الاستيفاء، يُطلب من الاستشاري تعديل المخطط المقترح لتلبية المعايير الصحية المطلوبة.", 
+      en: "<span style='color: green; font-weight: bold;'>Discuss and Approve the Proposed Layout with the Licensing Committee:</span> The layout is reviewed in terms of health and manufacturing process sequence. If the layout meets health requirements, preliminary approval is granted for implementation, along with a review by other concerned authorities. If requirements are not met, the consultant is asked to modify the proposed layout to meet the necessary health standards." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>التوقيع علي تعهد:</span> يتم توقيع صاحب المنشأة أو من ينوب عنه قانونيًا على تعهد يتضمن: 1- الالتزام بالمخطط المعتمد. 2- في حالة التغيير، مراجعة القسم قبل التنفيذ. 3- مراجعة جهات الاختصاص كما موضح بالموافقة. 4- عدم ممارسة النشاط إلا بعد المراجعة النهائية.", 
+      en: "<span style='color: green; font-weight: bold;'>Signing a Commitment:</span> The facility owner or legal representative signs a commitment that includes: 1- Adhering to the approved layout. 2- Consulting the department before any changes. 3- Reviewing relevant authorities as stated in the approval. 4- Not commencing activities until final inspection approval." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>إصدار الموافقة النهائية:</span> بعد استيفاء المتطلبات الضرورية لترخيص المنشأة، يتم إصدار الموافقة النهائية وتحديد جهات الاختصاص الأخرى المعنية. يُجرى استعراض شامل لجميع المستندات والإيصالات المتعلقة بدفع رسوم المعاينات المبدئية والنهائية كجزء من العملية.", 
+      en: "<span style='color: green; font-weight: bold;'>Final Approval Issuance:</span> After meeting all necessary requirements for facility licensing, the final approval is issued, along with identifying other relevant authorities. A comprehensive review of all documents and receipts for initial and final inspection fees is conducted as part of the process." 
+    },
+    { 
+      ar: "<span style='color: green; font-weight: bold;'>إلغاء التعهد:</span> بعد الانتهاء من التجهيزات بالمنشأة ومراجعة جميع جهات الاختصاص المعنية، يتم طلب معاينة على المنشأة. يتم فيها الكشف النهائي على المنشأة، وفي حالة الاستيفاء للشروط يتم إلغاء التعهد واعتماد المخطط وتحرير شهادة التقييم الغذائي للمنشأة، أما في حالة عدم الاستيفاء، يقوم مسؤول المنشأة بإنهاء النواقص وطلب معاينة مرة أخرى.", 
+      en: "<span style='color: green; font-weight: bold;'>Commitment Revocation:</span> After completing the facility's preparations and reviewing all relevant authorities, a final inspection is requested. During this inspection, the facility undergoes a final review, and if it meets the requirements, the commitment is revoked, the layout is approved, and the food evaluation certificate is issued for the facility. If requirements are not met, the facility manager addresses the deficiencies and requests another inspection." 
+    }
+  ]
+};
 const activityRequirements = {
         restaurant: [
             { ar: "يجب توفير معدات السلامة الغذائية.", en: "Must provide food safety equipment." },
@@ -621,114 +625,113 @@ const activityRequirements = {
 
 </script>
 <div id="feesContent" class="fees-and-spaces">
-    <h3 data-ar="الرسوم" data-en="Fees">الرسوم</h3>
-    <p data-ar="تتضمن الرسوم المطلوبة للحصول على التراخيص المطلوبة." data-en="Includes the fees required to obtain the necessary licenses.">
-        تتضمن الرسوم المطلوبة للحصول على التراخيص المطلوبة.
+    <h3>
+        <span data-ar="الرسوم" data-en="Fees">الرسوم</span>
+    </h3>
+    <p>
+        <span data-ar="تتضمن الرسوم المطلوبة للحصول على التراخيص المطلوبة." data-en="Includes the fees required to obtain the necessary licenses.">تتضمن الرسوم المطلوبة للحصول على التراخيص المطلوبة.</span>
     </p>
     <ul>
-        <li data-ar="رسوم المعاينات للمنشآت الغذائية: 250 درهم لكل معاينة" 
-            data-en="Inspection fees for food establishments: 250 AED per inspection">
-            رسوم المعاينات للمنشآت الغذائية: 250 درهم لكل معاينة
+        <li>
+            <span class="key" data-ar="رسوم المعاينات:" data-en="Inspection fees:">رسوم المعاينات:</span>
+            <span data-ar="250 درهم لكل معاينة" data-en="250 AED per inspection">250 درهم لكل معاينة</span>
         </li>
-        <li data-ar="رسوم التقرير النهائي: متغير حسب المساحات الإجمالية للمنشآت من 1 متر مربع إلى 50 متر مربع: 250 درهم، من 50 متر مربع وأكبر: 500 درهم" 
-            data-en="Final report fees: Variable based on total area of establishments  1 to 50 square meters: 250 AED, 50 square meters and above: 500 AED">
-            رسوم التقرير النهائي: متغير حسب المساحات الإجمالية للمنشآت - من 1 متر مربع إلى 50 متر مربع: 250 درهم، من 50 متر مربع وأكبر: 500 درهم
+        <li>
+            <span class="key" data-ar="رسوم التقرير النهائي:" data-en="Final report fees:">رسوم التقرير النهائي:</span>
+            <span data-ar="250 درهم حتى 50 متر مربع، 500 درهم أكبر من ذلك." data-en="250 AED up to 50 square meters, 500 AED above that.">250 درهم حتى 50 متر مربع، 500 درهم أكبر من ذلك.</span>
         </li>
-        <li data-ar="رسوم التصريح الصحي: حسب نوع الترخيص - الترخيص التجاري: 500 درهم، الترخيص المهني: 250 درهم، الترخيص الصناعي: 1000 درهم" 
-            data-en="Health permit fees: Based on license type - Commercial license: 500 AED, Professional license: 250 AED, Industrial license: 1000 AED">
-            رسوم التصريح الصحي: حسب نوع الترخيص - الترخيص التجاري: 500 درهم، الترخيص المهني: 250 درهم، الترخيص الصناعي: 1000 درهم
+        <li>
+            <span class="key" data-ar="رسوم التصريح الصحي:" data-en="Health permit fees:">رسوم التصريح الصحي:</span>
+            <span data-ar="500 درهم للترخيص التجاري، 250 درهم للترخيص المهني، 1000 درهم للترخيص الصناعي." data-en="500 AED for commercial license, 250 AED for professional license, 1000 AED for industrial license.">500 درهم للترخيص التجاري، 250 درهم للترخيص المهني، 1000 درهم للترخيص الصناعي.</span>
         </li>
     </ul>
 </div>
-
 <div id="spacesContent" class="fees-and-spaces">
-    <h3 data-ar="المساحات" data-en="Spaces">المساحات</h3>
-    <p data-ar="يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار." data-en="Appropriate spaces must be provided for the establishment according to the selected activity.">
-        يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار.
+    <h3>
+        <span data-ar="المساحات" data-en="Spaces">المساحات</span>
+    </h3>
+    <p>
+        <span data-ar="يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار." data-en="Appropriate spaces must be provided for the establishment according to the selected activity.">يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار.</span>
     </p>
     <ul>
-        <li data-ar="مساحة مطعم: مطلوب 25 متر مربع للمطبخ و10 متر مربع للمستودع" 
-            data-en="Restaurant Space: 25 m² for the kitchen and 10 m² for storage">
-            مساحة مطعم: مطلوب 25 متر مربع للمطبخ و10 متر مربع للمستودع
+        <li>
+            <span class="key" data-ar="مساحة مطعم:" data-en="Restaurant Space:">مساحة مطعم:</span>
+            <span data-ar="مطلوب 25 متر مربع للمطبخ و10 متر مربع للمستودع" data-en="25 m² for kitchen and 10 m² for storage">مطلوب 25 متر مربع للمطبخ و10 متر مربع للمستودع</span>
         </li>
-        <li data-ar="مساحة كافتيريا:  15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط" 
-            data-en="Cafeteria Space: 15 m² for the kitchen; additional 5 m² per extra activity like shawarma">
-            مساحة كافتيريا:  15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط
+        <li>
+            <span class="key" data-ar="مساحة كافتيريا:" data-en="Cafeteria Space:">مساحة كافتيريا:</span>
+            <span data-ar="15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط" data-en="15 m² for kitchen; additional 5 m² per extra activity like shawarma">15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط</span>
         </li>
-        <li data-ar="مساحة مطبخ شعبي: مطلوب مساحة 150 متر مربع في الاماكن الصناعية والتجارية فقط" 
-            data-en="Traditional Kitchen Space: 150 m² required in industrial and commercial areas only">
-            مساحة مطبخ شعبي: مطلوب مساحة 150 متر مربع في الاماكن الصناعية والتجارية فقط
+        <li>
+            <span class="key" data-ar="مساحة مطبخ شعبي:" data-en="Traditional Kitchen Space:">مساحة مطبخ شعبي:</span>
+            <span data-ar="مطلوب مساحة 150 متر مربع في الأماكن الصناعية والتجارية فقط" data-en="150 m² required in industrial and commercial areas only">مطلوب مساحة 150 متر مربع في الأماكن الصناعية والتجارية فقط</span>
         </li>
-        <li data-ar="مساحة مقهي: مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)" 
-            data-en="Cafe Space: 10 m² required (minimum display area of 10 m²)">
-            مساحة مقهي: مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)
+        <li>
+            <span class="key" data-ar="مساحة مقهي:" data-en="Cafe Space:">مساحة مقهي:</span>
+            <span data-ar="مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)" data-en="10 m² required (minimum display area of 10 m²)">مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)</span>
         </li>
-        <li data-ar="مساحة طهي وشوي الأسماك : مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الاسماك تحتاج مساحة عرض الاسماك 5م² وتصبح المساحة المطلوبة 35 م²" 
-            data-en="Fish Grilling Space: 30 m² (25 m² for kitchen + 5 m² for storage); if displaying fish, add 5 m² for display area (total 35 m²)">
-            مساحة طهي وشوي الأسماك: مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الاسماك تحتاج مساحة عرض الاسماك 5م² وتصبح المساحة المطلوبة 35 م²
+        <li>
+            <span class="key" data-ar="مساحة طهي وشوي الأسماك:" data-en="Fish Grilling Space:">مساحة طهي وشوي الأسماك:</span>
+            <span data-ar="مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الأسماك تحتاج مساحة عرض 5م² وتصبح المساحة المطلوبة 35 م²" data-en="30 m² required (25 m² for kitchen + 5 m² for storage); if displaying fish, total 35 m² needed.">مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الأسماك تحتاج مساحة عرض 5م² وتصبح المساحة المطلوبة 35 م²</span>
         </li>
-        <li data-ar="مساحة مشاوي على الفحم: مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)" 
-            data-en="Charcoal Grill Space: 30 m² (20 m² kitchen + 5 m² storage + 5 m² grill area)">
-            مساحة مشاوي على الفحم:  مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)
+        <li>
+            <span class="key" data-ar="مساحة مشاوي على الفحم:" data-en="Charcoal Grill Space:">مساحة مشاوي على الفحم:</span>
+            <span data-ar="مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)" data-en="30 m² required (20 m² kitchen + 5 m² storage + 5 m² grill area)">مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)</span>
         </li>
-        <li data-ar="مساحة تجهيز المعجنات والفطائر:  مطلوب مساحة 20م² لموقع التحضير والتجهيز" 
-            data-en="Pastry Preparation Space: 20 m² for preparation and setup area">
-            مساحة تجهيز المعجنات والفطائر:  مطلوب مساحة 20م² لموقع التحضير والتجهيز
+        <li>
+            <span class="key" data-ar="مساحة تجهيز المعجنات والفطائر:" data-en="Pastry Preparation Space:">مساحة تجهيز المعجنات والفطائر:</span>
+            <span data-ar="مطلوب مساحة 20م² لموقع التحضير والتجهيز" data-en="20 m² for preparation and setup area">مطلوب مساحة 20م² لموقع التحضير والتجهيز</span>
         </li>
-        <li data-ar="سوبر ماركت:  مساحة 60م² بدون ملحمة ومسمكة في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²" 
-            data-en="Supermarket: 60 m² without butcher or fish section; add 20 m² for butcher and 16 m² for fish section">
-            سوبر ماركت:  مطلوب مساحة 60م² بدون ملحمة ومسمكة في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²
+        <li>
+            <span class="key" data-ar="سوبر ماركت:" data-en="Supermarket:">سوبر ماركت:</span>
+            <span data-ar="مطلوب مساحة 60م² بدون ملحمة ومسمكة، في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²" data-en="60 m² required without butcher or fish section; add 20 m² for butcher and 16 m² for fish section">مطلوب مساحة 60م² بدون ملحمة ومسمكة، في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²</span>
         </li>
-        <li data-ar="مساحة بيع المثلجات:  مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض" 
-            data-en="Ice Cream Selling Space: 15 m² for selling only; 50 m² for preparation, selling, and display">
-            مساحة بيع المثلجات:  مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض
+        <li>
+            <span class="key" data-ar="مساحة بيع المثلجات:" data-en="Ice Cream Selling Space:">مساحة بيع المثلجات:</span>
+            <span data-ar="مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز، وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض" data-en="15 m² for selling only; 50 m² for preparation, selling, and display">مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز، وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض</span>
         </li>
-        <li data-ar="مساحة بيع الحلويات بالتجزئة: مطلوب مساحة 15م²" 
-            data-en="Retail Sweets Selling Space: 15 m²">
-            مساحة بيع الحلويات بالتجزئة:  مطلوب مساحة 15م²
+        <li>
+            <span class="key" data-ar="مساحة بيع الحلويات بالتجزئة:" data-en="Retail Sweets Selling Space:">مساحة بيع الحلويات بالتجزئة:</span>
+            <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
         </li>
-        <li data-ar="مساحة بيع الشوكولاتة بالتجزئة:  مطلوب مساحة 15م²" 
-            data-en="Retail Chocolate Selling Space: 15 m²">
-            مساحة بيع الشوكولاتة بالتجزئة مطلوب مساحة 15م²
+        <li>
+            <span class="key" data-ar="مساحة بيع الشوكولاتة بالتجزئة:" data-en="Retail Chocolate Selling Space:">مساحة بيع الشوكولاتة بالتجزئة:</span>
+            <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
         </li>
-        <li data-ar="مساحة بيع البن بالتجزئة:  مطلوب مساحة 15م²" 
-            data-en="Retail Coffee Selling Space: 15 m²">
-            مساحة بيع البن بالتجزئة:  بالتجزئة مطلوب مساحة 15م²
+        <li>
+            <span class="key" data-ar="مساحة بيع البن بالتجزئة:" data-en="Retail Coffee Selling Space:">مساحة بيع البن بالتجزئة:</span>
+            <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
         </li>
-        <li data-ar="مساحة بيع التوابل والبهارات بالتجزئة:  مطلوب مساحة 15م²" 
-            data-en="Retail Spices Selling Space: 15 m²">
-            مساحة بيع التوابل والبهارات بالتجزئة:  مطلوب مساحة 15م²
+        <li>
+            <span class="key" data-ar="مساحة بيع التوابل والبهارات بالتجزئة:" data-en="Retail Spices Selling Space:">مساحة بيع التوابل والبهارات بالتجزئة:</span>
+            <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
         </li>
-        <li data-ar="مساحة طحن و بيع البهارات:  مطلوب مساحة 40م²" 
-            data-en="Spices Grinding and Selling Space: 40 m²">
-            مساحة طحن و بيع البهارات:  مطلوب مساحة 40م²
+        <li>
+            <span class="key" data-ar="مساحة طحن وبيع البهارات:" data-en="Spices Grinding and Selling Space:">مساحة طحن وبيع البهارات:</span>
+            <span data-ar="مطلوب مساحة 40م²" data-en="40 m² required">مطلوب مساحة 40م²</span>
         </li>
-        <li data-ar="مساحة بقالة:  مطلوب مساحة 30 م²" 
-            data-en="Grocery Space: 30 m²">
-            مساحة بقالة:  مطلوب مساحة 30 م²
+        <li>
+            <span class="key" data-ar="مساحة بقالة:" data-en="Grocery Space:">مساحة بقالة:</span>
+            <span data-ar="مطلوب مساحة 30 م²" data-en="30 m² required">مطلوب مساحة 30 م²</span>
         </li>
-        <li data-ar="مساحة بيع المواد الغذائية بالتجزئة:  مطلوب مساحة 20 متر مربع" 
-            data-en="Retail Food Selling Space: 20 m²">
-            مساحة بيع المواد الغذائية بالتجزئة:  مطلوب مساحة 20 متر مربع
+        <li>
+            <span class="key" data-ar="مساحة بيع المواد الغذائية بالتجزئة:" data-en="Retail Food Selling Space:">مساحة بيع المواد الغذائية بالتجزئة:</span>
+            <span data-ar="مطلوب مساحة 20 متر مربع" data-en="20 m² required">مطلوب مساحة 20 متر مربع</span>
         </li>
-       <li data-ar="مساحة بيع المواد الغذائية بالجملة: مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية" 
-          data-en="Wholesale Food Selling Space: 70 m², and it must be in industrial areas">
-          مساحة بيع المواد الغذائية بالجملة: مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية
+        <li>
+            <span class="key" data-ar="مساحة بيع المواد الغذائية بالجملة:" data-en="Wholesale Food Selling Space:">مساحة بيع المواد الغذائية بالجملة:</span>
+            <span data-ar="مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية" data-en="70 m² required, must be in industrial areas">مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية</span>
         </li>
-
-        <li data-ar="مساحة تحضير وتجهيز الحلويات:  مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع 50 متر مربع" 
-            data-en="Sweets Preparation and Setup Space: 40 m² for kitchen and 10 m² for storage (total 50 m²)">
-            مساحة تحضير وتجهيز الحلويات: مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع 50 متر مربع
+        <li>
+            <span class="key" data-ar="مساحة تحضير وتجهيز الحلويات:" data-en="Sweets Preparation and Setup Space:">مساحة تحضير وتجهيز الحلويات:</span>
+            <span data-ar="مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع (مجموع 50 متر مربع)" data-en="40 m² for kitchen and 10 m² for storage (total 50 m²)">مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع (مجموع 50 متر مربع)</span>
         </li>
-
-        <li data-ar="مساحة مصانع الأغذية:  مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الانتاج المستخدمة" 
-            data-en="Food Factory Space: 200 m², depending on activity, equipment, and production lines used">
-            مساحة مصانع الأغذية:  مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الانتاج المستخدمة
+        <li>
+            <span class="key" data-ar="مساحة مصانع الأغذية:" data-en="Food Factory Space:">مساحة مصانع الأغذية:</span>
+            <span data-ar="مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الإنتاج المستخدمة" data-en="200 m² required depending on activity, equipment, and production lines used">مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الإنتاج المستخدمة</span>
         </li>
-
     </ul>
 </div>
-
 <div class="icon-section">
     <i class="fas fa-coins" onclick="toggleFees()"></i>
     <i class="fas fa-ruler-combined" onclick="toggleSpaces()"></i>
@@ -736,8 +739,6 @@ const activityRequirements = {
 <a href="mailto:Phls@shjmun.gov.ae"><i class="fas fa-envelope" style="color: #8b785a;"></i>
 </a>
 </div>
-
-
 <footer>
     <p data-ar="جميع الحقوق محفوظة لقسم الرقابة الغذائية © 2024" data-en="All rights reserved to the Food Control Department © 2024">
         جميع الحقوق محفوظة لقسم الرقابة الغذائية © 2024
@@ -812,27 +813,35 @@ function showSteps() {
             description.style.display = description.style.display === 'none' || description.style.display === '' ? 'block' : 'none';
         }
 
+  function toggleFees() {
+        var feesContent = document.getElementById("feesContent");
+        var spacesContent = document.getElementById("spacesContent");
+        
+        // إخفاء قسم المساحات إذا كان مفتوحًا
+        spacesContent.style.display = "none";
+        
+        // التبديل بين إظهار وإخفاء قسم الرسوم
+        if (feesContent.style.display === "none" || feesContent.style.display === "") {
+            feesContent.style.display = "block";
+        } else {
+            feesContent.style.display = "none";
+        }
+    }
 
-function toggleFees() {
-    const fees = document.getElementById('feesContent');
-    fees.style.display = fees.style.display === 'block' ? 'none' : 'block';
-}
-
-function toggleFees() {
-    const fees = document.getElementById('feesContent');
-    fees.style.display = fees.style.display === 'block' ? 'none' : 'block';
-}
-
-
-function toggleFees() {
-    const fees = document.getElementById('feesContent');
-    fees.style.display = fees.style.display === 'block' ? 'none' : 'block';
-}
-
-function toggleSpaces() {
-    const spaces = document.getElementById('spacesContent');
-    spaces.style.display = spaces.style.display === 'block' ? 'none' : 'block';
-}
+    function toggleSpaces() {
+        var spacesContent = document.getElementById("spacesContent");
+        var feesContent = document.getElementById("feesContent");
+        
+        // إخفاء قسم الرسوم إذا كان مفتوحًا
+        feesContent.style.display = "none";
+        
+        // التبديل بين إظهار وإخفاء قسم المساحات
+        if (spacesContent.style.display === "none" || spacesContent.style.display === "") {
+            spacesContent.style.display = "block";
+        } else {
+            spacesContent.style.display = "none";
+        }
+    }
 
 
 
