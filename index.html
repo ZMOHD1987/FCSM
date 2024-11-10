@@ -145,6 +145,25 @@
             border-radius: 8px;
             border: 1px solid #ddd;
             display: none; /* تبدأ المخفية */
+        .button {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-top: 10px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+        .button i {
+            margin-right: 5px;
+        }
+
         }
         .language-toggle {
             position: absolute;
@@ -396,8 +415,8 @@ function applyForService(serviceAr, serviceEn) {
         ? "يجب إرسال المستندات بصيغة بي دي اف كملف واحد عالي الجودة."
         : "Documents must be sent as a single high-quality PDF file.";
 
-    // بناء رابط البريد الإلكتروني مع الموضوع والنص
-    const mailtoLink = `mailto:phls.shjmun.gov.ae?subject=${lang === "ar" ? "التقديم على خدمة " + service : "Application for Service: " + service}&body=${message}`;
+    // بناء رابط البريد الإلكتروني بشكل صحيح مع الصيغة الكاملة
+    const mailtoLink = `mailto:phls@shjmun.gov.ae?subject=${encodeURIComponent(lang === "ar" ? "التقديم على خدمة " + service : "Application for Service: " + service)}&body=${encodeURIComponent(message)}`;
     
     // فتح تطبيق البريد الإلكتروني
     window.location.href = mailtoLink;
@@ -417,6 +436,7 @@ function applyForService(serviceAr, serviceEn) {
         <option value="cafeteria" data-ar="كافتيريا" data-en="Cafeteria">كافتيريا</option>
         <option value="grocery" data-ar="بقالة" data-en="Grocery">بقالة</option>
         <option value="supermarket" data-ar="سوبر ماركت" data-en="Supermarket">سوبر ماركت</option>
+        <option value="Tandoor Bakery" data-ar="مخبز تنور" data-en="Tandoor Bakery">مخبز تنور</option>
         <option value="food_sales" data-ar="بيع المواد الغذائية" data-en="Food Sales">بيع المواد الغذائية</option>
         <option value="butcher" data-ar="جزار" data-en="Butcher">جزار</option>
         <option value="fishery" data-ar="مزرعة أسماك" data-en="Fishery">مزرعة أسماك</option>
@@ -512,15 +532,169 @@ const licenseSteps = {
     }
   ]
 };
-const activityRequirements = {
-        restaurant: [
-            { ar: "يجب توفير معدات السلامة الغذائية.", en: "Must provide food safety equipment." },
-            { ar: "توفير مساحات مناسبة لتناول الطعام.", en: "Provide suitable dining areas." }
-        ],
-        cafeteria: [
-            { ar: "يجب توفير معدات السلامة الغذائية.", en: "Must provide food safety equipment." },
-            { ar: "توفير مساحات مناسبة لتناول الطعام.", en: "Provide suitable dining areas." }
-        ],
+const activityRequirements = {          
+    restaurant: [
+        { ar: "يجب توفير معدات السلامة الغذائية.", en: "Must provide food safety equipment." },
+        { ar: "توفير مساحات مناسبة لتناول الطعام.", en: "Provide suitable dining areas." }
+    ],
+    cafeteria: [
+        { ar: "يجب توفير معدات السلامة الغذائية.", en: "Must provide food safety equipment." },
+        { ar: "توفير مساحات مناسبة لتناول الطعام.", en: "Provide suitable dining areas." }
+    ],
+  "Tandoor Bakery": [
+    {
+      "ar": "يجب أن يكون موقع المنشأة الغذائية بعيدًا عن الروائح الكريهة والدخان والأتربة أو الملوثات الأخرى التي قد تشكل خطرًا صحيًا على عملياتها التشغيلية.",
+      "en": "The location of the food establishment must be away from unpleasant odors, smoke, dust, or other pollutants that may pose a health risk to its operations."
+    },
+    {
+      "ar": "يجب أن تكون الأرضيات مصنوعة من مواد متينة خالية من الشقوق، ملساء، فاتحة اللون، غير منفذة أو ماصة للسوائل، سهلة الغسيل والتنظيف، وبها ميل كافٍ لتصريف السوائل إلى مجاري الأرضية، كما يفضل أن تكون مناطق الالتقاء بين الأرضيات والجدران مقوسة (بدون زوايا) لسهولة تنظيفها وتطهيرها ولمنع تراكم الملوثات.",
+      "en": "Floors must be made of durable materials, free of cracks, smooth, light-colored, non-absorbent, easy to wash and clean, with enough slope to drain liquids into floor drains. It is also preferable for the intersections between floors and walls to be curved (without corners) to facilitate cleaning and disinfection and to prevent the accumulation of contaminants."
+    },
+    {
+      "ar": "يجب أن تكون الجدران مشيدة من مواد متينة خالية من الشقوق، غير منفذة أو ماصة للسوائل، سهلة الغسيل والتنظيف، وأن تكون الجدران الداخلية في أماكن التجهيز مصنعة من مواد سهلة التنظيف، ملساء (مثل السيراميك أو الرخام) ذات لون فاتح، على أن ترتفع مترين ونصف على الأقل عن الأرض، ويمكن طلاء الجزء العلوي بطلاء مناسب قابل للغسيل وسهل التنظيف.",
+      "en": "Walls must be constructed of durable materials, free of cracks, non-absorbent, easy to wash and clean. The interior walls in preparation areas should be made of easy-to-clean, smooth materials (such as ceramic or marble) in a light color, rising at least two and a half meters above the floor. The upper part can be painted with a suitable, washable, and easy-to-clean paint."
+    },
+    {
+      "ar": "يجب أن تكون الأسقف مشيدة من مواد متينة خالية من الشقوق مطلية بطلاء فاتح اللون مناسب قابل للغسيل وسهل التنظيف، كما يمكن استخدام الأسقف المستعارة شرطًا أن تكون ملساء سهلة التنظيف وأن تكون من مادة غير منفذة أو ماصة للسوائل.",
+      "en": "Ceilings must be constructed of durable materials, free of cracks, painted with a light-colored, washable, and easy-to-clean paint. Suspended ceilings can be used, provided they are smooth, easy to clean, and made of non-absorbent materials."
+    },
+    {
+      "ar": "يجب أن تكون المجاري الأرضية فعالة في إزالة مياه الصرف، وذات أغطية قابلة للفك والتنظيف، كما يجب أن تكون أنابيب المجاري منحدرة بصورة صحيحة، وموصولة بنظام الصرف الصحي.",
+      "en": "Floor drains must be effective in removing wastewater and have removable and cleanable covers. Drain pipes should be sloped correctly and connected to the sewage system."
+    },
+    {
+      "ar": "يجب توفير التهوية المناسبة لمنع ارتفاع الحرارة وتكاثف البخار ولإزالة الهواء الملوث، وأن يكون تصميم وتركيب نظم التهوية كافيًا من حيث العدد والقدرة (بتوفير عدد كافٍ من المكيفات ومراوح الشفط).",
+      "en": "Proper ventilation must be provided to prevent heat build-up and steam condensation and to remove polluted air. The design and installation of ventilation systems should be sufficient in terms of number and capacity (by providing enough air conditioners and exhaust fans)."
+    },
+    {
+      "ar": "يجب توفير إضاءة كافية سواء كانت طبيعية أم صناعية لضمان إنتاج الأغذية في بيئة آمنة وصحية، ولتسهيل عملية التنظيف في المنشأة، كما يجب أن تكون المصابيح ضد الكسر أو محمية بأغطية ضد الكسر.",
+      "en": "Adequate lighting, whether natural or artificial, must be provided to ensure food production in a safe and healthy environment and to facilitate cleaning in the facility. The lamps should be shatterproof or protected by shatterproof covers."
+    },
+    {
+      "ar": "يجب توفير حوض غسيل مفرد من الاستانلس ستيل مقاس لا يقل عن 40 سم × 40 سم، يكون مزودًا بالماء الساخن والبارد، مخصص لغسيل الأدوات.",
+      "en": "A single stainless steel washing basin with a minimum size of 40 cm × 40 cm should be provided, equipped with hot and cold water, and designated for washing utensils."
+    },
+    {
+      "ar": "توفير حوض غسيل أيدي مثبت عليه جهاز صابون سائل وجهاز أوراق تنشيف تستخدم لمرة واحدة.",
+      "en": "A handwashing basin with a liquid soap dispenser and a single-use towel dispenser should be provided."
+    },
+    {
+      "ar": "توفير فلتر مياه وسخان مياه ويتم تركيبه على خط مياه الوصلة الرئيسية للمخبز.",
+      "en": "A water filter and water heater should be installed on the main water connection line for the bakery."
+    },
+    {
+      "ar": "يجب توفير قاطع هوائي على باب المدخل وإحكام إغلاق فتحات الأبواب، والنوافذ، ويُفضل أن تكون الواجهة زجاجية بشكل كامل.",
+      "en": "An air curtain must be provided at the entrance door, and the openings of doors and windows should be tightly closed. It is preferable for the facade to be entirely glass."
+    },
+    {
+      "ar": "ينبغي تصميم شباك المناولة بين منطقة التحضير والفرن بحيث يكون مناسباً لحجم العمل.",
+      "en": "The serving window between the preparation area and the oven should be designed to suit the volume of work."
+    },
+    {
+      "ar": "توفير ملقط لالتقاط الخبز ووضعه في كيس ورقي مناسب.",
+      "en": "Tongs should be provided for picking up bread and placing it in a suitable paper bag."
+    },
+    {
+      "ar": "يجب توفير معدات وأدوات مصنوعة من مواد آمنة ومناسبة لا تؤثر على سلامة الغذاء ومقاومة للكسر والتشقق والانبعاج والانحناء، كما ينبغي أن تكون المعدات قابلة للتحريك والفك وأن تكون هناك إمكانية لصيانتها وتنظيفها وتعقيمها بسهولة.",
+      "en": "Equipment and tools must be made of safe and suitable materials that do not affect food safety and are resistant to breaking, cracking, denting, and bending. The equipment should also be movable and detachable, with the possibility of easy maintenance, cleaning, and sterilization."
+    },
+    {
+      "ar": "أما المعدات الثابتة فيجب أن تكون مناطق اتصالها مع الأرضيات والجدران والمعدات المجاورة محكمة الإغلاق، وأن تكون موضوعة على مسافات مناسبة تسمح بالتنظيف تحتها وحولها.",
+      "en": "Fixed equipment should have sealed connections with floors, walls, and adjacent equipment, and be placed at suitable distances to allow cleaning beneath and around them."
+    },
+    {
+      "ar": "يجب توفير فرن مناسب مع قمع شفط موصول بمدخنة مرتفعة لأعلى بناء المنشأة بمترين، بالإضافة إلى مراوح شفط كبيرة الحجم لسحب الحرارة والأدخنة الخارجة من الفرن.",
+      "en": "A suitable oven with an exhaust funnel connected to a chimney rising two meters above the building should be provided, along with large exhaust fans to extract heat and smoke from the oven."
+    },
+    {
+      "ar": "توفير أرفف مناسبة لتبريد وحفظ الخبز.",
+      "en": "Appropriate shelves should be provided for cooling and storing bread."
+    },
+    {
+      "ar": "توفير عجانة مناسبة ولها غطاء مناسب لتغطية العجين موصول أعلى مصدر مياه.",
+      "en": "A suitable dough mixer with an appropriate cover for the dough should be provided, connected above a water source."
+    },
+    {
+      "ar": "توفير طاولات إعداد وتجهيز مناسبة (استالنس ستيل، رخام، ...).",
+      "en": "Suitable preparation and setup tables (stainless steel, marble, etc.) should be provided."
+    },
+    {
+      "ar": "توفير أرفف مناسبة لتخزين الأدوات.",
+      "en": "Suitable shelves should be provided for storing tools."
+    },
+    {
+      "ar": "توفير قواعد مناسبة لرفع أكياس الطحين وتكون بقوائم حتى يسهل التنظيف أسفل منها وبارتفاع مناسب عن الأرض لا يقل عن 25 سم.",
+      "en": "Suitable bases should be provided to raise flour bags, with legs to facilitate cleaning underneath, at a suitable height of no less than 25 cm above the ground."
+    },
+    {
+      "ar": "يجب توفير خزائن مناسبة لحفظ معدات ومواد التنظيف بحيث تكون بعيدة عن مناطق تداول الأغذية.",
+      "en": "Suitable cabinets should be provided to store cleaning equipment and materials away from food handling areas."
+    },
+    {
+      "ar": "توفير مخدات خبز التنور من أقمشة بيضاء نظيفة ومخصصة للخبز فقط وبعدد كاف.",
+      "en": "Tandoor bread cushions made of clean white fabrics, dedicated for bread only, should be provided in sufficient numbers."
+    },
+    {
+      "ar": "توفير شبك معدني من الاستانلس ستيل (منخل) للطحين.",
+      "en": "A stainless steel mesh (sieve) for flour should be provided."
+    },
+    {
+      "ar": "استخدام أوعية مناسبة مع غطاء لحفظ الطحين والمواد الغذائية الجافة بعد فتح الأكياس ويفضل الاحتفاظ داخل عبواتها الأصلية.",
+      "en": "Suitable containers with lids should be used to store flour and dry foodstuffs after opening the bags, preferably kept inside their original packaging."
+    },
+    {
+      "ar": "يجب توفير عدد كاف من حاويات النفايات المناسبة التي تفتح بالقدم.",
+      "en": "A sufficient number of appropriate foot-operated waste bins should be provided."
+    },
+    {
+      "ar": "يُسمح فقط باستخدام الأكياس الورقية المناسبة لتعبئة الخبز.",
+      "en": "Only suitable paper bags are allowed for bread packaging."
+    },
+    {
+      "ar": "لا يجوز تخزين أي مواد غذائية أو غير غذائية داخل المخبز غير مستخدمة لصناعة الخبز.",
+      "en": "No food or non-food items unused in bread production may be stored inside the bakery."
+    },
+    {
+      "ar": "توفير زي موحد بأكمام طويلة بلون فاتح للعاملين، مع توفير غطاء مناسب للرأس.",
+      "en": "Provide a uniform with long sleeves in a light color for workers, along with an appropriate head cover."
+    },
+    {
+      "ar": "لا يجوز استخدام الأقمشة والسجاد والكراتين للأرض أو الطاولات تحت منطقة الخبز أو الفرن.",
+      "en": "Fabrics, carpets, and cartons may not be used on the floor or tables in the bread or oven area."
+    },
+    {
+      "ar": "لا يجوز استخدام سقف الفرن للتخزين.",
+      "en": "The oven ceiling may not be used for storage."
+    },
+    {
+      "ar": "يجب عدم إجراء أي تغيير أو إضافة يمكن أن تؤثر على المخطط الأصلي أو تؤثر على تتابع العمليات في المنشآت القائمة دون الحصول على موافقة مسبقة من قسم رقابة الأغذية.",
+      "en": "No changes or additions that could affect the original plan or the sequence of operations in existing facilities may be made without prior approval from the Food Control Department."
+    },
+    {
+      "ar": "توفير صندوق محاسبة مناسب ولا يسمح للعامل الخباز بلمس النقود ومحاسبة الزبائن أثناء العمل.",
+      "en": "Provide a suitable cash register and do not allow the baker to handle money and process customer payments while working."
+    },
+    {
+      "ar": "يجب تسجيل العاملين في المخبز في برنامج الشارقة لسلامة الغذاء لتدريبهم على سلامة الغذاء حسب إمكانيات كل عامل.",
+      "en": "Bakery workers must be registered in the Sharjah Food Safety Program to train them in food safety according to each worker's capabilities."
+    },
+    {
+      "ar": "توفير بطاقة الصحة المهنية لجميع العمال.",
+      "en": "Provide a health card for all workers."
+    },
+    {
+      "ar": "عند تقديم خدمة توصيل الخبز عند الطلب، يجب توفير أكياس ورقية محكمة الإغلاق بشكل مناسب.",
+      "en": "When providing bread delivery service on demand, properly sealed paper bags must be provided."
+    },
+    {
+      "ar": "الالتزام بالممارسات الصحية الجيدة.",
+      "en": "Adhere to good hygiene practices."
+    },
+    {
+      "ar": "الالتزام باللائحة الفنية الخاصة بالخبز رقم UAU.S 5008.",
+      "en": "Comply with the technical regulation for bread No. UAU.S 5008."
+        }
+    ],
 
 "grocery": [
     { 
@@ -610,6 +784,7 @@ const activityRequirements = {
             case 'cafeteria':
             case 'grocery':
             case 'supermarket':
+           case 'Tandoor Bakery':
             case 'food_sales':
                 return 'commercial';
             case 'butcher':
@@ -624,6 +799,7 @@ const activityRequirements = {
 
 
 </script>
+
 <div id="feesContent" class="fees-and-spaces">
     <h3>
         <span data-ar="الرسوم" data-en="Fees">الرسوم</span>
@@ -633,19 +809,65 @@ const activityRequirements = {
     </p>
     <ul>
         <li>
-            <span class="key" data-ar="رسوم المعاينات:" data-en="Inspection fees:">رسوم المعاينات:</span>
+            <span class="key" data-ar="رسوم المعاينات" data-en="Inspection fees">رسوم المعاينات:</span>
             <span data-ar="250 درهم لكل معاينة" data-en="250 AED per inspection">250 درهم لكل معاينة</span>
+            <a href="#" class="button" data-service-ar="المعاينات" data-service-en="Inspection">
+                <i class="fa fa-envelope"></i> 
+                <span data-ar="دفع الرسوم" data-en="Pay Fees">دفع الرسوم</span>
+            </a>
         </li>
         <li>
-            <span class="key" data-ar="رسوم التقرير النهائي:" data-en="Final report fees:">رسوم التقرير النهائي:</span>
+            <span class="key" data-ar="رسوم التقرير النهائي" data-en="Final report fees">رسوم التقرير النهائي:</span>
             <span data-ar="250 درهم حتى 50 متر مربع، 500 درهم أكبر من ذلك." data-en="250 AED up to 50 square meters, 500 AED above that.">250 درهم حتى 50 متر مربع، 500 درهم أكبر من ذلك.</span>
+            <a href="#" class="button" data-service-ar="التقرير النهائي" data-service-en="Final Report">
+                <i class="fa fa-envelope"></i> 
+                <span data-ar="دفع الرسوم" data-en="Pay Fees">دفع الرسوم</span>
+            </a>
         </li>
         <li>
-            <span class="key" data-ar="رسوم التصريح الصحي:" data-en="Health permit fees:">رسوم التصريح الصحي:</span>
+            <span class="key" data-ar="رسوم التصريح الصحي" data-en="Health permit fees">رسوم التصريح الصحي:</span>
             <span data-ar="500 درهم للترخيص التجاري، 250 درهم للترخيص المهني، 1000 درهم للترخيص الصناعي." data-en="500 AED for commercial license, 250 AED for professional license, 1000 AED for industrial license.">500 درهم للترخيص التجاري، 250 درهم للترخيص المهني، 1000 درهم للترخيص الصناعي.</span>
+            <a href="#" class="button" data-service-ar="التصريح الصحي" data-service-en="Health Permit">
+                <i class="fa fa-envelope"></i> 
+                <span data-ar="دفع الرسوم" data-en="Pay Fees">دفع الرسوم</span>
+            </a>
         </li>
     </ul>
 </div>
+
+<script>
+    document.querySelectorAll('.button').forEach(button => {
+        button.addEventListener('click', function() {
+            const lang = document.documentElement.lang;
+            const serviceAr = this.getAttribute('data-service-ar');
+            const serviceEn = this.getAttribute('data-service-en');
+            const service = lang === 'ar' ? serviceAr : serviceEn;
+            let message = '';
+
+            if (lang === 'ar') {
+                if (service === 'المعاينات') {
+                    message = 'الرجاء إرسال المستندات التالية: %0D%0A- الاسم التجاري أو الرخصة %0D%0A- رقم التواصل';
+                } else if (service === 'التقرير النهائي') {
+                    message = 'الرجاء إرسال المستندات التالية: %0D%0A- الاسم التجاري أو الرخصة %0D%0A- كتابة مساحة الموقع %0D%0A- كتابة قيمة الرسوم %0D%0A- رقم التواصل %0D%0A- اسم المفتش القائم بالمعاينة';
+                } else if (service === 'التصريح الصحي') {
+                    message = 'الرجاء إرسال المستندات التالية: %0D%0A- الرخصة التجارية %0D%0A- رقم التصريح';
+                }
+            } else {
+                if (service === 'Inspection') {
+                    message = 'Please send the following documents: %0D%0A- Trade name or license %0D%0A- Contact number';
+                } else if (service === 'Final Report') {
+                    message = 'Please send the following documents: %0D%0A- Trade name or license %0D%0A- Site area %0D%0A- Fee amount %0D%0A- Contact number %0D%0A- Inspector\'s name';
+                } else if (service === 'Health Permit') {
+                    message = 'Please send the following documents: %0D%0A- Commercial license %0D%0A- Permit number';
+                }
+            }
+
+            const mailtoLink = `mailto:phls@shjmun.gov.ae?subject=${lang === "ar" ? "دفع الرسوم " + service : "Application for Service: " + service}&body=${message}`;
+            window.location.href = mailtoLink;
+        });
+    });
+</script>
+
 <div id="spacesContent" class="fees-and-spaces">
     <h3>
         <span data-ar="المساحات" data-en="Spaces">المساحات</span>
