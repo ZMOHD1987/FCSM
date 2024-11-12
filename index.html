@@ -337,7 +337,7 @@
         يعد قسم الرقابة الغذائية المسؤول عن الموافقة أو الرفض على الطلبات المتعلقة بترخيص المنشآت الغذائية وفقًا للمعايير والإجراءات المعتمدة. يشمل سير العمل تقديم الطلب من قبل المستثمر، ثم يتم مراجعة المستندات من قبل لجنة التراخيص، تليها المعاينة الميدانية من قبل اللجنة. في حال استيفاء جميع الشروط، يتم إصدار الموافقة النهائية للترخيص.
     </p>
     <ul>
-        <li><strong style="color: darkgreen; font-weight: bold;" data-ar="مدير إدارة الصحة والسلامة المهنية" data-en="Director of the Occupational Health and Safety Department">مدير إدارة الصحة والسلامة المهنية:</strong> 
+        <li><strong style="color: darkgreen; font-weight: bold;" data-ar="مدير إدارة الرقابة والسلامة الصحية" data-en="Director of Health Control and Safety Department">مدير إدارة الرقابة والسلامة الصحية:</strong> 
         <span data-ar="مسؤول عن الإشراف على التراخيص الغذائية وضمان الالتزام بالمعايير والإجراءات المحددة للصحة والسلامة المهنية في المنشآت الغذائية، واتخاذ القرارات المتعلقة بالاستثناءات عند الضرورة." 
         data-en="Responsible for overseeing food licensing and ensuring compliance with the health and occupational safety standards in food establishments, as well as making decisions regarding exceptions when necessary.">
         مسؤول عن الإشراف على التراخيص الغذائية وضمان الالتزام بالمعايير والإجراءات المحددة للصحة والسلامة المهنية في المنشآت الغذائية، واتخاذ القرارات المتعلقة بالاستثناءات عند الضرورة.</span></li>
@@ -1117,12 +1117,12 @@ const activityRequirements = {
         </a>
     </div>
 
-    <!-- المخططات الاسترشادية -->
+    <!-- المخططات الاسترشادية كقائمة منسدلة -->
     <div class="icon-item dropdown">
         <!-- زر المخططات الاسترشادية -->
         <button class="icon-btn dropdown-btn">
             <i class="fas fa-file-alt"></i>
-            <span class="icon-text" data-ar="المخططات الاسترشادية" data-en="Guideline Plans"></span>
+            <span class="icon-text" data-ar="المخططات الاسترشادية" data-en="Guideline Plans">المخططات الاسترشادية</span>
         </button>
         <div class="dropdown-content">
             <!-- روابط المخططات الاسترشادية -->
@@ -1142,7 +1142,6 @@ const activityRequirements = {
     </div>
 </div>
 
-
 <!-- CSS لتوزيع الأيقونات بالتساوي عبر عرض الصفحة -->
 <style>
     .icon-section {
@@ -1156,6 +1155,7 @@ const activityRequirements = {
     .icon-item {
         text-align: center;
         flex: 1; /* جعل كل عنصر يحتل نفس المساحة */
+        position: relative;
     }
 
     .icon-item i {
@@ -1168,6 +1168,7 @@ const activityRequirements = {
         font-size: 14px;
         color: #8b785a;
         margin-top: 5px;
+        text-align: center; /* محاذاة النص في المنتصف */
     }
 
     .icon-item a {
@@ -1177,7 +1178,6 @@ const activityRequirements = {
     /* تصميم قائمة المخططات الاسترشادية */
     .dropdown {
         position: relative;
-        display: inline-block;
     }
 
     .dropdown-content {
@@ -1187,6 +1187,9 @@ const activityRequirements = {
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
+        top: 120%; /* وضع القائمة أسفل النص */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .dropdown-content a {
@@ -1209,20 +1212,20 @@ const activityRequirements = {
         background-color: transparent;
         border: none;
         cursor: pointer;
-        text-align: center;
         font-size: 16px;
         color: #8b785a; /* نفس اللون للأيقونات */
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column; /* محاذاة الأيقونة والنص عمودياً */
+        text-align: center;
     }
 
-    .dropdown-btn i {
-        margin-right: 8px; /* إضافة بعض المسافة بين الأيقونة والنص */
+    /* تحسين المحاذاة النص أسفل الأيقونة بالضبط */
+    .icon-btn .icon-text {
+        margin-top: 5px; /* مسافة بسيطة بين الأيقونة والنص */
     }
 </style>
-
-
 
 <footer>
     <p data-ar="جميع الحقوق محفوظة لقسم الرقابة الغذائية © 2024" data-en="All rights reserved to the Food Control Department © 2024">
