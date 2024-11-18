@@ -561,20 +561,23 @@ function applyForService(serviceAr, serviceEn) {
 
  <div class="activity-selection">
     <label for="activity" data-ar="اختر النشاط:" data-en="Choose Activity:">اختر النشاط:</label>
-    <select id="activity" onchange="showSteps()">
-        <option value="" data-ar="اختر النشاط" data-en="Choose Activity">اختر النشاط</option>
-        <option value="restaurant" data-ar="مطعم" data-en="Restaurant">مطعم</option>
-        <option value="cafeteria" data-ar="كافتيريا" data-en="Cafeteria">كافتيريا</option>
-        <option value="grocery" data-ar="بقالة" data-en="Grocery">بقالة</option>
-        <option value="supermarket" data-ar="سوبر ماركت" data-en="Supermarket">سوبر ماركت</option>
-        <option value="Tandoor Bakery" data-ar="مخبز تنور" data-en="Tandoor Bakery">مخبز تنور</option>
-        <option value="food_sales" data-ar="بيع المواد الغذائية" data-en="Food Sales">بيع المواد الغذائية</option>
-        <option value="butcher" data-ar="جزار" data-en="Butcher">جزار</option>
-        <option value="fishery" data-ar="مزرعة أسماك" data-en="Fishery">مزرعة أسماك</option>
-        <option value="factory" data-ar="مصنع" data-en="Factory">مصنع</option>
-    </select>
-</div>
-
+<select id="activity" onchange="showSteps()">
+    <option value="" data-ar="اختر النشاط" data-en="Choose Activity">اختر النشاط</option>
+    <option value="restaurant" data-ar="مطعم" data-en="Restaurant">مطعم</option>
+    <option value="cafeteria" data-ar="كافتيريا" data-en="Cafeteria">كافتيريا</option>
+    <option value="cold hot drinks" data-ar="مشروبات باردة وساخنة" data-en="Cold and Hot Drinks">مشروبات باردة وساخنة</option>
+    <option value="cafe" data-ar="مقهي" data-en="Cafe">مقهي</option>
+    <option value="dessert preparation" data-ar="تحضير وتجهيز الحلويات" data-en="Dessert Preparation">تحضير وتجهيز الحلويات</option>
+    <option value="grocery" data-ar="بقالة" data-en="Grocery">بقالة</option>
+    <option value="supermarket" data-ar="سوبر ماركت" data-en="Supermarket">سوبر ماركت</option>
+    <option value="tandoor bakery" data-ar="مخبز تنور" data-en="Tandoor Bakery">مخبز تنور</option>
+    <option value="food sales" data-ar="بيع المواد الغذائية المعلبة والمحفوظة بالتجزئة" data-en="Canned and Preserved Food Sales">بيع المواد الغذائية المعلبة والمحفوظة بالتجزئة</option>
+    <option value="butcher" data-ar="ملحمة" data-en="Butcher">ملحمة</option>
+    <option value="fishery" data-ar="بيع الاسماك الطازجة والحيونات البحرية" data-en="Fresh Fish and Seafood Sales">بيع الاسماك الطازجة والحيونات البحرية</option>
+    <option value="Catering for Events" data-ar="مطبخ اعداد الولائم للحفلات" data-en="Catering for Events">مطبخ اعداد الولائم للحفلات</option>
+    <option value="factory" data-ar="مصنع" data-en="Factory">مصنع</option>
+    <option value="catering companies" data-ar="شركات التموين" data-en="Catering Companies">شركات التموين</option>
+</select>
 <div id="stepsContent"></div> <!-- سيتم عرض محتوى الخطوات هنا -->
 
 <script>
@@ -913,25 +916,28 @@ const activityRequirements = {
 
 
     function getLicenseType(activity) {
-        switch (activity) {
-            case 'restaurant':
-            case 'cafeteria':
-            case 'grocery':
-            case 'supermarket':
-           case 'Tandoor Bakery':
-            case 'food_sales':
-                return 'commercial';
-            case 'butcher':
-            case 'fishery':
-                return 'professional';
-            case 'factory':
-                return 'industrial';
-            default:
-                return 'commercial';
-        }
-    }
-
-
+switch (activity) {
+    case 'restaurant':
+    case 'cafeteria':
+    case 'grocery':
+    case 'supermarket':
+    case 'tandoor bakery':
+    case 'food sales':
+    case 'cold hot drinks':
+    case 'cafe':
+    case 'dessert preparation':
+    case 'Catering for Events':
+        return 'commercial';
+    case 'butcher':
+    case 'fishery':
+        return 'professional';
+    case 'factory':
+    case 'catering companies':  // تصنيف "catering" و "factory" كأنشطة صناعية
+        return 'industrial';
+    default:
+        return 'commercial';
+}
+}
 </script>
 
 <div id="feesContent" class="fees-and-spaces">
