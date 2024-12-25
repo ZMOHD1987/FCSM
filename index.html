@@ -466,24 +466,68 @@
             <span class="key" data-ar="المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:" data-en="Exits or Openings:">المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:</span> <span class="text" data-ar="يجب حماية الفتحات التي تؤدي إلى خارج المنشأة الغذائية من دخول الآفات بوسائل مناسبة مثل شبك الحماية، أو تثبيت ستائر هواء مصممة بشكل جيد." data-en="Exits leading outside the food establishment must be protected from pest entry by suitable means such as protective screens or well-designed air curtains."></span>
         </li>
 
+<style>
+    /* القواعد العامة لجميع الجداول */
+    table {
+        width: 100%; /* عرض كامل للجداول */
+        border-collapse: collapse; /* إزالة المسافات بين حدود الخلايا */
+        text-align: center; /* محاذاة النص إلى المنتصف */
+        font-size: 12px; /* حجم الخط الافتراضي */
+        border: 1px solid #ddd; /* حدود ناعمة */
+    }
+
+    th, td {
+        padding: 8px; /* مسافة داخل الخلايا */
+        font-size: 11px; /* حجم خط صغير للخلايا */
+        border: 1px solid #ddd; /* حدود الخلايا */
+    }
+
+    th {
+        background-color: #A3C586; /* لون خلفية لرأس الجدول */
+        font-size: 10px; /* حجم خط أصغر لرأس الجدول */
+        text-transform: uppercase; /* تحويل النصوص إلى أحرف كبيرة */
+    }
+
+    /* تحسين العرض على الهواتف */
+    @media (max-width: 768px) {
+        table {
+            font-size: 10px; /* تصغير الخطوط عند العرض على شاشات صغيرة */
+        }
+        th, td {
+            font-size: 9px; /* خطوط أصغر داخل الخلايا */
+            padding: 6px; /* تقليل المسافة داخل الخلايا */
+        }
+    }
+
+    @media (max-width: 480px) {
+        table {
+            font-size: 9px; /* حجم أصغر للشاشات الصغيرة جدًا */
+        }
+        th, td {
+            font-size: 8px; /* خطوط صغيرة جدًا داخل الخلايا */
+            padding: 4px; /* تقليل المسافة أكثر */
+        }
+    }
+</style>
+
 
 <li class="requirement">
     <span class="key" data-ar="الأرضيات:" data-en="Floors:">الأرضيات:</span>
     <span class="text" data-ar="يجب أن تكون الأرضيات مصنوعة من مواد متينة خالية من الشقوق، ملساء، فاتحة اللون، غير منفذة أو ماصة للسوائل، سهلة الغسيل والتنظيف." data-en="Floors must be made of durable, crack-free materials, smooth, light-colored, non-permeable or non-absorbent of liquids, and easy to wash and clean."></span>
 </li>
-<table border="1" style="width:100%; border-collapse:collapse; text-align:center; font-size:12px; table-layout:fixed;">
+<table border="1" style="width:100%; border-collapse:collapse; text-align:center;">
     <thead>
         <tr style="background-color:#A3C586;">
-            <th data-ar="المادة" data-en="Material" style="width:10%;">المادة</th>
-            <th data-ar="المناطق الرطبة" data-en="Wet Areas" style="width:10%;">المناطق الرطبة</th>
-            <th data-ar="أماكن تحضير الغذاء" data-en="Food Prep Areas" style="width:10%;">أماكن تحضير الغذاء</th>
-            <th data-ar="أماكن تحضير الخضار" data-en="Vegetable Prep Areas" style="width:10%;">أماكن تحضير الخضار</th>
-            <th data-ar="مناطق الخدمة والبيع" data-en="Service and Sales Areas" style="width:10%;">مناطق الخدمة والبيع</th>
-            <th data-ar="مناطق تخزين الطعام" data-en="Food Storage Areas" style="width:10%;">مناطق تخزين الطعام</th>
-            <th data-ar="البرادات والثلاجات" data-en="Refrigerators and Freezers" style="width:10%;">البرادات والثلاجات</th>
-            <th data-ar="مناطق المخلفات والحاويات" data-en="Waste and Containers Areas" style="width:10%;">مناطق المخلفات والحاويات</th>
-            <th data-ar="صالة الطعام" data-en="Dining Area" style="width:10%;">صالة الطعام</th>
-            <th data-ar="الملاحظات" data-en="Notes" style="width:20%;">الملاحظات</th>
+            <th data-ar="المادة" data-en="Material">المادة</th>
+            <th data-ar="المناطق الرطبة" data-en="Wet Areas">المناطق الرطبة</th>
+            <th data-ar="أماكن تحضير الغذاء" data-en="Food Prep Areas">أماكن تحضير الغذاء</th>
+            <th data-ar="أماكن تحضير الخضار" data-en="Vegetable Prep Areas">أماكن تحضير الخضار</th>
+            <th data-ar="مناطق الخدمة والبيع" data-en="Service and Sales Areas">مناطق الخدمة والبيع</th>
+            <th data-ar=" مناطق تخزين الطعام" data-en=" Food Storage Areas">مناطق تخزين الطعام</th>
+            <th data-ar="البرادات والثلاجات" data-en="Refrigerators and Freezers">البرادات والثلاجات</th>
+            <th data-ar="مناطق المخلفات والحاويات" data-en="Waste and Containers Areas">مناطق المخلفات والحاويات</th>
+             <th data-ar="صالة الطعام" data-en="Dining Area">صالة الطعام</th>
+            <th data-ar="الملاحظات" data-en="Notes">الملاحظات</th>
         </tr>
     </thead>
     <tbody>
