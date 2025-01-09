@@ -347,6 +347,8 @@ html[lang="en"] .contact-info {
     </script>
 </head>
 <body>
+
+
 <div class="container">
     <div class="logo-section">
         <img src='https://zmohd1987.github.io/FCSM/ShjLogo.png' alt='شعار بلدية مدينة الشارقة' class="logo">
@@ -355,68 +357,97 @@ html[lang="en"] .contact-info {
         <button onclick="toggleLanguage()">
             <i class="fas fa-language"></i>
             <span id="languageButton" data-ar="عربي" data-en="English">عربي</span>
+
+
+
         </button>
     </div>
+<script>
+    function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.style.display = section.style.display === "none" ? "block" : "none";
+        }
+    }
+</script>
+
 
 <header>
     <h1 id="pageTitle" data-ar="دليل تراخيص المنشآت الغذائية" data-en="Food Establishment Licensing Guide">دليل تراخيص المنشآت الغذائية</h1>
 </header>
-
-<div class="section-title" onclick="toggleSection('introSection')" data-ar="مقدمة" data-en="Introduction">مقدمة</div>
-
-
-<div id="introSection" class="section-content">
+<div class="section-title" onclick="toggleSection('1_introSection')" data-ar="1. مقدمة" data-en="1. Introduction">
+    1. مقدمة
+</div>
+<div id="1_introSection" class="section-content">
     <p data-ar="حرصًا من بلدية مدينة الشارقة على تعزيز الصحة العامة وضمان سلامة الأغذية المتداولة داخل المدينة، يأتي هذا الدليل ليكون مرجعًا موحدًا لرواد الأعمال والمستثمرين وأصحاب المنشآت الغذائية. يتضمن الدليل تفاصيل الإجراءات والمعايير والخطوات اللازمة للحصول على التراخيص الغذائية، وذلك لضمان التزام كافة المنشآت الغذائية بأعلى معايير السلامة الغذائية."
        data-en="The Sharjah City Municipality seeks to enhance public health and ensure the safety of food products circulating within the city by setting clear and effective standards and procedures. This guide includes the specifications and requirements for food establishment licenses, as well as the steps needed to obtain licenses for food-related activities, with clarification of the legal and professional standards that must be followed, to ensure the highest levels of food safety and promote community health while keeping up with ongoing developments in this field.">
-       حرصًا من بلدية مدينة الشارقة على تعزيز الصحة العامة وضمان سلامة الأغذية المتداولة داخل المدينة، يأتي هذا الدليل ليكون مرجعًا موحدًا لرواد الأعمال والمستثمرين وأصحاب المنشآت الغذائية. يتضمن الدليل تفاصيل الإجراءات والمعايير والخطوات اللازمة للحصول على التراخيص الغذائية، وذلك لضمان التزام كافة المنشآت الغذائية بأعلى معايير السلامة الغذائية.
+        حرصًا من بلدية مدينة الشارقة على تعزيز الصحة العامة وضمان سلامة الأغذية المتداولة داخل المدينة، يأتي هذا الدليل ليكون مرجعًا موحدًا لرواد الأعمال والمستثمرين وأصحاب المنشآت الغذائية. يتضمن الدليل تفاصيل الإجراءات والمعايير والخطوات اللازمة للحصول على التراخيص الغذائية، وذلك لضمان التزام كافة المنشآت الغذائية بأعلى معايير السلامة الغذائية.
     </p>
-</div>
 
-<div class="section-title" onclick="toggleSection('goalSection')" data-ar="الهدف من الدليل" data-en="Purpose of the Guide">الهدف من الدليل</div>
-<div id="goalSection" class="section-content">
-    <p data-ar="يهدف هذا الدليل إلى تقديم إطار واضح وموحد لأصحاب المنشآت الغذائية والمستثمرين، يضمن لهم فهمًا شاملًا للمتطلبات والمعايير اللازمة للحصول على التراخيص اللازمة. يهدف الدليل إلى تيسير الإجراءات، وتعزيز الالتزام بأعلى معايير الصحة والسلامة العامة، وتوفير إرشادات دقيقة تساعد في تحسين جودة الخدمات الغذائية المقدمة، وتسهيل الوصول إلى المعلومات المتعلقة بمتطلبات المساحات، والخطوات التفصيلية والإجراءات الخاصة بكل نوع من المنشآت."
-       data-en="This guide aims to provide a clear and unified framework for food establishment owners and investors, ensuring a comprehensive understanding of the necessary requirements and standards for obtaining the required licenses. The guide aims to streamline procedures, enhance compliance with the highest health and safety standards, provide detailed guidance to improve the quality of food services, and facilitate access to information regarding space requirements and specific steps and procedures for each type of establishment.">
-        يهدف هذا الدليل إلى تقديم إطار واضح وموحد لأصحاب المنشآت الغذائية والمستثمرين، يضمن لهم فهمًا شاملًا للمتطلبات والمعايير اللازمة للحصول على التراخيص اللازمة. يهدف الدليل إلى تيسير الإجراءات، وتعزيز الالتزام بأعلى معايير الصحة والسلامة العامة، وتوفير إرشادات دقيقة تساعد في تحسين جودة الخدمات الغذائية المقدمة، وتسهيل الوصول إلى المعلومات المتعلقة بمتطلبات المساحات، والخطوات التفصيلية والإجراءات الخاصة بكل نوع من المنشآت.
-    </p>
 </div>
+    <div class="section-title" onclick="toggleSection('goalSection')" data-ar="2. الهدف من الدليل" data-en="2. Purpose of the Guide">
+        2. الهدف من الدليل
+    </div>
 
-<div class="section-title" onclick="toggleSection('rolesSection')" data-ar="الأدوار والمسؤوليات لإدارة الرقابة والسلامة الصحية" data-en="Roles and Responsibilities of the Health Control and Safety Department">الأدوار والمسؤوليات لإدارة الرقابة والسلامة الصحية</div>
-<div id="rolesSection" class="section-content">
-    <p data-ar="يعد قسم الرقابة الغذائية المسؤول عن الموافقة أو الرفض على الطلبات المتعلقة بترخيص المنشآت الغذائية وفقًا للمعايير والإجراءات المعتمدة. يشمل سير العمل تقديم الطلب من قبل المستثمر، ثم يتم مراجعة المستندات من قبل لجنة التراخيص، تليها المعاينة الميدانية من قبل اللجنة. في حال استيفاء جميع الشروط، يتم إصدار الموافقة النهائية للترخيص."
-       data-en="The Food Control Department is responsible for approving or rejecting applications related to the licensing of food establishments, based on established criteria and procedures. The workflow includes the submission of the application by the investor, followed by document review by the Licensing Committee, and then a site inspection by the committee. Once all conditions are met, final approval for licensing is issued.">
-        يعد قسم الرقابة الغذائية المسؤول عن الموافقة أو الرفض على الطلبات المتعلقة بترخيص المنشآت الغذائية وفقًا للمعايير والإجراءات المعتمدة. يشمل سير العمل تقديم الطلب من قبل المستثمر، ثم يتم مراجعة المستندات من قبل لجنة التراخيص، تليها المعاينة الميدانية من قبل اللجنة. في حال استيفاء جميع الشروط، يتم إصدار الموافقة النهائية للترخيص.
-    </p>
-    <ul>
-        <li><strong style="color: darkgreen; font-weight: bold;" data-ar="مدير إدارة الرقابة والسلامة الصحية :" data-en="Director of Health Control and Safety Department :"> :مدير إدارة الرقابة والسلامة الصحية:</strong> 
-        <span data-ar="مسؤول عن الإشراف على التراخيص الغذائية وضمان الالتزام بالمعايير والإجراءات المحددة للصحة والسلامة المهنية في المنشآت الغذائية، واتخاذ القرارات المتعلقة بالاستثناءات عند الضرورة." 
-        data-en="Responsible for overseeing food licensing and ensuring compliance with the health and occupational safety standards in food establishments, as well as making decisions regarding exceptions when necessary.">
-        مسؤول عن الإشراف على التراخيص الغذائية وضمان الالتزام بالمعايير والإجراءات المحددة للصحة والسلامة المهنية في المنشآت الغذائية، واتخاذ القرارات المتعلقة بالاستثناءات عند الضرورة.</span></li>
-        
-        <li><strong style="color: darkgreen; font-weight: bold;" data-ar="رئيس قسم الرقابة الغذائية :" data-en="Head of the Food Control Department :">رئيس قسم الرقابة الغذائية ::</strong> 
-        <span data-ar="مسؤول عن ضمان التزام المنشآت الغذائية بالمعايير الصحية أثناء عملية الترخيص، والتأكد من أن جميع الإجراءات الخاصة بالسلامة الغذائية تم تنفيذها بشكل صحيح." 
-        data-en="Responsible for ensuring that food establishments comply with health standards during the licensing process and making sure that all food safety procedures are properly implemented.">
-        مسؤول عن ضمان التزام المنشآت الغذائية بالمعايير الصحية أثناء عملية الترخيص، والتأكد من أن جميع الإجراءات الخاصة بالسلامة الغذائية تم تنفيذها بشكل صحيح.</span></li>
-        
-        <li><strong style="color: darkgreen; font-weight: bold;" data-ar="رئيس وحدة التراخيص :" data-en="Head of the Licensing Unit :">رئيس وحدة التراخيص ::</strong> 
-        <span data-ar="مسؤول عن التنسيق بين الفرق المختلفة المعنية بعمليات الترخيص، ومراجعة طلبات التراخيص الغذائية، وتقديم التوصيات بالموافقة أو الرفض بناءً على التقييم الشامل للطلب." 
-        data-en="Responsible for coordinating between the different teams involved in the licensing process, reviewing food licensing applications, and providing recommendations for approval or rejection based on a comprehensive evaluation of the application.">
-        مسؤول عن التنسيق بين الفرق المختلفة المعنية بعمليات الترخيص، ومراجعة طلبات التراخيص الغذائية، وتقديم التوصيات بالموافقة أو الرفض بناءً على التقييم الشامل للطلب.</span></li>
-        
-        <li><strong style="color: darkgreen; font-weight: bold;" data-ar="لجنة التراخيص :" data-en="Licensing Committee :">لجنة التراخيص ::</strong> 
-        <span data-ar="تقوم بمراجعة المستندات المقدمة من المنشآت الغذائية، وإجراء المعاينة الميدانية للموقع، والتأكد من استيفاء الشروط المطلوبة للحصول على الترخيص الغذائي." 
-        data-en="The committee reviews the documents submitted by food establishments, conducts on-site inspections, and ensures that the required conditions for obtaining food licensing are met.">
-        تقوم بمراجعة المستندات المقدمة من المنشآت الغذائية، وإجراء المعاينة الميدانية للموقع، والتأكد من استيفاء الشروط المطلوبة للحصول على الترخيص الغذائي.</span></li>
-    </ul>
-</div>
+    <div id="goalSection" class="section-content">
+        <p data-ar="يهدف هذا الدليل إلى تقديم إطار واضح وموحد لأصحاب المنشآت الغذائية والمستثمرين، يضمن لهم فهمًا شاملًا للمتطلبات والمعايير اللازمة للحصول على التراخيص اللازمة. يهدف الدليل إلى تيسير الإجراءات، وتعزيز الالتزام بأعلى معايير الصحة والسلامة العامة، وتوفير إرشادات دقيقة تساعد في تحسين جودة الخدمات الغذائية المقدمة، وتسهيل الوصول إلى المعلومات المتعلقة بمتطلبات المساحات، والخطوات التفصيلية والإجراءات الخاصة بكل نوع من المنشآت."
+           data-en="This guide aims to provide a clear and unified framework for food establishment owners and investors, ensuring a comprehensive understanding of the necessary requirements and standards for obtaining the required licenses. The guide aims to streamline procedures, enhance compliance with the highest health and safety standards, provide detailed guidance to improve the quality of food services, and facilitate access to information regarding space requirements and specific steps and procedures for each type of establishment.">
+            يهدف هذا الدليل إلى تقديم إطار واضح وموحد لأصحاب المنشآت الغذائية والمستثمرين، يضمن لهم فهمًا شاملًا للمتطلبات والمعايير اللازمة للحصول على التراخيص اللازمة. يهدف الدليل إلى تيسير الإجراءات، وتعزيز الالتزام بأعلى معايير الصحة والسلامة العامة، وتوفير إرشادات دقيقة تساعد في تحسين جودة الخدمات الغذائية المقدمة، وتسهيل الوصول إلى المعلومات المتعلقة بمتطلبات المساحات، والخطوات التفصيلية والإجراءات الخاصة بكل نوع من المنشآت.
+        </p>
+    </div>
+
+    <div class="section-title" onclick="toggleSection('rolesSection')" data-ar="3. الأدوار والمسؤوليات لإدارة الرقابة والسلامة الصحية" data-en="3. Roles and Responsibilities of the Health Control and Safety Department">
+        3. الأدوار والمسؤوليات لإدارة الرقابة والسلامة الصحية
+    </div>
+
+    <div id="rolesSection" class="section-content">
+        <p data-ar="يعد قسم الرقابة الغذائية المسؤول عن الموافقة أو الرفض على الطلبات المتعلقة بترخيص المنشآت الغذائية وفقًا للمعايير والإجراءات المعتمدة. يشمل سير العمل تقديم الطلب من قبل المستثمر، ثم يتم مراجعة المستندات من قبل لجنة التراخيص، تليها المعاينة الميدانية من قبل اللجنة. في حال استيفاء جميع الشروط، يتم إصدار الموافقة النهائية للترخيص."
+           data-en="The Food Control Department is responsible for approving or rejecting applications related to the licensing of food establishments, based on established criteria and procedures. The workflow includes the submission of the application by the investor, followed by document review by the Licensing Committee, and then a site inspection by the committee. Once all conditions are met, final approval for licensing is issued.">
+            يعد قسم الرقابة الغذائية المسؤول عن الموافقة أو الرفض على الطلبات المتعلقة بترخيص المنشآت الغذائية وفقًا للمعايير والإجراءات المعتمدة. يشمل سير العمل تقديم الطلب من قبل المستثمر، ثم يتم مراجعة المستندات من قبل لجنة التراخيص، تليها المعاينة الميدانية من قبل اللجنة. في حال استيفاء جميع الشروط، يتم إصدار الموافقة النهائية للترخيص.
+        </p>
+        <ul>
+            <li><strong style="color: darkgreen; font-weight: bold;" data-ar="3.1. مدير إدارة الرقابة والسلامة الصحية :" data-en="3.1. Director of Health Control and Safety Department :">
+                3.1. مدير إدارة الرقابة والسلامة الصحية:</strong>
+                <span data-ar="مسؤول عن الإشراف على التراخيص الغذائية وضمان الالتزام بالمعايير والإجراءات المحددة للصحة والسلامة المهنية في المنشآت الغذائية، واتخاذ القرارات المتعلقة بالاستثناءات عند الضرورة."
+                data-en="Responsible for overseeing food licensing and ensuring compliance with the health and occupational safety standards in food establishments, as well as making decisions regarding exceptions when necessary.">
+                مسؤول عن الإشراف على التراخيص الغذائية وضمان الالتزام بالمعايير والإجراءات المحددة للصحة والسلامة المهنية في المنشآت الغذائية، واتخاذ القرارات المتعلقة بالاستثناءات عند الضرورة.
+                </span>
+            </li>
+
+            <li><strong style="color: darkgreen; font-weight: bold;" data-ar="3.2. رئيس قسم الرقابة الغذائية :" data-en="3.2. Head of the Food Control Department :">
+                3.2. رئيس قسم الرقابة الغذائية:</strong>
+                <span data-ar="مسؤول عن ضمان التزام المنشآت الغذائية بالمعايير الصحية أثناء عملية الترخيص، والتأكد من أن جميع الإجراءات الخاصة بالسلامة الغذائية تم تنفيذها بشكل صحيح."
+                data-en="Responsible for ensuring that food establishments comply with health standards during the licensing process and making sure that all food safety procedures are properly implemented.">
+                مسؤول عن ضمان التزام المنشآت الغذائية بالمعايير الصحية أثناء عملية الترخيص، والتأكد من أن جميع الإجراءات الخاصة بالسلامة الغذائية تم تنفيذها بشكل صحيح.
+                </span>
+            </li>
+
+            <li><strong style="color: darkgreen; font-weight: bold;" data-ar="3.3. رئيس وحدة التراخيص :" data-en="3.3. Head of the Licensing Unit :">
+                3.3. رئيس وحدة التراخيص:</strong>
+                <span data-ar="مسؤول عن التنسيق بين الفرق المختلفة المعنية بعمليات الترخيص، ومراجعة طلبات التراخيص الغذائية، وتقديم التوصيات بالموافقة أو الرفض بناءً على التقييم الشامل للطلب."
+                data-en="Responsible for coordinating between the different teams involved in the licensing process, reviewing food licensing applications, and providing recommendations for approval or rejection based on a comprehensive evaluation of the application.">
+                مسؤول عن التنسيق بين الفرق المختلفة المعنية بعمليات الترخيص، ومراجعة طلبات التراخيص الغذائية، وتقديم التوصيات بالموافقة أو الرفض بناءً على التقييم الشامل للطلب.
+                </span>
+            </li>
+
+            <li><strong style="color: darkgreen; font-weight: bold;" data-ar="3.4. لجنة التراخيص :" data-en="3.4. Licensing Committee :">
+                3.4. لجنة التراخيص:</strong>
+                <span data-ar="تقوم بمراجعة المستندات المقدمة من المنشآت الغذائية، وإجراء المعاينة الميدانية للموقع، والتأكد من استيفاء الشروط المطلوبة للحصول على الترخيص الغذائي."
+                data-en="The committee reviews the documents submitted by food establishments, conducts on-site inspections, and ensures that the required conditions for obtaining food licensing are met.">
+                تقوم بمراجعة المستندات المقدمة من المنشآت الغذائية، وإجراء المعاينة الميدانية للموقع، والتأكد من استيفاء الشروط المطلوبة للحصول على الترخيص الغذائي.
+                </span>
+            </li>
+        </ul>
+    </div>
  
-<div class="section-title" onclick="toggleSection('scopeSection')" data-ar="مجال التطبيق" data-en="Scope of Application">مجال التطبيق</div>
+<div class="section-title" onclick="toggleSection('scopeSection')" data-ar="4. مجال التطبيق" data-en="4. Scope of Application">4. مجال التطبيق</div>
 <div id="scopeSection" class="section-content">
     <p data-ar="لغايات هذه الاشتراطات، تسري أحكام هذا الدليل على جميع المنشآت الغذائية ضمن نطاق مدينة الشارقة، ويشمل ذلك كافة المنشآت العاملة في تصنيع أو تحضير أو تقديم أو بيع الأغذية. يهدف الدليل إلى توضيح المتطلبات والإجراءات والمعايير اللازمة للحصول على التراخيص بما يحقق الالتزام بأعلى معايير السلامة والصحة العامة في جميع مراحل تداول الأغذية." 
        data-en="For the purposes of these requirements, the provisions of this guide apply to all food establishments within the scope of Sharjah city, including those involved in the manufacturing, preparation, serving, or sale of food. The guide aims to clarify the requirements, procedures, and standards necessary for obtaining licenses, ensuring compliance with the highest standards of food safety and public health throughout all stages of food handling.">
         لغايات هذه الاشتراطات، تسري أحكام هذا الدليل على جميع المنشآت الغذائية ضمن نطاق مدينة الشارقة، ويشمل ذلك كافة المنشآت العاملة في تصنيع أو تحضير أو تقديم أو بيع الأغذية. يهدف الدليل إلى توضيح المتطلبات والإجراءات والمعايير اللازمة للحصول على التراخيص بما يحقق الالتزام بأعلى معايير السلامة والصحة العامة في جميع مراحل تداول الأغذية.
     </p>
 </div>
-    <div class="section-title" onclick="toggleSection('definitionSection', 'ar')" data-ar="المصطلحات والتعريفات" data-en="Definitions">المصطلحات والتعريفات</div>
+    <div class="section-title" onclick="toggleSection('definitionSection', 'ar')" data-ar="5. المصطلحات والتعريفات" data-en="5. Definitions">5. المصطلحات والتعريفات</div>
     <div id="definitionSection" class="section-content">
         <ul>
             <li class="definition">
@@ -476,92 +507,717 @@ html[lang="en"] .contact-info {
         </ul>
     </div>
 
-<div class="section-title" onclick="toggleSection('infrastructureSection', 'ar')" data-ar="اشتراطات البنية التحتية" data-en="Infrastructure Requirements">اشتراطات البنية التحتية</div>
+<div class="section-title" onclick="toggleSection('infrastructureSection', 'ar')" data-ar="6. اشتراطات البنية التحتية" data-en="6. Infrastructure Requirements">6. اشتراطات البنية التحتية</div>
 <div id="infrastructureSection" class="section-content">
     <ul>
-     <li class="requirement">
-<span class="key" data-ar="الموقع:" data-en="Location:">الموقع:</span> 
-<span class="requirement">
-<h2 data-ar="اشتراطات الموقع" data-en="Location Requirements">اشتراطات الموقع / Location Requirements</h2>
-<ul>
-    <li data-ar="يجب أن يتم اختيار الموقع بحيث يكون مناسبًا ويضمن الحفاظ على المنشأة في حالة نظيفة وصالحة للاستخدام." data-en="The location must be selected to ensure suitability and maintain the establishment in a clean and usable condition.">أ. يجب أن يتم اختيار الموقع بحيث يكون مناسبًا ويضمن الحفاظ على المنشأة في حالة نظيفة وصالحة للاستخدام.</li>
-    <li data-ar="يجب التأكد من أن أي جزء من المنشأة لا يشكل تهديدًا على سلامة الأغذية أو صلاحيتها للاستهلاك." data-en="It must be ensured that no part of the establishment poses a threat to the safety or suitability of the food for consumption.">ب. يجب التأكد من أن أي جزء من المنشأة لا يشكل تهديدًا على سلامة الأغذية أو صلاحيتها للاستهلاك.</li>
-    <li data-ar="يجب أن تكون المنشأة بعيدة عن المناطق الملوثة بيئيًا، مثل المناطق الصناعية أو الأماكن التي تشهد تلوثًا في الهواء أو المياه." data-en="The establishment must be located away from environmentally polluted areas, such as industrial zones or places exposed to air or water contamination.">ج. يجب أن تكون المنشأة بعيدة عن المناطق الملوثة بيئيًا، مثل المناطق الصناعية أو الأماكن التي تشهد تلوثًا في الهواء أو المياه.</li>
-    <li data-ar="يجب تجنب إقامة المنشأة في المناطق المعرضة لانتشار الآفات التي قد تنقل الأمراض أو تسبب تلوثًا للطعام." data-en="The establishment must not be located in areas exposed to pests that may transmit diseases or cause food contamination.">د. يجب تجنب إقامة المنشأة في المناطق المعرضة لانتشار الآفات التي قد تنقل الأمراض أو تسبب تلوثًا للطعام.</li>
-    <li data-ar="ينبغي أن يتم اختيار الموقع بحيث يكون من السهل إزالة المخلفات الصلبة والسائلة منه بفعالية للحفاظ على مستوى نظافة مرتفع." data-en="The location should be selected so that solid and liquid waste can be effectively removed, maintaining a high level of cleanliness.">ه. ينبغي أن يتم اختيار الموقع بحيث يكون من السهل إزالة المخلفات الصلبة والسائلة منه بفعالية للحفاظ على مستوى نظافة مرتفع.</li>
-</ul>
-
-<h2 data-ar="ملاحظات الموقع" data-en="Location Notes">ملاحظات الموقع / Location Notes</h2>
-<ul>
-    <li data-ar="عند تحديد موقع المنشأة الغذائية، ينبغي أن تكون المنشأة قادرة على تحقيق العزل اللازم لضمان:" data-en="When determining the location of the food establishment, it should be capable of ensuring necessary isolation to guarantee:">
-        1. عند تحديد موقع المنشأة الغذائية، ينبغي أن تكون المنشأة قادرة على تحقيق العزل اللازم لضمان:
-        <ul>
-            <li data-ar="منع كونها ملاذًا للآفات." data-en="Preventing it from becoming a refuge for pests.">منع كونها ملاذًا للآفات.</li>
-            <li data-ar="منع دخول الأتربة، الرياح، الدخان، الملوثات، والمواد الخارجية." data-en="Preventing the entry of dust, wind, smoke, contaminants, and foreign materials.">منع دخول الأتربة، الرياح، الدخان، الملوثات، والمواد الخارجية.</li>
-            <li data-ar="منع دخول الآفات." data-en="Preventing the entry of pests.">منع دخول الآفات.</li>
-        </ul>
-    </li>
-    <li data-ar="ينبغي أن تكون المنشأة بعيدة عن المناطق الملوثة بيئيًا أو الأنشطة الصناعية التي قد تهدد سلامة الأغذية." data-en="The establishment should be located away from environmentally polluted areas or industrial activities that may threaten food safety.">
-        2. ينبغي أن تكون المنشأة بعيدة عن المناطق الملوثة بيئيًا أو الأنشطة الصناعية التي قد تهدد سلامة الأغذية.
-    </li>
-    <li data-ar="من المهم اختيار موقع المنشأة بعيدًا عن العوامل التي قد تعرض سلامة الأغذية للخطر، مثل أماكن التخلص من النفايات." data-en="It is important to choose a site away from factors that may compromise food safety, such as waste disposal areas.">
-        3. من المهم اختيار موقع المنشأة بعيدًا عن العوامل التي قد تعرض سلامة الأغذية للخطر، مثل أماكن التخلص من النفايات.
-    </li>
-    <li data-ar="ينبغي أن يكون الموقع على بعد 30 مترًا على الأقل من مصادر التلوث المحتملة، ويمكن تعديل هذه المسافة حسب الظروف." data-en="The location should be at least 30 meters away from potential sources of contamination, with the distance adjustable based on the circumstances.">
-        4. ينبغي أن يكون الموقع على بعد 30 مترًا على الأقل من مصادر التلوث المحتملة، ويمكن تعديل هذه المسافة حسب الظروف.
-    </li>
-    <li data-ar="يجب أن تكون المنشأة بعيدة عن المناطق البيئية الملوثة أو مواقع الأنشطة الصناعية التي قد تشكل تهديدًا على سلامة الأغذية." data-en="The establishment must be far from polluted environmental areas or industrial activity sites that may threaten food safety.">
-        5. يجب أن تكون المنشأة بعيدة عن المناطق البيئية الملوثة أو مواقع الأنشطة الصناعية التي قد تشكل تهديدًا على سلامة الأغذية.
-    </li>
-    <li data-ar="لا يجب أن يمثل موقع المنشأة الغذائية أي تهديد على سلامة الأغذية، ويجب تحقيق ما ذكر أعلاه لضمان السلامة." data-en="The location of the food establishment should not pose any threat to food safety, and the above-mentioned measures should be implemented to ensure safety.">
-        6. لا يجب أن يمثل موقع المنشأة الغذائية أي تهديد على سلامة الأغذية، ويجب تحقيق ما ذكر أعلاه لضمان السلامة.
-    </li>
-    <li data-ar="يجب اختيار موقع المنشأة الغذائية بعيدًا عن العوامل التي قد تشكل خطرًا صحيًا على المنشأة، مثل مناطق التخلص من النفايات أو أي مناطق قد تتعارض مع سلامة الأغذية." data-en="The food establishment must be located away from factors that may pose a health risk, such as waste disposal areas or any areas that may conflict with food safety.">
-        7. يجب اختيار موقع المنشأة الغذائية بعيدًا عن العوامل التي قد تشكل خطرًا صحيًا على المنشأة، مثل مناطق التخلص من النفايات أو أي مناطق قد تتعارض مع سلامة الأغذية.
-        <ul>
-            <li data-ar="يوصى بأن تكون المنشأة الغذائية بعيدة بما لا يقل عن 30 مترًا عن مصادر التلوث المحتملة، مع إمكانية التعديل بناءً على ظروف الموقع الطبيعية واشتراطات الجهات المعنية." data-en="It is recommended that the food establishment be at least 30 meters away from potential sources of contamination, with adjustments based on the natural conditions of the site and the requirements of the relevant authorities.">
-                يوصى بأن تكون المنشأة الغذائية بعيدة بما لا يقل عن 30 مترًا عن مصادر التلوث المحتملة، مع إمكانية التعديل بناءً على ظروف الموقع الطبيعية واشتراطات الجهات المعنية.
-            </li>
-        </ul>
-    </li>
-</ul>
 
 <li class="requirement">
-    <span class="key" data-ar="التصميم:" data-en="Design:">التصميم:</span> 
-    <span class="text" data-ar="يجب أن يكون تصميم المنشأة الغذائية مناسبًا للأنشطة الغذائية التي سيتم مزاولتها، بحيث يكون هناك انسياب منتظم في سير العمليات، وأن تكون مناطق تحضير الأغذية مفصولة عن دورات المياه ومناطق تخزين مواد التنظيف والمواد الكيميائية. كما يجب أن يضمن حجم المنشأة الغذائية وتخطيطها وتصميمها ما يسمح بتنفيذ العمليات اللازمة للصيانة والتنظيف والتطهير. يسهم التصميم في تقليل التلوث الناتج عن الهواء ويجب أن يوفر مساحة كافية للعمل وحرية الحركة، مع منع التكدس. كما يجب أن يكون المسار التدفقي للعمل مناسبًا ليتيح أداء العمليات بشكل صحي وآمن. يجب أن يضمن التصميم حماية ضد تراكم الأوساخ، التكثف، ملامسة المواد السامة، تكسر الجزيئات وتناثرها في الطعام، وتكوين العفن على الأسطح، مما قد يشكل خطر التلوث المباشر للطعام. يجب أن يتيح التصميم تطبيق الممارسات الصحية الجيدة، بما في ذلك الحماية من التلوث التبادلي، كما يجب أن يمنع دخول الحشرات أو تفشيها. وأخيرًا، يجب أن يوفر الموقع ظروف تحكم مناسبة لدرجة الحرارة والرطوبة، بحيث تكون هناك قدرة كافية على التحكم فيها عند الحاجة." data-en="The design of the food establishment must be suitable for the food activities to be conducted, ensuring a regular flow of operations, and separating food preparation areas from restrooms and storage areas for cleaning materials and chemicals. The size, layout, design, and construction must allow for the necessary maintenance, cleaning, and sanitizing operations. The design should help reduce air pollution and provide sufficient space for work and movement while preventing congestion. The workflow path must be suitable to allow hygienic and safe operations. The design must ensure protection against dirt accumulation, condensation, contact with toxic materials, particle breakage, scattering into food, and mold formation on surfaces, all of which can pose direct food contamination hazards. The design must allow for good hygiene practices, including protection against cross-contamination, and prevent pest entry or outbreaks. Lastly, the location must provide appropriate conditions for temperature and humidity control with sufficient capability to manage them when necessary."></span>
+    <span class="key" data-ar="6. اشتراطات البنية التحتية:" data-en="6. Infrastructure Requirements:">6. اشتراطات البنية التحتية:</span>
+    <p data-ar="يجب اختيار مواقع المباني والمرافق والمعدات وتصميمها بما يتناسب مع طبيعة العمليات والمخاطر المرتبطة بها، لضمان النقاط التالية:" 
+            data-en="The selection and design of building sites, equipment, and facilities should align with the nature of operations and associated risks to ensure the following:"></p>
+  
+    <ul>
+        <li data-ar="اختيار مواقع المباني والمرافق بشكل يقلل من مخاطر التلوث إلى أدنى مستوى." 
+            data-en="Selection of building sites and facilities to minimize contamination risks to the lowest level."></li>
+        <li data-ar="تصميم المنشأة بطريقة تسهل الصيانة والتنظيف والتطهير، مع الحد من التلوث الناجم عن الهواء." 
+            data-en="Design of the facility to facilitate effective maintenance, cleaning, and disinfection, while minimizing airborne contamination."></li>
+        <li data-ar="أن تكون المواد والأسطح المستخدمة، وخصوصًا تلك التي تتلامس مع الغذاء، غير سامة ومناسبة للاستخدام المقصود." 
+            data-en="Materials and surfaces, especially those in contact with food, should be non-toxic and suitable for the intended use."></li>
+        <li data-ar="توفير مرافق لمراقبة درجة الحرارة والرطوبة، بالإضافة إلى الضوابط الأخرى حسب الحاجة." 
+            data-en="Provision of facilities to monitor temperature, humidity, and other necessary controls."></li>
+        <li data-ar="تطبيق تدابير فعّالة لمنع دخول الآفات والحفاظ على بيئة خالية منها." 
+            data-en="Implementation of effective measures to prevent pests and ensure a pest-free environment."></li>
+        <li data-ar="توفير دورات مياه ملائمة وكافية للعاملين." 
+            data-en="Provision of adequate and suitable restroom facilities for employees."></li>
+    </ul>
 </li>
 
-        <li class="requirement">
-            <span class="key" data-ar="التهوية:" data-en="Ventilation:">التهوية:</span> <span class="text" data-ar="يجب أن تزود المنشآت الغذائية بالتهوية المناسبة لمنع ارتفاع الحرارة وتكاثف البخار ولإزالة الهواء الملوث، وأن يكون تصميم وتركيب نظم التهوية كافيًا من حيث العدد والقدرة." data-en="Food establishments must be equipped with adequate ventilation to prevent heat buildup and condensation, and to remove contaminated air, with sufficient design and installation of ventilation systems in terms of quantity and capacity."></span>
+
+<li class="requirement">
+    <span class="key" data-ar="6.1 الموقع:" data-en="6.1 Location:">6.1 الموقع:</span> 
+    <ul>
+        <li data-ar="يجب أن يكون الموقع مناسباً ويجب الحفاظ على نظافة المنشأة وحالتها الجيدة." data-en="The location must be suitable and the establishment must be maintained in a clean and good condition.">يجب أن يكون الموقع مناسباً ويجب الحفاظ على نظافة المنشأة وحالتها الجيدة.</li>
+        <li data-ar="يجب أن تكون المنشأة بعيدة عن المناطق الملوثة بيئياً." data-en="The establishment must be located away from environmentally polluted areas.">يجب أن تكون المنشأة بعيدة عن المناطق الملوثة بيئياً.</li>
+        <li data-ar="ينبغي أن تكون المنشأة في مكان لا يشكل تهديداً لسلامة الغذاء وصلاحيته." data-en="The establishment must be in a location that does not pose a threat to the safety or suitability of the food.">ينبغي أن تكون المنشأة في مكان لا يشكل تهديداً لسلامة الغذاء وصلاحيته.</li>
+        <li data-ar="يجب أن تكون المنشأة بعيدة عن المناطق التي يصعب إزالة النفايات الصلبة أو السائلة منها." data-en="The establishment must be away from areas where solid or liquid waste is difficult to remove.">يجب أن تكون المنشأة بعيدة عن المناطق التي يصعب إزالة النفايات الصلبة أو السائلة منها.</li>
+        <li data-ar="ينبغي أن تكون المنشأة بعيدة عن المناطق التي يُحتمل فيها تفشي الآفات." data-en="The establishment must be away from areas where pests are likely to spread.">ينبغي أن تكون المنشأة بعيدة عن المناطق التي يُحتمل فيها تفشي الآفات.</li>
+    </ul>
+</li>
+
+<li class="requirement">
+    <span class="key" data-ar="6.1.1 التصميم:" data-en="6.1.1 Design:">6.1.1 التصميم:</span> 
+    <ul>
+        <li data-ar="يجب أن تكون البنية الداخلية للمنشأة الغذائية مكونة من مواد صلبة ومتينة يسهل صيانتها وتنظيفها وتطهيرها عند الضرورة." data-en="The internal structure of the food establishment must be made of solid and durable materials that are easy to maintain, clean, and sanitize when necessary.">
+            يجب أن تكون البنية الداخلية للمنشأة الغذائية مكونة من مواد صلبة ومتينة يسهل صيانتها وتنظيفها وتطهيرها عند الضرورة.
         </li>
-        <li class="requirement">
-            <span class="key" data-ar="مناطق التخزين:" data-en="Storage Areas:">مناطق التخزين:</span> <span class="text" data-ar="يجب على المنشآت الغذائية توفير أماكن تخزين بمساحات كافية للمواد اللازمة للعمل والإنتاج، مع توفير أرفف بأعداد كافية لضمان تخزين جميع المواد بعيدًا عن الأرض." data-en="Food establishments must provide adequate storage areas for materials necessary for operation and production, with sufficient shelves to ensure all materials are stored off the ground."></span>
+        <li data-ar="يجب السماح بتنفيذ العمليات اللازمة للصيانة والتنظيف والتطهير بسهولة." data-en="Proper maintenance, cleaning, and sanitizing operations must be easily performed.">
+            يجب السماح بتنفيذ العمليات اللازمة للصيانة والتنظيف والتطهير بسهولة.
         </li>
-        <li class="requirement">
-            <span class="key" data-ar="إمدادات المياه:" data-en="Water Supply:">إمدادات المياه:</span> <span class="text" data-ar="يجب أن تتوفر في المنشأة الغذائية إمدادات كافية من المياه الصالحة للشرب لأغراض التنظيف وإعداد الطعام." data-en="Food establishments must have sufficient supplies of potable water for cleaning and food preparation."></span>
+        <li data-ar="يجب تقليل التلوث الناتج عن الهواء وتوفير مساحة كافية للعمل وحرية الحركة ومنع التكدس." data-en="Air pollution must be minimized, and sufficient workspace and freedom of movement must be provided while preventing overcrowding.">
+            يجب تقليل التلوث الناتج عن الهواء وتوفير مساحة كافية للعمل وحرية الحركة ومنع التكدس.
         </li>
-        <li class="requirement">
-            <span class="key" data-ar="التخلص من النفايات الصلبة:" data-en="Solid Waste Disposal:">التخلص من النفايات الصلبة:</span> <span class="text" data-ar="يجب توفير عدد كافٍ من حاويات النفايات المناسبة." data-en="A sufficient number of appropriate waste containers must be provided."></span>
+        <li data-ar="يجب أن يكون مسار تدفق العمل مناسبًا، مما يتيح أداء العمليات بشكل صحي وآمن." data-en="The workflow path must be suitable to enable hygienic and safe operations.">
+            يجب أن يكون مسار تدفق العمل مناسبًا، مما يتيح أداء العمليات بشكل صحي وآمن.
         </li>
-        <li class="requirement">
-            <span class="key" data-ar="مصائد الشحوم والدهون:" data-en="Grease Traps:">مصائد الشحوم والدهون:</span> <span class="text" data-ar="يجب تركيب مصائد دهون ذات نوعية مناسبة حسب نوع وحجم النشاط." data-en="Grease traps of suitable quality must be installed according to the type and size of the activity."></span>
+        <li data-ar="يجب أن يحمي التصميم من تراكم الأوساخ والتكثف وملامسة المواد السامة أو تكسر وتناثر الجزيئات في الطعام." data-en="The design must protect against the accumulation of dirt, condensation, contact with toxic materials, or particle breakage and scattering into food.">
+            يجب أن يحمي التصميم من تراكم الأوساخ والتكثف وملامسة المواد السامة أو تكسر وتناثر الجزيئات في الطعام.
         </li>
-        <li class="requirement">
-            <span class="key" data-ar="أحواض غسل اليدين:" data-en="Hand Washing Sinks:">أحواض غسل اليدين:</span> <span class="text" data-ar="يجب توفير أحواض لغسيل الأيدي بعدد كافٍ حسب نوع وحجم النشاط، بحيث تكون موجودة في مكان مناسب وسهل الوصول إليه." data-en="Adequate hand washing sinks must be provided according to the type and size of the activity, located in convenient and accessible places."></span>
+        <li data-ar="يجب منع تشكل العفن غير المرغوب فيه على الأسطح." data-en="Unwanted mold formation on surfaces must be prevented.">
+            يجب منع تشكل العفن غير المرغوب فيه على الأسطح.
         </li>
-        <li class="requirement">
-            <span class="key" data-ar="دورات المياه:" data-en="Restrooms:">دورات المياه:</span> <span class="text" data-ar="يجب أن تتوفر لمتداولي الأغذية دورات مياه كافية ومناسبة وفي مكان ملائم، وأن تكون محكمة الإغلاق، ذات إضاءة وتهوية جيدة." data-en="Sufficient and suitable restrooms must be available for food handlers in a convenient location, fully enclosed, well-lit, and ventilated."></span>
+        <li data-ar="يجب تطبيق الممارسات الصحية الجيدة بما في ذلك الحماية من التلوث التبادلي ومنع دخول الحشرات أو تفشيها." data-en="Good hygiene practices must be applied, including protection against cross-contamination and prevention of pest entry or outbreaks.">
+            يجب تطبيق الممارسات الصحية الجيدة بما في ذلك الحماية من التلوث التبادلي ومنع دخول الحشرات أو تفشيها.
         </li>
-        <li class="requirement">
-            <span class="key" data-ar="مناطق تبديل الملابس:" data-en="Changing Areas:">مناطق تبديل الملابس:</span> <span class="text" data-ar="يجب توفير غرف لتبديل الملابس إذا كان العمال يقومون بتبديل ملابسهم بصورة روتينية في المنشأة الغذائية." data-en="Changing rooms must be provided if workers routinely change their clothes in the food establishment."></span>
+        <li data-ar="يجب توفير ظروف تحكم مناسبة لدرجة الحرارة والرطوبة بقدرة كافية عند الضرورة." data-en="Appropriate conditions for temperature and humidity control must be provided with sufficient capacity when necessary.">
+            يجب توفير ظروف تحكم مناسبة لدرجة الحرارة والرطوبة بقدرة كافية عند الضرورة.
         </li>
-        <li class="requirement">
-            <span class="key" data-ar="مرافق التنظيف:" data-en="Cleaning Facilities:">مرافق التنظيف:</span> <span class="text" data-ar="يجب توفير أماكن مناسبة لحفظ معدات ومواد التنظيف بحيث تكون بعيدة عن مناطق تداول الأغذية." data-en="Suitable areas must be provided for storing cleaning equipment and materials, away from food handling areas."></span>
+        <li data-ar="ينبغي الفصل بين المناطق التي تحتوي على مستويات مختلفة من ضوابط النظافة مثل مناطق المواد الخام ومناطق المنتجات النهائية للتقليل إلى أدنى حد من انتقال التلوث وذلك من خلال تدابير من قبيل الفصل المادي (مثل الجدران والفواصل) و / أو الموقع (مثل المسافة وحركة المرور)، أو تدفقات الإنتاج في اتجاه واحد، أو تدفق الهواء، أو الفصل الزمني مع إجراء التنظيف والتطهير المناسبين بين الاستخدامات." data-en="Separation should be made between areas with different levels of hygiene controls, such as raw material areas and finished product areas, to minimize contamination transfer. This can be achieved through measures such as physical barriers (e.g., walls and partitions), location (e.g., distance and traffic), unidirectional production flows, air flow, or temporal separation, with appropriate cleaning and disinfection between uses.">
+            ينبغي الفصل بين المناطق التي تحتوي على مستويات مختلفة من ضوابط النظافة مثل مناطق المواد الخام ومناطق المنتجات النهائية للتقليل إلى أدنى حد من انتقال التلوث وذلك من خلال تدابير من قبيل الفصل المادي (مثل الجدران والفواصل) و / أو الموقع (مثل المسافة وحركة المرور)، أو تدفقات الإنتاج في اتجاه واحد، أو تدفق الهواء، أو الفصل الزمني مع إجراء التنظيف والتطهير المناسبين بين الاستخدامات.
         </li>
+    </ul>
+</li>
+
+<li class="requirement">
+    <span class="key" data-ar="6.1.2 الهياكل والتجهيزات الداخلية:" data-en="6.1.2 Internal Structures and Fittings:">6.1.2 الهياكل والتجهيزات الداخلية:</span>
+    <p data-ar="يجب أن تكون الهياكل الداخلية للمنشآت مصممة ومبنية باستخدام مواد قوية وعالية التحمل، مع الأخذ في الاعتبار سهولة الصيانة والتطهير وفقًا للمعايير الصحية لضمان بيئة عمل آمنة وصحية. وينبغي أن تفي الهياكل بالمتطلبات التالية لضمان سلامة الغذاء وحمايته من التلوث:" data-en="The internal structures of facilities must be designed and built using durable, high-strength materials that facilitate easy maintenance and disinfection, in accordance with health standards to ensure a safe and hygienic work environment. The structures should meet the following requirements to ensure food safety and protection from contamination:"></p>
+    
+    <ul>
+<!-- الجدران والفواصل -->
+<li class="requirement">
+    <span class="key" data-ar="6.1.2.1 الجدران والفواصل:" data-en="6.1.2.1 Walls and Partitions:">6.1.2.1 الجدران والفواصل | Walls and Partitions:</span>
+    <p data-ar="ينبغي أن تكون الأسطح الأساسية مثل الجدران، الفواصل، والأرضيات من مواد مقاومة للسوائل وسهلة التنظيف والتطهير لضمان القضاء على أي مصدر محتمل للتلوث." data-en="Essential surfaces such as walls, partitions, and floors should be made of liquid-resistant materials that are easy to clean and disinfect to eliminate any potential sources of contamination."></p>
+    <p data-ar="يجب أن تتمتع الأسطح بالجدران والفواصل بملمس أملس وسطح مستوٍ حتى الارتفاع المناسب للعمليات التشغيلية لتسهيل عمليات التنظيف والصيانة." data-en="Wall and partition surfaces should be smooth and level to an appropriate height for operational processes to facilitate cleaning and maintenance."></p>
+    <ul>
+        <li data-ar="يجب أن تكون الجدران والفواصل في المناطق التي تتعرض للرطوبة أو الأبخرة مصنوعة من مواد مقاومة للرطوبة ومقاومة للبكتيريا لضمان سهولة التنظيف ومنع نمو الميكروبات." data-en="Walls and partitions in areas exposed to moisture or vapors should be made of moisture-resistant and bacteria-resistant materials to ensure ease of cleaning and prevent microbial growth."></li>
+        <li data-ar="ينبغي أن تكون الفواصل قابلة للإزالة أو ذات تصميم يسمح بسهولة صيانتها وتنظيفها بشكل دوري." data-en="Partitions should be removable or designed to allow for easy maintenance and regular cleaning."></li>
+        <li data-ar="يجب أن تكون الجدران والفواصل في مناطق التحضير والتخزين محكمة ومتماسكة بحيث تمنع تراكم الأوساخ وتسمح بالتهوية الجيدة." data-en="Walls and partitions in preparation and storage areas should be tightly sealed to prevent dirt accumulation and allow for proper ventilation."></li>
+        <li data-ar="ينبغي أن تتمتع الفواصل بقدرة على مقاومة التأثيرات الميكانيكية لضمان طول عمرها تحت الاستخدام المكثف." data-en="Partitions should be resistant to mechanical impacts to ensure their longevity under heavy use."></li>
+        <li data-ar="يجب أن تكون الأسطح قابلة للمسح بسهولة باستخدام المنظفات المناسبة والمواد المضادة للبكتيريا لضمان الحفاظ على بيئة نظيفة وآمنة." data-en="Surfaces should be easily wipeable using appropriate cleaners and antibacterial agents to ensure a clean and safe environment."></li>
+    </ul>
+</li>
+
+<h2 data-ar="أمثلة لبعض المواد المسموح بها للجدران والفواصل وفق المواصفات الإماراتية والدولية" 
+    data-en="Examples of Permissible Wall and Partition Materials per UAE and Global Standards" 
+    style="text-align:center;">
+    أمثلة لبعض المواد المسموح بها للجدران والفواصل وفق المواصفات الإماراتية والدولية | Examples of Permissible Wall and Partition Materials per UAE and Global Standards
+</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th data-ar="المادة" data-en="Material">المادة | Material</th>
+            <th data-ar="صالة الطعام" data-en="Dining Area">صالة الطعام | Dining Area</th>
+            <th data-ar="مناطق الخدمة والبيع" data-en="Service and Sales Areas">مناطق الخدمة والبيع | Service and Sales Areas</th>
+            <th data-ar="أماكن تحضير الغذاء" data-en="Food Prep Areas">أماكن تحضير الغذاء | Food Prep Areas</th>
+            <th data-ar="أماكن طهي الغذاء" data-en="Food Cooking Areas">أماكن طهي الغذاء | Food Cooking Areas</th>
+            <th data-ar="البرادات والثلاجات" data-en="Refrigerators and Freezers">البرادات والثلاجات | Refrigerators and Freezers</th>
+            <th data-ar="الملاحظات" data-en="Notes">الملاحظات | Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-ar="ألواح خشب الزينة" data-en="Decorative Wooden Panels">ألواح خشب الزينة | Decorative Wooden Panels</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td data-ar="للاستخدام الجمالي فقط، معتمدة للمناطق الجافة" data-en="For aesthetic use only, approved for dry areas">للاستخدام الجمالي فقط، معتمدة للمناطق الجافة | For aesthetic use only, approved for dry areas</td>
+        </tr>
+        <tr>
+            <td data-ar="ألواح الألمنيوم" data-en="Aluminum Panels">ألواح الألمنيوم | Aluminum Panels</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="مقاومة للرطوبة والبكتيريا، معتمدة دولياً" data-en="Moisture and bacteria-resistant, internationally approved">مقاومة للرطوبة والبكتيريا، معتمدة دولياً | Moisture and bacteria-resistant, internationally approved</td>
+        </tr>
+        <tr>
+            <td data-ar="طوب الديكور" data-en="Decorative Bricks">طوب الديكور | Decorative Bricks</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td data-ar="للاستخدام الجمالي فقط، غير مقاوم للرطوبة" data-en="For aesthetic use only, not moisture-resistant">للاستخدام الجمالي فقط، غير مقاوم للرطوبة | For aesthetic use only, not moisture-resistant</td>
+        </tr>
+        <tr>
+            <td data-ar="الأسمنت" data-en="Cement">الأسمنت | Cement Troeled</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="سطح  مصقول مقاوم للماء، معتمد في المناطق الرطبة" data-en="Water-resistant surface, approved for humid areas">سطح مقاوم للماء، معتمد في المناطق الرطبة | Water-resistant surface, approved for humid areas</td>
+        </tr>
+        <tr>
+            <td data-ar="ستانلس ستيل" data-en="Stainless Steel">ستانلس ستيل | Stainless Steel</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="مقاوم للصدأ، مفاصل ملحومة، معتمد من ESMA" data-en="Rust-resistant, welded joints, ESMA approved">مقاوم للصدأ، مفاصل ملحومة، معتمد من ESMA | Rust-resistant, welded joints, ESMA approved</td>
+        </tr>
+        <tr>
+            <td data-ar="سيراميك" data-en="Ceramic tiles">سيراميك | Ceramic tiles</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="جص إيبوكسي، مقاوم للماء والبكتيريا" data-en="Epoxy-grouted, water and bacteria-resistant">جص إيبوكسي، مقاوم للماء والبكتيريا | Epoxy-grouted, water and bacteria-resistant</td>
+        </tr>
+        <tr>
+            <td data-ar="ألواح فينيل" data-en="Vinyl sheets">ألواح فينيل | Vinyl sheets</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="مفاصل ملحومة حرارياً، مقاومة للرطوبة" data-en="Heat-welded joints, moisture resistant">مفاصل ملحومة حرارياً، مقاومة للرطوبة | Heat-welded joints, moisture resistant</td>
+        </tr>
+        <tr>
+            <td data-ar="جبس مدهون" data-en="Painted Plaster">جبس مدهون | Painted Plaster</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td data-ar="سطح أملس مقاوم للبكتيريا" data-en="Smooth finish, bacteria-resistant">سطح أملس مقاوم للبكتيريا | Smooth finish, bacteria-resistant</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 data-ar="المراجع" data-en="References">المراجع | References:</h3>
+<ul>
+    <li>
+        <a href="https://www.iso.org/iso-22000-food-safety-management.html" target="_blank" style="color:green;" 
+           data-ar="ISO 22000:2018 - أنظمة إدارة سلامة الغذاء" 
+           data-en="ISO 22000:2018 - Food Safety Management Systems">
+           ISO 22000:2018 - أنظمة إدارة سلامة الغذاء | Food Safety Management Systems
+        </a>
+    </li>
+    <li>
+        <a href="https://www.esma.gov.ae" target="_blank" style="color:green;" 
+           data-ar="هيئة الإمارات للمواصفات والمقاييس (ESMA)" 
+           data-en="Emirates Authority for Standardization and Metrology (ESMA)">
+           هيئة الإمارات للمواصفات والمقاييس (ESMA) | Emirates Authority for Standardization and Metrology
+        </a>
+    </li>
+    <li>
+        <a href="https://www.codexalimentarius.org" target="_blank" style="color:green;" 
+           data-ar="Codex Alimentarius" 
+           data-en="Codex Alimentarius">
+           Codex Alimentarius
+        </a>
+    </li>
+</ul>
+
+
+
+   
+<!-- الأرضيات -->
+<li class="requirement">
+    <span class="key" data-ar="6.1.2.2 الأرضيات:" data-en="6.1.2.2 Floors:">6.1.2.2 الأرضيات:</span>
+    <p data-ar="يجب أن تصمم الأرضيات بشكل يسمح بالصرف الجيد للمياه مع توفير إمكانية تنظيفها بفعالية للحفاظ على بيئة خالية من التلوث." data-en="Floors should be designed to allow efficient drainage and should be easy to clean to maintain a contamination-free environment."></p>
+    <ul>
+        <li data-ar="ينبغي أن تكون الأرضيات في مناطق العمل التي لا تتعرض في العادة إلى الرطوبة متينة، غير ماصة للماء، سهلة التنظيف، وتمنع الانزلاق." data-en="Floors in areas not typically exposed to moisture should be durable, non-porous, easy to clean, and slip-resistant."></li>
+        <li data-ar="ينبغي أن تكون مناطق الالتقاء بين الأرضيات والجدران مقوسة لتسهيل التنظيف وتجنب تراكم الأوساخ." data-en="The junctions between floors and walls should be curved to facilitate cleaning and prevent dirt accumulation."></li>
+        <li data-ar="يجب أن تكون الأرضيات في مناطق الطهي والتجهيز من المواد المسموح بها (مادة غير منفذة للسوائل) وبها ميل كافي لتصريف السوائل إلى مجاري أرضية، مع التأكد من وجود عدد كاف من فتحات التصريف." data-en="Floors in cooking and preparation areas should be made of permissible materials (non-permeable to liquids) and have sufficient slope for liquid drainage to floor drains, with enough drain openings."></li>
+        <li data-ar="يجب أن تتحمل الأرضيات المواد الكيميائية التي قد تستخدم في التنظيف، بالإضافة إلى قدرتها على تحمل درجات الحرارة العالية في مناطق الطهي." data-en="Floors should be resistant to cleaning chemicals and capable of withstanding high temperatures in cooking areas."></li>
+        <li data-ar="يجب حماية الأرضيات من الخدوش أو التآكل الذي قد يؤدي إلى تراكم الملوثات." data-en="Floors should be protected from scratches or wear that may lead to contamination buildup."></li>
+        <li data-ar="يجب أن تكون الأرضيات سهلة الصيانة وتتمتع بقدرة على مقاومة الأضرار الناتجة عن الأحمال الثقيلة." data-en="Floors should be easy to maintain and capable of resisting damage from heavy loads."></li>
+    </ul>
+</li>
+<h2 data-ar="أمثلة على بعض المواد المسموح بها للأرضيات وفق المواصفات الإماراتية والعالمية" 
+    data-en="Examples of Permissible Flooring Materials per UAE and Global Standards" 
+    style="text-align:center;">
+    أمثلة على بعض المواد المسموح بها للأرضيات وفق المواصفات الإماراتية والعالمية | Examples of Permissible Flooring Materials per UAE and Global Standards
+</h2>
+<table>
+    <thead>
+        <tr>
+            <th data-ar="المادة" data-en="Material">المادة | Material</th>
+            <th data-ar="صالة الطعام" data-en="Dining Area">صالة الطعام | Dining Area</th>
+            <th data-ar="مناطق الخدمة والبيع" data-en="Service and Sales Areas">مناطق الخدمة والبيع | Service and Sales Areas</th>
+            <th data-ar="أماكن تحضير الغذاء" data-en="Food Prep Areas">أماكن تحضير الغذاء | Food Prep Areas</th>
+            <th data-ar="أماكن طهي الغذاء" data-en="Food Cooking Areas">أماكن طهي الغذاء | Food Cooking Areas</th>
+            <th data-ar="البرادات والثلاجات" data-en="Refrigerators and Freezers">البرادات والثلاجات | Refrigerators and Freezers</th>
+            <th data-ar="الملاحظات" data-en="Notes">الملاحظات | Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-ar="إيبوكسي" data-en="Epoxy">إيبوكسي | Epoxy</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="مقاوم للبكتيريا، مقاوم للانزلاق، معتمد من ESMA" data-en="Anti-bacterial, anti-slip, ESMA approved">مقاوم للبكتيريا، مقاوم للانزلاق، معتمد من ESMA | Anti-bacterial, anti-slip, ESMA approved</td>
+        </tr>
+        <tr>
+            <td data-ar="سيراميك" data-en="Ceramic tiles">سيراميك | Ceramic tiles</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="الفواصل مغلقة بجص إيبوكسي، مقاوم للماء، معتمد دولياً" data-en="Epoxy-grouted, water-resistant, internationally approved">الفواصل مغلقة بجص إيبوكسي، مقاوم للماء، معتمد دولياً | Epoxy-grouted, water-resistant, internationally approved</td>
+        </tr>
+        <tr>
+            <td data-ar="فينييل" data-en="Vinyl">فينييل | Vinyl</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="مفاصل ملحومة حرارياً، مقاوم للبكتيريا" data-en="Heat-welded joints, anti-bacterial">مفاصل ملحومة حرارياً، مقاوم للبكتيريا | Heat-welded joints, anti-bacterial</td>
+        </tr>
+        <tr>
+            <td data-ar="خرسانة معالجة" data-en="Treated Concrete">خرسانة معالجة | Treated Concrete</td>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="سطح مقاوم للماء والبكتيريا" data-en="Water and bacteria-resistant surface">سطح مقاوم للماء والبكتيريا | Water and bacteria-resistant surface</td>
+        </tr>
+        <tr>
+            <td data-ar="جرانيت" data-en="Granite">جرانيت | Granite</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="مصقول لتجنب تراكم الأوساخ، معتمد من ESMA" data-en="Polished to prevent dirt buildup, ESMA approved">مصقول لتجنب تراكم الأوساخ، معتمد من ESMA | Polished to prevent dirt buildup, ESMA approved</td>
+        </tr>
+<tr>
+    <td data-ar="ستانلس ستيل مضاد للانزلاق" data-en="Anti-Slip Stainless Steel">ستانلس ستيل مضاد للانزلاق | Anti-Slip Stainless Steel</td>
+    <td>✔</td>
+    <td>✔</td>
+    <td>✔</td>
+    <td>✔</td>
+    <td>✔</td>
+    <td data-ar="غير تفاعلي مع الطعام، مقاوم للصدأ، مضاد للانزلاق، معتمد دولياً" data-en="Non-reactive, rust-resistant, anti-slip, internationally approved">غير تفاعلي مع الطعام، مقاوم للصدأ، مضاد للانزلاق، معتمد دولياً | Non-reactive, rust-resistant, anti-slip, internationally approved</td>
+</tr>
+        <tr>
+            <td data-ar="أرضيات خشبية" data-en="Wooden Flooring">أرضيات خشبية | Wooden Flooring</td>
+            <td>✔</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td data-ar="مناسبة للمناطق منخفضة الرطوبة، معالجة للوقاية من الحشرات" data-en="Suitable for low-humidity areas, treated to prevent insects">مناسبة للمناطق منخفضة الرطوبة، معالجة للوقاية من الحشرات | Suitable for low-humidity areas, treated to prevent insects</td>
+        </tr>
+        <tr>
+            <td data-ar="سجاد" data-en="Carpet">سجاد | Carpet</td>
+            <td>✔</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td data-ar="مناسب فقط للمناطق غير المعرضة للطعام، سهل التنظيف" data-en="Suitable only for non-food areas, easy to clean">مناسب فقط للمناطق غير المعرضة للطعام، سهل التنظيف | Suitable only for non-food areas, easy to clean</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 data-ar="المراجع" data-en="References">المراجع | References:</h3>
+<ul>
+    <li>
+        <a href="https://www.iso.org/iso-22000-food-safety-management.html" target="_blank" style="color:green;" 
+           data-ar="ISO 22000:2018 - أنظمة إدارة سلامة الغذاء" 
+           data-en="ISO 22000:2018 - Food Safety Management Systems">
+           ISO 22000:2018 - أنظمة إدارة سلامة الغذاء | Food Safety Management Systems
+        </a>
+    </li>
+    <li>
+        <a href="https://www.esma.gov.ae" target="_blank" style="color:green;" 
+           data-ar="هيئة الإمارات للمواصفات والمقاييس (ESMA)" 
+           data-en="Emirates Authority for Standardization and Metrology (ESMA)">
+           هيئة الإمارات للمواصفات والمقاييس (ESMA) | Emirates Authority for Standardization and Metrology
+        </a>
+    </li>
+    <li>
+        <a href="https://www.ecfr.gov/current/title-21" target="_blank" style="color:green;" 
+           data-ar="CFR Title 21 - الغذاء والدواء" 
+           data-en="CFR Title 21 - Food and Drugs">
+           CFR Title 21 - الغذاء والدواء | Food and Drugs
+        </a>
+    </li>
+    <li>
+        <a href="https://www.codexalimentarius.org" target="_blank" style="color:green;" 
+           data-ar="Codex Alimentarius" 
+           data-en="Codex Alimentarius">
+           Codex Alimentarius
+        </a>
+    </li>
+</ul>
+
+
+
+
+<!-- الأسطح العلوية (الأسقف) -->
+<li class="requirement">
+    <span class="key" data-ar="6.1.2.3 الأسطح العلوية (الأسقف):" data-en="6.1.2.3 Overhead Surfaces (Ceilings):">6.1.2.3 الأسطح العلوية (الأسقف) | Overhead Surfaces (Ceilings):</span>
+    <p data-ar="يجب أن تكون الأسطح العلوية مثل الأسقف والتركيبات مقاومة للكسر والتآكل، ويجب أن تتم معالجتها بحيث تحد من تراكم الأوساخ والرطوبة التي قد تؤثر على البيئة." data-en="Overhead surfaces such as ceilings and fixtures must be break-resistant and treated to minimize dirt and moisture accumulation, which could impact the environment."></p>
+    <ul>
+        <li data-ar="ينبغي أن تكون الأسطح العلوية في المناطق التي تحتوي على أنظمة تهوية أو تكييفات مقاومة للرطوبة لتجنب تراكم الميكروبات." data-en="Overhead surfaces in areas with ventilation or air conditioning systems should be moisture-resistant to prevent microbial buildup."></li>
+        <li data-ar="يجب أن تكون الأسطح العلوية سهلة الصيانة والتنظيف لضمان بيئة صحية وآمنة للمعدات والعاملين." data-en="Overhead surfaces should be easy to maintain and clean to ensure a healthy and safe environment for equipment and workers."></li>
+        <li data-ar="يجب أن تتم معالجة الأسطح العلوية بمواد مقاومة للأوساخ والروائح الكريهة لتجنب التأثيرات السلبية على جودة الهواء." data-en="Overhead surfaces should be treated with materials resistant to dirt and unpleasant odors to avoid negative impacts on air quality."></li>
+        <li data-ar="يجب أن تكون الأسطح العلوية على ارتفاع مناسب بحيث لا تتعرض للتلف نتيجة للأنشطة اليومية وتكون قابلة للوصول أثناء أعمال الصيانة." data-en="Overhead surfaces should be at an appropriate height to avoid damage from daily activities and be accessible during maintenance tasks." ></li>
+        <li data-ar="يجب أن تكون الأسطح العلوية مغطاة بمواد غير مسامية، وسهلة المسح، ومقاومة للبكتيريا للحفاظ على النظافة." data-en="Overhead surfaces should be covered with non-porous, easy-to-wipe, and bacteria-resistant materials to maintain cleanliness." ></li>
+    </ul>
+</li>
+<h2 style="text-align:center;" data-ar="أمثلة على بعض المواد المسموح بها للأسقف وفق المواصفات الإماراتية والعالمية" data-en="Examples of Permissible Ceiling Materials per UAE and Global Standards">
+    أمثلة على بعض المواد المسموح بها للأسقف وفق المواصفات الإماراتية والعالمية | Examples of Permissible Ceiling Materials per UAE and Global Standards
+</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th data-ar="المادة" data-en="Material">المادة | Material</th>
+            <th data-ar="صالة الطعام" data-en="Dining Area">صالة الطعام | Dining Area</th>
+            <th data-ar="مناطق الخدمة والبيع" data-en="Service and Sales Areas">مناطق الخدمة والبيع | Service and Sales Areas</th>
+            <th data-ar="أماكن تحضير الغذاء" data-en="Food Prep Areas">أماكن تحضير الغذاء | Food Prep Areas</th>
+            <th data-ar="أماكن طهي الغذاء" data-en="Food Cooking Areas">أماكن طهي الغذاء | Food Cooking Areas</th>
+            <th data-ar="البرادات والثلاجات" data-en="Refrigerators and Freezers">البرادات والثلاجات | Refrigerators and Freezers</th>
+            <th data-ar="الملاحظات" data-en="Notes">الملاحظات | Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-ar="قصارة مدهونة" data-en="Painted Plaster">قصارة مدهونة | Painted Plaster</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td></td>
+            <td data-ar="مناسبة للمناطق الجافة، مقاومة للماء، مقاومة للبكتيريا" data-en="Suitable for dry areas, waterproof, bacteria-resistant">مناسبة للمناطق الجافة، مقاومة للماء، مقاومة للبكتيريا | Suitable for dry areas, waterproof, bacteria-resistant</td>
+        </tr>
+        <tr>
+            <td data-ar="أسمنت مصقول" data-en="Polished Cement">أسمنت مصقول | Polished Cement</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td></td>
+            <td data-ar="مناسب للأسطح الملساء، مقاوم للرطوبة" data-en="Suitable for smooth surfaces, moisture-resistant">مناسب للأسطح الملساء، مقاوم للرطوبة | Suitable for smooth surfaces, moisture-resistant</td>
+        </tr>
+        <tr>
+            <td data-ar="خليط أسمنت" data-en="Cement Mixture">خليط أسمنت | Cement Mixture</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td></td>
+            <td data-ar="مقاوم للبكتيريا وذو قدرة على العزل الحراري" data-en="Bacteria-resistant and provides thermal insulation">مقاوم للبكتيريا وذو قدرة على العزل الحراري | Bacteria-resistant and provides thermal insulation</td>
+        </tr>
+        <tr>
+            <td data-ar="ألواح جاهزة" data-en="Pre-fabricated Panels">ألواح جاهزة | Pre-fabricated Panels</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td data-ar="تسهل التركيب وتتوفر بمقاسات مختلفة" data-en="Easy to install, available in different sizes">تسهل التركيب وتتوفر بمقاسات مختلفة | Easy to install, available in different sizes</td>
+        </tr>
+        <tr>
+            <td data-ar="ألواح خشب الزينة" data-en="Decorative Wood Panels">ألواح خشب الزينة | Decorative Wood Panels</td>
+            <td>✔</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td data-ar="تستخدم فقط في المناطق الجافة وغير الرطبة" data-en="Used only in dry, non-moisture areas">تستخدم فقط في المناطق الجافة وغير الرطبة | Used only in dry, non-moisture areas</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>المراجع | References:</h3>
+<ul>
+    <li><a href="https://www.iso.org/iso-22000-food-safety-management.html" target="_blank" style="color:green;">ISO 22000:2018 - أنظمة إدارة سلامة الغذاء | ISO 22000:2018 - Food Safety Management Systems</a></li>
+    <li><a href="https://www.esma.gov.ae" target="_blank" style="color:green;">هيئة الإمارات للمواصفات والمقاييس (ESMA) | Emirates Authority for Standardization and Metrology (ESMA)</a></li>
+    <li><a href="https://www.codexalimentarius.org" target="_blank" style="color:green;">Codex Alimentarius</a></li>
+</ul>
+
+
+<!-- أماكن التخزين -->
+<li class="requirement">
+    <span class="key" data-ar="6.1.2.4 أماكن التخزين:" data-en="6.1.2.4 Storage:">6.1.2.4 أماكن التخزين | Storage:</span>
+    <p data-ar="يجب أن تكون الأدوات المستخدمة في التجهيزات الداخلية مثل الأرفف، الحوامل، ووسائل التخزين مقاومة للصدأ وسهلة التنظيف لضمان الحفاظ على جودة الطعام." data-en="Internal equipment such as shelves, racks, and storage devices must be resistant to rust and easy to clean to maintain food quality."></p>
+    <ul>
+        <li data-ar="يجب أن يتم التخزين في بيئة جافة وباردة بشكل مناسب لضمان الحفاظ على المواد الغذائية بأفضل حال." data-en="Storage should be in a suitably dry and cool environment to ensure the preservation of food quality."></li>
+        <li data-ar="يجب أن تكون المواد المخزنة في الأماكن المناسبة التي تحافظ على درجة الحرارة المطلوبة: التخزين الجاف عند 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل." data-en="Items should be stored in appropriate areas that maintain required temperatures: dry storage at 15-25°C, cold storage between 1-4°C, and frozen storage at -18°C or lower."></li>
+        <li data-ar="يجب أن تكون مناطق التخزين منفصلة عن أماكن العمل الأخرى لتجنب التلوث المتبادل." data-en="Storage areas should be separated from other work areas to avoid cross-contamination."></li>
+        <li data-ar="ينبغي أن تكون الأرفف والحوامل مرتفعة عن الأرض لتجنب الرطوبة والتلوث." data-en="Shelves and racks should be raised from the floor to avoid moisture and contamination."></li>
+        <li data-ar="يجب أن تكون المعدات الخاصة بالتخزين مصممة بحيث لا تتسبب في تراكم الأوساخ أو تكون صعبة التنظيف." data-en="Storage equipment should be designed in a way that prevents dirt accumulation and is easy to clean."></li>
+    </ul>
+</li>
+
+<!-- طابق الميزانين والدرج -->
+<li class="requirement">
+    <span class="key" data-ar="6.1.2.5 طابق الميزانين والدرج:" data-en="6.1.2.5 Mezzanine and Stairs:">6.1.2.5 طابق الميزانين والدرج | Mezzanine and Stairs:</span>
+    <p data-ar="يجب أن تكون الأدوات المستخدمة في التجهيزات الداخلية مثل الأرفف، الحوامل، ووسائل التخزين مقاومة للصدأ وسهلة التنظيف لضمان الحفاظ على جودة الطعام." data-en="Internal equipment such as shelves, racks, and storage devices must be resistant to rust and easy to clean to maintain food quality."></p>
+    <ul>
+        <li data-ar="يجب أن يكون الميزانين مبنيًا من مواد صلبة أو معدنية مثل الفولاذ المقاوم للصدأ أو الخرسانة المقواة، ومجهزًا بحواف مرتفعة بشكل كافٍ لمنع الملوثات من السقوط على الأسطح الواقعة أسفله." data-en="The mezzanine should be constructed from solid or metal materials such as stainless steel or reinforced concrete, and equipped with sufficiently high edges to prevent contaminants from falling onto surfaces below."></li>
+        <li data-ar="يجب أن تكون السلالم والدرج آمنة، ومصممة وفق معايير الصحة والسلامة، مع توفير درابزين مصنوعة من مواد مقاومة للتآكل مثل الألمنيوم أو الفولاذ المقاوم للصدأ وتسهيلات للوصول السهل." data-en="Stairs and steps must be designed according to health and safety standards, with handrails made from corrosion-resistant materials such as aluminum or stainless steel, and easy access facilities provided."></li>
+    </ul>
+</li>
+
+
+
+
+
+<li class="requirement">
+    <span class="key" data-ar="6.1.3 منشآت الأغذية المؤقتة المتنقلة وماكينات البيع:" data-en="6.1.3 Temporary Mobile Food Establishments and Vending Machines:">6.1.3 منشآت الأغذية المؤقتة المتنقلة وماكينات البيع:</span>
+    <p data-ar="يشمل هذا القسم المنشآت المتنقلة المؤقتة مثل الأكشاك في الأسواق، وعربات الباعة المتجولين، وماكينات بيع الطعام، بالإضافة إلى المباني المؤقتة مثل الخيام والسرادقات." 
+            data-en="This section covers temporary mobile establishments such as market stalls, street vendor carts, food vending machines, and temporary structures like tents and marquees."></p>
+    <ul>
+        <li data-ar="يجب اختيار الموقع المناسب لتلك المنشآت والهياكل بحيث يكون تصميمها وبناؤها قادرين على الحد من تلوث الغذاء وإيواء الآفات قدر الإمكان." 
+            data-en="The location of these establishments and structures must be carefully selected, with design and construction aimed at minimizing food contamination and pest infestation to the greatest extent practicable."></li>
+        <li data-ar="ينبغي أن يراعى في تصميم وتشييد هذه المنشآت توفير تدابير فعالة للحفاظ على بيئة نظيفة وآمنة، تشمل على سبيل المثال توفير وسائل فعالة لمنع دخول الحشرات أو الملوثات الأخرى." 
+            data-en="The design and construction of these establishments should incorporate effective measures to maintain a clean and safe environment, including means to prevent pests and other contaminants from entering."></li>
+        <li data-ar="عند الحاجة، ينبغي توفير مرافق مناسبة لدورات المياه وكذلك مرافق لغسل اليدين لضمان نظافة العاملين وضمان سلامة الغذاء." 
+            data-en="When necessary, appropriate facilities should be provided, including restrooms and handwashing facilities, to ensure worker hygiene and food safety."></li>
+    </ul>
+</li>
+
+</li>
+
+<li class="requirement">
+    <span class="key" data-ar="6.2 المرافق:" data-en="6.2 Facilities:">6.2 المرافق:</span>
+    <ul>
+        <!-- 1. مرافق التنظيف -->
         <li class="requirement">
-            <span class="key" data-ar="المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:" data-en="Exits or Openings:">المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:</span> <span class="text" data-ar="يجب حماية الفتحات التي تؤدي إلى خارج المنشأة الغذائية من دخول الآفات بوسائل مناسبة مثل شبك الحماية، أو تثبيت ستائر هواء مصممة بشكل جيد." data-en="Exits leading outside the food establishment must be protected from pest entry by suitable means such as protective screens or well-designed air curtains."></span>
+            <span class="key" data-ar="6.2.1 مرافق التنظيف:" data-en="6.2.1 Cleaning Facilities:">6.2.1 مرافق التنظيف:</span>
+            <ul>
+                <li data-ar="ينبغي توفير مرافق كافية ومناسبة لتنظيف الأواني والمعدات وينبغي أن تحتوي تلك المرافق على ما يكفي من إمدادات المياه الساخنة و/أو الباردة عند الاقتضاء." data-en="Adequate and suitable facilities for cleaning utensils and equipment must be provided, and these facilities should have sufficient hot and/or cold water supplies when necessary."></li>
+                <li data-ar="ينبغي توفير منطقة تنظيف منفصلة للأدوات والمعدات المستخدمة في مناطق شديدة التلوث، مثل المراحيض، وأماكن الصرف والتخلص من النفايات." data-en="A separate cleaning area should be provided for utensils and equipment used in highly contaminated areas, such as toilets and waste disposal areas."></li>
+                <li data-ar="ينبغي حسب الاقتضاء، أن تكون مرافق غسل الأغذية منفصلة عن مرافق تنظيف الأواني والمعدات." data-en="If necessary, food washing facilities should be separated from utensil and equipment cleaning facilities."></li>
+                <li data-ar="ينبغي إتاحة أحواض منفصلة لغسل الأيدي وغسل الأغذية." data-en="Separate sinks for hand washing and food washing should be available."></li>
+            </ul>
         </li>
 
+<!-- 2. التهوية -->
+<li class="requirement">
+    <span class="key" data-ar="6.2.2 التهوية:" data-en="6.2.2 Ventilation:">6.2.2 التهوية:</span>
+    <ul>
+        <li data-ar="يجب أن تزود المنشآت الغذائية بالتهوية المناسبة والكافية سواء طبيعية أو ميكانيكية مع تجنب أي تدفق ميكانيكي للهواء من منطقة ملوثة إلى منطقة نظيفة."
+            data-en="Food establishments must be equipped with appropriate and sufficient ventilation, whether natural or mechanical, avoiding any mechanical airflow from a contaminated area to a clean one."></li>
+        <li data-ar="يجب أن تكون فتحات التهوية مزودة بمرشحات أو سياج حماية مصنوع من مواد غير قابلة للتآكل مع الأخذ في الاعتبار سهولة الوصول إلى الفلاتر والأجزاء التي تتطلب التنظيف."
+            data-en="Ventilation openings should be fitted with filters or protective barriers made of corrosion-resistant materials, ensuring easy access to filters and parts that require cleaning."></li>
+        <li data-ar="يجب أن تكون التهوية كافية للحد من تلوث الغذاء الناتج عن الهواء والتحكم بدرجة الحرارة المحيطة والروائح والرطوبة."
+            data-en="The ventilation must be sufficient to reduce food contamination caused by air and control ambient temperature, odors, and humidity."></li>
+        <li data-ar="يجب مراقبة درجات حرارة الغرفة، التبريد والتجميد لضمان سلامة الغذاء وصلاحيته للاستهلاك."
+            data-en="Room temperature, cooling, and freezing temperatures must be monitored to ensure food safety and suitability for consumption."></li>
+    </ul>
+
+    <!-- جدول خاص بوحدات القياس -->
+    <table border="1" style="border-collapse: collapse; width: 100%; margin-top: 10px;">
+        <thead>
+            <tr>
+                <th style="padding: 10px; text-align: center;" data-ar="الموقع" data-en="Location">الموقع</th>
+                <th style="padding: 10px; text-align: center;" data-ar="تدفق الهواء (لتر/ثانية)" data-en="Air Flow (L/s)">تدفق الهواء (لتر/ثانية)</th>
+                <th style="padding: 10px; text-align: center;" data-ar="درجة الحرارة" data-en="Temperature">درجة الحرارة</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 10px;" data-ar="صالات تقديم الطعام" data-en="Dining Areas">صالات تقديم الطعام</td>
+                <td style="padding: 10px;" data-ar="10-15 لتر/ثانية لكل شخص" data-en="10-15 L/s per person">10-15 لتر/ثانية لكل شخص</td>
+                <td style="padding: 10px;" data-ar="لا تقل عن 25°م" data-en="No less than 25°C">لا تقل عن 25°م</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;" data-ar="مناطق الطهي والتحضير" data-en="Cooking and Preparation Areas">مناطق الطهي والتحضير</td>
+                <td style="padding: 10px;" data-ar="15-25 لتر/ثانية لكل متر مربع" data-en="15-25 L/s per square meter">15-25 لتر/ثانية لكل متر مربع</td>
+                <td style="padding: 10px;" data-ar="لا تقل عن 25°م" data-en="No less than 25°C">لا تقل عن 25°م</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;" data-ar="مناطق التخزين الجاف" data-en="Dry Storage Areas">مناطق التخزين الجاف</td>
+                <td style="padding: 10px;" data-ar="5-8 لتر/ثانية لكل متر مربع" data-en="5-8 L/s per square meter">5-8 لتر/ثانية لكل متر مربع</td>
+                <td style="padding: 10px;" data-ar="لا تقل عن 25°م" data-en="No less than 25°C">لا تقل عن 25°م</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;" data-ar="غرف التبريد" data-en="Refrigeration Rooms">غرف التبريد</td>
+                <td style="padding: 10px;" data-ar="10-15 لتر/ثانية لكل متر مربع" data-en="10-15 L/s per square meter">10-15 لتر/ثانية لكل متر مربع</td>
+                <td style="padding: 10px;" data-ar="من 1°م إلى 5°م" data-en="From 1°C to 5°C">من 1°م إلى 5°م</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;" data-ar="غرف التجميد" data-en="Freezing Rooms">غرف التجميد</td>
+                <td style="padding: 10px;" data-ar="10-15 لتر/ثانية لكل متر مربع" data-en="10-15 L/s per square meter">10-15 لتر/ثانية لكل متر مربع</td>
+                <td style="padding: 10px;" data-ar="أقل من -18°م" data-en="Less than -18°C">أقل من -18°م</td>
+            </tr>
+        </tbody>
+    </table>
+</li>
+
+
+
+<li class="requirement">
+<!-- 3. الإضاءة -->
+<span class="key" data-ar="6.2.3 الإضاءة:" data-en="6.2.3 Lighting:">6.2.3 الإضاءة | Lighting:</span>
+<p data-ar="يجب أن يراعى في وسائل ومعدات الإضاءة الشروط الآتية:" 
+   data-en="The following conditions should be considered for lighting equipment and facilities:"></p>
+<ul>
+    <li data-ar="أن توفر إضاءة كافية سواء طبيعية أو اصطناعية للتمكن من العمل بشكل صحي ." 
+        data-en="Adequate lighting, whether natural or artificial, should be provided to enable healthy work operations ."></li>
+    <li data-ar="ينبغي ألا تؤثر الإضاءة تأثيرًا ضارًا على القدرة على كشف عيوب الغذاء أو كشف الملوثات في الغذاء أو تلوث المرافق والمعدات حفاظًا على نظافتها." 
+        data-en="Lighting should not adversely affect the ability to detect food defects, contaminants in food, or contamination of facilities and equipment, ensuring cleanliness."></li>
+    <li data-ar="أن تكون معدات الإضاءة والأسلاك الكهربائية محمية بشكل يسمح بسهولة التنظيف والوقاية من التلوث التبادلي." 
+        data-en="Lighting equipment and electrical wiring should be protected in a way that allows easy cleaning and prevents cross-contamination."></li>
+    <li data-ar="يجب أن تكون المصابيح محمية ضد الكسر لتجنب المخاطر الناتجة عن التلوث." 
+        data-en="Light bulbs should be protected against breakage to avoid contamination risks."></li>
+</ul>
+
+<!-- جدول الإضاءة -->
+<h3 data-ar="مستويات الإضاءة الموصى بها وفق المواصفات" data-en="Recommended Lighting Levels per Standards">مستويات الإضاءة الموصى بها وفق المواصفات | Recommended Lighting Levels per Standards</h3>
+<table>
+    <thead>
+        <tr>
+            <th data-ar="المجال" data-en="Area">المجال | Area</th>
+            <th data-ar="مستوى الإضاءة (لوكس)" data-en="Lighting Level (Lux)">مستوى الإضاءة (لوكس) | Lighting Level (Lux)</th>
+            <th data-ar="المسافة عن الأرض (سم)" data-en="Distance from Floor (cm)">المسافة عن الأرض (سم) | Distance from Floor (cm)</th>
+            <th data-ar="التعليقات" data-en="Comments">التعليقات | Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-ar="الوحدات المبردة والمناطق الجافة لتخزين الغذاء" data-en="Refrigeration Units & Dry Food Storage Areas">الوحدات المبردة والمناطق الجافة لتخزين الغذاء | Refrigeration Units & Dry Food Storage Areas</td>
+            <td>≥ 108 لوكس (10 قدم شمعة) | ≥ 108 Lux (10 foot candles)</td>
+            <td>75 سم (30 بوصة) | 75 cm (30 inches)</td>
+            <td data-ar="الإضاءة في وحدات التبريد للمشي والمناطق الجافة لتخزين الغذاء وأثناء فترات التنظيف." data-en="Lighting in walk-in refrigeration units and dry food storage areas during cleaning periods.">الإضاءة في وحدات التبريد للمشي والمناطق الجافة لتخزين الغذاء وأثناء فترات التنظيف. | Lighting in walk-in refrigeration units and dry food storage areas during cleaning periods.</td>
+        </tr>
+        <tr>
+            <td data-ar="مناطق الخدمة الذاتية للزبائن (مثل البوفيهات، محطات السلطة)" data-en="Self-service Areas (e.g., Buffets, Salad Bars)">مناطق الخدمة الذاتية للزبائن (مثل البوفيهات، محطات السلطة) | Self-service Areas (e.g., Buffets, Salad Bars)</td>
+            <td>≥ 215 لوكس (20 قدم شمعة) | ≥ 215 Lux (20 foot candles)</td>
+            <td>على سطح تقديم الطعام | On food serving surface</td>
+            <td data-ar="الإضاءة عند سطح حيث يتم تقديم الطعام للزبائن أو في أماكن بيع الطعام الطازج أو المعبأ." data-en="Lighting at a surface where food is provided to consumers, or in areas where fresh or packaged food is sold or offered for consumption.">الإضاءة عند سطح حيث يتم تقديم الطعام للزبائن أو في أماكن بيع الطعام الطازج أو المعبأ. | Lighting at a surface where food is provided to consumers, or in areas where fresh or packaged food is sold or offered for consumption.</td>
+        </tr>
+        <tr>
+            <td data-ar="داخل المعدات مثل البرادات والأجهزة تحت العدادات" data-en="Inside Equipment (e.g., Reach-in and Under-counter Refrigerators)">داخل المعدات مثل البرادات والأجهزة تحت العدادات | Inside Equipment (e.g., Reach-in and Under-counter Refrigerators)</td>
+            <td>≥ 215 لوكس (20 قدم شمعة) | ≥ 215 Lux (20 foot candles)</td>
+            <td>داخل المعدات | Inside equipment</td>
+            <td data-ar="الإضاءة داخل معدات مثل البرادات ذات الباب المفصلي والبرادات تحت العدادات." data-en="Lighting inside equipment like reach-in refrigerators and under-counter refrigerators.">الإضاءة داخل معدات مثل البرادات ذات الباب المفصلي والبرادات تحت العدادات. | Lighting inside equipment like reach-in refrigerators and under-counter refrigerators.</td>
+        </tr>
+        <tr>
+            <td data-ar="مناطق غسل اليدين، غسيل الأواني، تخزين المعدات والأدوات، والغرف الصحية" data-en="Handwashing, Warewashing, Equipment and Utensil Storage, and Toilet Rooms">مناطق غسل اليدين، غسيل الأواني، تخزين المعدات والأدوات، والغرف الصحية | Handwashing, Warewashing, Equipment and Utensil Storage, and Toilet Rooms</td>
+            <td>≥ 215 لوكس (20 قدم شمعة) | ≥ 215 Lux (20 foot candles)</td>
+            <td>75 سم (30 بوصة) | 75 cm (30 inches)</td>
+            <td data-ar="الإضاءة عند مسافة 75 سم فوق الأرض في مناطق غسل اليدين وغسل الأواني وتخزين المعدات والأدوات والغرف الصحية." data-en="Lighting at 75 cm (30 inches) above the floor in areas used for handwashing, warewashing, equipment and utensil storage, and toilet rooms.">الإضاءة عند مسافة 75 سم فوق الأرض في مناطق غسل اليدين وغسل الأواني وتخزين المعدات والأدوات والغرف الصحية. | Lighting at 75 cm (30 inches) above the floor in areas used for handwashing, warewashing, equipment and utensil storage, and toilet rooms.</td>
+        </tr>
+        <tr>
+            <td data-ar="مناطق العمل الخاصة بالموظفين في التعامل مع الطعام أو الأدوات" data-en="Food Employee Work Areas">مناطق العمل الخاصة بالموظفين في التعامل مع الطعام أو الأدوات | Food Employee Work Areas</td>
+            <td>≥ 540 لوكس (50 قدم شمعة) | ≥ 540 Lux (50 foot candles)</td>
+            <td>على سطح العمل | On work surface</td>
+            <td data-ar="الإضاءة في المناطق حيث يعمل الموظفون مع الطعام أو أدوات مثل السكاكين، شرائح اللحم، أو الماكينات حيث تكون سلامة الموظف مهمة." data-en="Lighting where food employees work with food or equipment like knives, slicers, or machines where employee safety is important.">الإضاءة في المناطق حيث يعمل الموظفون مع الطعام أو أدوات مثل السكاكين، شرائح اللحم، أو الماكينات حيث تكون سلامة الموظف مهمة. | Lighting where food employees work with food or equipment like knives, slicers, or machines where employee safety is important.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 data-ar="المراجع" data-en="References">المراجع | References:</h3>
+<ul>
+    <li><a href="https://www.fda.gov/food/food-labeling-nutrition/food-code" target="_blank" style="color:green;">FDA Food Code 2022 - الصفحة 155 | FDA Food Code 2022 - Page 155</a></li>
+</ul>
+
+
+
+
+<!-- 4. إمدادات المياه -->
+<li class="requirement">
+    <span class="key" data-ar="6.2.4 إمدادات المياه:" data-en="6.2.4 Water Supply:">6.2.4 إمدادات المياه:</span>
+    <ul>
+        <li data-ar="يجب أن تتوفر في المنشأة الغذائية إمدادات كافية من المياه الصالحة للشرب لأغراض التنظيف وإعداد الطعام." 
+            data-en="Adequate supplies of potable water should be provided in the food establishment for cleaning and food preparation purposes."></li>
+    </ul>
+</li>
+
+        <!-- 5. الصرف الصحي -->
+        <li class="requirement">
+            <span class="key" data-ar="6.2.5 الصرف الصحي:" data-en="6.2.5 Sanitation:">6.2.5 الصرف الصحي:</span>
+    <p data-ar="يجب أن يراعى في مرافق الصرف الصحي الشروط الآتية:" 
+       data-en="The following conditions should be considered for sanitary facilities:"></p>
+    <ul>
+        <li data-ar="أن تكون بحجم وتصميم مناسبين بحيث يكون تركيبها وصيانتها ملائمين لتجنب مخاطر التلوث والروائح الكريهة." 
+            data-en="They should be of an appropriate size and design to ensure easy installation and maintenance, preventing contamination risks and foul odors."></li>
+        <li data-ar="أن تكون مرشحات قنوات الصرف الصحي بما فيها تلك القابلة للفك والتركيب والحواجز المضادة للانزلاق بها مصنعة من مواد ملائمة وأن تتم المحافظة عليها بحالة جيدة وصيانتها باستمرار للحد من مخاطر التلوث." 
+            data-en="The filters of the sanitary drains, including those that are removable, and anti-slip barriers, should be made of suitable materials and maintained in good condition with regular servicing to reduce contamination risks."></li>
+        <li data-ar="أن تكون قنوات الصرف الصحي المفتوحة كلياً أو جزئياً مصممة بشكل يضمن عدم تدفق الأوساخ من المنطقة الملوثة إلى المنطقة النظيفة، وخصوصاً في المناطق التي يتم فيها تداول الغذاء عالي الخطورة." 
+            data-en="Sanitary drains, whether fully or partially open, should be designed to prevent the flow of waste from contaminated areas to clean areas, particularly in zones where high-risk food is handled."></li>
+    </ul>
+<!-- 6. مصائد الشحوم -->
+<li class="requirement">
+    <span class="key" data-ar="6.2.6 مصائد الشحوم:" data-en="6.2.6 Grease Traps:">6.2.6 مصائد الشحوم:</span>
+    <ul>
+        <li data-ar="ينبغي تركيب مصائد الشحوم في المنشآت الغذائية التي تقوم بأعمال التحضير والتجهيز واستخدام الزيوت والدهون لتقليل انتقالها إلى شبكة الصرف." 
+            data-en="Grease traps should be installed in food establishments that carry out preparation, processing, and use of oils and fats to reduce their transfer to the sewage system."></li>
+        <li data-ar="ينبغي أن تكون المصائد مصممة بشكل مناسب لتكون قادرة على احتجاز الدهون والشحوم دون التأثير على تدفق المياه." 
+            data-en="The grease traps should be properly designed to effectively capture fats and grease without affecting water flow."></li>
+        <li data-ar="يجب صيانة وتنظيف مصائد الشحوم بانتظام لضمان عملها بكفاءة وفعالية. يجب التأكد من التعامل مع الشركات المعتمدة من بلدية مدينة الشارقة فقط لتلبية المعايير المطلوبة." 
+            data-en="Grease traps must be cleaned and maintained regularly to ensure efficient and effective operation. Only certified companies by Sharjah Municipality should be engaged to meet the required standards."></li>
+    </ul>
+    <p><a href="https://zmohd1987.github.io/FCSM/Greasetrap.png" target="_blank" data-ar="رابط لصور وتصنيف مصائد الشحوم المعتمدة من بلدية الشارقة" data-en="Link to the types and classifications of grease traps certified by Sharjah Municipality">رابط لصور وتصنيف مصائد الشحوم المعتمدة من بلدية الشارقة</a></p>
+</li>
+
+        </li>
+
+        <!-- 7. مرافق النظافة الشخصية والمراحيض -->
+        <li class="requirement">
+            <span class="key" data-ar="6.2.7 مرافق النظافة الشخصية والمراحيض:" data-en="6.2.7 Personal Hygiene and Toilet Facilities:">6.2.7 مرافق النظافة الشخصية والمراحيض:</span>
+            <ul>
+                <li data-ar="ينبغي توفير ما يكفي من مرافق الغسل والمراحيض للحفاظ على النظافة الشخصية وتجنب تلوث الغذاء." data-en="Sufficient handwashing and toilet facilities should be provided to maintain personal hygiene and prevent food contamination."></li>
+                <li data-ar="يجب أن تحتوي هذه المرافق على صابون (ويفضل أن يكون سائل) ومياه ساخنة وباردة إذا لزم الأمر." data-en="These facilities should include soap (preferably liquid soap) and both hot and cold water when required."></li>
+                <li data-ar="ينبغي توفير أحواض غسل الأيدي المصممة بطريقة صحية مناسبة، ومن المثالي أن تكون مزودة بصنابير تعمل بدون استخدام الأيدي." data-en="Handwashing sinks should be designed in a hygienic manner, ideally with hands-free faucets."></li>
+                <li data-ar="ينبغي عدم استخدام أحواض غسل الأيدي لغسل الأغذية أو الأواني." data-en="Handwashing sinks should not be used for washing food or utensils."></li>
+            </ul>
+        </li>
+    </ul>
+</li>
+
+
+<!-- 6. مناطق تبديل الملابس -->
+<li class="requirement">
+    <span class="key" data-ar="6.2.8 مناطق تبديل الملابس:" data-en="6.2.8 Dressing Areas:">6.2.8 مناطق تبديل الملابس:</span>
+    <ul>
+        <li data-ar="يجب توفير غرف لتبديل الملابس إذا كان العمال يقومون بتبديل ملابسهم بصورة روتينية في المنشأة الغذائية." data-en="Changing rooms must be provided if workers routinely change their clothes in the food establishment."></li>
+        <li data-ar="ينبغي أن تكون غرف تبديل الملابس مزودة بوسائل تخزين آمنة لملابس العمال الشخصية لضمان عدم تلوث الطعام." data-en="Changing rooms should be equipped with secure storage for workers' personal clothing to prevent food contamination."></li>
+        <li data-ar="يجب أن تكون غرف تبديل الملابس مصممة بحيث يسهل تنظيفها وصيانتها بشكل دوري." data-en="Changing rooms should be designed to facilitate easy cleaning and regular maintenance."></li>
+        <li data-ar="يفضل أن تكون هذه الغرف منفصلة عن أماكن العمل لتقليل خطر تلوث الطعام." data-en="It is preferable that these rooms be separate from food preparation areas to minimize the risk of food contamination."></li>
+        <li data-ar="يجب أن تحتوي غرف تبديل الملابس على تهوية جيدة لضمان راحة العاملين وتجنب تراكم الروائح." data-en="Changing rooms should have adequate ventilation to ensure worker comfort and prevent the accumulation of odors."></li>
+        <li data-ar="ينبغي أن تكون مواد بناء الغرف مقاومة للرطوبة وسهلة التنظيف لتفادي تراكم البكتيريا." data-en="The materials used for building changing rooms should be moisture-resistant and easy to clean to avoid bacterial buildup."></li>
+    </ul>
+</li>
+
+<!-- 6. المخارج أو الفتحات التي تؤدي إلى خارج المنشأة -->
+<li class="requirement">
+    <span class="key" data-ar="6.2.9 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:" data-en="6.2.9 Exits or Openings:">6.2.9 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:</span>
+    <ul>
+        <li data-ar="يجب حماية الفتحات التي تؤدي إلى خارج المنشأة الغذائية من دخول الآفات بوسائل مناسبة مثل شبك الحماية، أو تثبيت ستائر هواء مصممة بشكل جيد." 
+            data-en="Exits or openings leading outside the food establishment must be protected from pest entry with appropriate means such as protective screens or well-designed air curtains."></li>
+        <li data-ar="يجب أن تكون الفتحات أو المخارج محكمة الإغلاق لضمان عدم تسرب الآفات أو الملوثات الخارجية." 
+            data-en="Exits or openings should be properly sealed to prevent the entry of pests or external contaminants."></li>
+        <li data-ar="يفضل أن تكون الفتحات الموجهة إلى الخارج ذات تصميم يسهل إغلاقها وصيانتها بشكل دوري." 
+            data-en="Exits should be designed for ease of closing and regular maintenance."></li>
+    </ul>
+</li>
+
+
+
+
+<!-- 6. التخلص من النفايات -->
+<li class="requirement">
+    <span class="key" data-ar="6.2.10 التخلص من النفايات:" data-en="6.2.10 Waste Disposal:">6.2.10 التخلص من النفايات:</span>
+    <ul>
+        <li data-ar="يجب تصميم مناطق التخلص من النفايات بعيداً عن مناطق تحضير الطعام لمنع التلوث، ويجب أن تكون محمية من دخول الآفات باستخدام شبك الحماية أو ستائر الهواء." data-en="Waste disposal areas should be designed away from food preparation areas to prevent contamination, and must be protected from pests using protective screens or air curtains."></li>
+        <li data-ar="يجب أن يتم تنظيف مناطق التخلص من النفايات بشكل دوري باستخدام مواد تنظيف معتمدة لضمان الامتثال للمعايير الصحية." data-en="Waste disposal areas must be cleaned regularly using approved cleaning materials to ensure compliance with health standards."></li>
+        <li data-ar="يجب أن يتم التخلص من النفايات من قبل أفراد مدربين بشكل مناسب، مع الاحتفاظ بسجلات دقيقة لكل عملية التخلص منها عند الحاجة." data-en="Waste disposal should be carried out by trained personnel, with records of each disposal process maintained when necessary."></li>
+        <li data-ar="يجب إدارة النفايات بطرق آمنة تجنبًا للتلوث البيئي أو الإصابة بالآفات التي قد تؤثر على سلامة الغذاء." data-en="Waste must be managed safely to prevent environmental contamination or pest infestation that could affect food safety."></li>
+        <li data-ar="يجب أن تحتوي أنظمة تصريف النفايات السائلة على تدابير مناسبة لضمان تصريف آمن وفعال بعيدًا عن مناطق الطعام." data-en="Liquid waste systems must include appropriate measures to ensure safe and effective drainage away from food areas."></li>
+    </ul>
+</li>
+</div> 
 <style>
     /* القواعد العامة لكل الجداول */
     table {
@@ -621,497 +1277,56 @@ html[lang="en"] .contact-info {
     }
 </style>
 
-
-<li class="requirement">
-    <span class="key" data-ar="الأرضيات:" data-en="Floors:">الأرضيات:</span>
-    <span class="text" data-ar="يجب أن تكون الأرضيات مصنوعة من مواد متينة خالية من الشقوق، ملساء، فاتحة اللون، غير منفذة أو ماصة للسوائل، سهلة الغسيل والتنظيف." data-en="Floors must be made of durable, crack-free materials, smooth, light-colored, non-permeable or non-absorbent of liquids, and easy to wash and clean."></span>
-</li>
-<table border="1" style="width:100%; border-collapse:collapse; text-align:center;">
-    <thead>
-        <tr style="background-color:#A3C586;">
-            <th data-ar="المادة" data-en="Material">المادة</th>
-            <th data-ar="المناطق الرطبة" data-en="Wet Areas">المناطق الرطبة</th>
-            <th data-ar="أماكن تحضير الغذاء" data-en="Food Prep Areas">أماكن تحضير الغذاء</th>
-            <th data-ar="أماكن تحضير الخضار" data-en="Vegetable Prep Areas">أماكن تحضير الخضار</th>
-            <th data-ar="مناطق الخدمة والبيع" data-en="Service and Sales Areas">مناطق الخدمة والبيع</th>
-            <th data-ar=" مناطق تخزين الطعام" data-en=" Food Storage Areas">مناطق تخزين الطعام</th>
-            <th data-ar="البرادات والثلاجات" data-en="Refrigerators and Freezers">البرادات والثلاجات</th>
-            <th data-ar="مناطق المخلفات والحاويات" data-en="Waste and Containers Areas">مناطق المخلفات والحاويات</th>
-             <th data-ar="صالة الطعام" data-en="Dining Area">صالة الطعام</th>
-            <th data-ar="الملاحظات" data-en="Notes">الملاحظات</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-ar="ستانلس ستيل" data-en="Stainless Steel">ستانلس ستيل</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="مفاصل ملحومة وأغطية مقاومة للماء" data-en="Welded joints Waterproof screw covers">مفاصل ملحومة وأغطية مقاومة للماء</td>
-        </tr>
-        <tr>
-            <td data-ar="سيراميك" data-en="Ceramic tiles">سيراميك</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="جص إيبوكسي" data-en="Epoxy grout">جص إيبوكسي</td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح فينيل" data-en="Vinyl sheets">ألواح فينيل</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="مفاصل ملحومة بالحرارة" data-en="Heat welded joints">مفاصل ملحومة بالحرارة</td>
-        </tr>
-        <tr>
-            <td data-ar="جبس مدهون" data-en="Painted plaster">جبس مدهون</td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="سطح ناعم" data-en="Smooth finish">سطح ناعم</td>
-        </tr>
-        <tr>
-            <td data-ar="طوب الديكور" data-en="Feature brick">طوب الديكور</td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح المعدن" data-en="Aluminum sheet">ألواح المعدن</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="مفاصل ملحومة أو محكمة" data-en="Welded or sealed joints">مفاصل ملحومة أو محكمة</td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح فولاذ" data-en="Steel Sheet">ألواح فولاذ</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="مفاصل ملحومة أو محكمة" data-en="Welded or sealed joints">مفاصل ملحومة أو محكمة</td>
-        </tr>
-        <tr>
-            <td data-ar="أسمنت" data-en="Troweled Cement">أسمنت</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="سطح مصقول" data-en="Polished surface">سطح مصقول</td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح خشبية" data-en="Wood paneling">ألواح خشبية</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="خشب محكم" data-en="Wood sealed">خشب محكم</td>
-        </tr>
-        <tr>
-           <td data-ar="طوب مدهون" data-en="Painted Brickwork">طوب مدهون</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="مفاصل متساوية وسطح صلب" data-en="Flush joints and solid surfaces">مفاصل متساوية وسطح صلب</td>
-        </tr>
-
-        <tr>
-            <td data-ar="اسمنت صلب" data-en="Concrete">اسمنت صلب</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="سطح أملس مغلق" data-en="Sealed smooth  surface">سطح أملس مغلق</td>
-        </tr>
-
-        <tr>
-            <td data-ar="ألواح جاهزة" data-en="Pre-formed Panels">ألواح جاهزة</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="مفاصل شريط H مغلقة بمادة ماستيك. في المناطق الرطبة / يجب دمج تحضير الطعام في جدار قصير أو وضعه على قاعدة" data-en="H bars joints mastic sealed. In wet areas/ food preparation shall be integrated into a dwarf wall or set on plinth">مفاصل شريط H مغلقة بمادة ماستيك. في المناطق الرطبة / يجب دمج تحضير الطعام في جدار قصير أو وضعه على قاعدة</td>
-        </tr>
-
-    </tbody>
-</table>
-
-
-<li class="requirement">
-    <span class="key" data-ar="الجدران:" data-en="Walls:">الجدران:</span>
-    <span class="text" data-ar="يجب أن تكون الجدران مشيدة من مواد متينة خالية من الشقوق، غير منفذة أو ماصة للسوائل، سهلة الغسيل والتنظيف." data-en="Walls must be constructed of durable, crack-free materials, non-permeable or non-absorbent of liquids, and easy to wash and clean."></span>
-</li>
-<table border="1" style="width:100%; border-collapse:collapse; text-align:center;">
-    <thead>
-        <tr style="background-color:#A3C586;">
-            <th data-ar="المادة" data-en="Material">المادة</th>
-            <th data-ar="المناطق الرطبة" data-en="Wet Areas">المناطق الرطبة</th>
-            <th data-ar="أماكن تحضير الغذاء" data-en="Food Prep Areas">أماكن تحضير الغذاء</th>
-            <th data-ar="أماكن تحضير الخضار" data-en="Vegetable Prep Areas">أماكن تحضير الخضار</th>
-            <th data-ar="مناطق الخدمة والبيع" data-en="Service and Sales Areas">مناطق الخدمة والبيع</th>
-            <th data-ar="البرادات والثلاجات" data-en="Refrigerators and Freezers">البرادات والثلاجات</th>
-            <th data-ar="مناطق المخلفات والحاويات" data-en="Waste and Containers Areas">مناطق المخلفات والحاويات</th>
-            <th data-ar="صالة الطعام" data-en="Dining Area">صالة الطعام</th>
-            <th data-ar="الملاحظات" data-en="Notes">الملاحظات</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-ar="ستانلس ستيل" data-en="Stainless Steel">ستانلس ستيل</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="مفاصل ملحومة وأغطية مقاومة للماء" data-en="Welded joints Waterproof screw covers">مفاصل ملحومة وأغطية مقاومة للماء</td>
-        </tr>
-        <tr>
-            <td data-ar="سيراميك" data-en="Ceramic tiles">سيراميك</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="جص إيبوكسي" data-en="Epoxy grout">جص إيبوكسي</td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح فينيل" data-en="Vinyl sheets">ألواح فينيل</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="مفاصل ملحومة بالحرارة" data-en="Heat welded joints">مفاصل ملحومة بالحرارة</td>
-        </tr>
-        <tr>
-            <td data-ar="جبس مدهون" data-en="Painted plaster">جبس مدهون</td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="سطح ناعم" data-en="Smooth finish">سطح ناعم</td>
-        </tr>
-        <tr>
-            <td data-ar="طوب الديكور" data-en="Feature brick">طوب الديكور</td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح المعدن" data-en="Aluminum sheet">ألواح المعدن</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="مفاصل ملحومة أو محكمة" data-en="Welded or sealed joints">مفاصل ملحومة أو محكمة</td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح فولاذ" data-en="Steel Sheet">ألواح فولاذ</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="مفاصل ملحومة أو محكمة" data-en="Welded or sealed joints">مفاصل ملحومة أو محكمة</td>
-        </tr>
-        <tr>
-            <td data-ar="أسمنت" data-en="Troweled Cement">أسمنت</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="سطح مصقول" data-en="Polished surface">سطح مصقول</td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح خشبية" data-en="Wood paneling">ألواح خشبية</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td data-ar="خشب محكم" data-en="Wood sealed">خشب محكم</td>
-        </tr>
-        <tr>
-           <td data-ar="طوب مدهون" data-en="Painted Brickwork">طوب مدهون</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="مفاصل متساوية وسطح صلب" data-en="Flush joints and solid surfaces">مفاصل متساوية وسطح صلب</td>
-        </tr>
-
-        <tr>
-            <td data-ar="اسمنت صلب" data-en="Concrete">اسمنت صلب</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="سطح أملس مغلق" data-en="Sealed smooth  surface">سطح أملس مغلق</td>
-        </tr>
-
-        <tr>
-            <td data-ar="ألواح جاهزة" data-en="Pre-formed Panels">ألواح جاهزة</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="مفاصل شريط H مغلقة بمادة ماستيك. في المناطق الرطبة / يجب دمج تحضير الطعام في جدار قصير أو وضعه على قاعدة" data-en="H bars joints mastic sealed. In wet areas/ food preparation shall be integrated into a dwarf wall or set on plinth">مفاصل شريط H مغلقة بمادة ماستيك. في المناطق الرطبة / يجب دمج تحضير الطعام في جدار قصير أو وضعه على قاعدة</td>
-        </tr>
-
-    </tbody>
-</table>
-
-
-<li class="requirement">
-    <span class="key" data-ar="الأسقف:" data-en="Ceilings:">الأسقف:</span>
-    <span class="text" data-ar="يجب أن تكون الأسقف مشيدة من مواد متينة خالية من الشقوق مطلية بطلاء فاتح اللون مناسب قابل للغسيل." 
-          data-en="Ceilings must be constructed from durable, crack-free materials, painted with light-colored washable paint.">
-        يجب أن تكون الأسقف مشيدة من مواد متينة خالية من الشقوق مطلية بطلاء فاتح اللون مناسب قابل للغسيل.
-    </span>
-</li>
-
-<table border="1" style="width:100%; border-collapse:collapse; text-align:center;">
-    <thead>
-        <tr style="background-color:#A3C586;">
-            <th data-ar="المادة" data-en="Material">المادة</th>
-            <th data-ar="المناطق الرطبة" data-en="Wet Areas">المناطق الرطبة</th>
-                <th data-ar="أماكن تحضير الخضار" data-en="Vegetable Prep Areas">أماكن تحضير الخضار</th>
-            <th data-ar="مناطق تخزين الطعام" data-en="STORING Area">مناطق تخزين الطعام</th>
-            <th data-ar="البرادات والثلاجات" data-en="Refrigerators and Freezers">البرادات والثلاجات</th>
-            <th data-ar="مناطق المخلفات والحاويات " data-en="Waste and Containers Areas">مناطق المخلفات والحاويات </th>
-            <th data-ar="صالة الطعام" data-en="Dining Area">صالة الطعام</th>
-            <th data-ar="الملاحظات" data-en="Notes">الملاحظات</th>
-        </tr>
-    <tbody>
-        <tr>
-
-            <td data-ar="قصارة مدهونة" data-en="Painted plaster">قصارة مدهونة</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-           <td data-ar="مفصول ناعم" data-en="Smooth finish">مفصول ناعم</td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح فولاذ" data-en="Steel Sheet">ألواح فولاذ</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-
-        </tr>
-        <tr>
-
-            <td data-ar="خلائط الاسمنت" data-en="Troweled Cement">خلائط الاسمنت</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="سطح مصقول" data-en="Polished surface">سطح مصقول</td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح خشبية" data-en="Wood paneling H">ألواح خشبية</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td data-ar="سطح مسمط" data-en="Sealed surfaces">سطح مسمط</td>
-        </tr>
-        <tr>
-            <td data-ar="خلائط الاسمنت" data-en="Concrete">خلائط الاسمنت</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td>✔</td>
-            <td>✔</td>
-            <td data-ar="سطح ناعم ومسمط" data-en="Sealed smooth surface">سطح ناعم ومسمط</td>
-        </tr>
-        <tr>
-            <td data-ar="ألواح جاهزة" data-en="Pre-formed Panels">ألواح جاهزة</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td></td>
-            <td>✔</td>
-         </tr>
-        <tr>
-
-            <td data-ar="ألواح صوتية" data-en="Acoustic Panels">ألواح صوتية</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-            <td data-ar="ألواح معلقة بشكل آمن" data-en="Suspended T-bars">ألواح معلقة بشكل آمن</td>
-        </tr>
-        <tr>
-          <td data-ar="ألواح خشبية للزينة" data-en="Decorative Panels">ألواح خشبية للزينة</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✔</td>
-        </tr>
-    </tbody>
-</table>
-
-
-
-
-        <li class="requirement">
-            <span class="key" data-ar="الإضاءة:" data-en="Lighting:">الإضاءة:</span> <span class="text" data-ar="يجب أن تتوفر في المنشآت الغذائية إضاءة كافية سواء كانت طبيعية أم صناعية لضمان إنتاج الأغذية في بيئة آمنة وصحية." data-en="Food establishments must have sufficient lighting, whether natural or artificial, to ensure food production in a safe and healthy environment."></span>
-        </li>
-        <li class="requirement">
-            <span class="key" data-ar="المجاري الأرضية:" data-en="Floor Drains:">المجاري الأرضية:</span> <span class="text" data-ar="يجب أن تكون المجاري الأرضية فعالة في إزالة مياه الصرف، وذات أغطية قابلة للفك والتنظيف." data-en="Floor drains must be effective in removing wastewater and have removable, cleanable covers."></span>
-        </li>
-        <li class="requirement">
-            <span class="key" data-ar="المعدات والأدوات:" data-en="Equipment and Tools:">المعدات والأدوات:</span> <span class="text" data-ar="يجب أن تستخدم المنشآت معدات وأدوات مصنوعة من مواد آمنة ومناسبة لا تؤثر على سلامة وجودة الغذاء." data-en="Food establishments must use equipment and tools made from safe and suitable materials that do not affect food safety and quality."></span>
-        </li>
-        <li class="requirement">
-            <span class="key" data-ar="طابق الميزانين والدرج:" data-en="Mezzanine and Stairs:">طابق الميزانين والدرج:</span> <span class="text" data-ar="يجب أن يكون الميزانين مبنيًا من مواد صلبة أو معدنية ومجهزًا بحواف مرتفعة بشكل كافٍ لمنع الملوثات من السقوط على الأسطح الواقعة أسفله." data-en="The mezzanine must be built from solid or metallic materials equipped with sufficiently high edges to prevent contaminants from falling onto surfaces below."></span>
-        </li>
-    </ul>
-</div> 
-
-
-
 <div class="services-section">
     <div class="section-title" onclick="toggleSection('servicesSection')" data-ar="الخدمات" data-en="Services">الخدمات</div>
     <div id="servicesSection" class="section-content">
 
-        <!-- 1 - المعاينات -->
-        <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="1 - المعاينات: معاينة موقع" data-en="1 - Inspections: Site Inspection">1 - المعاينات: معاينة موقع</p>
-        <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)" 
-           data-en="Required Documents (Trade Name or Trade License - Title Deed - Land Map - Building Engineering Plan - Proposed Plan)">
-           المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)
-        </p>
-        <button class="apply-button" onclick="applyForService('معاينة موقع', 'Site Inspection')">
-            <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
-        </button>
-
-        <!-- 2 - إصدار تقرير نهائي للمنشآت الغذائية -->
-        <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="2 - إصدار تقرير نهائي للمنشآت الغذائية" data-en="2 - Final Report Issuance for Food Establishments">2 - إصدار تقرير نهائي للمنشآت الغذائية</p>
-        <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)" 
-           data-en="Required Documents (Trade Name or Trade License - Title Deed - Land Map - Building Engineering Plan - Proposed Plan)">
-           المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)
-        </p>
-        <button class="apply-button" onclick="applyForService('إصدار تقرير نهائي للمنشآت الغذائية', 'Final Report Issuance for Food Establishments')">
-            <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
-        </button>
+        <!-- 1 - إصدار تقرير نهائي للمنشآت الغذائية -->
+        <div class="service">
+            <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="1 - إصدار تقرير نهائي للمنشآت الغذائية" data-en="1 - Final Report Issuance for Food Establishments">1 - إصدار تقرير نهائي للمنشآت الغذائية</p>
+            <p style="font-size: 14px;" data-ar="إصدار تقرير نهائي للمنشآت الغذائية (جديد - إضافة نشاط - حذف نشاط - تغيير موقع - إضافة فرع - إضافة مستودع - تصريح مستودع - تصريح كشك - عربة متنقلة - إضافة مساحة - حذف مساحة)" 
+               data-en="Issuance of Final Report for Food Establishments (New - Add Activity - Delete Activity - Change Location - Add Branch - Add Warehouse - Warehouse Permit - Kiosk Permit - Mobile Cart - Add Area - Remove Area)">
+               إصدار تقرير نهائي للمنشآت الغذائية (جديد - إضافة نشاط - حذف نشاط - تغيير موقع - إضافة فرع - إضافة مستودع - تصريح مستودع - تصريح كشك - عربة متنقلة - إضافة مساحة - حذف مساحة)
+            </p>
+            <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)" 
+               data-en="Required Documents (Trade Name or Trade License - Title Deed - Land Map - Building Engineering Plan - Proposed Plan)">
+               المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط الهندسي للبناء - المخطط المقترح)
+            </p>
+            <button class="apply-button" onclick="applyForService('إصدار تقرير نهائي للمنشآت الغذائية', 'Final Report Issuance for Food Establishments')">
+                <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
+            </button>
+        </div>
 
         <!-- 3 - اعتماد مخطط تعديل موقع -->
-        <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="3 - اعتماد مخطط تعديل موقع" data-en="3 - Site Modification Plan Approval">3 - اعتماد مخطط تعديل موقع</p>
-        <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط المعتمد من قسم الرقابة الغذائية - المخطط المقترح)" 
-           data-en="Required Documents (Trade Name or Trade License - Title Deed - Land Map - Approved Plan from Food Control Department - Proposed Plan)">
-           المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط المعتمد من قسم الرقابة الغذائية - المخطط المقترح)
-        </p>
-        <button class="apply-button" onclick="applyForService('اعتماد مخطط تعديل موقع', 'Site Modification Plan Approval')">
-            <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
-        </button>
+        <div class="service">
+            <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="3 - اعتماد مخطط تعديل موقع" data-en="3 - Site Modification Plan Approval">3 - اعتماد مخطط تعديل موقع</p>
+            <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط المعتمد من قسم الرقابة الغذائية - المخطط المقترح)" 
+               data-en="Required Documents (Trade Name or Trade License - Title Deed - Land Map - Approved Plan from Food Control Department - Proposed Plan)">
+               المستندات المطلوبة (الاسم التجاري أو الرخصة التجارية - سند الملكية - خارطة الأرض - المخطط المعتمد من قسم الرقابة الغذائية - المخطط المقترح)
+            </p>
+            <button class="apply-button" onclick="applyForService('اعتماد مخطط تعديل موقع', 'Site Modification Plan Approval')">
+                <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
+            </button>
+        </div>
 
         <!-- 4 - شهادة التقييم الغذائي -->
-        <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="4 - شهادة التقييم الغذائي" data-en="4 - Food Evaluation Certificate">4 - شهادة التقييم الغذائي</p>
-        <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الرخصة التجارية - المخطط المعتمد من قسم الرقابة الغذائية - أرقام التواصل - عدد العمال بالمنشأة)" 
-           data-en="Required Documents (Trade License - Approved Plan from Food Control Department - Contact Numbers - Number of Employees in Establishment)">
-           المستندات المطلوبة (الرخصة التجارية - المخطط المعتمد من قسم الرقابة الغذائية - أرقام التواصل - عدد العمال بالمنشأة)
-        </p>
-        <button class="apply-button" onclick="applyForService('شهادة التقييم الغذائي', 'Food Evaluation Certificate')">
-            <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
-        </button>
+        <div class="service">
+            <p style="font-weight: bold; color: #006400; font-size: 16px;" data-ar="4 - شهادة التقييم الغذائي" data-en="4 - Food Evaluation Certificate">4 - شهادة التقييم الغذائي</p>
+            <p style="font-size: 14px;" data-ar="المستندات المطلوبة (الرخصة التجارية - المخطط المعتمد من قسم الرقابة الغذائية - أرقام التواصل - عدد العمال بالمنشأة)" 
+               data-en="Required Documents (Trade License - Approved Plan from Food Control Department - Contact Numbers - Number of Employees in Establishment)">
+               المستندات المطلوبة (الرخصة التجارية - المخطط المعتمد من قسم الرقابة الغذائية - أرقام التواصل - عدد العمال بالمنشأة)
+            </p>
+            <button class="apply-button" onclick="applyForService('شهادة التقييم الغذائي', 'Food Evaluation Certificate')">
+                <span class="icon">✉️</span> <span data-ar="التقديم على الخدمة" data-en="Apply for Service">التقديم على الخدمة</span>
+            </button>
+        </div>
 
     </div>
 </div>
 
+
 <script>
+
 function applyForService(serviceAr, serviceEn) {
     const lang = document.documentElement.lang || "ar";
     const service = lang === "ar" ? serviceAr : serviceEn;
@@ -3085,19 +3300,21 @@ en: [
 </script>
  
 <script>
-        function toggleDescription(serviceId) {
-            const description = document.getElementById(serviceId);
-            description.style.display = description.style.display === 'none' || description.style.display === '' ? 'block' : 'none';
-        }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
-  function toggleFees() {
+<script>
+    function toggleDescription(serviceId) {
+        const description = document.getElementById(serviceId);
+        description.style.display = description.style.display === 'none' || description.style.display === '' ? 'block' : 'none';
+    }
+
+    function toggleFees() {
         var feesContent = document.getElementById("feesContent");
         var spacesContent = document.getElementById("spacesContent");
         
-        // إخفاء قسم المساحات إذا كان مفتوحًا
         spacesContent.style.display = "none";
         
-        // التبديل بين إظهار وإخفاء قسم الرسوم
         if (feesContent.style.display === "none" || feesContent.style.display === "") {
             feesContent.style.display = "block";
         } else {
@@ -3109,71 +3326,87 @@ en: [
         var spacesContent = document.getElementById("spacesContent");
         var feesContent = document.getElementById("feesContent");
         
-        // إخفاء قسم الرسوم إذا كان مفتوحًا
         feesContent.style.display = "none";
         
-        // التبديل بين إظهار وإخفاء قسم المساحات
         if (spacesContent.style.display === "none" || spacesContent.style.display === "") {
             spacesContent.style.display = "block";
         } else {
             spacesContent.style.display = "none";
         }
     }
-function showSteps() {
-  const activity = document.getElementById("activity").value; // جلب النشاط المختار
-  const stepsContent = document.getElementById("stepsContent"); // تحديد مكان عرض المحتوى
-  stepsContent.innerHTML = ""; // تفريغ المحتوى السابق
 
-  if (activity) {
-    const lang = document.documentElement.lang || "ar"; // تحديد اللغة (ar أو en)
-    const requirements = activityRequirements[activity]; // جلب الاشتراطات بناءً على النشاط
-    const licenseType = getLicenseType(activity); // جلب نوع الترخيص
-    const steps = licenseSteps[licenseType]; // جلب الخطوات بناءً على نوع الترخيص
+    function showSteps() {
+        const activity = document.getElementById("activity").value; 
+        const stepsContent = document.getElementById("stepsContent"); 
+        stepsContent.innerHTML = ""; 
 
-    // عرض الاشتراطات إذا وجدت
-    if (requirements && requirements.length > 0) {
-      stepsContent.innerHTML += `<h3>${lang === "ar" ? "الاشتراطات" : "Requirements"}</h3>`;
-      requirements.forEach((req) => {
-        stepsContent.innerHTML += `<h4>${req.title[lang]}</h4>`;
-        stepsContent.innerHTML += `<ol>`;
-        req.points[lang].forEach((point) => {
-          stepsContent.innerHTML += `<li>${point}</li>`;
-        });
-        stepsContent.innerHTML += `</ol>`;
-      });
-    } else {
-      stepsContent.innerHTML += `<p>${lang === "ar" ? "لا توجد اشتراطات." : "No requirements available."}</p>`;
+        if (activity) {
+            const lang = document.documentElement.lang || "ar"; 
+            const requirements = activityRequirements[activity]; 
+            const licenseType = getLicenseType(activity); 
+            const steps = licenseSteps[licenseType]; 
+
+            if (requirements && requirements.length > 0) {
+                stepsContent.innerHTML += `<h3>${lang === "ar" ? "الاشتراطات" : "Requirements"}</h3>`;
+                requirements.forEach((req) => {
+                    stepsContent.innerHTML += `<h4>${req.title[lang]}</h4>`;
+                    stepsContent.innerHTML += `<ol>`;
+                    req.points[lang].forEach((point) => {
+                        stepsContent.innerHTML += `<li>${point}</li>`;
+                    });
+                    stepsContent.innerHTML += `</ol>`;
+                });
+            } else {
+                stepsContent.innerHTML += `<p>${lang === "ar" ? "لا توجد اشتراطات." : "No requirements available."}</p>`;
+            }
+
+            if (steps && steps.length > 0) {
+                stepsContent.innerHTML += `<h3>${lang === "ar" ? "خطوات الترخيص" : "License Steps"}</h3>`;
+                stepsContent.innerHTML += `<ul>`;
+                steps.forEach((step) => {
+                    stepsContent.innerHTML += `<li>${step[lang]}</li>`;
+                });
+                stepsContent.innerHTML += `</ul>`;
+            } else {
+                stepsContent.innerHTML += `<p>${lang === "ar" ? "لا توجد خطوات الترخيص." : "No license steps available."}</p>`;
+            }
+        } else {
+            stepsContent.innerHTML = `<p>${lang === "ar" ? "يرجى اختيار نشاط." : "Please select an activity."}</p>`;
+        }
     }
 
-    // عرض خطوات الترخيص إذا وجدت
-    if (steps && steps.length > 0) {
-      stepsContent.innerHTML += `<h3>${lang === "ar" ? "خطوات الترخيص" : "License Steps"}</h3>`;
-      stepsContent.innerHTML += `<ul>`;
-      steps.forEach((step) => {
-        stepsContent.innerHTML += `<li>${step[lang]}</li>`;
-      });
-      stepsContent.innerHTML += `</ul>`;
-    } else {
-      stepsContent.innerHTML += `<p>${lang === "ar" ? "لا توجد خطوات الترخيص." : "No license steps available."}</p>`;
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        
+        if (section.style.display === "none") {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
     }
-  } else {
-    stepsContent.innerHTML = `<p>${lang === "ar" ? "يرجى اختيار نشاط." : "Please select an activity."}</p>`;
-  }
+
+function printContent() {
+    const content = document.getElementById('content'); // تحديد العنصر الذي يحتوي على جميع الأقسام
+
+    if (!content) {
+        alert("العنصر المطلوب للطباعة غير موجود!");
+        return;
+    }
+
+    // استخدام html2canvas لتحويل المحتوى إلى صورة
+    html2canvas(content).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF();
+        const imgWidth = pdf.internal.pageSize.getWidth();
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+        pdf.save('document.pdf');
+    });
 }
-
-
-function toggleSection(sectionId) {
-    var section = document.getElementById(sectionId);
-    
-    // التبديل بين إظهار أو إخفاء المحتوى
-    if (section.style.display === "none") {
-        section.style.display = "block";
-    } else {
-        section.style.display = "none";
-    }
-}
-
 </script>
 
+<!-- زر الطباعة -->
+<button onclick="printContent()">طباعة إلى PDF</button>
 </body>
 </html>
