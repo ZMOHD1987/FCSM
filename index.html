@@ -49,7 +49,7 @@
         }
 
         .section-title {
-            font-size: 2rem;
+            font-size: 1.5rem; /* تكبير او تصغير خط العناوين */
             color: #8b785a;
             cursor: pointer;
             margin-top: 20px;
@@ -58,14 +58,14 @@
             border-bottom: 1px solid #ddd;
         }
 
-        .section-content {
+        .section-content { 
             display: none;
             padding: 15px;
             background-color: #f9f8f7;
             border-radius: 5px;
             margin-top: 15px;
             color: #555;
-            font-size: 1.5rem;
+            font-size: 1.1rem; /* تكبير او تصغير الخط للمحتوي */
         }
 
         .activity-selection {
@@ -309,7 +309,21 @@ html[lang="en"] .contact-info {
 }
 
 
+
 </style>
+    <style>
+        ul, ol {
+            margin: 0;      /* إزالة الهامش */
+            padding: 0;     /* إزالة التبطين */
+        }
+
+        li {
+            margin: 0;      /* إزالة الهامش عند العناصر */
+            padding: 0;     /* إزالة أي مسافة داخل العناصر */
+            list-style-position: inside;  /* وضع الأرقام داخل النص */
+        }
+    </style>
+
     <script>
         function toggleDescription(serviceId) {
             const description = document.getElementById(serviceId);
@@ -509,92 +523,99 @@ html[lang="en"] .contact-info {
 
 <div class="section-title" onclick="toggleSection('infrastructureSection', 'ar')" data-ar="6. اشتراطات البنية التحتية" data-en="6. Infrastructure Requirements">6. اشتراطات البنية التحتية</div>
 <div id="infrastructureSection" class="section-content">
-    <ul>
-
-<li class="requirement">
-    <span class="key" data-ar="6. اشتراطات البنية التحتية:" data-en="6. Infrastructure Requirements:">6. اشتراطات البنية التحتية:</span>
-    <p data-ar="يجب اختيار مواقع المباني والمرافق والمعدات وتصميمها بما يتناسب مع طبيعة العمليات والمخاطر المرتبطة بها، لضمان النقاط التالية:" 
+    
+<ul style="list-style-type: none;">
+    <li class="requirement">
+        <span class="key" data-ar="6. اشتراطات البنية التحتية:" data-en="6. Infrastructure Requirements:">6. اشتراطات البنية التحتية:</span>
+        <p data-ar="يجب اختيار مواقع المباني والمرافق والمعدات وتصميمها بما يتناسب مع طبيعة العمليات والمخاطر المرتبطة بها، لضمان النقاط التالية:" 
             data-en="The selection and design of building sites, equipment, and facilities should align with the nature of operations and associated risks to ensure the following:"></p>
-  
-    <ul>
-        <li data-ar="اختيار مواقع المباني والمرافق بشكل يقلل من مخاطر التلوث إلى أدنى مستوى." 
-            data-en="Selection of building sites and facilities to minimize contamination risks to the lowest level."></li>
-        <li data-ar="تصميم المنشأة بطريقة تسهل الصيانة والتنظيف والتطهير، مع الحد من التلوث الناجم عن الهواء." 
-            data-en="Design of the facility to facilitate effective maintenance, cleaning, and disinfection, while minimizing airborne contamination."></li>
-        <li data-ar="أن تكون المواد والأسطح المستخدمة، وخصوصًا تلك التي تتلامس مع الغذاء، غير سامة ومناسبة للاستخدام المقصود." 
-            data-en="Materials and surfaces, especially those in contact with food, should be non-toxic and suitable for the intended use."></li>
-        <li data-ar="توفير مرافق لمراقبة درجة الحرارة والرطوبة، بالإضافة إلى الضوابط الأخرى حسب الحاجة." 
-            data-en="Provision of facilities to monitor temperature, humidity, and other necessary controls."></li>
-        <li data-ar="تطبيق تدابير فعّالة لمنع دخول الآفات والحفاظ على بيئة خالية منها." 
-            data-en="Implementation of effective measures to prevent pests and ensure a pest-free environment."></li>
-        <li data-ar="توفير دورات مياه ملائمة وكافية للعاملين." 
-            data-en="Provision of adequate and suitable restroom facilities for employees."></li>
-    </ul>
-</li>
+        <ol style="list-style-type: disc;">
+            <li data-ar="اختيار مواقع المباني والمرافق بشكل يقلل من مخاطر التلوث إلى أدنى مستوى." 
+                data-en="Selection of building sites and facilities to minimize contamination risks to the lowest level."></li>
+            <li data-ar="تصميم المنشأة بطريقة تسهل الصيانة والتنظيف والتطهير، مع الحد من التلوث الناجم عن الهواء." 
+                data-en="Design of the facility to facilitate effective maintenance, cleaning, and disinfection, while minimizing airborne contamination."></li>
+            <li data-ar="أن تكون المواد والأسطح المستخدمة، وخصوصًا تلك التي تتلامس مع الغذاء، غير سامة ومناسبة للاستخدام المقصود." 
+                data-en="Materials and surfaces, especially those in contact with food, should be non-toxic and suitable for the intended use."></li>
+            <li data-ar="توفير مرافق لمراقبة درجة الحرارة والرطوبة، بالإضافة إلى الضوابط الأخرى حسب الحاجة." 
+                data-en="Provision of facilities to monitor temperature, humidity, and other necessary controls."></li>
+            <li data-ar="تطبيق تدابير فعّالة لمنع دخول الآفات والحفاظ على بيئة خالية منها." 
+                data-en="Implementation of effective measures to prevent pests and ensure a pest-free environment."></li>
+            <li data-ar="توفير دورات مياه ملائمة وكافية للعاملين." 
+                data-en="Provision of adequate and suitable restroom facilities for employees."></li>
+        </ol>
+    </li>
 
+    <li class="requirement">
+        <span class="key" data-ar="6.1 الموقع:" data-en="6.1 Location:">6.1 الموقع:</span> 
+        <ol style="list-style-type: disc;"> 
+            <li data-ar="يجب أن يكون الموقع مناسباً ويجب الحفاظ على نظافة المنشأة وحالتها الجيدة." data-en="The location must be suitable and the establishment must be maintained in a clean and good condition.">
+                يجب أن يكون الموقع مناسباً ويجب الحفاظ على نظافة المنشأة وحالتها الجيدة.
+            </li>
+            <li data-ar="يجب أن تكون المنشأة بعيدة عن المناطق الملوثة بيئياً." data-en="The establishment must be located away from environmentally polluted areas.">
+                يجب أن تكون المنشأة بعيدة عن المناطق الملوثة بيئياً.
+            </li>
+            <li data-ar="ينبغي أن تكون المنشأة في مكان لا يشكل تهديداً لسلامة الغذاء وصلاحيته." data-en="The establishment must be in a location that does not pose a threat to the safety or suitability of the food.">
+                ينبغي أن تكون المنشأة في مكان لا يشكل تهديداً لسلامة الغذاء وصلاحيته.
+            </li>
+            <li data-ar="يجب أن تكون المنشأة بعيدة عن المناطق التي يصعب إزالة النفايات الصلبة أو السائلة منها." data-en="The establishment must be away from areas where solid or liquid waste is difficult to remove.">
+                يجب أن تكون المنشأة بعيدة عن المناطق التي يصعب إزالة النفايات الصلبة أو السائلة منها.
+            </li>
+            <li data-ar="ينبغي أن تكون المنشأة بعيدة عن المناطق التي يُحتمل فيها تفشي الآفات." data-en="The establishment must be away from areas where pests are likely to spread.">
+                ينبغي أن تكون المنشأة بعيدة عن المناطق التي يُحتمل فيها تفشي الآفات.
+            </li>
+        </ol>
+    </li>
 
-<li class="requirement">
-    <span class="key" data-ar="6.1 الموقع:" data-en="6.1 Location:">6.1 الموقع:</span> 
-    <ul>
-        <li data-ar="يجب أن يكون الموقع مناسباً ويجب الحفاظ على نظافة المنشأة وحالتها الجيدة." data-en="The location must be suitable and the establishment must be maintained in a clean and good condition.">يجب أن يكون الموقع مناسباً ويجب الحفاظ على نظافة المنشأة وحالتها الجيدة.</li>
-        <li data-ar="يجب أن تكون المنشأة بعيدة عن المناطق الملوثة بيئياً." data-en="The establishment must be located away from environmentally polluted areas.">يجب أن تكون المنشأة بعيدة عن المناطق الملوثة بيئياً.</li>
-        <li data-ar="ينبغي أن تكون المنشأة في مكان لا يشكل تهديداً لسلامة الغذاء وصلاحيته." data-en="The establishment must be in a location that does not pose a threat to the safety or suitability of the food.">ينبغي أن تكون المنشأة في مكان لا يشكل تهديداً لسلامة الغذاء وصلاحيته.</li>
-        <li data-ar="يجب أن تكون المنشأة بعيدة عن المناطق التي يصعب إزالة النفايات الصلبة أو السائلة منها." data-en="The establishment must be away from areas where solid or liquid waste is difficult to remove.">يجب أن تكون المنشأة بعيدة عن المناطق التي يصعب إزالة النفايات الصلبة أو السائلة منها.</li>
-        <li data-ar="ينبغي أن تكون المنشأة بعيدة عن المناطق التي يُحتمل فيها تفشي الآفات." data-en="The establishment must be away from areas where pests are likely to spread.">ينبغي أن تكون المنشأة بعيدة عن المناطق التي يُحتمل فيها تفشي الآفات.</li>
-    </ul>
-</li>
+    <!-- السطر الفارغ بدون ترقيم -->
+    <li style="list-style-type: none;"></li>
 
-<li class="requirement">
-    <span class="key" data-ar="6.1.1 التصميم:" data-en="6.1.1 Design:">6.1.1 التصميم:</span> 
-    <ul>
-        <li data-ar="يجب أن تكون البنية الداخلية للمنشأة الغذائية مكونة من مواد صلبة ومتينة يسهل صيانتها وتنظيفها وتطهيرها عند الضرورة." data-en="The internal structure of the food establishment must be made of solid and durable materials that are easy to maintain, clean, and sanitize when necessary.">
-            يجب أن تكون البنية الداخلية للمنشأة الغذائية مكونة من مواد صلبة ومتينة يسهل صيانتها وتنظيفها وتطهيرها عند الضرورة.
-        </li>
-        <li data-ar="يجب السماح بتنفيذ العمليات اللازمة للصيانة والتنظيف والتطهير بسهولة." data-en="Proper maintenance, cleaning, and sanitizing operations must be easily performed.">
-            يجب السماح بتنفيذ العمليات اللازمة للصيانة والتنظيف والتطهير بسهولة.
-        </li>
-        <li data-ar="يجب تقليل التلوث الناتج عن الهواء وتوفير مساحة كافية للعمل وحرية الحركة ومنع التكدس." data-en="Air pollution must be minimized, and sufficient workspace and freedom of movement must be provided while preventing overcrowding.">
-            يجب تقليل التلوث الناتج عن الهواء وتوفير مساحة كافية للعمل وحرية الحركة ومنع التكدس.
-        </li>
-        <li data-ar="يجب أن يكون مسار تدفق العمل مناسبًا، مما يتيح أداء العمليات بشكل صحي وآمن." data-en="The workflow path must be suitable to enable hygienic and safe operations.">
-            يجب أن يكون مسار تدفق العمل مناسبًا، مما يتيح أداء العمليات بشكل صحي وآمن.
-        </li>
-        <li data-ar="يجب أن يحمي التصميم من تراكم الأوساخ والتكثف وملامسة المواد السامة أو تكسر وتناثر الجزيئات في الطعام." data-en="The design must protect against the accumulation of dirt, condensation, contact with toxic materials, or particle breakage and scattering into food.">
-            يجب أن يحمي التصميم من تراكم الأوساخ والتكثف وملامسة المواد السامة أو تكسر وتناثر الجزيئات في الطعام.
-        </li>
-        <li data-ar="يجب منع تشكل العفن غير المرغوب فيه على الأسطح." data-en="Unwanted mold formation on surfaces must be prevented.">
-            يجب منع تشكل العفن غير المرغوب فيه على الأسطح.
-        </li>
-        <li data-ar="يجب تطبيق الممارسات الصحية الجيدة بما في ذلك الحماية من التلوث التبادلي ومنع دخول الحشرات أو تفشيها." data-en="Good hygiene practices must be applied, including protection against cross-contamination and prevention of pest entry or outbreaks.">
-            يجب تطبيق الممارسات الصحية الجيدة بما في ذلك الحماية من التلوث التبادلي ومنع دخول الحشرات أو تفشيها.
-        </li>
-        <li data-ar="يجب توفير ظروف تحكم مناسبة لدرجة الحرارة والرطوبة بقدرة كافية عند الضرورة." data-en="Appropriate conditions for temperature and humidity control must be provided with sufficient capacity when necessary.">
-            يجب توفير ظروف تحكم مناسبة لدرجة الحرارة والرطوبة بقدرة كافية عند الضرورة.
-        </li>
-        <li data-ar="ينبغي الفصل بين المناطق التي تحتوي على مستويات مختلفة من ضوابط النظافة مثل مناطق المواد الخام ومناطق المنتجات النهائية للتقليل إلى أدنى حد من انتقال التلوث وذلك من خلال تدابير من قبيل الفصل المادي (مثل الجدران والفواصل) و / أو الموقع (مثل المسافة وحركة المرور)، أو تدفقات الإنتاج في اتجاه واحد، أو تدفق الهواء، أو الفصل الزمني مع إجراء التنظيف والتطهير المناسبين بين الاستخدامات." data-en="Separation should be made between areas with different levels of hygiene controls, such as raw material areas and finished product areas, to minimize contamination transfer. This can be achieved through measures such as physical barriers (e.g., walls and partitions), location (e.g., distance and traffic), unidirectional production flows, air flow, or temporal separation, with appropriate cleaning and disinfection between uses.">
-            ينبغي الفصل بين المناطق التي تحتوي على مستويات مختلفة من ضوابط النظافة مثل مناطق المواد الخام ومناطق المنتجات النهائية للتقليل إلى أدنى حد من انتقال التلوث وذلك من خلال تدابير من قبيل الفصل المادي (مثل الجدران والفواصل) و / أو الموقع (مثل المسافة وحركة المرور)، أو تدفقات الإنتاج في اتجاه واحد، أو تدفق الهواء، أو الفصل الزمني مع إجراء التنظيف والتطهير المناسبين بين الاستخدامات.
-        </li>
-    </ul>
-</li>
+    <li class="requirement">
+        <span class="key" data-ar="6.1.1 التصميم:" data-en="6.1.1 Design:">6.1.1 التصميم:</span> 
+        <ol style="list-style-type: disc;"> 
+            <li data-ar="يجب أن تكون البنية الداخلية للمنشأة الغذائية مكونة من مواد صلبة ومتينة يسهل صيانتها وتنظيفها وتطهيرها عند الضرورة." data-en="The internal structure of the food establishment must be made of solid and durable materials that are easy to maintain, clean, and sanitize when necessary.">
+                يجب أن تكون البنية الداخلية للمنشأة الغذائية مكونة من مواد صلبة ومتينة يسهل صيانتها وتنظيفها وتطهيرها عند الضرورة.
+            </li>
+            <li data-ar="يجب السماح بتنفيذ العمليات اللازمة للصيانة والتنظيف والتطهير بسهولة." data-en="Proper maintenance, cleaning, and sanitizing operations must be easily performed.">
+                يجب السماح بتنفيذ العمليات اللازمة للصيانة والتنظيف والتطهير بسهولة.
+            </li>
+            <li data-ar="يجب تقليل التلوث الناتج عن الهواء وتوفير مساحة كافية للعمل وحرية الحركة ومنع التكدس." data-en="Air pollution must be minimized, and sufficient workspace and freedom of movement must be provided while preventing overcrowding.">
+                يجب تقليل التلوث الناتج عن الهواء وتوفير مساحة كافية للعمل وحرية الحركة ومنع التكدس.
+            </li>
+            <li data-ar="يجب أن يكون مسار تدفق العمل مناسبًا، مما يتيح أداء العمليات بشكل صحي وآمن." data-en="The workflow path must be suitable to enable hygienic and safe operations.">
+                يجب أن يكون مسار تدفق العمل مناسبًا، مما يتيح أداء العمليات بشكل صحي وآمن.
+            </li>
+        </ol>
+    </li>
 
 <li class="requirement">
     <span class="key" data-ar="6.1.2 الهياكل والتجهيزات الداخلية:" data-en="6.1.2 Internal Structures and Fittings:">6.1.2 الهياكل والتجهيزات الداخلية:</span>
-    <p data-ar="يجب أن تكون الهياكل الداخلية للمنشآت مصممة ومبنية باستخدام مواد قوية وعالية التحمل، مع الأخذ في الاعتبار سهولة الصيانة والتطهير وفقًا للمعايير الصحية لضمان بيئة عمل آمنة وصحية. وينبغي أن تفي الهياكل بالمتطلبات التالية لضمان سلامة الغذاء وحمايته من التلوث:" data-en="The internal structures of facilities must be designed and built using durable, high-strength materials that facilitate easy maintenance and disinfection, in accordance with health standards to ensure a safe and hygienic work environment. The structures should meet the following requirements to ensure food safety and protection from contamination:"></p>
-    
-    <ul>
-<!-- الجدران والفواصل -->
+    <p data-ar="يجب أن تكون الهياكل الداخلية للمنشآت مصممة ومبنية باستخدام مواد قوية وعالية التحمل، مع الأخذ في الاعتبار سهولة الصيانة والتطهير وفقًا للمعايير الصحية لضمان بيئة عمل آمنة وصحية. وينبغي أن تفي الهياكل بالمتطلبات التالية لضمان سلامة الغذاء وحمايته من التلوث:" 
+        data-en="The internal structures of facilities must be designed and built using durable, high-strength materials that facilitate easy maintenance and disinfection, in accordance with health standards to ensure a safe and hygienic work environment. The structures should meet the following requirements to ensure food safety and protection from contamination:">
+    </p>
+
+
 <li class="requirement">
     <span class="key" data-ar="6.1.2.1 الجدران والفواصل:" data-en="6.1.2.1 Walls and Partitions:">6.1.2.1 الجدران والفواصل | Walls and Partitions:</span>
-    <p data-ar="ينبغي أن تكون الأسطح الأساسية مثل الجدران، الفواصل، والأرضيات من مواد مقاومة للسوائل وسهلة التنظيف والتطهير لضمان القضاء على أي مصدر محتمل للتلوث." data-en="Essential surfaces such as walls, partitions, and floors should be made of liquid-resistant materials that are easy to clean and disinfect to eliminate any potential sources of contamination."></p>
-    <p data-ar="يجب أن تتمتع الأسطح بالجدران والفواصل بملمس أملس وسطح مستوٍ حتى الارتفاع المناسب للعمليات التشغيلية لتسهيل عمليات التنظيف والصيانة." data-en="Wall and partition surfaces should be smooth and level to an appropriate height for operational processes to facilitate cleaning and maintenance."></p>
-    <ul>
-        <li data-ar="يجب أن تكون الجدران والفواصل في المناطق التي تتعرض للرطوبة أو الأبخرة مصنوعة من مواد مقاومة للرطوبة ومقاومة للبكتيريا لضمان سهولة التنظيف ومنع نمو الميكروبات." data-en="Walls and partitions in areas exposed to moisture or vapors should be made of moisture-resistant and bacteria-resistant materials to ensure ease of cleaning and prevent microbial growth."></li>
-        <li data-ar="ينبغي أن تكون الفواصل قابلة للإزالة أو ذات تصميم يسمح بسهولة صيانتها وتنظيفها بشكل دوري." data-en="Partitions should be removable or designed to allow for easy maintenance and regular cleaning."></li>
-        <li data-ar="يجب أن تكون الجدران والفواصل في مناطق التحضير والتخزين محكمة ومتماسكة بحيث تمنع تراكم الأوساخ وتسمح بالتهوية الجيدة." data-en="Walls and partitions in preparation and storage areas should be tightly sealed to prevent dirt accumulation and allow for proper ventilation."></li>
-        <li data-ar="ينبغي أن تتمتع الفواصل بقدرة على مقاومة التأثيرات الميكانيكية لضمان طول عمرها تحت الاستخدام المكثف." data-en="Partitions should be resistant to mechanical impacts to ensure their longevity under heavy use."></li>
-        <li data-ar="يجب أن تكون الأسطح قابلة للمسح بسهولة باستخدام المنظفات المناسبة والمواد المضادة للبكتيريا لضمان الحفاظ على بيئة نظيفة وآمنة." data-en="Surfaces should be easily wipeable using appropriate cleaners and antibacterial agents to ensure a clean and safe environment."></li>
-    </ul>
+    <ol style="list-style-type: disc;">
+        <li data-ar="ينبغي أن تكون الأسطح الأساسية مثل الجدران، الفواصل، والأرضيات من مواد مقاومة للسوائل وسهلة التنظيف والتطهير لضمان القضاء على أي مصدر محتمل للتلوث." 
+            data-en="Essential surfaces such as walls, partitions, and floors should be made of liquid-resistant materials that are easy to clean and disinfect to eliminate any potential sources of contamination.">
+            ينبغي أن تكون الأسطح الأساسية مثل الجدران، الفواصل، والأرضيات من مواد مقاومة للسوائل وسهلة التنظيف والتطهير لضمان القضاء على أي مصدر محتمل للتلوث.
+        </li>
+        <li data-ar="يجب أن تتمتع الأسطح بالجدران والفواصل بملمس أملس وسطح مستوٍ حتى الارتفاع المناسب للعمليات التشغيلية لتسهيل عمليات التنظيف والصيانة." 
+            data-en="Wall and partition surfaces should be smooth and level to an appropriate height for operational processes to facilitate cleaning and maintenance.">
+            يجب أن تتمتع الأسطح بالجدران والفواصل بملمس أملس وسطح مستوٍ حتى الارتفاع المناسب للعمليات التشغيلية لتسهيل عمليات التنظيف والصيانة.
+        </li>
+        <li data-ar="يجب أن تكون الجدران والفواصل في المناطق التي تتعرض للرطوبة أو الأبخرة مصنوعة من مواد مقاومة للرطوبة ومقاومة للبكتيريا لضمان سهولة التنظيف ومنع نمو الميكروبات." 
+            data-en="Walls and partitions in areas exposed to moisture or vapors should be made of moisture-resistant and bacteria-resistant materials to ensure ease of cleaning and prevent microbial growth.">
+            يجب أن تكون الجدران والفواصل في المناطق التي تتعرض للرطوبة أو الأبخرة مصنوعة من مواد مقاومة للرطوبة ومقاومة للبكتيريا لضمان سهولة التنظيف ومنع نمو الميكروبات.
+        </li>
+        <li data-ar="ينبغي أن تكون الفواصل قابلة للإزالة أو ذات تصميم يسمح بسهولة صيانتها وتنظيفها بشكل دوري." 
+            data-en="Partitions should be removable or designed to allow for easy maintenance and regular cleaning.">
+            ينبغي أن تكون الفواصل قابلة للإزالة أو ذات تصميم يسمح بسهولة صيانتها وتنظيفها بشكل دوري.
+        </li>
+    </ol>
 </li>
+
 
 <h2 data-ar="أمثلة لبعض المواد المسموح بها للجدران والفواصل وفق المواصفات الإماراتية والدولية" 
     data-en="Examples of Permissible Wall and Partition Materials per UAE and Global Standards" 
@@ -721,15 +742,32 @@ html[lang="en"] .contact-info {
 <!-- الأرضيات -->
 <li class="requirement">
     <span class="key" data-ar="6.1.2.2 الأرضيات:" data-en="6.1.2.2 Floors:">6.1.2.2 الأرضيات:</span>
-    <p data-ar="يجب أن تصمم الأرضيات بشكل يسمح بالصرف الجيد للمياه مع توفير إمكانية تنظيفها بفعالية للحفاظ على بيئة خالية من التلوث." data-en="Floors should be designed to allow efficient drainage and should be easy to clean to maintain a contamination-free environment."></p>
-    <ul>
-        <li data-ar="ينبغي أن تكون الأرضيات في مناطق العمل التي لا تتعرض في العادة إلى الرطوبة متينة، غير ماصة للماء، سهلة التنظيف، وتمنع الانزلاق." data-en="Floors in areas not typically exposed to moisture should be durable, non-porous, easy to clean, and slip-resistant."></li>
-        <li data-ar="ينبغي أن تكون مناطق الالتقاء بين الأرضيات والجدران مقوسة لتسهيل التنظيف وتجنب تراكم الأوساخ." data-en="The junctions between floors and walls should be curved to facilitate cleaning and prevent dirt accumulation."></li>
-        <li data-ar="يجب أن تكون الأرضيات في مناطق الطهي والتجهيز من المواد المسموح بها (مادة غير منفذة للسوائل) وبها ميل كافي لتصريف السوائل إلى مجاري أرضية، مع التأكد من وجود عدد كاف من فتحات التصريف." data-en="Floors in cooking and preparation areas should be made of permissible materials (non-permeable to liquids) and have sufficient slope for liquid drainage to floor drains, with enough drain openings."></li>
-        <li data-ar="يجب أن تتحمل الأرضيات المواد الكيميائية التي قد تستخدم في التنظيف، بالإضافة إلى قدرتها على تحمل درجات الحرارة العالية في مناطق الطهي." data-en="Floors should be resistant to cleaning chemicals and capable of withstanding high temperatures in cooking areas."></li>
-        <li data-ar="يجب حماية الأرضيات من الخدوش أو التآكل الذي قد يؤدي إلى تراكم الملوثات." data-en="Floors should be protected from scratches or wear that may lead to contamination buildup."></li>
-        <li data-ar="يجب أن تكون الأرضيات سهلة الصيانة وتتمتع بقدرة على مقاومة الأضرار الناتجة عن الأحمال الثقيلة." data-en="Floors should be easy to maintain and capable of resisting damage from heavy loads."></li>
-    </ul>
+    <ol style="list-style-type: disc;">
+        <li data-ar="ينبغي أن تكون الأرضيات في مناطق العمل التي لا تتعرض في العادة إلى الرطوبة متينة، غير ماصة للماء، سهلة التنظيف، وتمنع الانزلاق." 
+            data-en="Floors in areas not typically exposed to moisture should be durable, non-porous, easy to clean, and slip-resistant.">
+            ينبغي أن تكون الأرضيات في مناطق العمل التي لا تتعرض في العادة إلى الرطوبة متينة، غير ماصة للماء، سهلة التنظيف، وتمنع الانزلاق.
+        </li>
+        <li data-ar="ينبغي أن تكون مناطق الالتقاء بين الأرضيات والجدران مقوسة لتسهيل التنظيف وتجنب تراكم الأوساخ." 
+            data-en="The junctions between floors and walls should be curved to facilitate cleaning and prevent dirt accumulation.">
+            ينبغي أن تكون مناطق الالتقاء بين الأرضيات والجدران مقوسة لتسهيل التنظيف وتجنب تراكم الأوساخ.
+        </li>
+        <li data-ar="يجب أن تكون الأرضيات في مناطق الطهي والتجهيز من المواد المسموح بها (مادة غير منفذة للسوائل) وبها ميل كافي لتصريف السوائل إلى مجاري أرضية، مع التأكد من وجود عدد كاف من فتحات التصريف." 
+            data-en="Floors in cooking and preparation areas should be made of permissible materials (non-permeable to liquids) and have sufficient slope for liquid drainage to floor drains, with enough drain openings.">
+            يجب أن تكون الأرضيات في مناطق الطهي والتجهيز من المواد المسموح بها (مادة غير منفذة للسوائل) وبها ميل كافي لتصريف السوائل إلى مجاري أرضية، مع التأكد من وجود عدد كاف من فتحات التصريف.
+        </li>
+        <li data-ar="يجب أن تتحمل الأرضيات المواد الكيميائية التي قد تستخدم في التنظيف، بالإضافة إلى قدرتها على تحمل درجات الحرارة العالية في مناطق الطهي." 
+            data-en="Floors should be resistant to cleaning chemicals and capable of withstanding high temperatures in cooking areas.">
+            يجب أن تتحمل الأرضيات المواد الكيميائية التي قد تستخدم في التنظيف، بالإضافة إلى قدرتها على تحمل درجات الحرارة العالية في مناطق الطهي.
+        </li>
+        <li data-ar="يجب حماية الأرضيات من الخدوش أو التآكل الذي قد يؤدي إلى تراكم الملوثات." 
+            data-en="Floors should be protected from scratches or wear that may lead to contamination buildup.">
+            يجب حماية الأرضيات من الخدوش أو التآكل الذي قد يؤدي إلى تراكم الملوثات.
+        </li>
+        <li data-ar="يجب أن تكون الأرضيات سهلة الصيانة وتتمتع بقدرة على مقاومة الأضرار الناتجة عن الأحمال الثقيلة." 
+            data-en="Floors should be easy to maintain and capable of resisting damage from heavy loads.">
+            يجب أن تكون الأرضيات سهلة الصيانة وتتمتع بقدرة على مقاومة الأضرار الناتجة عن الأحمال الثقيلة.
+        </li>
+    </ol>
 </li>
 <h2 data-ar="أمثلة على بعض المواد المسموح بها للأرضيات وفق المواصفات الإماراتية والعالمية" 
     data-en="Examples of Permissible Flooring Materials per UAE and Global Standards" 
@@ -863,13 +901,28 @@ html[lang="en"] .contact-info {
 <li class="requirement">
     <span class="key" data-ar="6.1.2.3 الأسطح العلوية (الأسقف):" data-en="6.1.2.3 Overhead Surfaces (Ceilings):">6.1.2.3 الأسطح العلوية (الأسقف) | Overhead Surfaces (Ceilings):</span>
     <p data-ar="يجب أن تكون الأسطح العلوية مثل الأسقف والتركيبات مقاومة للكسر والتآكل، ويجب أن تتم معالجتها بحيث تحد من تراكم الأوساخ والرطوبة التي قد تؤثر على البيئة." data-en="Overhead surfaces such as ceilings and fixtures must be break-resistant and treated to minimize dirt and moisture accumulation, which could impact the environment."></p>
-    <ul>
-        <li data-ar="ينبغي أن تكون الأسطح العلوية في المناطق التي تحتوي على أنظمة تهوية أو تكييفات مقاومة للرطوبة لتجنب تراكم الميكروبات." data-en="Overhead surfaces in areas with ventilation or air conditioning systems should be moisture-resistant to prevent microbial buildup."></li>
-        <li data-ar="يجب أن تكون الأسطح العلوية سهلة الصيانة والتنظيف لضمان بيئة صحية وآمنة للمعدات والعاملين." data-en="Overhead surfaces should be easy to maintain and clean to ensure a healthy and safe environment for equipment and workers."></li>
-        <li data-ar="يجب أن تتم معالجة الأسطح العلوية بمواد مقاومة للأوساخ والروائح الكريهة لتجنب التأثيرات السلبية على جودة الهواء." data-en="Overhead surfaces should be treated with materials resistant to dirt and unpleasant odors to avoid negative impacts on air quality."></li>
-        <li data-ar="يجب أن تكون الأسطح العلوية على ارتفاع مناسب بحيث لا تتعرض للتلف نتيجة للأنشطة اليومية وتكون قابلة للوصول أثناء أعمال الصيانة." data-en="Overhead surfaces should be at an appropriate height to avoid damage from daily activities and be accessible during maintenance tasks." ></li>
-        <li data-ar="يجب أن تكون الأسطح العلوية مغطاة بمواد غير مسامية، وسهلة المسح، ومقاومة للبكتيريا للحفاظ على النظافة." data-en="Overhead surfaces should be covered with non-porous, easy-to-wipe, and bacteria-resistant materials to maintain cleanliness." ></li>
-    </ul>
+    <ol style="list-style-type: disc;">
+        <li data-ar="ينبغي أن تكون الأسطح العلوية في المناطق التي تحتوي على أنظمة تهوية أو تكييفات مقاومة للرطوبة لتجنب تراكم الميكروبات." 
+            data-en="Overhead surfaces in areas with ventilation or air conditioning systems should be moisture-resistant to prevent microbial buildup.">
+            ينبغي أن تكون الأسطح العلوية في المناطق التي تحتوي على أنظمة تهوية أو تكييفات مقاومة للرطوبة لتجنب تراكم الميكروبات.
+        </li>
+        <li data-ar="يجب أن تكون الأسطح العلوية سهلة الصيانة والتنظيف لضمان بيئة صحية وآمنة للمعدات والعاملين." 
+            data-en="Overhead surfaces should be easy to maintain and clean to ensure a healthy and safe environment for equipment and workers.">
+            يجب أن تكون الأسطح العلوية سهلة الصيانة والتنظيف لضمان بيئة صحية وآمنة للمعدات والعاملين.
+        </li>
+        <li data-ar="يجب أن تتم معالجة الأسطح العلوية بمواد مقاومة للأوساخ والروائح الكريهة لتجنب التأثيرات السلبية على جودة الهواء." 
+            data-en="Overhead surfaces should be treated with materials resistant to dirt and unpleasant odors to avoid negative impacts on air quality.">
+            يجب أن تتم معالجة الأسطح العلوية بمواد مقاومة للأوساخ والروائح الكريهة لتجنب التأثيرات السلبية على جودة الهواء.
+        </li>
+        <li data-ar="يجب أن تكون الأسطح العلوية على ارتفاع مناسب بحيث لا تتعرض للتلف نتيجة للأنشطة اليومية وتكون قابلة للوصول أثناء أعمال الصيانة." 
+            data-en="Overhead surfaces should be at an appropriate height to avoid damage from daily activities and be accessible during maintenance tasks.">
+            يجب أن تكون الأسطح العلوية على ارتفاع مناسب بحيث لا تتعرض للتلف نتيجة للأنشطة اليومية وتكون قابلة للوصول أثناء أعمال الصيانة.
+        </li>
+        <li data-ar="يجب أن تكون الأسطح العلوية مغطاة بمواد غير مسامية، وسهلة المسح، ومقاومة للبكتيريا للحفاظ على النظافة." 
+            data-en="Overhead surfaces should be covered with non-porous, easy-to-wipe, and bacteria-resistant materials to maintain cleanliness.">
+            يجب أن تكون الأسطح العلوية مغطاة بمواد غير مسامية، وسهلة المسح، ومقاومة للبكتيريا للحفاظ على النظافة.
+        </li>
+    </ol>
 </li>
 <h2 style="text-align:center;" data-ar="أمثلة على بعض المواد المسموح بها للأسقف وفق المواصفات الإماراتية والعالمية" data-en="Examples of Permissible Ceiling Materials per UAE and Global Standards">
     أمثلة على بعض المواد المسموح بها للأسقف وفق المواصفات الإماراتية والعالمية | Examples of Permissible Ceiling Materials per UAE and Global Standards
@@ -948,23 +1001,44 @@ html[lang="en"] .contact-info {
 <li class="requirement">
     <span class="key" data-ar="6.1.2.4 أماكن التخزين:" data-en="6.1.2.4 Storage:">6.1.2.4 أماكن التخزين | Storage:</span>
     <p data-ar="يجب أن تكون الأدوات المستخدمة في التجهيزات الداخلية مثل الأرفف، الحوامل، ووسائل التخزين مقاومة للصدأ وسهلة التنظيف لضمان الحفاظ على جودة الطعام." data-en="Internal equipment such as shelves, racks, and storage devices must be resistant to rust and easy to clean to maintain food quality."></p>
-    <ul>
-        <li data-ar="يجب أن يتم التخزين في بيئة جافة وباردة بشكل مناسب لضمان الحفاظ على المواد الغذائية بأفضل حال." data-en="Storage should be in a suitably dry and cool environment to ensure the preservation of food quality."></li>
-        <li data-ar="يجب أن تكون المواد المخزنة في الأماكن المناسبة التي تحافظ على درجة الحرارة المطلوبة: التخزين الجاف عند 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل." data-en="Items should be stored in appropriate areas that maintain required temperatures: dry storage at 15-25°C, cold storage between 1-4°C, and frozen storage at -18°C or lower."></li>
-        <li data-ar="يجب أن تكون مناطق التخزين منفصلة عن أماكن العمل الأخرى لتجنب التلوث المتبادل." data-en="Storage areas should be separated from other work areas to avoid cross-contamination."></li>
-        <li data-ar="ينبغي أن تكون الأرفف والحوامل مرتفعة عن الأرض لتجنب الرطوبة والتلوث." data-en="Shelves and racks should be raised from the floor to avoid moisture and contamination."></li>
-        <li data-ar="يجب أن تكون المعدات الخاصة بالتخزين مصممة بحيث لا تتسبب في تراكم الأوساخ أو تكون صعبة التنظيف." data-en="Storage equipment should be designed in a way that prevents dirt accumulation and is easy to clean."></li>
-    </ul>
+    <ol style="list-style-type: disc;">
+        <li data-ar="يجب أن يتم التخزين في بيئة جافة وباردة بشكل مناسب لضمان الحفاظ على المواد الغذائية بأفضل حال." 
+            data-en="Storage should be in a suitably dry and cool environment to ensure the preservation of food quality.">
+            يجب أن يتم التخزين في بيئة جافة وباردة بشكل مناسب لضمان الحفاظ على المواد الغذائية بأفضل حال.
+        </li>
+        <li data-ar="يجب أن تكون المواد المخزنة في الأماكن المناسبة التي تحافظ على درجة الحرارة المطلوبة: التخزين الجاف عند 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل." 
+            data-en="Items should be stored in appropriate areas that maintain required temperatures: dry storage at 15-25°C, cold storage between 1-4°C, and frozen storage at -18°C or lower.">
+            يجب أن تكون المواد المخزنة في الأماكن المناسبة التي تحافظ على درجة الحرارة المطلوبة: التخزين الجاف عند 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل.
+        </li>
+        <li data-ar="يجب أن تكون مناطق التخزين منفصلة عن أماكن العمل الأخرى لتجنب التلوث المتبادل." 
+            data-en="Storage areas should be separated from other work areas to avoid cross-contamination.">
+            يجب أن تكون مناطق التخزين منفصلة عن أماكن العمل الأخرى لتجنب التلوث المتبادل.
+        </li>
+        <li data-ar="ينبغي أن تكون الأرفف والحوامل مرتفعة عن الأرض لتجنب الرطوبة والتلوث." 
+            data-en="Shelves and racks should be raised from the floor to avoid moisture and contamination.">
+            ينبغي أن تكون الأرفف والحوامل مرتفعة عن الأرض لتجنب الرطوبة والتلوث.
+        </li>
+        <li data-ar="يجب أن تكون المعدات الخاصة بالتخزين مصممة بحيث لا تتسبب في تراكم الأوساخ أو تكون صعبة التنظيف." 
+            data-en="Storage equipment should be designed in a way that prevents dirt accumulation and is easy to clean.">
+            يجب أن تكون المعدات الخاصة بالتخزين مصممة بحيث لا تتسبب في تراكم الأوساخ أو تكون صعبة التنظيف.
+        </li>
+    </ol>
 </li>
 
 <!-- طابق الميزانين والدرج -->
 <li class="requirement">
     <span class="key" data-ar="6.1.2.5 طابق الميزانين والدرج:" data-en="6.1.2.5 Mezzanine and Stairs:">6.1.2.5 طابق الميزانين والدرج | Mezzanine and Stairs:</span>
     <p data-ar="يجب أن تكون الأدوات المستخدمة في التجهيزات الداخلية مثل الأرفف، الحوامل، ووسائل التخزين مقاومة للصدأ وسهلة التنظيف لضمان الحفاظ على جودة الطعام." data-en="Internal equipment such as shelves, racks, and storage devices must be resistant to rust and easy to clean to maintain food quality."></p>
-    <ul>
-        <li data-ar="يجب أن يكون الميزانين مبنيًا من مواد صلبة أو معدنية مثل الفولاذ المقاوم للصدأ أو الخرسانة المقواة، ومجهزًا بحواف مرتفعة بشكل كافٍ لمنع الملوثات من السقوط على الأسطح الواقعة أسفله." data-en="The mezzanine should be constructed from solid or metal materials such as stainless steel or reinforced concrete, and equipped with sufficiently high edges to prevent contaminants from falling onto surfaces below."></li>
-        <li data-ar="يجب أن تكون السلالم والدرج آمنة، ومصممة وفق معايير الصحة والسلامة، مع توفير درابزين مصنوعة من مواد مقاومة للتآكل مثل الألمنيوم أو الفولاذ المقاوم للصدأ وتسهيلات للوصول السهل." data-en="Stairs and steps must be designed according to health and safety standards, with handrails made from corrosion-resistant materials such as aluminum or stainless steel, and easy access facilities provided."></li>
-    </ul>
+    <ol style="list-style-type: disc;">
+        <li data-ar="يجب أن يكون الميزانين مبنيًا من مواد صلبة أو معدنية مثل الفولاذ المقاوم للصدأ أو الخرسانة المقواة، ومجهزًا بحواف مرتفعة بشكل كافٍ لمنع الملوثات من السقوط على الأسطح الواقعة أسفله." 
+            data-en="The mezzanine should be constructed from solid or metal materials such as stainless steel or reinforced concrete, and equipped with sufficiently high edges to prevent contaminants from falling onto surfaces below.">
+            يجب أن يكون الميزانين مبنيًا من مواد صلبة أو معدنية مثل الفولاذ المقاوم للصدأ أو الخرسانة المقواة، ومجهزًا بحواف مرتفعة بشكل كافٍ لمنع الملوثات من السقوط على الأسطح الواقعة أسفله.
+        </li>
+        <li data-ar="يجب أن تكون السلالم والدرج آمنة، ومصممة وفق معايير الصحة والسلامة، مع توفير درابزين مصنوعة من مواد مقاومة للتآكل مثل الألمنيوم أو الفولاذ المقاوم للصدأ وتسهيلات للوصول السهل." 
+            data-en="Stairs and steps must be designed according to health and safety standards, with handrails made from corrosion-resistant materials such as aluminum or stainless steel, and easy access facilities provided.">
+            يجب أن تكون السلالم والدرج آمنة، ومصممة وفق معايير الصحة والسلامة، مع توفير درابزين مصنوعة من مواد مقاومة للتآكل مثل الألمنيوم أو الفولاذ المقاوم للصدأ وتسهيلات للوصول السهل.
+        </li>
+    </ol>
 </li>
 
 
@@ -974,48 +1048,60 @@ html[lang="en"] .contact-info {
 <li class="requirement">
     <span class="key" data-ar="6.1.3 منشآت الأغذية المؤقتة المتنقلة وماكينات البيع:" data-en="6.1.3 Temporary Mobile Food Establishments and Vending Machines:">6.1.3 منشآت الأغذية المؤقتة المتنقلة وماكينات البيع:</span>
     <p data-ar="يشمل هذا القسم المنشآت المتنقلة المؤقتة مثل الأكشاك في الأسواق، وعربات الباعة المتجولين، وماكينات بيع الطعام، بالإضافة إلى المباني المؤقتة مثل الخيام والسرادقات." 
-            data-en="This section covers temporary mobile establishments such as market stalls, street vendor carts, food vending machines, and temporary structures like tents and marquees."></p>
-    <ul>
+       data-en="This section covers temporary mobile establishments such as market stalls, street vendor carts, food vending machines, and temporary structures like tents and marquees."></p>
+    <ol style="list-style-type: disc;">
         <li data-ar="يجب اختيار الموقع المناسب لتلك المنشآت والهياكل بحيث يكون تصميمها وبناؤها قادرين على الحد من تلوث الغذاء وإيواء الآفات قدر الإمكان." 
-            data-en="The location of these establishments and structures must be carefully selected, with design and construction aimed at minimizing food contamination and pest infestation to the greatest extent practicable."></li>
-        <li data-ar="ينبغي أن يراعى في تصميم وتشييد هذه المنشآت توفير تدابير فعالة للحفاظ على بيئة نظيفة وآمنة، تشمل على سبيل المثال توفير وسائل فعالة لمنع دخول الحشرات أو الملوثات الأخرى." 
-            data-en="The design and construction of these establishments should incorporate effective measures to maintain a clean and safe environment, including means to prevent pests and other contaminants from entering."></li>
-        <li data-ar="عند الحاجة، ينبغي توفير مرافق مناسبة لدورات المياه وكذلك مرافق لغسل اليدين لضمان نظافة العاملين وضمان سلامة الغذاء." 
-            data-en="When necessary, appropriate facilities should be provided, including restrooms and handwashing facilities, to ensure worker hygiene and food safety."></li>
-    </ul>
-</li>
-
-</li>
-
-<li class="requirement">
-    <span class="key" data-ar="6.2 المرافق:" data-en="6.2 Facilities:">6.2 المرافق:</span>
-    <ul>
-        <!-- 1. مرافق التنظيف -->
-        <li class="requirement">
-            <span class="key" data-ar="6.2.1 مرافق التنظيف:" data-en="6.2.1 Cleaning Facilities:">6.2.1 مرافق التنظيف:</span>
-            <ul>
-                <li data-ar="ينبغي توفير مرافق كافية ومناسبة لتنظيف الأواني والمعدات وينبغي أن تحتوي تلك المرافق على ما يكفي من إمدادات المياه الساخنة و/أو الباردة عند الاقتضاء." data-en="Adequate and suitable facilities for cleaning utensils and equipment must be provided, and these facilities should have sufficient hot and/or cold water supplies when necessary."></li>
-                <li data-ar="ينبغي توفير منطقة تنظيف منفصلة للأدوات والمعدات المستخدمة في مناطق شديدة التلوث، مثل المراحيض، وأماكن الصرف والتخلص من النفايات." data-en="A separate cleaning area should be provided for utensils and equipment used in highly contaminated areas, such as toilets and waste disposal areas."></li>
-                <li data-ar="ينبغي حسب الاقتضاء، أن تكون مرافق غسل الأغذية منفصلة عن مرافق تنظيف الأواني والمعدات." data-en="If necessary, food washing facilities should be separated from utensil and equipment cleaning facilities."></li>
-                <li data-ar="ينبغي إتاحة أحواض منفصلة لغسل الأيدي وغسل الأغذية." data-en="Separate sinks for hand washing and food washing should be available."></li>
-            </ul>
+            data-en="The location of these establishments and structures must be carefully selected, with design and construction aimed at minimizing food contamination and pest infestation to the greatest extent practicable.">
+            يجب اختيار الموقع المناسب لتلك المنشآت والهياكل بحيث يكون تصميمها وبناؤها قادرين على الحد من تلوث الغذاء وإيواء الآفات قدر الإمكان.
         </li>
+        <li data-ar="ينبغي أن يراعى في تصميم وتشييد هذه المنشآت توفير تدابير فعالة للحفاظ على بيئة نظيفة وآمنة، تشمل على سبيل المثال توفير وسائل فعالة لمنع دخول الحشرات أو الملوثات الأخرى." 
+            data-en="The design and construction of these establishments should incorporate effective measures to maintain a clean and safe environment, including means to prevent pests and other contaminants from entering.">
+            ينبغي أن يراعى في تصميم وتشييد هذه المنشآت توفير تدابير فعالة للحفاظ على بيئة نظيفة وآمنة، تشمل على سبيل المثال توفير وسائل فعالة لمنع دخول الحشرات أو الملوثات الأخرى.
+        </li>
+        <li data-ar="عند الحاجة، ينبغي توفير مرافق مناسبة لدورات المياه وكذلك مرافق لغسل اليدين لضمان نظافة العاملين وضمان سلامة الغذاء." 
+            data-en="When necessary, appropriate facilities should be provided, including restrooms and handwashing facilities, to ensure worker hygiene and food safety.">
+            عند الحاجة، ينبغي توفير مرافق مناسبة لدورات المياه وكذلك مرافق لغسل اليدين لضمان نظافة العاملين وضمان سلامة الغذاء.
+        </li>
+    </ol>
+</li>
 
-<!-- 2. التهوية -->
 <li class="requirement">
-    <span class="key" data-ar="6.2.2 التهوية:" data-en="6.2.2 Ventilation:">6.2.2 التهوية:</span>
-    <ul>
-        <li data-ar="يجب أن تزود المنشآت الغذائية بالتهوية المناسبة والكافية سواء طبيعية أو ميكانيكية مع تجنب أي تدفق ميكانيكي للهواء من منطقة ملوثة إلى منطقة نظيفة."
-            data-en="Food establishments must be equipped with appropriate and sufficient ventilation, whether natural or mechanical, avoiding any mechanical airflow from a contaminated area to a clean one."></li>
-        <li data-ar="يجب أن تكون فتحات التهوية مزودة بمرشحات أو سياج حماية مصنوع من مواد غير قابلة للتآكل مع الأخذ في الاعتبار سهولة الوصول إلى الفلاتر والأجزاء التي تتطلب التنظيف."
-            data-en="Ventilation openings should be fitted with filters or protective barriers made of corrosion-resistant materials, ensuring easy access to filters and parts that require cleaning."></li>
-        <li data-ar="يجب أن تكون التهوية كافية للحد من تلوث الغذاء الناتج عن الهواء والتحكم بدرجة الحرارة المحيطة والروائح والرطوبة."
-            data-en="The ventilation must be sufficient to reduce food contamination caused by air and control ambient temperature, odors, and humidity."></li>
-        <li data-ar="يجب مراقبة درجات حرارة الغرفة، التبريد والتجميد لضمان سلامة الغذاء وصلاحيته للاستهلاك."
-            data-en="Room temperature, cooling, and freezing temperatures must be monitored to ensure food safety and suitability for consumption."></li>
-    </ul>
+    <span class="key" data-ar="6.2 المرافق:" data-en="6.2 Facilities:">6.2 المرافق | Facilities:</span>
+        <li class="requirement">
+            <span class="key" data-ar="6.2.1 مرافق التنظيف:" data-en="6.2.1 Cleaning Facilities:">6.2.1 مرافق التنظيف | Cleaning Facilities:</span>
+            <ol style="list-style-type: disc;">
+                <li data-ar="ينبغي توفير مرافق كافية ومناسبة لتنظيف الأواني والمعدات وينبغي أن تحتوي تلك المرافق على ما يكفي من إمدادات المياه الساخنة و/أو الباردة عند الاقتضاء." 
+                    data-en="Adequate and suitable facilities for cleaning utensils and equipment must be provided, and these facilities should have sufficient hot and/or cold water supplies when necessary."></li>
+                <li data-ar="ينبغي توفير منطقة تنظيف منفصلة للأدوات والمعدات المستخدمة في مناطق شديدة التلوث، مثل المراحيض، وأماكن الصرف والتخلص من النفايات." 
+                    data-en="A separate cleaning area should be provided for utensils and equipment used in highly contaminated areas, such as toilets and waste disposal areas."></li>
+                <li data-ar="ينبغي حسب الاقتضاء، أن تكون مرافق غسل الأغذية منفصلة عن مرافق تنظيف الأواني والمعدات." 
+                    data-en="If necessary, food washing facilities should be separated from utensil and equipment cleaning facilities."></li>
+                <li data-ar="ينبغي إتاحة أحواض منفصلة لغسل الأيدي وغسل الأغذية." 
+                    data-en="Separate sinks for hand washing and food washing should be available."></li>
+            </ol>
+        </li>
+        <li class="requirement">
+            <span class="key" data-ar="6.2.2 التهوية:" data-en="6.2.2 Ventilation:">6.2.2 التهوية | Ventilation:</span>
+    <ol style="list-style-type: disc;">
 
-    <!-- جدول خاص بوحدات القياس -->
+                <li data-ar="يجب أن تزود المنشآت الغذائية بالتهوية المناسبة والكافية سواء طبيعية أو ميكانيكية مع تجنب أي تدفق ميكانيكي للهواء من منطقة ملوثة إلى منطقة نظيفة." 
+                    data-en="Food establishments must be equipped with appropriate and sufficient ventilation, whether natural or mechanical, avoiding any mechanical airflow from a contaminated area to a clean one."></li>
+                <li data-ar="يجب أن تكون فتحات التهوية مزودة بمرشحات أو سياج حماية مصنوع من مواد غير قابلة للتآكل مع الأخذ في الاعتبار سهولة الوصول إلى الفلاتر والأجزاء التي تتطلب التنظيف." 
+                    data-en="Ventilation openings should be fitted with filters or protective barriers made of corrosion-resistant materials, ensuring easy access to filters and parts that require cleaning."></li>
+                <li data-ar="يجب أن تكون التهوية كافية للحد من تلوث الغذاء الناتج عن الهواء والتحكم بدرجة الحرارة المحيطة والروائح والرطوبة." 
+                    data-en="The ventilation must be sufficient to reduce food contamination caused by air and control ambient temperature, odors, and humidity."></li>
+                <li data-ar="يجب مراقبة درجات حرارة الغرفة، التبريد والتجميد لضمان سلامة الغذاء وصلاحيته للاستهلاك." 
+                    data-en="Room temperature, cooling, and freezing temperatures must be monitored to ensure food safety and suitability for consumption."></li>
+            </ol>
+        </li>
+    </ol>
+</li>
+
+
+
+
+
+</li>    <!-- جدول خاص بوحدات القياس -->
     <table border="1" style="border-collapse: collapse; width: 100%; margin-top: 10px;">
         <thead>
             <tr>
@@ -1057,20 +1143,21 @@ html[lang="en"] .contact-info {
 
 
 <li class="requirement">
-<!-- 3. الإضاءة -->
-<span class="key" data-ar="6.2.3 الإضاءة:" data-en="6.2.3 Lighting:">6.2.3 الإضاءة | Lighting:</span>
-<p data-ar="يجب أن يراعى في وسائل ومعدات الإضاءة الشروط الآتية:" 
-   data-en="The following conditions should be considered for lighting equipment and facilities:"></p>
-<ul>
-    <li data-ar="أن توفر إضاءة كافية سواء طبيعية أو اصطناعية للتمكن من العمل بشكل صحي ." 
-        data-en="Adequate lighting, whether natural or artificial, should be provided to enable healthy work operations ."></li>
-    <li data-ar="ينبغي ألا تؤثر الإضاءة تأثيرًا ضارًا على القدرة على كشف عيوب الغذاء أو كشف الملوثات في الغذاء أو تلوث المرافق والمعدات حفاظًا على نظافتها." 
-        data-en="Lighting should not adversely affect the ability to detect food defects, contaminants in food, or contamination of facilities and equipment, ensuring cleanliness."></li>
-    <li data-ar="أن تكون معدات الإضاءة والأسلاك الكهربائية محمية بشكل يسمح بسهولة التنظيف والوقاية من التلوث التبادلي." 
-        data-en="Lighting equipment and electrical wiring should be protected in a way that allows easy cleaning and prevents cross-contamination."></li>
-    <li data-ar="يجب أن تكون المصابيح محمية ضد الكسر لتجنب المخاطر الناتجة عن التلوث." 
-        data-en="Light bulbs should be protected against breakage to avoid contamination risks."></li>
-</ul>
+    <!-- 3. الإضاءة -->
+    <span class="key" data-ar="6.2.3 الإضاءة:" data-en="6.2.3 Lighting:">6.2.3 الإضاءة | Lighting:</span>
+    <p data-ar="يجب أن يراعى في وسائل ومعدات الإضاءة الشروط الآتية:" 
+       data-en="The following conditions should be considered for lighting equipment and facilities:"></p>
+    <ol style="list-style-type: disc;">
+        <li data-ar="أن توفر إضاءة كافية سواء طبيعية أو اصطناعية للتمكن من العمل بشكل صحي ." 
+            data-en="Adequate lighting, whether natural or artificial, should be provided to enable healthy work operations ."></li>
+        <li data-ar="ينبغي ألا تؤثر الإضاءة تأثيرًا ضارًا على القدرة على كشف عيوب الغذاء أو كشف الملوثات في الغذاء أو تلوث المرافق والمعدات حفاظًا على نظافتها." 
+            data-en="Lighting should not adversely affect the ability to detect food defects, contaminants in food, or contamination of facilities and equipment, ensuring cleanliness."></li>
+        <li data-ar="أن تكون معدات الإضاءة والأسلاك الكهربائية محمية بشكل يسمح بسهولة التنظيف والوقاية من التلوث التبادلي." 
+            data-en="Lighting equipment and electrical wiring should be protected in a way that allows easy cleaning and prevents cross-contamination."></li>
+        <li data-ar="يجب أن تكون المصابيح محمية ضد الكسر لتجنب المخاطر الناتجة عن التلوث." 
+            data-en="Light bulbs should be protected against breakage to avoid contamination risks."></li>
+    </ol>
+</li>
 
 <!-- جدول الإضاءة -->
 <h3 data-ar="مستويات الإضاءة الموصى بها وفق المواصفات" data-en="Recommended Lighting Levels per Standards">مستويات الإضاءة الموصى بها وفق المواصفات | Recommended Lighting Levels per Standards</h3>
@@ -1123,100 +1210,108 @@ html[lang="en"] .contact-info {
 </ul>
 
 
-
-
-<!-- 4. إمدادات المياه -->
 <li class="requirement">
-    <span class="key" data-ar="6.2.4 إمدادات المياه:" data-en="6.2.4 Water Supply:">6.2.4 إمدادات المياه:</span>
-    <ul>
+    <!-- 4. إمدادات المياه -->
+    <span class="key" data-ar="6.2.4 إمدادات المياه:" data-en="6.2.4 Water Supply:">6.2.4 إمدادات المياه | Water Supply:</span>
+    <ol style="list-style-type: disc;">
         <li data-ar="يجب أن تتوفر في المنشأة الغذائية إمدادات كافية من المياه الصالحة للشرب لأغراض التنظيف وإعداد الطعام." 
             data-en="Adequate supplies of potable water should be provided in the food establishment for cleaning and food preparation purposes."></li>
-    </ul>
+    </ol>
 </li>
 
-        <!-- 5. الصرف الصحي -->
-        <li class="requirement">
-            <span class="key" data-ar="6.2.5 الصرف الصحي:" data-en="6.2.5 Sanitation:">6.2.5 الصرف الصحي:</span>
+<li class="requirement">
+    <!-- 5. الصرف الصحي -->
+    <span class="key" data-ar="6.2.5 الصرف الصحي:" data-en="6.2.5 Sanitation:">6.2.5 الصرف الصحي | Sanitation:</span>
     <p data-ar="يجب أن يراعى في مرافق الصرف الصحي الشروط الآتية:" 
        data-en="The following conditions should be considered for sanitary facilities:"></p>
-    <ul>
+    <ol style="list-style-type: disc;">
         <li data-ar="أن تكون بحجم وتصميم مناسبين بحيث يكون تركيبها وصيانتها ملائمين لتجنب مخاطر التلوث والروائح الكريهة." 
             data-en="They should be of an appropriate size and design to ensure easy installation and maintenance, preventing contamination risks and foul odors."></li>
         <li data-ar="أن تكون مرشحات قنوات الصرف الصحي بما فيها تلك القابلة للفك والتركيب والحواجز المضادة للانزلاق بها مصنعة من مواد ملائمة وأن تتم المحافظة عليها بحالة جيدة وصيانتها باستمرار للحد من مخاطر التلوث." 
             data-en="The filters of the sanitary drains, including those that are removable, and anti-slip barriers, should be made of suitable materials and maintained in good condition with regular servicing to reduce contamination risks."></li>
         <li data-ar="أن تكون قنوات الصرف الصحي المفتوحة كلياً أو جزئياً مصممة بشكل يضمن عدم تدفق الأوساخ من المنطقة الملوثة إلى المنطقة النظيفة، وخصوصاً في المناطق التي يتم فيها تداول الغذاء عالي الخطورة." 
             data-en="Sanitary drains, whether fully or partially open, should be designed to prevent the flow of waste from contaminated areas to clean areas, particularly in zones where high-risk food is handled."></li>
-    </ul>
-<!-- 6. مصائد الشحوم -->
+    </ol>
+</li>
+
 <li class="requirement">
-    <span class="key" data-ar="6.2.6 مصائد الشحوم:" data-en="6.2.6 Grease Traps:">6.2.6 مصائد الشحوم:</span>
-    <ul>
+    <!-- 6. مصائد الشحوم -->
+    <span class="key" data-ar="6.2.6 مصائد الشحوم:" data-en="6.2.6 Grease Traps:">6.2.6 مصائد الشحوم | Grease Traps:</span>
+    <ol style="list-style-type: disc;">
         <li data-ar="ينبغي تركيب مصائد الشحوم في المنشآت الغذائية التي تقوم بأعمال التحضير والتجهيز واستخدام الزيوت والدهون لتقليل انتقالها إلى شبكة الصرف." 
             data-en="Grease traps should be installed in food establishments that carry out preparation, processing, and use of oils and fats to reduce their transfer to the sewage system."></li>
         <li data-ar="ينبغي أن تكون المصائد مصممة بشكل مناسب لتكون قادرة على احتجاز الدهون والشحوم دون التأثير على تدفق المياه." 
             data-en="The grease traps should be properly designed to effectively capture fats and grease without affecting water flow."></li>
         <li data-ar="يجب صيانة وتنظيف مصائد الشحوم بانتظام لضمان عملها بكفاءة وفعالية. يجب التأكد من التعامل مع الشركات المعتمدة من بلدية مدينة الشارقة فقط لتلبية المعايير المطلوبة." 
             data-en="Grease traps must be cleaned and maintained regularly to ensure efficient and effective operation. Only certified companies by Sharjah Municipality should be engaged to meet the required standards."></li>
-    </ul>
-    <p><a href="https://zmohd1987.github.io/FCSM/Greasetrap.png" target="_blank" data-ar="رابط لصور وتصنيف مصائد الشحوم المعتمدة من بلدية الشارقة" data-en="Link to the types and classifications of grease traps certified by Sharjah Municipality">رابط لصور وتصنيف مصائد الشحوم المعتمدة من بلدية الشارقة</a></p>
+    </ol>
+    <p><a href="https://zmohd1987.github.io/FCSM/Greasetrap.png" target="_blank" data-ar="رابط لصور وتصنيف مصائد الشحوم المعتمدة من بلدية الشارقة" data-en="Link to the types and classifications of grease traps certified by Sharjah Municipality"><strong>رابط لصور وتصنيف مصائد الشحوم المعتمدة من بلدية الشارقة</strong></a></p>
 </li>
 
-        </li>
-
-        <!-- 7. مرافق النظافة الشخصية والمراحيض -->
-        <li class="requirement">
-            <span class="key" data-ar="6.2.7 مرافق النظافة الشخصية والمراحيض:" data-en="6.2.7 Personal Hygiene and Toilet Facilities:">6.2.7 مرافق النظافة الشخصية والمراحيض:</span>
-            <ul>
-                <li data-ar="ينبغي توفير ما يكفي من مرافق الغسل والمراحيض للحفاظ على النظافة الشخصية وتجنب تلوث الغذاء." data-en="Sufficient handwashing and toilet facilities should be provided to maintain personal hygiene and prevent food contamination."></li>
-                <li data-ar="يجب أن تحتوي هذه المرافق على صابون (ويفضل أن يكون سائل) ومياه ساخنة وباردة إذا لزم الأمر." data-en="These facilities should include soap (preferably liquid soap) and both hot and cold water when required."></li>
-                <li data-ar="ينبغي توفير أحواض غسل الأيدي المصممة بطريقة صحية مناسبة، ومن المثالي أن تكون مزودة بصنابير تعمل بدون استخدام الأيدي." data-en="Handwashing sinks should be designed in a hygienic manner, ideally with hands-free faucets."></li>
-                <li data-ar="ينبغي عدم استخدام أحواض غسل الأيدي لغسل الأغذية أو الأواني." data-en="Handwashing sinks should not be used for washing food or utensils."></li>
-            </ul>
-        </li>
-    </ul>
-</li>
-
-
-<!-- 6. مناطق تبديل الملابس -->
 <li class="requirement">
-    <span class="key" data-ar="6.2.8 مناطق تبديل الملابس:" data-en="6.2.8 Dressing Areas:">6.2.8 مناطق تبديل الملابس:</span>
-    <ul>
-        <li data-ar="يجب توفير غرف لتبديل الملابس إذا كان العمال يقومون بتبديل ملابسهم بصورة روتينية في المنشأة الغذائية." data-en="Changing rooms must be provided if workers routinely change their clothes in the food establishment."></li>
-        <li data-ar="ينبغي أن تكون غرف تبديل الملابس مزودة بوسائل تخزين آمنة لملابس العمال الشخصية لضمان عدم تلوث الطعام." data-en="Changing rooms should be equipped with secure storage for workers' personal clothing to prevent food contamination."></li>
-        <li data-ar="يجب أن تكون غرف تبديل الملابس مصممة بحيث يسهل تنظيفها وصيانتها بشكل دوري." data-en="Changing rooms should be designed to facilitate easy cleaning and regular maintenance."></li>
-        <li data-ar="يفضل أن تكون هذه الغرف منفصلة عن أماكن العمل لتقليل خطر تلوث الطعام." data-en="It is preferable that these rooms be separate from food preparation areas to minimize the risk of food contamination."></li>
-        <li data-ar="يجب أن تحتوي غرف تبديل الملابس على تهوية جيدة لضمان راحة العاملين وتجنب تراكم الروائح." data-en="Changing rooms should have adequate ventilation to ensure worker comfort and prevent the accumulation of odors."></li>
-        <li data-ar="ينبغي أن تكون مواد بناء الغرف مقاومة للرطوبة وسهلة التنظيف لتفادي تراكم البكتيريا." data-en="The materials used for building changing rooms should be moisture-resistant and easy to clean to avoid bacterial buildup."></li>
-    </ul>
+    <!-- 7. مرافق النظافة الشخصية والمراحيض -->
+    <span class="key" data-ar="6.2.7 مرافق النظافة الشخصية والمراحيض:" data-en="6.2.7 Personal Hygiene and Toilet Facilities:">6.2.7 مرافق النظافة الشخصية والمراحيض | Personal Hygiene and Toilet Facilities:</span>
+    <ol style="list-style-type: disc;">
+        <li data-ar="ينبغي توفير ما يكفي من مرافق الغسل والمراحيض للحفاظ على النظافة الشخصية وتجنب تلوث الغذاء." 
+            data-en="Sufficient handwashing and toilet facilities should be provided to maintain personal hygiene and prevent food contamination."></li>
+        <li data-ar="يجب أن تحتوي هذه المرافق على صابون (ويفضل أن يكون سائل) ومياه ساخنة وباردة إذا لزم الأمر." 
+            data-en="These facilities should include soap (preferably liquid soap) and both hot and cold water when required."></li>
+        <li data-ar="ينبغي توفير أحواض غسل الأيدي المصممة بطريقة صحية مناسبة، ومن المثالي أن تكون مزودة بصنابير تعمل بدون استخدام الأيدي." 
+            data-en="Handwashing sinks should be designed in a hygienic manner, ideally with hands-free faucets."></li>
+        <li data-ar="ينبغي عدم استخدام أحواض غسل الأيدي لغسل الأغذية أو الأواني." 
+            data-en="Handwashing sinks should not be used for washing food or utensils."></li>
+    </ol>
 </li>
 
-<!-- 6. المخارج أو الفتحات التي تؤدي إلى خارج المنشأة -->
 <li class="requirement">
-    <span class="key" data-ar="6.2.9 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:" data-en="6.2.9 Exits or Openings:">6.2.9 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:</span>
-    <ul>
+    <!-- 8. مناطق تبديل الملابس -->
+    <span class="key" data-ar="6.2.8 مناطق تبديل الملابس:" data-en="6.2.8 Dressing Areas:">6.2.8 مناطق تبديل الملابس | Dressing Areas:</span>
+    <ol style="list-style-type: disc;">
+        <li data-ar="يجب توفير غرف لتبديل الملابس إذا كان العمال يقومون بتبديل ملابسهم بصورة روتينية في المنشأة الغذائية." 
+            data-en="Changing rooms must be provided if workers routinely change their clothes in the food establishment."></li>
+        <li data-ar="ينبغي أن تكون غرف تبديل الملابس مزودة بوسائل تخزين آمنة لملابس العمال الشخصية لضمان عدم تلوث الطعام." 
+            data-en="Changing rooms should be equipped with secure storage for workers' personal clothing to prevent food contamination."></li>
+        <li data-ar="يجب أن تكون غرف تبديل الملابس مصممة بحيث يسهل تنظيفها وصيانتها بشكل دوري." 
+            data-en="Changing rooms should be designed to facilitate easy cleaning and regular maintenance."></li>
+        <li data-ar="يفضل أن تكون هذه الغرف منفصلة عن أماكن العمل لتقليل خطر تلوث الطعام." 
+            data-en="It is preferable that these rooms be separate from food preparation areas to minimize the risk of food contamination."></li>
+        <li data-ar="يجب أن تحتوي غرف تبديل الملابس على تهوية جيدة لضمان راحة العاملين وتجنب تراكم الروائح." 
+            data-en="Changing rooms should have adequate ventilation to ensure worker comfort and prevent the accumulation of odors."></li>
+        <li data-ar="ينبغي أن تكون مواد بناء الغرف مقاومة للرطوبة وسهلة التنظيف لتفادي تراكم البكتيريا." 
+            data-en="The materials used for building changing rooms should be moisture-resistant and easy to clean to avoid bacterial buildup."></li>
+    </ol>
+</li>
+
+<li class="requirement">
+    <!-- 9. المخارج أو الفتحات التي تؤدي إلى خارج المنشأة -->
+    <span class="key" data-ar="6.2.9 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:" data-en="6.2.9 Exits or Openings:">6.2.9 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة | Exits or Openings:</span>
+    <ol style="list-style-type: disc;">
         <li data-ar="يجب حماية الفتحات التي تؤدي إلى خارج المنشأة الغذائية من دخول الآفات بوسائل مناسبة مثل شبك الحماية، أو تثبيت ستائر هواء مصممة بشكل جيد." 
             data-en="Exits or openings leading outside the food establishment must be protected from pest entry with appropriate means such as protective screens or well-designed air curtains."></li>
         <li data-ar="يجب أن تكون الفتحات أو المخارج محكمة الإغلاق لضمان عدم تسرب الآفات أو الملوثات الخارجية." 
             data-en="Exits or openings should be properly sealed to prevent the entry of pests or external contaminants."></li>
         <li data-ar="يفضل أن تكون الفتحات الموجهة إلى الخارج ذات تصميم يسهل إغلاقها وصيانتها بشكل دوري." 
             data-en="Exits should be designed for ease of closing and regular maintenance."></li>
-    </ul>
+    </ol>
 </li>
 
-
-
-
-<!-- 6. التخلص من النفايات -->
 <li class="requirement">
-    <span class="key" data-ar="6.2.10 التخلص من النفايات:" data-en="6.2.10 Waste Disposal:">6.2.10 التخلص من النفايات:</span>
-    <ul>
-        <li data-ar="يجب تصميم مناطق التخلص من النفايات بعيداً عن مناطق تحضير الطعام لمنع التلوث، ويجب أن تكون محمية من دخول الآفات باستخدام شبك الحماية أو ستائر الهواء." data-en="Waste disposal areas should be designed away from food preparation areas to prevent contamination, and must be protected from pests using protective screens or air curtains."></li>
-        <li data-ar="يجب أن يتم تنظيف مناطق التخلص من النفايات بشكل دوري باستخدام مواد تنظيف معتمدة لضمان الامتثال للمعايير الصحية." data-en="Waste disposal areas must be cleaned regularly using approved cleaning materials to ensure compliance with health standards."></li>
-        <li data-ar="يجب أن يتم التخلص من النفايات من قبل أفراد مدربين بشكل مناسب، مع الاحتفاظ بسجلات دقيقة لكل عملية التخلص منها عند الحاجة." data-en="Waste disposal should be carried out by trained personnel, with records of each disposal process maintained when necessary."></li>
-        <li data-ar="يجب إدارة النفايات بطرق آمنة تجنبًا للتلوث البيئي أو الإصابة بالآفات التي قد تؤثر على سلامة الغذاء." data-en="Waste must be managed safely to prevent environmental contamination or pest infestation that could affect food safety."></li>
-        <li data-ar="يجب أن تحتوي أنظمة تصريف النفايات السائلة على تدابير مناسبة لضمان تصريف آمن وفعال بعيدًا عن مناطق الطعام." data-en="Liquid waste systems must include appropriate measures to ensure safe and effective drainage away from food areas."></li>
-    </ul>
+    <!-- 10. التخلص من النفايات -->
+    <span class="key" data-ar="6.2.10 التخلص من النفايات:" data-en="6.2.10 Waste Disposal:">6.2.10 التخلص من النفايات | Waste Disposal:</span>
+    <ol style="list-style-type: disc;">
+        <li data-ar="يجب تصميم مناطق التخلص من النفايات بعيداً عن مناطق تحضير الطعام لمنع التلوث، ويجب أن تكون محمية من دخول الآفات باستخدام شبك الحماية أو ستائر الهواء." 
+            data-en="Waste disposal areas should be designed away from food preparation areas to prevent contamination, and must be protected from pests using protective screens or air curtains."></li>
+        <li data-ar="يجب أن يتم تنظيف مناطق التخلص من النفايات بشكل دوري باستخدام مواد تنظيف معتمدة لضمان الامتثال للمعايير الصحية." 
+            data-en="Waste disposal areas must be cleaned regularly using approved cleaning materials to ensure compliance with health standards."></li>
+        <li data-ar="يجب أن يتم التخلص من النفايات من قبل أفراد مدربين بشكل مناسب، مع الاحتفاظ بسجلات دقيقة لكل عملية التخلص منها عند الحاجة." 
+            data-en="Waste disposal should be carried out by trained personnel, with records of each disposal process maintained when necessary."></li>
+        <li data-ar="يجب إدارة النفايات بطرق آمنة تجنبًا للتلوث البيئي أو الإصابة بالآفات التي قد تؤثر على سلامة الغذاء." 
+            data-en="Waste must be managed safely to prevent environmental contamination or pest infestation that could affect food safety."></li>
+        <li data-ar="يجب أن تحتوي أنظمة تصريف النفايات السائلة على تدابير مناسبة لضمان تصريف آمن وفعال بعيدًا عن مناطق الطعام." 
+            data-en="Liquid waste systems must include appropriate measures to ensure safe and effective drainage away from food areas."></li>
+    </ol>
 </li>
+
 </div> 
 <style>
     /* القواعد العامة لكل الجداول */
