@@ -215,12 +215,31 @@
                 font-size: 1.5rem;
                 padding: 15px;
             }
+        .section-content {
+            padding: 10px 20px;
+        }
 
-            .section-title {
-                font-size: 1.4rem;
-                padding: 8px;
-            }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
+        .definition {
+            margin-bottom: 10px;
+        }
+
+        .definition .key {
+            font-weight: bold;
+            color: #333;
+            display: inline; /* يجعل المفتاح في نفس السطر */
+        }
+
+        .definition .text {
+            display: inline; /* يجعل النص في نفس السطر */
+            color: #555;
+            margin-right: 5px; /* مسافة صغيرة بين المفتاح والنص */
+        }
             #activity {
                 font-size: 1rem;
                 padding: 10px;
@@ -461,51 +480,90 @@ html[lang="en"] .contact-info {
         لغايات هذه الاشتراطات، تسري أحكام هذا الدليل على جميع المنشآت الغذائية ضمن نطاق مدينة الشارقة، ويشمل ذلك كافة المنشآت العاملة في تصنيع أو تحضير أو تقديم أو بيع الأغذية. يهدف الدليل إلى توضيح المتطلبات والإجراءات والمعايير اللازمة للحصول على التراخيص بما يحقق الالتزام بأعلى معايير السلامة والصحة العامة في جميع مراحل تداول الأغذية.
     </p>
 </div>
-    <div class="section-title" onclick="toggleSection('definitionSection', 'ar')" data-ar="5. المصطلحات والتعريفات" data-en="5. Definitions">5. المصطلحات والتعريفات</div>
-    <div id="definitionSection" class="section-content">
-        <ul>
-            <li class="definition">
-                <span class="key" data-ar="الدولة:" data-en="Country:">الدولة:</span> <span class="text" data-ar="دولة الإمارات العربية المتحدة." data-en="United Arab Emirates."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="البلدية:" data-en="Municipality:">البلدية:</span> <span class="text" data-ar="بلدية مدينة الشارقة، وهي الجهة المحلية المسؤولة عن تنظيم وتطبيق القوانين واللوائح المتعلقة بالصحة والسلامة العامة وإصدار التراخيص للمنشآت الغذائية." data-en="Sharjah City Municipality, the local authority responsible for regulating and enforcing laws and regulations regarding public health and safety and issuing licenses for food establishments."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="القسم:" data-en="Department:">القسم:</span> <span class="text" data-ar="قسم الرقابة الغذائية في بلدية مدينة الشارقة، المسؤول عن الإشراف والتفتيش وضمان الالتزام بالمعايير الصحية المطلوبة في المنشآت الغذائية." data-en="Food Control Department at Sharjah City Municipality, responsible for supervision and inspection to ensure compliance with required health standards in food establishments."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="القانون:" data-en="Law:">القانون:</span> <span class="text" data-ar="القانون الإتحادي رقم 10 لسنة 2015 بشأن سلامة الغذاء." data-en="Federal Law No. 10 of 2015 concerning food safety."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="المفتش:" data-en="Inspector:">المفتش:</span> <span class="text" data-ar="الموظف المختص من قبل بلدية مدينة الشارقة الذي يقوم بإجراء عمليات التفتيش والتدقيق الميداني على المنشآت الغذائية للتأكد من مطابقتها للاشتراطات الصحية." data-en="The designated employee from Sharjah City Municipality who conducts field inspections and audits of food establishments to ensure compliance with health requirements."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="المنشأة الغذائية:" data-en="Food Establishment:">المنشأة الغذائية:</span> <span class="text" data-ar="هي المنشأة المرخص لها بتداول الغذاء سواء كان من خلال مرفق ثابت أو متحرك، دائم أو مؤقت." data-en="An establishment licensed to handle food, whether through a fixed or mobile facility, permanent or temporary."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="الغذاء:" data-en="Food:">الغذاء:</span> <span class="text" data-ar="أية مادة أو جزء منها مصنعة أو شبه مصنعة مخصصة للاستهلاك الآدمي بطريق الأكل أو الشرب، بما في ذلك المشروبات ومياه الشرب المعبأة والمخللات والبهارات ولبان المضغ، وأية مادة تدخل في تصنيع وتحضير ومعالجة الغذاء، إلا أنها لا تشمل مواد التجميل أو التبغ أو المواد التي لا تستخدم إلا كعقاقير." data-en="Any substance or part thereof that is manufactured or semi-manufactured intended for human consumption by eating or drinking, including beverages, bottled drinking water, pickles, spices, chewing gum, and any substance used in the manufacturing, preparation, and processing of food, excluding cosmetics, tobacco, or materials used solely as drugs."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="الرقابة على الغذاء:" data-en="Food Control:">الرقابة على الغذاء:</span> <span class="text" data-ar="نشاط تنظيمي إلزامي يهدف إلى حماية صحة المستهلك، وضمان سلامة الغذاء خلال مراحل تداوله وموافقته مع متطلبات الصحة والجودة وتوسيمه بشكل دقيق وواضح وفقاً للأنظمة واللوائح والقرارات الصادرة." data-en="A mandatory regulatory activity aimed at protecting consumer health, ensuring food safety during its handling stages, and compliance with health and quality requirements, accurately and clearly labeling according to the regulations and decisions issued."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="السلسلة الغذائية:" data-en="Food Chain:">السلسلة الغذائية:</span> <span class="text" data-ar="كافة المراحل التي يمر بها الغذاء بدءاً من الإنتاج الأولي حتى وصوله إلى المستهلك، بما في ذلك مراحل تصنيعه وتحضيره ومعالجته وتعبئته وتغليفه وتجهيزه ونقله وتخزينه وتوزيعه وتقديمه وعرضه وبيعه." data-en="All stages that food passes through from primary production to reaching the consumer, including its manufacturing, preparation, processing, packaging, labeling, handling, transport, storage, distribution, presentation, and sale."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="التداول:" data-en="Food Handling:">التداول:</span> <span class="text" data-ar="يشمل جميع العمليات المتعلقة بالغذاء مثل إنتاجه، تصنيعه، تحضيره، معالجته، تعبئته، إعادة تعبئته، تغليفه، تجهيزه، نقله، استيراده، حيازته، تخزينه، توزيعه، تقديمه، عرضه، بيعه، تصديره أو إعادة تصديره، وذلك في أي مرحلة من مراحل السلسلة الغذائية." data-en="Includes all operations related to food such as its production, manufacturing, preparation, processing, packaging, repackaging, labeling, handling, transport, import, possession, storage, distribution, presentation, sale, export, or re-export, at any stage of the food chain."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="لجنة التراخيص:" data-en="Licensing Committee:">لجنة التراخيص:</span> <span class="text" data-ar="لجنة متخصصة داخل بلدية مدينة الشارقة، تُعنى بمراجعة طلبات الترخيص والتأكد من استيفائها لكافة الشروط والمتطلبات، بالإضافة إلى إجراء المعاينات الميدانية اللازمة." data-en="A specialized committee within Sharjah City Municipality, responsible for reviewing licensing applications and ensuring they meet all conditions and requirements, in addition to conducting necessary field inspections."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="المعاينة الميدانية:" data-en="Field Inspection:">المعاينة الميدانية:</span> <span class="text" data-ar="عملية تفتيش ميداني تقوم بها فرق لجنة التراخيص للتحقق من مطابقة المنشأة الغذائية للشروط والمعايير الصحية المطلوبة قبل منح الترخيص." data-en="A field inspection process conducted by the Licensing Committee teams to verify the food establishment's compliance with the required health conditions and standards before granting the license."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="التقرير النهائي:" data-en="Final Report:">التقرير النهائي:</span> <span class="text" data-ar="هو تقرير رسمي صادر عن قسم الرقابة الغذائية في بلدية مدينة الشارقة، يُؤكد فيه أنه لا مانع من الناحية الصحية لممارسة الأنشطة في المنشأة، مع التأكيد على التزامها بالمواصفات واللوائح الصحية المعتمدة." data-en="An official report issued by the Food Control Department at Sharjah City Municipality, confirming that there are no health objections to conducting activities in the establishment, while ensuring compliance with approved health specifications and regulations."></span>
-            </li>
-            <li class="definition">
-                <span class="key" data-ar="مخطط المنشأة:" data-en="Facility Plan:">مخطط المنشأة:</span> <span class="text" data-ar="هو المخطط المعتمد من قسم الرقابة الغذائية، والذي يتضمن توضيحًا للتقسيمات الداخلية للمنشأة بالإضافة إلى المعدات والأجهزة المستخدمة في الأنشطة الغذائية داخل المنشأة." data-en="The approved plan from the Food Control Department, which includes a clarification of the internal divisions of the establishment as well as the equipment and devices used in food activities within the establishment."></span>
-            </li>
+
+<div class="section-title" onclick="toggleSection('definitionSection', 'ar')" data-ar="5. المصطلحات والتعريفات" data-en="5. Definitions">5. المصطلحات والتعريفات</div>
+<div id="definitionSection" class="section-content">
+
+    <ul>
+        <li class="definition">
+            <span class="key" data-ar="الدولة:" data-en="Country:">الدولة:</span> 
+            <span class="text" data-ar="دولة الإمارات العربية المتحدة." data-en="United Arab Emirates."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="الأمارة:" data-en="Sharjah:">الأمارة:</span> 
+            <span class="text" data-ar="الشارقة." data-en="Sharjah."></span>
+        </li>
+
+        <li class="definition">
+            <span class="key" data-ar="البلدية:" data-en="Municipality:">البلدية:</span> 
+            <span class="text" data-ar="بلدية مدينة الشارقة." data-en="Sharjah City Municipality."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="القسم:" data-en="Department:">القسم:</span> 
+            <span class="text" data-ar="قسم الرقابة الغذائية في بلدية مدينة الشارقة، المسؤول عن الإشراف والتفتيش وضمان الالتزام بالمعايير الصحية المطلوبة في المنشآت الغذائية." data-en="Food Control Department at Sharjah City Municipality, responsible for supervision and inspection to ensure compliance with required health standards in food establishments."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="القانون:" data-en="Law:">القانون:</span> 
+            <span class="text" data-ar="القانون الإتحادي رقم 10 لسنة 2015 بشأن سلامة الغذاء." data-en="Federal Law No. 10 of 2015 concerning food safety."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="المفتش:" data-en="Inspector:">المفتش:</span> 
+            <span class="text" data-ar="الموظف المختص من قبل بلدية مدينة الشارقة الذي يقوم بإجراء عمليات التفتيش والتدقيق الميداني على المنشآت الغذائية للتأكد من مطابقتها للاشتراطات الصحية." data-en="The designated employee from Sharjah City Municipality who conducts field inspections and audits of food establishments to ensure compliance with health requirements."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="المنشأة الغذائية:" data-en="Food Establishment:">المنشأة الغذائية:</span> 
+            <span class="text" data-ar="هي المنشأة المرخص لها بتداول الغذاء سواء كان من خلال مرفق ثابت أو متحرك، دائم أو مؤقت." data-en="An establishment licensed to handle food, whether through a fixed or mobile facility, permanent or temporary."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="رخصة المنشأة:" data-en="Establishment License:">رخصة المنشأة:</span> 
+            <span class="text" data-ar="الموافقة الصادرة عن الجهة المعنية بالترخيص للمنشأة الغذائية." data-en="The approval issued by the relevant authority for licensing the food establishment."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="الغذاء:" data-en="Food:">الغذاء:</span> 
+            <span class="text" data-ar="أية مادة أو جزء منها مصنعة أو شبه مصنعة مخصصة للاستهلاك الآدمي بطريق الأكل أو الشرب، بما في ذلك المشروبات ومياه الشرب المعبأة والمخللات والبهارات ولبان المضغ، وأية مادة تدخل في تصنيع وتحضير ومعالجة الغذاء، إلا أنها لا تشمل مواد التجميل أو التبغ أو المواد التي لا تستخدم إلا كعقاقير." data-en="Any substance or part thereof that is manufactured or semi-manufactured intended for human consumption by eating or drinking, including beverages, bottled drinking water, pickles, spices, chewing gum, and any substance used in the manufacturing, preparation, and processing of food, excluding cosmetics, tobacco, or materials used solely as drugs."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="الرقابة على الغذاء:" data-en="Food Control:">الرقابة على الغذاء:</span> 
+            <span class="text" data-ar="نشاط تنظيمي إلزامي يهدف إلى حماية صحة المستهلك، وضمان سلامة الغذاء خلال مراحل تداوله وموافقته مع متطلبات الصحة والجودة وتوسيمه بشكل دقيق وواضح وفقاً للأنظمة واللوائح والقرارات الصادرة." data-en="A mandatory regulatory activity aimed at protecting consumer health, ensuring food safety during its handling stages, and compliance with health and quality requirements, accurately and clearly labeling according to the regulations and decisions issued."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="السلسلة الغذائية:" data-en="Food Chain:">السلسلة الغذائية:</span> 
+            <span class="text" data-ar="كافة المراحل التي يمر بها الغذاء بدءاً من الإنتاج الأولي حتى وصوله إلى المستهلك، بما في ذلك مراحل تصنيعه وتحضيره ومعالجته وتعبئته وتغليفه وتجهيزه ونقله وتخزينه وتوزيعه وتقديمه وعرضه وبيعه." data-en="All stages that food passes through from primary production to reaching the consumer, including its manufacturing, preparation, processing, packaging, labeling, handling, transport, storage, distribution, presentation, and sale."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="التداول:" data-en="Food Handling:">التداول:</span> 
+            <span class="text" data-ar="يشمل جميع العمليات المتعلقة بالغذاء مثل إنتاجه، تصنيعه، تحضيره، معالجته، تعبئته، إعادة تعبئته، تغليفه، تجهيزه، نقله، استيراده، حيازته، تخزينه، توزيعه، تقديمه، عرضه، بيعه، تصديره أو إعادة تصديره، وذلك في أي مرحلة من مراحل السلسلة الغذائية." data-en="Includes all operations related to food such as its production, manufacturing, preparation, processing, packaging, repackaging, labeling, handling, transport, import, possession, storage, distribution, presentation, sale, export, or re-export, at any stage of the food chain."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="لجنة التراخيص:" data-en="Licensing Committee:">لجنة التراخيص:</span> 
+            <span class="text" data-ar="لجنة متخصصة داخل بلدية مدينة الشارقة، تُعنى بمراجعة طلبات الترخيص والتأكد من استيفائها لكافة الشروط والمتطلبات، بالإضافة إلى إجراء المعاينات الميدانية اللازمة." data-en="A specialized committee within Sharjah City Municipality, responsible for reviewing licensing applications and ensuring they meet all conditions and requirements, in addition to conducting necessary field inspections."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="المعاينة الميدانية:" data-en="Field Inspection:">المعاينة الميدانية:</span> 
+            <span class="text" data-ar="عملية تفتيش ميداني تقوم بها فرق لجنة التراخيص للتحقق من مطابقة المنشأة الغذائية للشروط والمعايير الصحية المطلوبة قبل منح الترخيص." data-en="A field inspection process conducted by the Licensing Committee teams to verify the food establishment's compliance with the required health conditions and standards before granting the license."></span>
+        </li>
+<li class="requirement">
+    <span class="key" data-ar="المنشأة الغذائية المتحركة:" data-en="Mobile Food Establishment:">المنشأة الغذائية المتحركة | Mobile Food Establishment:</span>
+    <p data-ar="مركبة أو مقطورة أو أي وسيلة متنقلة يتم فيها ممارسة أنشطة غذائية دائمة أو مؤقتة مصرح بها." data-en="A vehicle, trailer, or any mobile means where authorized permanent or temporary food activities are conducted."></p>
+</li>
+<li class="requirement">
+    <span class="key" data-ar="النشاط الغذائي المؤقت:" data-en="Temporary Food Activity:">النشاط الغذائي المؤقت | Temporary Food Activity:</span>
+    <p data-ar="نشاط غذائي مصرح للمنشأة الغذائية بممارسته بعد الحصول على موافقة قسم الرقابة الغذائية بشكل مؤقت، وقد يتزامن مع مناسبة واحدة أو فعاليات موسمية مثل المعارض، المهرجانات، الكرنفالات، السيرك، السباقات، الخيام، أو ترويج المنتجات (تذوق)، أو أي أنشطة مماثلة." 
+       data-en="A food activity authorized for the food establishment to carry out temporarily after obtaining approval from the Food Control Department, which may coincide with a single event or seasonal activities such as exhibitions, festivals, carnivals, circuses, races, tents, or product promotions (tasting), or any similar activities."></p>
+</li>
+<li class="requirement">
+    <span class="key" data-ar="المرفق:" data-en="Facility:">المرفق | Facility:</span>
+    <p data-ar="غرفة أو مكان أو حيز له معالم واضحة مخصص لاستخدامه في عملية محددة لها علاقة بأنشطة تداول الغذاء، ويشمل الخزائن أو المعدات." data-en="A room, space, or area with distinct features designated for a specific process related to food handling activities, including cabinets or equipment."></p>
+</li>
+
+        <li class="definition">
+            <span class="key" data-ar="التقرير النهائي:" data-en="Final Report:">التقرير النهائي:</span> 
+            <span class="text" data-ar="هو تقرير رسمي صادر عن قسم الرقابة الغذائية في بلدية مدينة الشارقة، يُؤكد فيه أنه لا مانع من الناحية الصحية لممارسة الأنشطة في المنشأة، مع التأكيد على التزامها بالمواصفات واللوائح الصحية المعتمدة." data-en="An official report issued by the Food Control Department at Sharjah City Municipality, confirming that there are no health objections to conducting activities in the establishment, while ensuring compliance with approved health specifications and regulations."></span>
+        </li>
+        <li class="definition">
+            <span class="key" data-ar="مخطط المنشأة:" data-en="Facility Plan:">مخطط المنشأة:</span> 
+            <span class="text" data-ar="هو المخطط المعتمد من قبل بلدية مدينة الشارقة الذي يحدد أبعاد المنشأة وموقعها الداخلي، مع تحديد أماكن الأنشطة الغذائية المختلفة وتوزيع المناطق المخصصة للغرف والتخزين." data-en="The approved plan by Sharjah City Municipality, which defines the dimensions and internal layout of the establishment, specifying locations for different food activities and the distribution of rooms and storage areas."></span>
+        </li>
             <li class="definition">
                 <span class="key" data-ar="تعهد عدم ممارسة النشاط:" data-en="Commitment Not to Operate:">تعهد عدم ممارسة النشاط:</span> <span class="text" data-ar="هو تعهد خطي يوقعه المستثمر للحصول على التقرير النهائي، يتعهد فيه بعدم ممارسة النشاط إلا بعد مراجعة قسم الرقابة الغذائية، وذلك بعد استكمال كافة الاشتراطات الصحية والفنية. كما يلتزم المستثمر بمراجعة جهات الاختصاص المحددة في التعهد." data-en="A written commitment signed by the investor to obtain the final report, in which they commit not to operate until after reviewing the Food Control Department, following the completion of all health and technical requirements. The investor also commits to reviewing the specified authorities in the commitment."></span>
             </li>
@@ -521,28 +579,17 @@ html[lang="en"] .contact-info {
         </ul>
     </div>
 
+
+
 <div class="section-title" onclick="toggleSection('infrastructureSection', 'ar')" data-ar="6. اشتراطات البنية التحتية" data-en="6. Infrastructure Requirements">6. اشتراطات البنية التحتية</div>
 <div id="infrastructureSection" class="section-content">
     
 <ul style="list-style-type: none;">
     <li class="requirement">
         <span class="key" data-ar="6. اشتراطات البنية التحتية:" data-en="6. Infrastructure Requirements:">6. اشتراطات البنية التحتية:</span>
-        <p data-ar="يجب اختيار مواقع المباني والمرافق والمعدات وتصميمها بما يتناسب مع طبيعة العمليات والمخاطر المرتبطة بها، لضمان النقاط التالية:" 
-            data-en="The selection and design of building sites, equipment, and facilities should align with the nature of operations and associated risks to ensure the following:"></p>
-        <ol style="list-style-type: disc;">
-            <li data-ar="اختيار مواقع المباني والمرافق بشكل يقلل من مخاطر التلوث إلى أدنى مستوى." 
-                data-en="Selection of building sites and facilities to minimize contamination risks to the lowest level."></li>
-            <li data-ar="تصميم المنشأة بطريقة تسهل الصيانة والتنظيف والتطهير، مع الحد من التلوث الناجم عن الهواء." 
-                data-en="Design of the facility to facilitate effective maintenance, cleaning, and disinfection, while minimizing airborne contamination."></li>
-            <li data-ar="أن تكون المواد والأسطح المستخدمة، وخصوصًا تلك التي تتلامس مع الغذاء، غير سامة ومناسبة للاستخدام المقصود." 
-                data-en="Materials and surfaces, especially those in contact with food, should be non-toxic and suitable for the intended use."></li>
-            <li data-ar="توفير مرافق لمراقبة درجة الحرارة والرطوبة، بالإضافة إلى الضوابط الأخرى حسب الحاجة." 
-                data-en="Provision of facilities to monitor temperature, humidity, and other necessary controls."></li>
-            <li data-ar="تطبيق تدابير فعّالة لمنع دخول الآفات والحفاظ على بيئة خالية منها." 
-                data-en="Implementation of effective measures to prevent pests and ensure a pest-free environment."></li>
-            <li data-ar="توفير دورات مياه ملائمة وكافية للعاملين." 
-                data-en="Provision of adequate and suitable restroom facilities for employees."></li>
-        </ol>
+ <p data-ar="يجب أن تتمتع البنية الداخلية للمنشأة الغذائية باستخدام مواد متينة وصلبة تسهل صيانتها وتنظيفها وتعقيمها عند الحاجة. وعند إقامة الهياكل الداخلية داخل المنشأة، يجب أن تكون هذه الهياكل مصممة بشكل محكم وانسيابي، مع استخدام مواد قوية وعالية التحمل لضمان سهولة تنظيفها وصيانتها." 
+   data-en="The internal structure of the food establishment should be made of durable and solid materials that are easy to maintain, clean, and disinfect when necessary. When constructing internal structures, they should be designed in a smooth and sound manner, made from robust materials that are easy to clean and maintain.">
+</p>
     </li>
 
     <li class="requirement">
@@ -1000,27 +1047,40 @@ html[lang="en"] .contact-info {
 <!-- أماكن التخزين -->
 <li class="requirement">
     <span class="key" data-ar="6.1.2.4 أماكن التخزين:" data-en="6.1.2.4 Storage:">6.1.2.4 أماكن التخزين | Storage:</span>
-    <p data-ar="يجب أن تكون الأدوات المستخدمة في التجهيزات الداخلية مثل الأرفف، الحوامل، ووسائل التخزين مقاومة للصدأ وسهلة التنظيف لضمان الحفاظ على جودة الطعام." data-en="Internal equipment such as shelves, racks, and storage devices must be resistant to rust and easy to clean to maintain food quality."></p>
+    <p data-ar="ينبغي توفير مرافق كافية وكذلك منفصلة عند اللزوم للتخزين الآمن والصحي للمنتجات الغذائية والمكونات الغذائية، ومواد التعبئة، والمواد الكيميائية غير الغذائية بما يشمل مواد التنظيف، ومواد التشحيم، والوقود." 
+       data-en="Adequate and separate facilities must be provided, when necessary, for the safe and hygienic storage of food products, food ingredients, packaging materials, and non-food chemicals, including cleaning agents, lubricants, and fuels."></p>
     <ol style="list-style-type: disc;">
-        <li data-ar="يجب أن يتم التخزين في بيئة جافة وباردة بشكل مناسب لضمان الحفاظ على المواد الغذائية بأفضل حال." 
-            data-en="Storage should be in a suitably dry and cool environment to ensure the preservation of food quality.">
-            يجب أن يتم التخزين في بيئة جافة وباردة بشكل مناسب لضمان الحفاظ على المواد الغذائية بأفضل حال.
+        <li data-ar="يجب أن يسمح التخزين بفصل الأغذية الخام عن الأغذية المطهية أو الأغذية المسببة لحساسية عن الأغذية غير المسببة لحساسية." 
+            data-en="Storage must allow for the separation of raw foods from cooked foods or allergenic foods from non-allergenic foods.">
+            يجب أن يسمح التخزين بفصل الأغذية الخام عن الأغذية المطهية أو الأغذية المسببة لحساسية عن الأغذية غير المسببة لحساسية.
         </li>
-        <li data-ar="يجب أن تكون المواد المخزنة في الأماكن المناسبة التي تحافظ على درجة الحرارة المطلوبة: التخزين الجاف عند 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل." 
-            data-en="Items should be stored in appropriate areas that maintain required temperatures: dry storage at 15-25°C, cold storage between 1-4°C, and frozen storage at -18°C or lower.">
-            يجب أن تكون المواد المخزنة في الأماكن المناسبة التي تحافظ على درجة الحرارة المطلوبة: التخزين الجاف عند 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل.
+        <li data-ar="ينبغي تصميم المرافق وتشييدها على نحو يكفل تيسير الصيانة والتنظيف الكافيين." 
+            data-en="Facilities should be designed and constructed to facilitate adequate maintenance and cleaning.">
+            ينبغي تصميم المرافق وتشييدها على نحو يكفل تيسير الصيانة والتنظيف الكافيين.
         </li>
-        <li data-ar="يجب أن تكون مناطق التخزين منفصلة عن أماكن العمل الأخرى لتجنب التلوث المتبادل." 
-            data-en="Storage areas should be separated from other work areas to avoid cross-contamination.">
-            يجب أن تكون مناطق التخزين منفصلة عن أماكن العمل الأخرى لتجنب التلوث المتبادل.
+        <li data-ar="يجب تجنب دخول الآفات وإيوائها في مناطق التخزين." 
+            data-en="Storage areas must prevent the entry and harboring of pests.">
+            يجب تجنب دخول الآفات وإيوائها في مناطق التخزين.
         </li>
-        <li data-ar="ينبغي أن تكون الأرفف والحوامل مرتفعة عن الأرض لتجنب الرطوبة والتلوث." 
-            data-en="Shelves and racks should be raised from the floor to avoid moisture and contamination.">
-            ينبغي أن تكون الأرفف والحوامل مرتفعة عن الأرض لتجنب الرطوبة والتلوث.
+        <li data-ar="يجب حماية الأغذية بفعالية من التلوث بما يشمل انتقال مسببات الحساسية أثناء التخزين." 
+            data-en="Food must be effectively protected from contamination, including the transfer of allergens during storage.">
+            يجب حماية الأغذية بفعالية من التلوث بما يشمل انتقال مسببات الحساسية أثناء التخزين.
         </li>
-        <li data-ar="يجب أن تكون المعدات الخاصة بالتخزين مصممة بحيث لا تتسبب في تراكم الأوساخ أو تكون صعبة التنظيف." 
-            data-en="Storage equipment should be designed in a way that prevents dirt accumulation and is easy to clean.">
-            يجب أن تكون المعدات الخاصة بالتخزين مصممة بحيث لا تتسبب في تراكم الأوساخ أو تكون صعبة التنظيف.
+        <li data-ar="ينبغي التحكم في درجات الحرارة والرطوبة لتقليل تدهور الأغذية عند الضرورة." 
+            data-en="Temperature and humidity should be controlled to minimize food degradation when necessary.">
+            ينبغي التحكم في درجات الحرارة والرطوبة لتقليل تدهور الأغذية عند الضرورة.
+        </li>
+        <li data-ar="يجب توفير مرافق تخزين منفصلة وآمنة لمواد التنظيف والمواد الخطرة." 
+            data-en="Separate and secure storage facilities must be provided for cleaning materials and hazardous substances.">
+            يجب توفير مرافق تخزين منفصلة وآمنة لمواد التنظيف والمواد الخطرة.
+        </li>
+        <li data-ar="يجب أن تكون المعدات الخاصة بالتخزين مقاومة للصدأ وسهلة التنظيف." 
+            data-en="Storage equipment must be rust-resistant and easy to clean.">
+            يجب أن تكون المعدات الخاصة بالتخزين مقاومة للصدأ وسهلة التنظيف.
+        </li>
+        <li data-ar="ينبغي أن يتم تخزين المواد الغذائية في ظروف تضمن الحفاظ على جودتها وسلامتها: التخزين الجاف بين 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل، مع الالتزام بمتطلبات التخزين لكل نوع من المواد." 
+            data-en="Food items should be stored under conditions that ensure their quality and safety: dry storage at 15-25°C, cold storage between 1-4°C, and frozen storage at -18°C or lower, adhering to the storage requirements for each type of material.">
+            ينبغي أن يتم تخزين المواد الغذائية في ظروف تضمن الحفاظ على جودتها وسلامتها: التخزين الجاف بين 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل، مع الالتزام بمتطلبات التخزين لكل نوع من المواد.
         </li>
     </ol>
 </li>
@@ -1028,7 +1088,7 @@ html[lang="en"] .contact-info {
 <!-- طابق الميزانين والدرج -->
 <li class="requirement">
     <span class="key" data-ar="6.1.2.5 طابق الميزانين والدرج:" data-en="6.1.2.5 Mezzanine and Stairs:">6.1.2.5 طابق الميزانين والدرج | Mezzanine and Stairs:</span>
-    <p data-ar="يجب أن تكون الأدوات المستخدمة في التجهيزات الداخلية مثل الأرفف، الحوامل، ووسائل التخزين مقاومة للصدأ وسهلة التنظيف لضمان الحفاظ على جودة الطعام." data-en="Internal equipment such as shelves, racks, and storage devices must be resistant to rust and easy to clean to maintain food quality."></p>
+<p data-ar="يجب مراعاة النقاط الاتية عند تصميم طابق الميزانين والدرج داخل المنشآت الغذائية." data-en="The following points should be considered when designing the mezzanine floor and stairs inside food establishments."></p>
     <ol style="list-style-type: disc;">
         <li data-ar="يجب أن يكون الميزانين مبنيًا من مواد صلبة أو معدنية مثل الفولاذ المقاوم للصدأ أو الخرسانة المقواة، ومجهزًا بحواف مرتفعة بشكل كافٍ لمنع الملوثات من السقوط على الأسطح الواقعة أسفله." 
             data-en="The mezzanine should be constructed from solid or metal materials such as stainless steel or reinforced concrete, and equipped with sufficiently high edges to prevent contaminants from falling onto surfaces below.">
@@ -1037,6 +1097,10 @@ html[lang="en"] .contact-info {
         <li data-ar="يجب أن تكون السلالم والدرج آمنة، ومصممة وفق معايير الصحة والسلامة، مع توفير درابزين مصنوعة من مواد مقاومة للتآكل مثل الألمنيوم أو الفولاذ المقاوم للصدأ وتسهيلات للوصول السهل." 
             data-en="Stairs and steps must be designed according to health and safety standards, with handrails made from corrosion-resistant materials such as aluminum or stainless steel, and easy access facilities provided.">
             يجب أن تكون السلالم والدرج آمنة، ومصممة وفق معايير الصحة والسلامة، مع توفير درابزين مصنوعة من مواد مقاومة للتآكل مثل الألمنيوم أو الفولاذ المقاوم للصدأ وتسهيلات للوصول السهل.
+        </li>
+        <li data-ar="يجب أن تكون مواقع وطرق تشييد وبناء الأدراج، والمصاعد والهياكل المساعدة (مثل المنصات والسلالم والمزالق) بشكل يحول دون تلوث الغذاء وأن تزود المزالق والأفنية بفتحات للتنظيف." 
+            data-en="The location and construction methods of stairs, lifts, and auxiliary structures (such as platforms, stairs, and chutes) should prevent food contamination, and chutes and ramps should be provided with openings for cleaning.">
+            يجب أن تكون مواقع وطرق تشييد وبناء الأدراج، والمصاعد والهياكل المساعدة (مثل المنصات والسلالم والمزالق) بشكل يحول دون تلوث الغذاء وأن تزود المزالق والأفنية بفتحات للتنظيف.
         </li>
     </ol>
 </li>
@@ -1076,10 +1140,35 @@ html[lang="en"] .contact-info {
                     data-en="A separate cleaning area should be provided for utensils and equipment used in highly contaminated areas, such as toilets and waste disposal areas."></li>
                 <li data-ar="ينبغي حسب الاقتضاء، أن تكون مرافق غسل الأغذية منفصلة عن مرافق تنظيف الأواني والمعدات." 
                     data-en="If necessary, food washing facilities should be separated from utensil and equipment cleaning facilities."></li>
-                <li data-ar="ينبغي إتاحة أحواض منفصلة لغسل الأيدي وغسل الأغذية." 
-                    data-en="Separate sinks for hand washing and food washing should be available."></li>
-            </ol>
-        </li>
+                </ol>
+<li class="requirement">
+    <p data-ar<span class="key" data-ar="6.2.1.1 مغاسل الايدي:" data-en="6.2.1.1 Hand Washing Facilities:" lang="ar" dir="rtl">6.2.1.1 مغاسل الايدي:</span>
+<p data-ar="يجب توفير مرافق لغسل الأيدي واحدة على الأقل أو أكثر حسب الحاجة في مناطق تحضير الأغذية (واحدة لكل منطقة إذا كانت مناطق التحضير مفصولة)، باستثناء المنشآت التي لا تشكل أنشطتها خطورة على سلامة الأغذية، شريطة أن تكون:" 
+   data-en="At least one or more handwashing facilities must be provided as needed in food preparation areas (one for each separated area), except for establishments where activities do not pose a risk to food safety, provided that they are:"></p>
+    <ul style="list-style-type: disc;">
+        <li lang="ar" dir="rtl">مصنوعة من مواد سهلة التنظيف ومقاومة للصّدأ وغير سامة.</li>
+        <li lang="en" dir="ltr" style="display: none;">Made of materials that are easy to clean, rust-resistant, and non-toxic.</li>
+        <li lang="ar" dir="rtl">مزودة بماء جارٍ وصالح للشرب بدرجة حرارة ملائمة.</li>
+        <li lang="en" dir="ltr" style="display: none;">Equipped with running potable water at an appropriate temperature.</li>
+        <li lang="ar" dir="rtl">مفصولة عن المرافق المخصصة لغسل المواد الغذائية.</li>
+        <li lang="en" dir="ltr" style="display: none;">Separated from the facilities designated for washing food.</li>
+        <li lang="ar" dir="rtl">يفضل أن تكون من النوع الذي لا يتم تشغيله باليد.</li>
+        <li lang="en" dir="ltr" style="display: none;">Preferably of the type that is not operated manually.</li>
+        <li lang="ar" dir="rtl">يجب أن تكون نظيفة باستمرار ومتصلة بنظام الصرف الصحي.</li>
+        <li lang="en" dir="ltr" style="display: none;">Continuously clean and connected to the sewage system.</li>
+        <li lang="ar" dir="rtl">مزودة بسائل تنظيف بالقرب منها وبمناشف الاستخدام لمرة واحدة أو أي وسيلة تجفيف مناسبة.</li>
+        <li lang="en" dir="ltr" style="display: none;">Equipped with a cleaning solution nearby and single-use towels or other suitable drying means.</li>
+        <li lang="ar" dir="rtl">مزودة بلوحة بارزة مكتوب عليها 'غسيل الأيدي فقط'.</li>
+        <li lang="en" dir="ltr" style="display: none;">Clearly labeled with a prominent sign stating 'Hand wash only.'</li>
+    </ul>
+</li>
+
+
+
+
+
+
+
         <li class="requirement">
             <span class="key" data-ar="6.2.2 التهوية:" data-en="6.2.2 Ventilation:">6.2.2 التهوية | Ventilation:</span>
     <ol style="list-style-type: disc;">
@@ -1098,47 +1187,50 @@ html[lang="en"] .contact-info {
 </li>
 
 
+<table border="1" style="border-collapse: collapse; width: 100%; margin-top: 10px;">
+    <thead>
+        <tr>
+            <th style="padding: 10px; text-align: center;" data-ar="الموقع" data-en="Location">الموقع</th>
+            <th style="padding: 10px; text-align: center;" data-ar="تدفق الهواء (لتر/ثانية)" data-en="Air Flow (L/s)">تدفق الهواء (لتر/ثانية)</th>
+            <th style="padding: 10px; text-align: center;" data-ar="درجة الحرارة" data-en="Temperature">درجة الحرارة</th>
+            <th style="padding: 10px; text-align: center;" data-ar="سرعة تغير الهواء (ACH)" data-en="Air Changes (ACH)">سرعة تغير الهواء (ACH)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 10px;" data-ar="صالات تقديم الطعام" data-en="Dining Areas">صالات تقديم الطعام</td>
+            <td style="padding: 10px;" data-ar="10-15 لتر/ثانية لكل شخص" data-en="10-15 L/s per person">10-15 لتر/ثانية لكل شخص</td>
+            <td style="padding: 10px;" data-ar="من 1°م إلى 25°م" data-en="From 1°C to 25°C">من 1°م إلى 25°م</td>
+            <td style="padding: 10px;" data-ar="3" data-en="3">3</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;" data-ar="مناطق الطهي والتحضير" data-en="Cooking and Preparation Areas">مناطق الطهي والتحضير</td>
+            <td style="padding: 10px;" data-ar="15-25 لتر/ثانية لكل متر مربع" data-en="15-25 L/s per square meter">15-25 لتر/ثانية لكل متر مربع</td>
+            <td style="padding: 10px;" data-ar="من 1°م إلى 25°م" data-en="From 1°C to 25°C">من 1°م إلى 25°م</td>
+            <td style="padding: 10px;" data-ar="30" data-en="30">30</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;" data-ar="مناطق التخزين الجاف" data-en="Dry Storage Areas">مناطق التخزين الجاف</td>
+            <td style="padding: 10px;" data-ar="5-8 لتر/ثانية لكل متر مربع" data-en="5-8 L/s per square meter">5-8 لتر/ثانية لكل متر مربع</td>
+            <td style="padding: 10px;" data-ar="من 1°م إلى 25°م" data-en="From 1°C to 25°C">من 1°م إلى 25°م</td>
+            <td style="padding: 10px;" data-ar="3-5" data-en="3-5">3-5</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;" data-ar="غرف التبريد" data-en="Refrigeration Rooms">غرف التبريد</td>
+            <td style="padding: 10px;" data-ar="10-15 لتر/ثانية لكل متر مربع" data-en="10-15 L/s per square meter">10-15 لتر/ثانية لكل متر مربع</td>
+            <td style="padding: 10px;" data-ar="من 1°م إلى 5°م" data-en="From 1°C to 5°C">من 1°م إلى 5°م</td>
+            <td style="padding: 10px;" data-ar="4-6" data-en="4-6">4-6</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;" data-ar="غرف التجميد" data-en="Freezing Rooms">غرف التجميد</td>
+            <td style="padding: 10px;" data-ar="10-15 لتر/ثانية لكل متر مربع" data-en="10-15 L/s per square meter">10-15 لتر/ثانية لكل متر مربع</td>
+            <td style="padding: 10px;" data-ar="أقل من -18°م" data-en="Less than -18°C">أقل من -18°م</td>
+            <td style="padding: 10px;" data-ar="5-7" data-en="5-7">5-7</td>
+        </tr>
+    </tbody>
+</table>
 
 
-
-</li>    <!-- جدول خاص بوحدات القياس -->
-    <table border="1" style="border-collapse: collapse; width: 100%; margin-top: 10px;">
-        <thead>
-            <tr>
-                <th style="padding: 10px; text-align: center;" data-ar="الموقع" data-en="Location">الموقع</th>
-                <th style="padding: 10px; text-align: center;" data-ar="تدفق الهواء (لتر/ثانية)" data-en="Air Flow (L/s)">تدفق الهواء (لتر/ثانية)</th>
-                <th style="padding: 10px; text-align: center;" data-ar="درجة الحرارة" data-en="Temperature">درجة الحرارة</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="padding: 10px;" data-ar="صالات تقديم الطعام" data-en="Dining Areas">صالات تقديم الطعام</td>
-                <td style="padding: 10px;" data-ar="10-15 لتر/ثانية لكل شخص" data-en="10-15 L/s per person">10-15 لتر/ثانية لكل شخص</td>
-                <td style="padding: 10px;" data-ar="لا تقل عن 25°م" data-en="No less than 25°C">لا تقل عن 25°م</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;" data-ar="مناطق الطهي والتحضير" data-en="Cooking and Preparation Areas">مناطق الطهي والتحضير</td>
-                <td style="padding: 10px;" data-ar="15-25 لتر/ثانية لكل متر مربع" data-en="15-25 L/s per square meter">15-25 لتر/ثانية لكل متر مربع</td>
-                <td style="padding: 10px;" data-ar="لا تقل عن 25°م" data-en="No less than 25°C">لا تقل عن 25°م</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;" data-ar="مناطق التخزين الجاف" data-en="Dry Storage Areas">مناطق التخزين الجاف</td>
-                <td style="padding: 10px;" data-ar="5-8 لتر/ثانية لكل متر مربع" data-en="5-8 L/s per square meter">5-8 لتر/ثانية لكل متر مربع</td>
-                <td style="padding: 10px;" data-ar="لا تقل عن 25°م" data-en="No less than 25°C">لا تقل عن 25°م</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;" data-ar="غرف التبريد" data-en="Refrigeration Rooms">غرف التبريد</td>
-                <td style="padding: 10px;" data-ar="10-15 لتر/ثانية لكل متر مربع" data-en="10-15 L/s per square meter">10-15 لتر/ثانية لكل متر مربع</td>
-                <td style="padding: 10px;" data-ar="من 1°م إلى 5°م" data-en="From 1°C to 5°C">من 1°م إلى 5°م</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;" data-ar="غرف التجميد" data-en="Freezing Rooms">غرف التجميد</td>
-                <td style="padding: 10px;" data-ar="10-15 لتر/ثانية لكل متر مربع" data-en="10-15 L/s per square meter">10-15 لتر/ثانية لكل متر مربع</td>
-                <td style="padding: 10px;" data-ar="أقل من -18°م" data-en="Less than -18°C">أقل من -18°م</td>
-            </tr>
-        </tbody>
-    </table>
-</li>
 
 
 
@@ -1518,6 +1610,9 @@ function applyForService(serviceAr, serviceEn) {
        <option value="Sandwiches and Pastries Preparing" data-ar="تجهيز الفطائر والمعجنات" data-en="Sandwiches and Pastries Preparing">تجهيز الفطائر والمعجنات</option>
         <option value="factory" data-ar="مصنع" data-en="Factory">مصنع</option>
        <option value="food Supply Companies" data-ar="شركات التموين" data-en="food Supply Companies">شركات التموين</option>
+      <option value="Temporary Food Activity Permit Kiosk" data-ar="تصريح نشاط غذائي مؤقت كشك" data-en="Temporary Food Activity Permit Kiosk">تصريح نشاط غذائي مؤقت كشك</option>
+
+
 
 
 
@@ -3083,6 +3178,117 @@ en: [
       ]
     }
   }
+  ],
+  "Temporary Food Activity Permit Kiosk": [
+    {
+      title: {
+        ar: "<span style='color: green; font-weight: bold;'>تصريح نشاط غذائي مؤقت كشك:</span>",
+        en: "<span style='color: green; font-weight: bold;'>Temporary Food Activity Permit Kiosk:</span>"
+      },
+      points: {
+ar: [
+  "يقصد بنشاط غذائي مؤقت خاص بفعالية؛ تلك الأنشطة الغذائية التي تقام خلال الفعاليات لفترات محدودة ومؤقتة في بعض المناسبات كالاحتفالات والمعارض والأسواق الرمضانية، بحيث يتم عرض أو تجهيز المنتجات الغذائية وبيعها للمستهلكين من خلال أكشاك مؤقتة."
+],
+en: [
+  "Temporary food activity for events refers to food-related activities conducted during events for limited and temporary periods, such as celebrations, exhibitions, and Ramadan markets, where food products are displayed, prepared, and sold to consumers through temporary kiosks."
+]
+      }
+    },
+    {
+      title: {
+        ar: "<span style='color: green; font-weight: bold;'>متطلبات عامة:</span>",
+        en: "<span style='color: green; font-weight: bold;'>General Requirements:</span>"
+      },
+      points: {
+ar: [
+  "يجب أن تكون الفعالية مرخصة من الجهات المختصة بالشارقة.",
+  "يجب أن يكون موقع الفعاليات مناسب لممارسة الأنشطة الغذائية بحيث يكون بعيداً عن مصادر التلوث، وأن تتوفر به المرافق الصحية اللازمة.",
+  "على الجهة المنظمة للفعالية الالتزام بعدم السماح بممارسة أي نشاط غذائي خلال الفعالية قبل الحصول على التصريح والموافقة النهائية من قسم الرقابة الغذائية ببلدية الشارقة.",
+  "يجب على الجهة المنظمة للفعالية اتخاذ كافة التدابير اللازمة للحفاظ على نظافة المكان والتخلص بشكل آمن وقانوني من النفايات ومياه الصرف."
+],
+en: [
+  "The event must be licensed by the relevant authorities in Sharjah.",
+  "The event location must be suitable for food activities, away from sources of pollution, and equipped with the necessary health facilities.",
+  "The event organizer must ensure that no food activity is conducted during the event without obtaining the final approval and permit from the Food Control Section of Sharjah Municipality.",
+  "The event organizer must take all necessary measures to maintain cleanliness and dispose of waste and wastewater safely and legally."
+]
+
+      }
+    },
+
+
+  {
+    "title": {
+      "ar": "<span style='color: green; font-weight: bold;'>الاشتراطات الواجب توفرها في كشك بيع الأطعمة:</span>",
+      "en": "<span style='color: green; font-weight: bold;'>Requirements for Food Selling Kiosks:</span>"
+    },
+  "points": {
+ar: [
+  "أن يكون الكشك مجهزاً لهذا الغرض.",
+  "أن تتوفر بالكشك مساحة كافية لممارسة جميع الأنشطة التي تتطلبها العمليات التشغيلية.",
+  "أن يكون الكشك محكم الغلق بشكل كامل من ثلاثة جوانب ومن السقف. ومشيد من مواد متينة وغير منفذة ومناسبة للاستعمال في أماكن تحضير الغذاء. ملساء وسهلة التنظيف ذات لون فاتح، ومقام على أرضية صلبة سهلة التنظيف.",
+  "أن يتم توفير الشروط المناسبة للعمل داخل الكشك من إضاءة وتهوية وتكييف.",
+  "أن يتم توفير أرفف وخزائن مناسبة لحفظ المعدات والأدوات النظيفة المستخدمة في تحضير الأطعمة.",
+  "أن يتم توفير مصدر كهرباء وعلى مدار الوقت لتشغيل العمليات بالكشك.",
+  "عندما يكون هناك حاجة لتمديد توصيلات كهرباء أو غاز، يجب أخذ موافقة الجهات الرسمية ذات العلاقة على ذلك.",
+  "أن يتم توفير مبردات وثلاجات مناسبة لنوع وحجم العمل.",
+  "أن يتم توفير مصدر مياه صالحة للشرب مع التمديدات اللازمة.",
+  "أن يتم توفير حوض لغسيل الأيدي مزود بصابون سائل ومناديل ورقية. وكذلك توفير حوض آخر منفصل لغسيل الأدوات والمعدات المستخدمة.",
+  "أن يتم توفير خزان لجمع مياه الصرف وأن يتم التخلص من محتوياته بشكل صحي وقانوني.",
+  "أن يتم توفير طاولة تحضير من الستانلس ستيل.",
+  "أن يتم توفير حاويات مناسبة لحفظ النفايات.",
+  "أن يتم توفير مصائد حشرات مناسبة (كاللاصقة مثلاً)."
+],
+en: [
+  "The kiosk must be equipped for this purpose.",
+  "The kiosk should have sufficient space for all activities required for operational processes.",
+  "The kiosk should be fully enclosed on three sides and the roof. It should be built from durable, non-permeable materials suitable for food preparation areas, smooth, easy to clean, and light-colored. The kiosk should be placed on a solid, easy-to-clean floor.",
+  "Appropriate conditions for working inside the kiosk, such as lighting, ventilation, and air conditioning, must be provided.",
+  "Shelves and cabinets should be provided for storing clean equipment and tools used in food preparation.",
+  "An uninterrupted power supply must be provided for kiosk operations.",
+  "When there is a need to extend electrical or gas connections, approval must be obtained from the relevant official authorities.",
+  "Suitable coolers and refrigerators must be provided according to the type and size of the work.",
+  "A potable water source with necessary plumbing must be provided.",
+  "A hand-washing sink with liquid soap and paper towels must be available, as well as a separate sink for washing utensils and equipment.",
+  "A waste water tank must be provided, and its contents must be disposed of in a sanitary and legal manner.",
+  "A stainless steel preparation table must be provided.",
+  "Appropriate waste containers should be provided.",
+  "Suitable insect traps, such as sticky traps, must be provided."
+]
+  }
+  },
+  {
+    "title": {
+      "ar": "<span style='color: green; font-weight: bold;'>الاشتراطات الصحية التشغيلية:</span>",
+      "en": "<span style='color: green; font-weight: bold;'>Operational Health Requirements:</span>"
+    },
+    "points": {
+ar: [
+  "يجب عدم البدء بمزاولة النشاط قبل الحصول على تصريح من قسم الرقابة الغذائية والسلطات المختصة.",
+  "يجب الالتزام بالممارسات الصحية الجيدة المتعلقة بمزاولة النشاط المصرح به.",
+  "يجب أن يكون جميع العمال حاصلين على شهادات صحية.",
+  "يجب حفظ الأطعمة والمشروبات ضمن درجات الحرارة المناسبة لحفظها.",
+  "يجب حفظ جميع المواد الغذائية في عبواتها الأصلية لحين الاستعمال، أو توفير حاويات مناسبة لحفظ تلك المواد الغذائية محكمة الإغلاق.",
+  "يجب أن تكون جميع المنتجات الغذائية والمواد الأولية الداخلة في التجهيز سليمة ومطابقة للمواصفات.",
+  "يجب الحرص على النظافة الشخصية للعمال وارتداء الزي الموحد وغطاء الرأس، والحرص على النظافة العامة للكشك.",
+  "يجب تقديم الأطعمة في عبوات نظيفة ومناسبة للاستعمالات الغذائية وتستخدم لمرة واحدة.",
+  "يجب رفع جميع المواد الغذائية والمعدات عن الأرض على قواعد مناسبة لا يقل ارتفاعها عن 25سم.",
+  "يجب عدم عرض أو تخزين أو تحضير اية مواد غذائية خارج الكشك."
+],
+en: [
+  "No activity should commence before obtaining a permit from the Food Control Section and relevant authorities.",
+  "Good health practices related to conducting the authorized activity must be followed.",
+  "All workers must have health certificates.",
+  "Food and beverages must be stored at appropriate temperatures for preservation.",
+  "All food items should be kept in their original packaging until use, or in suitable containers that are tightly sealed.",
+  "All food products and raw materials used in preparation must be intact and meet specifications.",
+  "Personal hygiene of workers should be ensured, including wearing uniforms and head coverings, and general cleanliness of the kiosk.",
+  "Food should be served in clean, food-grade containers that are for single use only.",
+  "All food items and equipment must be elevated from the ground on suitable platforms, at least 25 cm high.",
+  "No food items should be displayed, stored, or prepared outside the kiosk."
+      ]
+    }
+  }
   ]
 };
 
@@ -3095,6 +3301,7 @@ en: [
             case 'supermarket':
             case 'Prepare sweets':
             case 'Sandwiches and Pastries Preparing':
+           case 'Temporary Food Activity Permit Kiosk':
             case 'supermarket':
             case 'Party Banquet Preparation':
            case 'Tandoor Bakery':
@@ -3525,6 +3732,7 @@ en: [
                 stepsContent.innerHTML += `</ul>`;
             } else {
                 stepsContent.innerHTML += `<p>${lang === "ar" ? "لا توجد خطوات الترخيص." : "No license steps available."}</p>`;
+                
             }
         } else {
             stepsContent.innerHTML = `<p>${lang === "ar" ? "يرجى اختيار نشاط." : "Please select an activity."}</p>`;
@@ -3541,28 +3749,6 @@ en: [
         }
     }
 
-function printContent() {
-    const content = document.getElementById('content'); // تحديد العنصر الذي يحتوي على جميع الأقسام
 
-    if (!content) {
-        alert("العنصر المطلوب للطباعة غير موجود!");
-        return;
-    }
-
-    // استخدام html2canvas لتحويل المحتوى إلى صورة
-    html2canvas(content).then(canvas => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF();
-        const imgWidth = pdf.internal.pageSize.getWidth();
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-        pdf.save('document.pdf');
-    });
-}
-</script>
-
-<!-- زر الطباعة -->
-<button onclick="printContent()">طباعة إلى PDF</button>
 </body>
 </html>
