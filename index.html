@@ -1420,12 +1420,6 @@ html[lang="en"] .contact-info {
             data-en="Potable water supplies must be separated from non-potable water systems and facilities."></li>
         <li data-ar="يجب أن تكون المياه الصالحة للشرب متاحة في جميع المناطق والمعدات، بما في ذلك معدات صناعة الثلج وصنابير المياه الصالحة للشرب." 
             data-en="Potable water must be available in all areas and equipment, including ice-making equipment and potable water faucets."></li>
-        <li data-ar="يجوز استخدام مياه غير صالحة للشرب للأغراض التي لا تتعلق مباشرة بالغذاء، مثل تنظيف الأرضيات والمباني والهياكل أو عمليات إنتاج البخار ومكافحة الحرائق." 
-            data-en="Non-potable water may be used for purposes not directly related to food, such as cleaning floors, buildings, and structures, or for steam production and fire fighting."></li>
-        <li data-ar="يمكن استخدام المياه غير الصالحة للشرب في عمليات تصنيع غذائي محدد مثل التبريد، بشرط أن لا تؤثر على سلامة وصلاحية الغذاء." 
-            data-en="Non-potable water may be used in specific food manufacturing operations such as cooling, provided it does not affect the safety and quality of the food."></li>
-        <li data-ar="عند استخدام المياه غير الصالحة للشرب، يجب تدويرها في نظام منفصل لضمان عدم اختلاطها أو ارتدادها إلى شبكات المياه الصالحة للشرب." 
-            data-en="When non-potable water is used, it should be circulated in a separate system to prevent contamination or backflow into potable water networks."></li>
         <li data-ar="يجب تمييز أنابيب المياه الصالحة للشرب عن الأنابيب الأخرى داخل المنشأة الغذائية باستخدام لون مميز." 
             data-en="Potable water pipes must be distinguished from other pipes within the food establishment by using a specific color."></li>
         <li data-ar="يجب أن تكون المياه أو الثلج الذي من شأنه ملامسة الغذاء بشكل مباشر من مصدر مياه صالحة للشرب، وأن يكون من مصدر ماء نظيف في حال التبريد الكامل للمنتجات السمكية، على أن يتم تداولها وتخزينها في ظروف تحميها من التلوث." 
@@ -1876,18 +1870,22 @@ const activityRequirements = {
   factory: [
     {
       title: {
-        ar: "<span style='color: green; font-weight: bold;'>المساحة:</span>",
-        en: "<span style='color: green; font-weight: bold;'>Space:</span>"
+        ar: "<span style='color: green; font-weight: bold;'>الحجم والمساحة:</span>",
+        en: "<span style='color: green; font-weight: bold;'>Size and Space:</span>"
       },
       points: {
         ar: [
-          "الموقع: أن تكون المنطقة المحيطة بالمصنع معبدة لمنع إثارة الأتربة، وأن يكون بعيداً عن أي منشأة صناعية أخرى غير غذائية ذات تأثير سلبي على البيئة.",
-          "توفير مساحات مناسبة لتناول الطعام."
+          "يجب أن تكون المساحة واسعة ومناسبة.",
+          "أن تكون المساحات متناسبة مع مخطط إنشاء المصنع المعتمد.",
+          "أن يكون المبنى مصمماً بالحجم الكافي الذي يفي بالغرض المعد والمصمم من اجله دون حدوث تزاحم في المعدات والمكائن او العاملين او المواد.",
+          "أن يشمل المبنى مساحات كافية منها (المستودعات -صالات الانتاج -أماكن العاملين- المختبر- الصيانة- المكاتب الإدارية)."
         ],
         en: [
-          "Location: The area around the factory should be paved to prevent dust and should be far from any other non-food industrial facility with a negative environmental impact.",
-          "Provide suitable dining areas."
-        ]
+          "The space should be spacious and appropriate.",
+          "The areas should align with the approved factory layout plan.",
+          "The building should be designed with sufficient size to fulfill its intended purpose without overcrowding of equipment, machinery, workers, or materials.",
+          "The building should include adequate spaces such as warehouses, production halls, worker areas, laboratories, maintenance, and administrative offices."
+    ]
       }
     },
     {
@@ -1897,16 +1895,930 @@ const activityRequirements = {
       },
       points: {
         ar: [
-          "أن يكون نظيف.",
-          "أن يكون بعيد عن الروائح والأتربة ومصادر التلوث."
+          "أن تكون المنطقة المحيطة بالمصنع معبدة لمنع إثارة الأتربة.",
+          "أن يكون بعيداً عن أي منشأة صناعية أخرى غير غذائية ذات تأثير سلبي على البيئة.",
+          "يمنع منعاً باتاً اتصال المصنع بمصنع آخر ما لم ينص على ذلك صراحة في ترخيص أي منهما.",
+          "يمنع منعاً باتاً التغيير في مساحة المصنع بالزيادة أو النقص مع عدم غرض الاستعمال إلا بعد أخذ موافقة."
         ],
         en: [
-          "It should be clean.",
-          "It should be far from odors, dust, and pollution sources."
+          "The surrounding area of the factory should be paved to prevent dust generation.",
+          "It should be located far from any other non-food industrial facilities that negatively impact the environment.",
+          "It is strictly prohibited for the factory to be connected to another factory unless explicitly stated in either's license.",
+          "Any changes to the factory's area, whether increase or decrease, or change in its intended use, are strictly prohibited without prior approval."
         ]
       }
+    },
+    {
+      title: {
+        ar: "<span style='color: green; font-weight: bold;'>حالة المبنى:</span>",
+        en: "<span style='color: green; font-weight: bold;'>Building Condition:</span>"
+      },
+      points: {
+        ar: [
+          "يجب أن يكون البناء من الطوب والاسمنت والسقف مسلح ويمكن استخدام الاسقف المعدنية المستعارة (تكون ملساء سهلة التنظيف).",
+          "يجب أن يستخدم في البناء مواد من النوع العازل للحرارة وغير منفذ أو ماص للماء.",
+          "يجب مراعاة عدم وجود أي شقوق بالمصنع بجميع مرافقه لتجنب دخول الحشرات والقوارض."
+        ],
+        en: [
+          "The building should be made of bricks and concrete with a reinforced roof. Suspended metal ceilings can be used if they are smooth and easy to clean.",
+          "The construction materials should be heat-insulating and non-porous or water-absorbent.",
+          "Ensure there are no cracks in the factory or its facilities to prevent the entry of insects and rodents."
+        ]
+      }
+    },
+    {
+
+
+      title: {
+        ar: "<span style='color: green; font-weight: bold;'>الحجم والمساحة:</span>",
+        en: "<span style='color: green; font-weight: bold;'>Size and Space:</span>"
+      },
+      points: {
+        ar: [
+          "يجب أن تكون المساحة واسعة ومناسبة.",
+          "أن تكون المساحات متناسبة مع مخطط إنشاء المصنع المعتمد.",
+          "أن يكون المبنى مصمماً بالحجم الكافي الذي يفي بالغرض المعد والمصمم من اجله دون حدوث تزاحم في المعدات والمكائن او العاملين او المواد.",
+          "أن يشمل المبنى مساحات كافية منها (المستودعات -صالات الانتاج -أماكن العاملين- المختبر- الصيانة- المكاتب الإدارية)."
+        ],
+        en: [
+          "The space should be spacious and appropriate.",
+          "The areas should align with the approved factory layout plan.",
+          "The building should be designed with sufficient size to fulfill its intended purpose without overcrowding of equipment, machinery, workers, or materials.",
+          "The building should include adequate spaces such as warehouses, production halls, worker areas, laboratories, maintenance, and administrative offices."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>التصميم:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Design:</span>"
+  },
+  "points": {
+    "ar": [
+      "يراعى أن يكون المبنى متناسباً في تصميمه مع نوع النشاط.",
+      "يجب أن يكون التصميم محكم بحيث لا يسمح بدخول الأتربة والغبار والحشرات والقوارض والملوثات.",
+      "يجب عزل صالة الإنتاج عن البيئة الخارجية عند تصميم المبنى.",
+      "يجب مراعاة فصل وعزل مناطق المصنع عن بعضها البعض لمنع حدوث التداخل والتلوث والحفاظ على الانسيابية والترتيب بينها.",
+      "يراعى في التصميم التأكد من عدم توافر ظروف ملائمة للتكثيف فوق خطوط الانتاج.",
+      "يراعى عند التصميم سهولة القيام بأعمال التنظيف والتطهير والصيانة داخل المنشأة.",
+      "يجب أن يكون تصميم الاجهزة والمعدات والمكائن طبقاً لقواعد السلامة والامان في التركيب والتنظيف والاستخدام.",
+      "يراعى في تصميم المصنع الأخذ في الاعتبار التوسع المستقبلي للمصنع وكيفية ملائمة شكل مسطح البناء للامتداد والتوسع في خطوط الانتاج مستقبلاً.",
+      "يراعى عند التصميم وجود مرافق الخدمات الخاصة بالمصنع كوحدات الكهرباء والتبريد والتدفئة والغازات حسب الاستخدام.",
+      "لا يسمح بتواجد سكن للعاملين في نفس المصنع.",
+      "يراعى عند التصميم وضع مناطق وتخطيطها لغرض سلامة العاملين أو الزوار (تحديد مناطق التي يسمح بالمشي بها، مخصصه لوسائل النقل، .. إلخ).",
+      "يراعى التنظيم والترتيب في تحديد مناطق الأدوات والمعدات والمكائن بالمصنع."
+    ],
+    "en": [
+      "The building design should align with the type of activity.",
+      "The design must be tight to prevent the entry of dust, insects, rodents, and pollutants.",
+      "The production hall should be isolated from the external environment in the design.",
+      "Factory areas should be separated and isolated to prevent interference and contamination, maintaining flow and order between them.",
+      "Ensure the design prevents conditions that encourage condensation above production lines.",
+      "The design should facilitate cleaning, disinfection, and maintenance within the facility.",
+      "Equipment and machinery should be designed according to safety and security standards for installation, cleaning, and usage.",
+      "The factory design should consider future expansion and how the building layout can accommodate production line extensions.",
+      "Ensure the presence of factory service facilities such as electricity, cooling, heating, and gas units as required.",
+      "Worker accommodation is not allowed within the factory.",
+      "Designate and plan areas for worker or visitor safety (e.g., walking zones, transport areas, etc.).",
+      "Ensure organization and order in determining areas for tools, equipment, and machinery in the factory."
+    ]
+      }
+    },
+    {
+
+    
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الأسقف:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Ceilings:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب طلاء الاسقف بلون فاتح (يفضل الأبيض) ليكون سهل التنظيف.",
+      "يراعى في حالة وجود سقف معلق أن يكون من مواد صحية غير ماصة للرطوبة وسهلة التنظيف ولا يوجد به نتوءات أو زوايا.",
+      "عدم وجود أي توصيلات صحية أعلى السقف المعلق.",
+      "عدم وجود فتحات في الأسقف تسمح بإيواء الحشرات والقوارض وتجمع الملوثات أعلى السقف.",
+      "تكون الزوايا بين الأسقف والجدران غير حادة ويفضل أن يكون بها استدارة أو ميل بزاوية (°45) ليسهل تنظيفها وتطهيرها ولمنع تراكم الملوثات.",
+      "أن تكون الأسقف ذات ميول مناسب يمنع تراكم وتسرب مياه الأمطار والأوساخ ومياه التنظيف.",
+      "أن يكون سقف صالات التصنيع عازل للحرارة."
+    ],
+    "en": [
+      "Ceilings should be painted in a light color (preferably white) to facilitate cleaning.",
+      "If a suspended ceiling is present, it should be made of hygienic materials that are non-absorbent to moisture, easy to clean, and free of protrusions or corners.",
+      "There should be no sanitary connections above the suspended ceiling.",
+      "Ceilings should have no openings that allow the sheltering of insects, rodents, or the accumulation of pollutants above them.",
+      "The corners between ceilings and walls should not be sharp and preferably have a curve or slope at a 45° angle to facilitate cleaning and disinfection and to prevent pollutant buildup.",
+      "Ceilings should have suitable slopes to prevent the accumulation and leakage of rainwater, dirt, and cleaning water.",
+      "The ceilings of manufacturing halls should be heat-insulated."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الجدران:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Walls:</span>"
+  },
+  "points": {
+    "ar": [
+      "تكون الجدران مطلية بطلاء مناسب فاتح اللون ملساء سهلة التنظيف.",
+      "يمكن أن تكسى جميع جدران المصنع الداخلية عدا المستودعات بالسيراميك الأملس الخالي من التعرجات ويكون ذو لون فاتح بإرتفاع لا يقل عن (3 م) ويتناسب مع نوعية الإنتاج.",
+      "أن تكون من الطوب العازل للحرارة وغير منفذ او ماص للماء.",
+      "مقاومة للأحماض والقلويات (حسب نوعية المنتج ومواد التنظيف والتعقيم).",
+      "يجب أن تكون الزوايا بين الجدران والأرضيات مقعرة (غير حادة) لتسهيل عملية التنظيف.",
+      "أن تكون خالية من الشقوق والتصدعات."
+    ],
+    "en": [
+      "Walls should be painted with a suitable light-colored, smooth, and easy-to-clean paint.",
+      "All internal walls of the factory, except warehouses, can be covered with smooth, ridge-free ceramic tiles of light color, with a height of no less than 3 meters, suitable for the type of production.",
+      "Walls should be made of heat-insulating bricks that are non-porous and non-water-absorbent.",
+      "Walls should be resistant to acids and alkalis (depending on the type of product and cleaning/disinfection materials).",
+      "The corners between walls and floors should be concave (not sharp) to facilitate cleaning.",
+      "Walls should be free of cracks and fractures."
+    ]
+      }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الأرضيات:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Floors:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب أن تكون الارضيات من مواد غير منفذة للماء وغير ماصة وسهلة التنظيف مثل البلاط أو السيراميك الخشن أو الأبوكسي.",
+      "يمكن أن تكون أرضيات المصنع الداخلية عدا المستودعات من السيراميك الخشن ذو لون فاتح وذات ميل خفيف تجاه فتحات الصرف.",
+      "توفير ميل مناسب لسهولة تصريف المياه إلى المجاري الأرضية بحد أدنى (2%).",
+      "يجب أن تكون الأرضيات مصنوعة من مواد مقاومة للأحماض والقلويات ومواد التنظيف والتعقيم.",
+      "يجب خلو الأرضيات من التشققات وأن تكون سهلة التنظيف.",
+      "أن تكون الأرضيات صلبة مقاومة للأثقال والاهتزازات، وذات سمك مناسب وأن تكون مانعة للانزلاق."
+    ],
+    "en": [
+      "Floors should be made of non-porous, non-absorbent materials that are easy to clean, such as tiles, rough ceramics, or epoxy.",
+      "The internal factory floors, except for warehouses, can be made of rough, light-colored ceramic tiles with a slight slope toward drainage openings.",
+      "Provide an appropriate slope for easy water drainage to floor drains, with a minimum of 2%.",
+      "Floors should be made of materials resistant to acids, alkalis, and cleaning/disinfection agents.",
+      "Floors should be free of cracks and easy to clean.",
+      "Floors should be solid, resistant to heavy loads and vibrations, have appropriate thickness, and be slip-resistant."
+      ]
+      }
+    },
+    {
+
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الأبواب:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Doors:</span>"
+  },
+  "points": {
+    "ar": [
+      "يراعى أن تكون الأبواب مصنوعة من الألمنيوم أو الزجاج غير القابل للكسر بحيث تكون غير منفذة للماء وغير ماصة ذات أسطح ملساء وتغلق ذاتياً بأحكام ومصنعة من مادة مقاومة للصدأ.",
+      "يجب توفير ستائر هوائية أو بلاستيكية على المداخل الرئيسية (الخارجية).",
+      "يجب أن تكون الأبواب المؤدية إلى داخل المصنع مزدوجة (عبارة عن بابين بينها مسافة متر تقريباً) وتفتح إلى الخارج وذلك ضماناً لعدم دخول الحشرات والقوارض أثناء فتحها.",
+      "يجب وجود أعداد كافية من الأبواب بالمنشأة ويجب أن تكون الأبواب الداخلية بالمنشأة من الأنواع ذاتية الإغلاق."
+    ],
+    "en": [
+      "The doors should be made of aluminum or unbreakable glass, ensuring they are water-resistant, non-absorbent, with smooth surfaces, self-closing securely, and made of rust-resistant material.",
+      "Air curtains or plastic strips should be provided at the main (external) entrances.",
+      "The doors leading into the factory should be double (two doors with about a meter space in between) and should open outward to prevent pests and rodents from entering when opened.",
+      "There should be a sufficient number of doors in the facility, and the internal doors should be self-closing."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>النوافذ والفتحات الأخرى:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Windows and Other Openings:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب أن تكون جميع الفتحات في المصنع محكمة الغلق ومغطاة بزجاج غير قابل للكسر، وأن تكون سهلة التنظيف.",
+      "في حال وجود نوافذ في ملحقات المصنع، يجب أن تكون مزودة بأغطية شبكية معدنية سهلة التحريك مصنوعة من مادة غير قابلة للصدأ ومحكمة الإغلاق.",
+      "يجب أن تكون حوافها منحدرة لمنع استخدامها كأرفف، ومنع تراكم الأوساخ.",
+      "يجب أن يصنع الإطار من مادة غير قابلة للصدأ وغير ماصة للماء."
+    ],
+    "en": [
+      "All openings in the facility should be tightly sealed and covered with unbreakable glass, and easy to clean.",
+      "If there are windows in the facility's annexes, they should be equipped with movable metal mesh covers made of rust-resistant material and tightly sealed.",
+      "The edges should be sloped to prevent them from being used as shelves and to prevent dirt accumulation.",
+      "The frame should be made of rust-resistant and non-absorbent material."
+    ]
+      }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الإضاءة:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Lighting:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب أن تكون الإضاءة مناسبة طبيعية أو صناعية بحيث يمكن القيام بعمليات الإنتاج بفعالية ولا ينتج عنها ظلال أو لمعان شديد في جميع أنحاء المنشأة.",
+      "يجب مراعاة توفير حماية مناسبة لوحدات الإضاءة الصناعية بالمنشأة للوقاية من أي مخاطر فيزيائية نتيجة كسرها.",
+      "أن تكون الإضاءة الطبيعية أو الصناعية كافية.",
+      "يجب أن تكون لمبات الإضاءة المثبتة والمعلقة فوق خطوط الإنتاج أو إحدى مراحله من النوع المأمون (وجود أغطية للمبات) لتلافي حدوث أي تلوث للغذاء في حالة تعرضها للكسر.",
+      "استخدام أنواع اللمبات التي لا تتسبب في زيادة درجة حرارة داخل المصنع."
+    ],
+    "en": [
+      "The lighting should be suitable, either natural or artificial, so that production operations can be carried out effectively without causing shadows or excessive glare throughout the facility.",
+      "Proper protection should be provided for industrial lighting units in the facility to prevent physical risks resulting from breakage.",
+      "The natural or artificial lighting should be sufficient.",
+      "The light bulbs installed and suspended above production lines or stages should be of the safe type (with covers) to avoid contamination of food in case of breakage.",
+      "Use light bulbs that do not cause an increase in temperature inside the facility."
+     ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>التهوية والتكييف:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Ventilation and Air Conditioning:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب أن يكون المبنى جيد التهوية لمنع ارتفاع درجة الحرارة داخله وضمان عدم تكاثف الأبخرة أو الغبار.",
+      "يجب أن يكون نظام التهوية والتكييف قادرًا على تنقية الهواء (تركيب عدد من مراوح الشفط والمكيفات تتناسب مع مساحة المنشأة والغرض من كل قسم وتتناسب مع حجم وكمية الإنتاج).",
+      "يجب تغطية فتحات التهوية من الخارج بشبك معدني يمنع دخول الحشرات والقوارض.",
+      "أن تكون التهوية باستخدام نظام دفع الهواء وسحبه لمنع تراكم البخار المكثف والغبار وطرد الهواء الملوث.",
+      "مراعاة ألا يكون اتجاه تيار الهواء من المناطق الملوثة إلى المناطق الأخرى الأقل تلوثًا.",
+      "يجب توفر نظام للتحكم الحراري بالمنشأة لمنع ارتفاع الحرارة التي تؤثر على جودة المنتج."
+    ],
+    "en": [
+      "The building should be well-ventilated to prevent temperature rise inside and ensure that steam or dust does not condense.",
+      "The ventilation and air conditioning system should be capable of purifying the air (installing the appropriate number of exhaust fans and air conditioners that suit the facility's size and the purpose of each section, as well as the volume and quantity of production).",
+      "Ventilation openings should be covered externally with metal mesh to prevent the entry of insects and rodents.",
+      "Ventilation should use an air push-and-pull system to prevent the accumulation of condensed steam and dust and expel contaminated air.",
+      "Care should be taken to ensure that the air flow direction is not from contaminated areas to less contaminated ones.",
+      "A thermal control system should be available in the facility to prevent temperature rise that affects product quality."
+    ]
+      }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>غرف تغيير الملابس / دورات المياه:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Changing Rooms / Restrooms:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب توفير غرف تغيير ملابس العاملين بالمنشآت الغذائية بحيث لا تكون متصلة مباشرة مع منطقة الإنتاج ومجهزة بدواليب معدنية غير قابلة للصدأ لحفظ أغراض العاملين والزي الرسمي الخاص بالعمل.",
+      "يشترط أن تكون استراحات العاملين ودورات المياه معزولة تمامًا بحيث لا تكون متصلة مباشرة مع منطقة الإنتاج.",
+      "يجب أن يتوفر للعاملين حمامات مزودة بالماء الساخن والبارد بعدد كافي ومزودة بمواد التنظيف المناسبة وأن لا تفتح مباشرة إلى أماكن الإنتاج.",
+      "يفضل أن يكون المدخل الرئيسي لدورات المياه مزودًا بباب ذاتي الغلق.",
+      "يجب أن تكون دورات المياه جيدة الإضاءة والتهوية.",
+      "توفير مغاسل للأيدي بعدد كافي في كل مكان يتطلب وجودها فيه وتكون مزودة بالماء الساخن والبارد والصابون السائل وأجهزة التجفيف ويفضل استعمال المناديل الورقية التي تستخدم لمرة واحدة.",
+      "إزالة الملابس الشخصية والاستحمام وارتداء الزي الخاص بالعمل داخل المصنع.",
+      "يفضل استخدام الصنابير التي تعمل ذاتيًا في مغاسل الأيدي.",
+      "يجب أن تكون جميع حاويات النفايات من النوع الذي يفتح بالقدم وتكون أغطيتها محكمة الغلق."
+    ],
+    "en": [
+      "Changing rooms for workers in food facilities should be provided, ensuring they are not directly connected to the production area and are equipped with rust-resistant metal lockers to store personal items and work uniforms.",
+      "Rest areas for workers and restrooms should be completely isolated and not directly connected to the production area.",
+      "There should be sufficient bathrooms for workers, equipped with both hot and cold water, appropriate cleaning materials, and should not open directly into the production areas.",
+      "It is preferred that the main entrance to the restrooms be equipped with a self-closing door.",
+      "Restrooms should be well-lit and ventilated.",
+      "Adequate handwashing sinks should be provided in all necessary locations, equipped with hot and cold water, liquid soap, drying devices, and preferably single-use paper towels.",
+      "Personal clothes should be removed, workers should shower, and wear work uniforms inside the facility.",
+      "Self-operating faucets should be used in handwashing sinks.",
+      "All waste containers should be of the foot-operated type and should have tightly sealed lids."
+      ]
+      }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>منطقة دخول العاملين:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Workers' Entry Area:</span>"
+  },
+  "points": {
+    "ar": [
+      "يفضل أن يكون نظام الطرد في دورات المياه من النوع الآلي.",
+      "يجب أن يتوفر للعاملين أماكن استحمام مزودة بالماء الساخن والبارد بعدد كافي.",
+      "يجب ألا يفتح مدخل العاملين على صالة الإنتاج مباشرة ويتضمن مدخلين بينهما مسافة كافية لوضع التجهيزات الخاصة بمدخل العاملين.",
+      "توفير عدد كافي من مغاسل الأيدي ذات النوع الآلي.",
+      "تزويد مغاسل الأيدي بماء حار وبارد ذاتي التشغيل وصابون سائل لليدين مضاد للبكتريا بدون رائحة.",
+      "تزويد منطقة العاملين بمكان مخصص لأغطية الرأس والفم وقفازات الأيدي والأحذية ومعقمات الأيدي.",
+      "توفير مجففات ورقية ذات الاستخدام لمرة واحدة.",
+      "توفير حاوية نفايات لا تفتح بالأيدي.",
+      "وضع ستارة هوائية أو بلاستيكية على المدخل المؤدي إلى صالة الإنتاج.",
+      "يفضل وضع جهاز خاص للتأكد من أن جميع العاملين قاموا بعملية التنظيف والتعقيم قبل الدخول لصالة الإنتاج."
+    ],
+    "en": [
+      "It is preferred that the flushing system in restrooms be automatic.",
+      "Adequate shower facilities for workers should be provided, with both hot and cold water.",
+      "The workers' entrance should not open directly into the production area and should include two doors with sufficient space in between to accommodate the necessary equipment for the workers' entry.",
+      "A sufficient number of automatic handwashing sinks should be provided.",
+      "Handwashing sinks should be equipped with hot and cold water, self-operating, and antibacterial liquid soap without fragrance.",
+      "The workers' area should include designated spaces for head and face covers, hand gloves, footwear, and hand sanitizers.",
+      "Single-use paper towel dryers should be provided.",
+      "Waste containers that cannot be opened by hand should be provided.",
+      "An air curtain or plastic strip should be placed at the entrance leading to the production area.",
+      "It is preferred to install a device to ensure all workers have performed cleaning and sanitization before entering the production area."
+    ]
+      }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الآلات والأدوات والمعدات:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Machines, Tools, and Equipment:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب أن تكون المعدات بعيدة عن الجدران.",
+      "يجب أن تبعد المعدات المتجاورة عن بعضها البعض.",
+      "عند تركيب الأدوات والمعدات والأجهزة يجب رفعها عن الأرض بمقدار مناسب ليسهل تنظيفها.",
+      "يجب أن تكون الأدوات والمعدات مصنوعة من مواد مقاومة للتآكل وتتحمل الغسيل والتطهير.",
+      "يجب أن تكون سيور المعدات مصنوعة من مادة يسهل تنظيفها وغير ماصة للماء والسوائل.",
+      "أن تكون الأجهزة والأدوات مصممة ومثبتة بطريقة تمنع الضرر الصحي ويمكن تنظيفها وتعقيمها بسهولة."
+    ],
+    "en": [
+      "Equipment should be kept away from walls.",
+      "Adjacent equipment should be spaced apart from each other.",
+      "When installing tools, equipment, and devices, they should be raised off the ground by an appropriate amount to facilitate cleaning.",
+      "Tools and equipment should be made of materials that are resistant to corrosion and capable of withstanding washing and sanitization.",
+      "Conveyor belts should be made of materials that are easy to clean and non-absorbent to water and liquids.",
+      "Devices and tools should be designed and installed in a way that prevents health hazards and allows for easy cleaning and sanitization."
+    ]
+     }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>المختبرات:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Laboratories:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب توفير مختبر قادر على إجراء التحاليل الكيميائية والميكروبية والفيزيائية للمواد الخام الداخلة في التصنيع والمنتجات المصنعة داخل حدود المصنع.",
+      "توفير أجهزة ومعدات مناسبة ومعايرة للمختبر.",
+      "يجب وجود شخص مختص ومؤهل.",
+      "تحليل عينات دورية ممثلة للإنتاج والمعدات والأجهزة والآلات للتأكد من سلامتها ومطابقتها للمواصفات القياسية مع الاحتفاظ بسجلات خاصة بالتحليل."
+    ],
+    "en": [
+      "A laboratory should be provided capable of conducting chemical, microbiological, and physical analyses of raw materials entering the manufacturing process and finished products within the facility.",
+      "Appropriate and calibrated devices and equipment should be available for the laboratory.",
+      "A qualified and specialized person should be present.",
+      "Periodic analysis of representative samples from production, equipment, devices, and machinery should be conducted to ensure their safety and compliance with standard specifications, with analysis records being maintained."
+    ]
+     }
+    },
+    {
+
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>مستودعات التخزين:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Storage Warehouses:</span>"
+  },
+  "points": {
+    "ar": [
+      "أن يكون تصميم المستودع بطريقة محكمة الغلق لمنع دخول الحشرات والقوارض والطيور.",
+      "يجب أن يتم تخزين الأغذية المبردة (أقل من 4°C)، والمجمدة ( -18°C)، والجافة ( 25°C) ويتم تدوينها بشكل دوري في سجلات خاصة.",
+      "يتم تخزين المواد الغذائية بشكل منفصل ومغطى بحيث لا تتعرض للتلوث الخلطي.",
+      "يجب تخزين المواد الأولية (خام + مواد التعبئة والتغليف) بشكل منفصل عن المنتج النهائي.",
+      "يجب أن تكون الأغذية مفصولة عن مواد التعبئة والتغليف عند تخزينها.",
+      "يجب فصل المواد المستخدمة في التنظيف والتطهير في مستودع مستقل.",
+      "يجب أن يتم فحص وفرز المواد الخام في بداية خط التصنيع وفى موقع ملائم بحيث لا تدخل إلى عملية التصنيع إلا المواد النظيفة السليمة.",
+      "غسل المواد الأولية إذا لزم الأمر لإزالة الأتربة والملوثات قبل دخولها خط الإنتاج.",
+      "عند تخزين الأغذية يجب رفعها عن الأرض بما لا يقل عن 20 سم وبعدها عن الجدران بما لا يقل عن 20 سم (مسافة كافية للتهوية والتنظيف)، وألا تصل إلى السقف (يفضل استخدام الطبليات البلاستيكية).",
+      "يجب أن يزود المستودع بالإضاءة والتهوية والتكييف المناسب وأدوات وأجهزة مكافحة الحريق.",
+      "أن تكون جميع أجزاء المستودع والمواد المخزنة نظيفة.",
+      "أن يكون تصميم المستودع لا يسمح بتلوث الهواء.",
+      "يجب إنشاء جميع مستودعات التخزين من مواد غير قابلة للاشتعال وتقاوم الأحمال والحرارة العالية."
+    ],
+    "en": [
+      "The warehouse should be designed to be tightly sealed to prevent the entry of insects, rodents, and birds.",
+      "Frozen (below 4°C), refrigerated ( -18°C), and dry foods (25°C) should be stored and recorded periodically in special logs.",
+      "Food items should be stored separately and covered to prevent cross-contamination.",
+      "Raw materials (raw + packaging materials) should be stored separately from the finished product.",
+      "Food items should be stored separately from packaging materials.",
+      "Cleaning and sanitizing materials should be stored in a separate warehouse.",
+      "Raw materials should be inspected and sorted at the start of the manufacturing line and in a suitable location, ensuring only clean and intact materials enter the manufacturing process.",
+      "Raw materials should be washed, if necessary, to remove dust and contaminants before entering the production line.",
+      "When storing food, it should be raised at least 20 cm off the ground and kept at least 20 cm away from walls (providing sufficient space for ventilation and cleaning), and not reach the ceiling (preferably using plastic pallets).",
+      "The warehouse should be equipped with appropriate lighting, ventilation, air conditioning, and fire-fighting tools and equipment.",
+      "All parts of the warehouse and stored materials should be clean.",
+      "The warehouse design should prevent air contamination.",
+      "All storage warehouses should be constructed from fire-resistant materials that can withstand high loads and temperatures."
+    ]
+      }
+    },
+    {
+"title": {
+    "ar": "<span style='color: green; font-weight: bold;'>مخزن المواد الكيميائية:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Chemical Storage:</span>"
+  },
+  "points": {
+    "ar": [
+      "تخزين المواد الكيميائية في منطقة منفصلة مخصصة لهذا الغرض ومحمية بشكل جيد وعليها البطاقات التعريفية.",
+      "يجب ألا يتم التعامل مع المواد الكيميائية إلا من قبل شخص مختص.",
+      "توفير سجل للمواد الكيميائية يحدد فيه نوعية المواد وخصائصها وطريقة التعامل معها."
+    ],
+    "en": [
+      "Chemical materials should be stored in a separate, designated area that is well-protected and labeled with identification tags.",
+      "Chemicals should only be handled by qualified personnel.",
+      "A chemical log should be provided detailing the type of materials, their properties, and the proper handling methods."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>المياه المستخدمة:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Water Used:</span>"
+  },
+  "points": {
+    "ar": [
+      "توفير مصدر مياه آمن وصحي خاص لمياه الشرب أو المياه المستخدمة، على أن يتم تركيب فلتر مزدوج على الخزانات ومراعاة تغيير الفلاتر دوريًا.",
+      "أن تكون المياه المستخدمة مطابقة للمواصفات القياسية الخليجية الخاصة بمياه الشرب غير المعبأة.",
+      "أن تخضع المياه المستخدمة للاختبارات المعملية المنتظمة مع الاحتفاظ بالنتائج.",
+      "توفير المياه اللازمة من حيث الكمية لتحضير المنتج، والنظافة الشخصية للعمال، ونظافة الموقع.",
+      "أن تكون خزانات المياه مغلقة بإحكام لمنع التلوث وسهلة التنظيف وغير قابلة للصدأ وبعيدة عن مصادر التلوث.",
+      "أن تكون خزانات وأنابيب المياه مصنعة من مواد غير قابلة للتفاعل معها، ومانعة للتسرب، وغير قابلة للصدأ أو تتفاعل أو تؤثر على الماء."
+    ],
+    "en": [
+      "Provide a safe and healthy water source for drinking or other uses, with a dual filter system installed on the tanks and filters replaced regularly.",
+      "The water used should comply with Gulf standard specifications for non-bottled drinking water.",
+      "The water used should undergo regular laboratory testing, with results maintained.",
+      "Ensure sufficient water is available for product preparation, personal hygiene of workers, and site cleanliness.",
+      "Water tanks should be tightly sealed to prevent contamination, easy to clean, rust-proof, and kept away from contamination sources.",
+      "Water tanks and pipes should be made of materials that do not react with the water, are leak-proof, and are resistant to rust or chemical interaction with the water."
+    ]      }
+    },
+    {
+
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>التنظيف والتطهير:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Cleaning and Sanitization:</span>"
+  },
+  "points": {
+    "ar": [
+      "توفير برنامج كامل لتنظيف المعدات والأدوات والمرافق.",
+      "توثيق عمليات التنظيف والتطهير في سجلات خاصة.",
+      "تخصيص لكل منشأة شخص مؤهل للقيام والإشراف على عمليات النظافة داخل المنشأة.",
+      "أن يكون لهذا الشخص مساعدين دائمين ومدربين جيدا على إعادة تركيب معدات التنظيف ومدركين لمدى خطورة التلوث.",
+      "إعطاء المواقع والأجهزة والمواد الحساسة اهتماما خاصا.",
+      "توفير آلات التنظيف والتعقيم المناسبة.",
+      "توفير نظام النظافة (CIP) في الموقع عندما يتطلب ذلك.",
+      "استخدام مياه نظيفة مطابقة للمواصفات القياسية الخليجية لعمليات التنظيف والتطهير والتعقيم.",
+      "تخزين مواد التنظيف في غرف مغلقة لا تستخدم إلا لهذا الغرض.",
+      "تخزين معدات التنظيف في أماكن مخصصة لا تستخدم إلا لهذا الغرض.",
+      "أن تكون جميع المنظفات والمطهرات المستخدمة معتمدة ولديها شهادة تثبت ذلك."
+    ],
+    "en": [
+      "Provide a comprehensive cleaning program for equipment, tools, and facilities.",
+      "Document cleaning and sanitization processes in dedicated records.",
+      "Assign a qualified person to oversee cleaning operations within the facility.",
+      "This person should have well-trained assistants who are skilled in reassembling cleaning equipment and aware of contamination risks.",
+      "Pay special attention to sensitive areas, equipment, and materials.",
+      "Provide appropriate cleaning and sanitization equipment.",
+      "Install a Cleaning In Place (CIP) system on-site when required.",
+      "Use clean water that meets Gulf specifications for cleaning, sanitizing, and disinfecting operations.",
+      "Store cleaning materials in closed rooms designated only for this purpose.",
+      "Store cleaning equipment in designated areas for exclusive use.",
+      "All cleaning and sanitizing agents used should be certified and supported by documentation."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>غرف التبريد والتجميد:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Cold and Freezing Rooms:</span>"
+  },
+  "points": {
+    "ar": [
+      "توفير وحدات تبريد مزودة بالأرفف المناسبة من مواد صحية لا تصدأ مع تزويدها بمقياس حراري خارجي يسهل قراءته.",
+      "أن تكون غرف التبريد والتجميد نظيفة بحيث يكون تصميمها مانع للتلوث.",
+      "أن تكون المواد المصنعة منها غرف التبريد والتجميد نظيفة وسهلة التنظيف.",
+      "أن تكون مساحة غرف التبريد والتجميد كافية بحيث لا تسمح بوجود تكدس.",
+      "أن تكون أبواب غرف التبريد والتجميد محكمة الغلق.",
+      "أن تكون إضاءة غرف التبريد والتجميد مناسبة.",
+      "أن تكون درجة حرارة غرف التبريد بين (1-4) م.",
+      "أن تكون درجة حرارة غرف التجميد (-18) م.",
+      "أن يتوفر نظام إنذار في غرف التبريد والتجميد."
+    ],
+    "en": [
+      "Provide refrigeration units with suitable shelves made from hygienic, rust-resistant materials, equipped with an external thermometer for easy reading.",
+      "Cold and freezing rooms should be clean, with designs that prevent contamination.",
+      "The materials used for the construction of cold and freezing rooms should be clean and easy to clean.",
+      "The size of the cold and freezing rooms should be sufficient to avoid overcrowding.",
+      "The doors of the cold and freezing rooms should be tightly sealed.",
+      "The lighting in cold and freezing rooms should be adequate.",
+      "The temperature of the cold rooms should be between (1-4) °C.",
+      "The temperature of the freezing rooms should be (-18) °C.",
+      "A warning system should be installed in the cold and freezing rooms."
+    ]
+      }
+    },
+    {
+
+
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>المواد الخام:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Raw Materials:</span>"
+  },
+  "points": {
+    "ar": [
+      "أن تخزن المواد الخام بعيداً عن مصادر التلوث والحشرات والقوارض.",
+      "ألا تكون عرضة للفساد.",
+      "أن تكون تحت ظروف تخزين جيدة ورطوبة ودرجة حرارة مناسبة.",
+      "أن تخزن بشكل منفصل عن المنتج النهائي.",
+      "أن تكون مفصولة عن مواد التعبئة والتغليف عند تخزينها.",
+      "أن يتم فحص وفرز المواد الخام في بداية خط التصنيع وفى موقع ملائم بحيث لا تدخل إلى عملية التصنيع إلا المواد النظيفة السليمة.",
+      "أن تكون درجة حرارة غرف التبريد بين (1-4) م.",
+      "أن تكون درجة حرارة غرف التجميد (-18) م."
+    ],
+    "en": [
+      "Raw materials should be stored away from sources of contamination, insects, and rodents.",
+      "They should not be prone to spoilage.",
+      "They should be stored under good conditions with appropriate humidity and temperature.",
+      "They should be stored separately from the final product.",
+      "They should be kept separate from packaging materials during storage.",
+      "Raw materials should be inspected and sorted at the beginning of the production line in a suitable location, ensuring that only clean and sound materials enter the production process.",
+      "The temperature in cold rooms should be between (1-4) °C.",
+      "The temperature in freezing rooms should be (-18) °C."
+    ]      }
+    },
+    {
+
+
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الأسطح الملامسة للغذاء:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Food Contact Surfaces:</span>"
+  },
+  "points": {
+    "ar": [
+      "أن تكون أسطح المعدات الملامسة للمنتج الغذائي من مادة غير قابلة للصدأ وغير سامة لا ينتج عنها رائحة أو طعم غير مقبول وسهلة التنظيف.",
+      "أن تكون أسطح المعدات الملامسة للمنتج الغذائي مقاومة للتآكل وغير قابلة للتفاعل مع المنتج (مناسبة للاستخدام الغذائي) وأن تتحمل الغسيل والتطهير المتكرر وخالية من الحفر والشقوق وقشور الطلاء.",
+      "أن تكون أسطح المعدات ملساء غير ماصة للماء خالية من التشققات ومقاومة للخدش وبدون أطراف وزوايا حادة وسهلة التنظيف.",
+      "يجب إجراء اختبارات المسح لكل الأسطح الملامسة للمنتج كعامل مهم للتأكد من سلامة المصنع وصحته."
+    ],
+    "en": [
+      "The surfaces of equipment in contact with food should be made from rust-resistant, non-toxic materials that do not produce undesirable odors or tastes, and are easy to clean.",
+      "The surfaces of equipment in contact with food should be corrosion-resistant, non-reactive with the product (suitable for food use), able to withstand repeated cleaning and sanitizing, and free from pits, cracks, and peeling paint.",
+      "The surfaces of equipment should be smooth, non-absorbent, free from cracks, scratch-resistant, without sharp edges or corners, and easy to clean.",
+      "Swabbing tests should be conducted on all surfaces in contact with food as an essential measure to ensure the facility's cleanliness and health."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الغسيل وعمليات التحضير:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Washing and Preparation Processes:</span>"
+  },
+  "points": {
+    "ar": [
+      "أن تغسل المواد الأولية إذا لزم الأمر لإزالة الأتربة أو الملوثات الأخرى مع عدم إعادة استعمال الماء المستعمل لهذا الغرض إلا بعد معاملته لجعله بالحالة التي لا تسبب أي خطر على الصحة العامة.",
+      "أن يتم توقيت عمليات التحضير وعمليات التعبئة بصورة سريعة ومتتابعة تحت الظروف التي تمنع تعرض المنتج للتلوث والفساد والتلف أو نمو الأحياء الدقيقة المسببة للأمراض أو التسمم مع سحب عينات دورية من خط الإنتاج ومن المنتج النهائي بطريقة عشوائية للتأكد من سلامة الانتاج."
+    ],
+    "en": [
+      "Raw materials should be washed when necessary to remove dirt or other contaminants, and the water used for this purpose should not be reused unless treated to a condition that poses no risk to public health.",
+      "Preparation and filling processes should be timed to proceed quickly and continuously under conditions that prevent contamination, spoilage, damage, or the growth of microorganisms that could cause diseases or poisoning, with random sampling taken from the production line and finished product to ensure production safety."
+    ]
+      }
+    },
+    {
+
+"title": {
+    "ar": "<span style='color: green; font-weight: bold;'>صالات الإنتاج:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Production Halls:</span>"
+  },
+  "points": {
+    "ar": [
+      "استخدام طرق تكنولوجية حديثة لعملية التصنيع وعدم وجود تقاطع في خطوط الانتاج لمنع التلوث الخلطي.",
+      "أن تتم عمليات التصنيع والتعبئة آليًا ما أمكن أو باستخدام الأجهزة والآلات والمعدات التي تحول دون حصول أي تلوث للمنتج النهائي، ولا يسمح باستعمال الأيدي في لمس الغذاء إلا في حالات الضرورة القصوى لإنجاز العمل، ويجب استخدام أدوات بدلاً من لمس الطعام مثل القفازات والملاعق والشوك والسكاكين.",
+      "يجب إجراء جميع عمليات الإنتاج تحت ظروف تمنع احتمال حدوث التلوث أو التلف التدريجي أو تكوين أحياء مجهرية ممرضة أو مسببة للتلف.",
+      "أن تتوفر وسائل غسل الأيدي في كل أقسام وصالات الإنتاج والتصنيع بما فيها الماء الساخن والبارد الجاري والصابون ووسائل صحية فعالة لتنشيف الأيدي.",
+      "أن تصنع سيور الآلات المستخدمة في مصانع الأغذية من مادة مناسبة يسهل تنظيفها ولا تسمح بامتصاص سوائل الأغذية.",
+      "أن تكون الأجهزة والأدوات مصممة ومثبتة بطريقة تمنع الضرر الصحي وتسمح بسهولة تنظيفها وتعقيمها.",
+      "توفر مصدر مياه آمن في صالات الإنتاج لغرض الغسيل والتنظيف.",
+      "توفير عدد كافٍ من مغاسل الأيدي ذات النوع الآلي داخل صالة الإنتاج."
+    ],
+    "en": [
+      "Use modern technological methods for the manufacturing process and ensure no intersection in production lines to prevent cross-contamination.",
+      "Manufacturing and packaging processes should be automated whenever possible, using devices and equipment that prevent contamination of the final product. Hands should only touch food in extreme cases and tools such as gloves, spoons, forks, and knives should be used instead.",
+      "All production processes must be conducted under conditions that prevent contamination, gradual spoilage, or the formation of harmful microorganisms or spoilage-causing agents.",
+      "Hand-washing facilities should be available in all sections of the production and manufacturing halls, including hot and cold running water, soap, and effective sanitary hand-drying facilities.",
+      "Conveyor belts used in food factories should be made of materials that are easy to clean and do not absorb food liquids.",
+      "Machines and tools should be designed and installed in a way that prevents health hazards and allows easy cleaning and disinfection.",
+      "Provide a safe water source in production halls for washing and cleaning purposes.",
+      "Ensure an adequate number of automated hand-washing stations within the production hall."
+    ]
+      }
+    },
+    {
+
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الفرز والفحص:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Sorting and Inspection:</span>"
+  },
+  "points": {
+    "ar": [
+      "توفر مساحة كافية لغرض الفحص والفرز.",
+      "ألا يكون مكان الفحص والفرز عرضة للتلوث.",
+      "أن تفحص وتفرز المواد الخام في أول خط التصنيع، وفي موقع ملائم بحيث لا تدخل إلى عملية التصنيع إلا المواد النظيفة والسليمة.",
+      "ألا تقبل المادة الخام إذا كانت تحتوي أصلاً على نواتج تحلل سامة أو مواد غريبة لا يمكن إزالتها إلى الحد المقبول بواسطة عمليات الفرز أو التجهيز أو التصنيع العادية."
+    ],
+    "en": [
+      "Provide sufficient space for sorting and inspection.",
+      "Ensure the inspection and sorting area is free from contamination.",
+      "Raw materials should be inspected and sorted at the first stage of the production line, in an appropriate location, ensuring only clean and safe materials enter the manufacturing process.",
+      "Raw material should not be accepted if it contains toxic degradation products or foreign materials that cannot be removed to acceptable levels by normal sorting, preparation, or processing procedures."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>التعبئة ونوع مادة التعبئة:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Packaging and Packaging Material:</span>"
+  },
+  "points": {
+    "ar": [
+      "أن تضمن طرق الحفظ حماية المنتج من التلوث وعوامل الفساد والعدوى وكل ما يشكل خطراً على الصحة العامة.",
+      "ألا تحتوي مواد التعبئة على أي مواد تؤدي إلى إحداث تغيرات عضوية حسية غير مرغوب فيها وأن تكون مواد التعبئة غير ماصة، وعديمة الطعم والرائحة وألا تسمح بتفاعلها مع المادة الغذائية.",
+      "مواد التعبئة غير المستعملة يجب تخزينها في موقع بعيد عن منطقة الإنتاج ويجب حمايتها من الغبار والتلوث.",
+      "يجب أن تكون مواد التعبئة المستخدمة في الإنتاج والتغليف من مصدر مصرح ومعتمد."
+    ],
+    "en": [
+      "The preservation methods should ensure protection of the product from contamination, spoilage, infection, and any other factors that pose a risk to public health.",
+      "Packaging materials should not contain any substances that cause undesirable sensory changes, and they should be non-absorbent, odorless, and tasteless, and should not react with the food product.",
+      "Unused packaging materials should be stored away from the production area and protected from dust and contamination.",
+      "Packaging materials used in production and packaging should come from an authorized and certified source."
+    ]
+      }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>البيانات الإيضاحية:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Labeling Information:</span>"
+  },
+  "points": {
+    "ar": [
+      "أن تكون مطابقة لجميع ما نصت عليه المواصفة القياسية الخاصة ببطاقة المواد الغذائية المعبأة.",
+      "يجب أن تتضمن البيانات الإيضاحية للبطاقة الغذائية (اسم المنتج - العلامة التجارية - اسم المصنع - الوزن الصافي - تاريخ الإنتاج والانتهاء - رقم التشغيلة - ترقيم المنتج).",
+      "الالتزام باللوائح الفنية والمواصفات والتعاميم ذات العلاقة بالمنتج الغذائي.",
+      "يجب أن تطبع البيانات بطريقة واضحة وصعبة التغير والإزالة."
+    ],
+    "en": [
+      "It must comply with the relevant food packaging label standards.",
+      "The label information should include: product name, brand, manufacturer name, net weight, production and expiry dates, batch number, and product numbering.",
+      "Compliance with technical regulations, standards, and guidelines relevant to the food product is required.",
+      "The label information should be printed clearly and be difficult to alter or remove."
+    ]
+      }
+    },
+    {
+
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>المنتج:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Product:</span>"
+  },
+  "points": {
+    "ar": [
+      "أن تكون المنتجات مطابقة للمواصفات القياسية الخاصة بنوع المنتج.",
+      "أن يتم تخزينه بطريقة سليمة.",
+      "أن يتم ترقيم المنتج النهائي ليسهل تتبعه.",
+      "يجب تسجيل المنتج واعتماد البطاقات الغذائية."
+    ],
+    "en": [
+      "The products must comply with the standard specifications for the product type.",
+      "They must be stored properly.",
+      "The final product should be numbered for easy traceability.",
+      "The product must be registered, and the food labels should be approved."
+    ]
+      }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>وسائل نقل الأغذية داخل منطقة الإنتاج والمستودعات:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Food Transport within Production Areas and Warehouses:</span>"
+  },
+  "points": {
+    "ar": [
+      "استخدام رافعة شوكية تعمل على الكهرباء أو الغاز.",
+      "ألا يصدر عن وسائل النقل المستخدمة داخل صالات الإنتاج والمستودعات أي حرارة عالية أو روائح.",
+      "أن تكون جميع وسائل النقل المستخدمة نظيفة ويسهل تنظيفها بشكل فعال."
+    ],
+    "en": [
+      "Use forklifts powered by electricity or gas.",
+      "No high heat or odors should be emitted by the transport vehicles used within production areas and warehouses.",
+      "All transport equipment used should be clean and easy to clean effectively."
+    ]
+      }
+    },
+    {
+
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الطرق والساحات داخل المصنع:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Roads and Yards within the Factory:</span>"
+  },
+  "points": {
+    "ar": [
+      "أن يصمم الموقع بحيث يمنع وجود تقاطع في خطوط الإنتاج والتقاطع بين المواد الغذائية وغير الغذائية.",
+      "يجب أن تكون الطرق والساحات داخل حدود المنشأة ذات أسطح قوية ومناسبة لسير العربات والشاحنات مع توفر وسائل التصريف والتنظيف.",
+      "يجب أن تكون هناك مناطق مخصصة لسير الرافعات ووسائل النقل داخل صالات الإنتاج."
+    ],
+    "en": [
+      "The site should be designed to prevent intersections in production lines and between food and non-food materials.",
+      "The roads and yards within the facility should have strong surfaces suitable for vehicle and truck movement, with appropriate drainage and cleaning systems.",
+      "There should be designated areas for forklifts and transport vehicles within the production halls."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>التخلص من المخلفات:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Waste Disposal:</span>"
+  },
+  "points": {
+    "ar": [
+      "أن تكون حاويات النفايات محكمة الغلق وتفتح وتغلق بالقدم مع استخدام أكياس لجمع النفايات.",
+      "ضرورة وجود نظامين منفصلين للصرف أحدهما يتصل بدورات المياه والمراحيض والآخر للصرف العام للمنشأة (مصارف الأرضيات، أجهزة التصنيع، المخلفات السائلة).",
+      "توفير الميول المناسب لتصريف المياه.",
+      "تزويد المجاري الأرضية بمحابس للروائح، وتهوية مناسبة، وأغطية محكمة الإغلاق.",
+      "ألا تمر خطوط الصرف عبر أو فوق مناطق الإنتاج.",
+      "النفايات سريعة التلف تحفظ في غرف منفصلة مبردة.",
+      "يتم التخلص من النفايات بانتظام كي لا تكون مصدراٌ للآفات والحشرات.",
+      "تنظيف وتطهير الحاويات وخطوط المجاري بانتظام.",
+      "توفير وحدة معالجة أولية لمياه الصرف بعيدة عن منطقة التصنيع.",
+      "تصريف الفضلات والمياه إلى شبكة الصرف الصحي أو إلى حفرة امتصاص تكون بعيدة عن الخزانات الأرضية لمياه الشرب.",
+      "ألا يكون هناك فتحات لغرف التفتيش بأماكن العمل."
+    ],
+    "en": [
+      "Waste containers should be tightly sealed and foot-operated with the use of bags for waste collection.",
+      "There should be two separate drainage systems: one for toilets and restrooms and the other for the general facility drainage (floor drains, manufacturing devices, liquid waste).",
+      "Provide proper slopes for water drainage.",
+      "Floor drains should be equipped with odor traps, proper ventilation, and tightly sealed covers.",
+      "Drain lines should not pass through or above production areas.",
+      "Perishable waste should be stored in separate refrigerated rooms.",
+      "Waste should be disposed of regularly to avoid becoming a source of pests and insects.",
+      "Containers and drain lines should be cleaned and disinfected regularly.",
+      "Provide a primary treatment unit for wastewater located away from the manufacturing area.",
+      "Waste and water should be directed to the sewage system or an absorption pit located far from the drinking water storage tanks.",
+      "There should be no inspection chamber openings in work areas."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>الوضع الصحي للعاملين:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Workers' Health Status:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب حصول جميع العاملين داخل المصنع على شهادات صحية سارية الصلاحية.",
+      "يتم استبعاد العمال المصابين بجروح ملوثة أو قروح أو أي أمراض معدية لحين شفائهم.",
+      "يجب توفر الإسعافات الأولية بالمصنع التي تتناسب مع الأخطار المحتملة (مطهرات - ضمادات - أدوية للجروح والحروق...الخ)، وأن يتواجد بالموقع جانب من العمال مدرباً ومؤهلاً في أعمال الإسعافات الأولية."
+    ],
+    "en": [
+      "All workers inside the factory must have valid health certificates.",
+      "Workers with infected wounds, ulcers, or contagious diseases must be excluded until they recover.",
+      "First aid should be available in the factory, tailored to potential hazards (disinfectants, bandages, wound and burn medications, etc.), with a portion of the workers trained and qualified in first aid procedures."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>نظافة العاملين:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Workers' Hygiene:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب أن يقوم العاملون بتطهير أيديهم قبل وبعد كل عملية تصنيع.",
+      "المحافظة على نظافة الزي الرسمي للعمل وإجراءات تغطية الرأس والأيدي والأرجل.",
+      "يجب تقليم الأظافر وعدم لبس الحلي أثناء العمل، والاستحمام قبل الدخول للعمل.",
+      "يفضل أن يكون هناك برنامج منتظم ودوري لاختبارات المسحات الطبية للعاملين."
+    ],
+    "en": [
+      "Workers must sanitize their hands before and after every production process.",
+      "Maintain cleanliness of the work uniform, and ensure proper coverage of the head, hands, and feet.",
+      "Fingernails should be trimmed, jewelry should not be worn during work, and workers should shower before entering the work area.",
+      "It is preferred to have a regular and periodic program for medical swab tests for workers."
+    ]
+      }
+    },
+    {
+
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>ملابس العاملين:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Workers' Clothing:</span>"
+  },
+  "points": {
+    "ar": [
+      "إزالة الملابس الشخصية قبل الدخول إلى منطقة العمل.",
+      "يفضل استخدام زي موحد للعاملين بحسب طبيعة العمل مثل عمال الإنتاج والصيانة... الخ مع ضرورة الالتزام بارتداء الملابس الواقية المخصصة حسب طبيعة العمل ودواعي الاستخدام.",
+      "المحافظة على نظافة زي العمل طيلة ساعات العمل."
+    ],
+    "en": [
+      "Remove personal clothing before entering the work area.",
+      "It is preferred to use a uniform for workers according to the nature of the work, such as production and maintenance workers, etc., with a requirement to wear protective clothing suitable for the nature of the work and its uses.",
+      "Ensure the cleanliness of work clothing throughout working hours."
+    ]
+      }
+    },
+    {
+
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>ملصقات الإرشادات الصحية:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Health Guidance Labels:</span>"
+  },
+  "points": {
+    "ar": [
+      "وضع ملصقات إرشادية صحية لمنع الأكل والشرب والتدخين والبصق وتنظيف الأنف ومضغ اللبان واستعمال الرواح العطرية... إلخ أثناء عمليات الإنتاج.",
+      "يفضل أن تكون الملصقات مكتوبة باللغتين العربية والإنجليزية أو اللغات المرتبطة بجنسيات العمالة ليسهل فهم العبارات المكتوبة في الملصقات.",
+      "وضع ملصقات إرشادية لطريقة غسل اليدين وتطهيرها وطريقة ارتداء غطاء الرأس والفم والقفازات.",
+      "وضع ملصقات إرشادية للاشتراطات الصحية داخل المنشأة."
+    ],
+    "en": [
+      "Place health guidance labels to prevent eating, drinking, smoking, spitting, nose cleaning, chewing gum, and using perfumes, etc., during production processes.",
+      "It is preferred that the labels be written in both Arabic and English, or languages related to the workers' nationalities, to ensure understanding of the written messages.",
+      "Place guidance labels for proper hand washing and sanitizing procedures, as well as for wearing head and mouth covers and gloves.",
+      "Place health guidance labels for the sanitary requirements within the facility."
+    ]
+      }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>التدريب:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Training:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب أن يتوفر لدى المنشأة برنامج تدريبي شامل لجميع العاملين.",
+      "توفير نظام لتعريف وتثقيف العاملين بالشروط الصحية الواجب توافرها في المنشأة الغذائية ومصادر التلوث وسبل تفاديها.",
+      "إقامة برامج ودورات للعاملين بشكل دوري (ندوات، أفلام، محاضرات، ملصقات، وغيرها) توضح أهمية سلامة تداول الغذاء.",
+      "توفير كادر مؤهل للقيام بعملية التدريب سواء من داخل المنشأة أو خارجها."
+    ],
+    "en": [
+      "The facility must have a comprehensive training program for all employees.",
+      "Provide a system to educate and inform employees about the necessary health conditions in the food establishment, sources of contamination, and ways to avoid them.",
+      "Conduct regular programs and courses for employees (seminars, films, lectures, posters, etc.) highlighting the importance of food safety.",
+      "Provide qualified staff to conduct training either from within or outside the facility."
+    ]
+      }
+    },
+    {
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>حفظ السجلات:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Record Keeping:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب أن تقوم المنشأة بحفظ وتوثيق جميع السجلات ذات العلاقة والتي تتعلق بتصنيع المنتجات الغذائية داخل المصنع من بداية استلام مواد الخام إلى توزيع المنتج النهائي ووصوله للمستهلك.",
+      "وضع سجلات بجميع الفحوصات الطبية لجميع العاملين.",
+      "وضع سجلات لجميع الدورات التدريبية للعاملين.",
+      "وضع سجلات لمكافحة الحشرات والقوارض."
+    ],
+    "en": [
+      "The facility must maintain and document all relevant records related to the production of food products within the plant, from receiving raw materials to distributing the final product to the consumer.",
+      "Maintain records of all medical examinations for employees.",
+      "Keep records of all employee training sessions.",
+      "Keep records for pest and rodent control."
+    ]
+      }
+    },
+    {
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>إدارة الجودة:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Quality Management:</span>"
+  },
+  "points": {
+    "ar": [
+      "يفضل أن يكون لدى المنشأة نظام مراقبة وجودة.",
+      "يفضل أن تكون إدارة الجودة مسئولة عن المراقبة الذاتية والتفتيش والتدقيق الخاص بالمنشأة.",
+      "يجب أن يتوفر لدى موظفي إدارة الجودة المؤهلات التعليمية المناسبة.",
+      "يفضل أن تطبق المنشأة أحد أنظمة سلامة الغذاء."
+    ],
+    "en": [
+      "It is preferable for the facility to have a monitoring and quality control system.",
+      "It is preferable for the quality management to be responsible for self-monitoring, inspection, and auditing within the facility.",
+      "Quality management staff should have the appropriate educational qualifications.",
+      "The facility should implement a food safety management system."
+    ]
+      }
+    },
+    {
+
+ "title": {
+    "ar": "<span style='color: green; font-weight: bold;'>المكاتب الإدارية:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Administrative Offices:</span>"
+  },
+  "points": {
+    "ar": [
+      "يجب أن تكون المكاتب الإدارية مستقلة عن باقي أجزاء المصنع.",
+      "عدم وجود مدخل من الأقسام الإدارية على صالات الإنتاج.",
+      "يمنع استخدام المباني الإدارية كسكن للعاملين بالمصنع."
+    ],
+    "en": [
+      "The administrative offices should be separate from the rest of the factory areas.",
+      "There should be no direct access from administrative departments to production halls.",
+      "The administrative buildings should not be used as living quarters for factory workers."
+    ]
     }
-  ],
+  }
+ ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   "Tandoor Bakery": [  // هنا يجب أن يكون هذا الاسم مطابق تمامًا لما هو في الـ <option>
@@ -3680,7 +4592,7 @@ en: [
                 <option value="" disabled selected data-ar="اختر المخطط" data-en="Choose the Plan">اختر المخطط</option>
                 <option value="https://zmohd1987.github.io/FCSM/Restaurant.png" data-ar="مخطط استرشادي مطعم" data-en="Restaurant Guideline Plan">مخطط استرشادي مطعم</option>
                 <option value="https://zmohd1987.github.io/FCSM/GROSERY.png" data-ar="مخطط استرشادي بقالة" data-en="Grocery Guideline Plan">مخطط استرشادي بقالة</option>
-                <option value="https://zmohd1987.github.io/FCSM/SCafeteria.png" data-ar="مخطط استرشادي كافتيريا" data-en="Cafeteria Guideline Plan">مخطط استرشادي كافتيريا</option>
+                <option value="https://zmohd1987.github.io/FCSM/Cafeteria.png" data-ar="مخطط استرشادي كافتيريا" data-en="Cafeteria Guideline Plan">مخطط استرشادي كافتيريا</option>
                 <option value="https://zmohd1987.github.io/FCSM/supermarket.png" data-ar="مخطط استرشادي سوبر ماركت" data-en="Supermarket Guideline Plan">مخطط استرشادي سوبر ماركت</option>
                 <option value="https://zmohd1987.github.io/FCSM/TandoorBakery.png" data-ar="مخطط استرشادي مخبز تنور" data-en="Bakery Guideline Plan">مخطط استرشادي مخبز تنور</option>
                 <option value="https://zmohd1987.github.io/FCSM/FoodRetail.png" data-ar="مخطط استرشادي بيع المواد الغذائية بالتجزئة" data-en="Food Retail Guideline Plan">مخطط استرشادي بيع المواد الغذائية بالتجزئة</option>
