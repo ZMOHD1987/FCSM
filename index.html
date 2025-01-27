@@ -140,8 +140,7 @@
         .social-icons i:hover {
             color: #6b5e40;
         }
-
-        .fees-and-spaces {
+       .fees-and-spaces {
             margin-top: 20px;
             padding: 15px;
             background-color: #f9f8f7;
@@ -150,6 +149,37 @@
             display: none;
             font-size: 1rem;
         }
+
+
+         .fees-and-spaces {
+            max-width: 800px;
+            margin: auto;
+        }
+        #spacesContent h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        #spacesContent ul {
+            list-style: none;
+            padding: 0;
+        }
+        #spacesContent li {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        #spacesContent li .key {
+            font-weight: bold;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        #spacesContent li span {
+            flex: 1;
+        }
+
 
         .button {
             display: inline-block;
@@ -219,11 +249,27 @@
             padding: 10px 20px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+ul {
+    list-style: none; /* إزالة النقاط من القائمة */
+    padding: 0;
+    margin: 0;
+}
+
+li.definition {
+    display: flex;
+    flex-wrap: wrap; /* السماح بتوزيع المحتوى داخل العنصر */
+    margin-bottom: 10px;
+}
+
+.key {
+    font-weight: bold;
+    margin-right: 10px;
+    flex: 1; /* يسمح للمصطلح بأن يأخذ مساحة كافية */
+}
+
+.text {
+    flex: 3; /* يسمح للنص التوضيحي بأخذ مساحة أكبر */
+}
 
         .definition {
             margin-bottom: 10px;
@@ -481,8 +527,10 @@ html[lang="en"] .contact-info {
     </p>
 </div>
 
-<div class="section-title" onclick="toggleSection('definitionSection', 'ar')" data-ar="5. المصطلحات والتعريفات" data-en="5. Definitions">5. المصطلحات والتعريفات</div>
-<div id="definitionSection" class="section-content">
+    <div class="section-title" onclick="toggleSection('definitionSection', 'ar')" data-ar="5. المصطلحات والتعريفات" data-en="5. Definitions">
+        5. المصطلحات والتعريفات
+    </div>
+    <div id="definitionSection" class="section-content">
 
     <ul>
         <li class="definition">
@@ -579,6 +627,43 @@ html[lang="en"] .contact-info {
         </ul>
     </div>
 
+    <style>
+        /* تحسين التصميم العام */
+        ul {
+            list-style: none; /* إزالة النقاط الافتراضية */
+            padding: 0;
+        }
+
+        .definition, .requirement {
+            display: flex;
+            flex-wrap: wrap; /* السماح بالتفاف النصوص الطويلة */
+            align-items: flex-start; /* العنوان والنص يبدأان من الأعلى */
+            margin-bottom: 10px;
+        }
+
+        .key {
+            font-weight: bold;
+            margin-right: 5px;
+            flex-shrink: 0; /* يضمن بقاء العنوان ثابتًا بجانب النص */
+            white-space: nowrap; /* منع كسر النص */
+        }
+
+        .text {
+            flex: 1; /* السماح للنصوص باحتلال المساحة المتبقية */
+            white-space: normal; /* النصوص يمكن أن تلتف */
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .section-content {
+            margin-top: 15px;
+        }
+    </style>
 
 
 <div class="section-title" onclick="toggleSection('infrastructureSection', 'ar')" data-ar="6. اشتراطات البنية التحتية" data-en="6. Infrastructure Requirements">6. اشتراطات البنية التحتية</div>
@@ -644,24 +729,27 @@ html[lang="en"] .contact-info {
 <li class="requirement">
     <span class="key" data-ar="6.1.2.1 الجدران والفواصل:" data-en="6.1.2.1 Walls and Partitions:">6.1.2.1 الجدران والفواصل | Walls and Partitions:</span>
     <ol style="list-style-type: disc;">
-        <li data-ar="ينبغي أن تكون الأسطح الأساسية مثل الجدران، الفواصل من مواد مقاومة للسوائل وسهلة التنظيف والتطهير لضمان القضاء على أي مصدر محتمل للتلوث." 
-            data-en="Essential surfaces such as walls, partitions should be made of liquid-resistant materials that are easy to clean and disinfect to eliminate any potential sources of contamination.">
-            ينبغي أن تكون الأسطح الأساسية مثل الجدران، الفواصل، والأرضيات من مواد مقاومة للسوائل وسهلة التنظيف والتطهير لضمان القضاء على أي مصدر محتمل للتلوث.
+        <li data-ar="ينبغي أن تكون الجدران وتشمل الفواصل والحواجز الجدارية بين مناطق التحضير المختلفة مناسبة لجميع الأنشطة الغذائية التي تتم في المنشأة الغذائية. ينصح باستخدام مواد الجدران المشار إليها في الجدول رقم (1)، بشرط أن يكون الارتفاع لا يقل عن (2.5 متر) من الأرض، مع إمكانية طلاء الجزء العلوي بطلاء فاتح غير منفذ للسوائل ويتحمل الغسيل المتكرر." 
+            data-en="Walls, including partitions and barriers between different preparation areas, should be suitable for all food-related activities in the establishment. It is recommended to use the wall materials mentioned in Table (1), ensuring a height of at least (2.5 meters) from the floor, with the upper part paintable using light, non-absorbent, and washable materials.">
+        </li>
+        <li data-ar="ينبغي أن تكون الأسطح الأساسية مثل الجدران والفواصل مصنوعة من مواد مقاومة للسوائل وسهلة التنظيف والتطهير لضمان القضاء على أي مصدر محتمل للتلوث." 
+            data-en="Essential surfaces such as walls and partitions should be made of liquid-resistant materials that are easy to clean and disinfect to eliminate any potential sources of contamination.">
         </li>
         <li data-ar="يجب أن تتمتع الأسطح بالجدران والفواصل بملمس أملس وسطح مستوٍ حتى الارتفاع المناسب للعمليات التشغيلية لتسهيل عمليات التنظيف والصيانة." 
             data-en="Wall and partition surfaces should be smooth and level to an appropriate height for operational processes to facilitate cleaning and maintenance.">
-            يجب أن تتمتع الأسطح بالجدران والفواصل بملمس أملس وسطح مستوٍ حتى الارتفاع المناسب للعمليات التشغيلية لتسهيل عمليات التنظيف والصيانة.
         </li>
         <li data-ar="يجب أن تكون الجدران والفواصل في المناطق التي تتعرض للرطوبة أو الأبخرة مصنوعة من مواد مقاومة للرطوبة ومقاومة للبكتيريا لضمان سهولة التنظيف ومنع نمو الميكروبات." 
             data-en="Walls and partitions in areas exposed to moisture or vapors should be made of moisture-resistant and bacteria-resistant materials to ensure ease of cleaning and prevent microbial growth.">
-            يجب أن تكون الجدران والفواصل في المناطق التي تتعرض للرطوبة أو الأبخرة مصنوعة من مواد مقاومة للرطوبة ومقاومة للبكتيريا لضمان سهولة التنظيف ومنع نمو الميكروبات.
         </li>
         <li data-ar="ينبغي أن تكون الفواصل قابلة للإزالة أو ذات تصميم يسمح بسهولة صيانتها وتنظيفها بشكل دوري." 
             data-en="Partitions should be removable or designed to allow for easy maintenance and regular cleaning.">
-            ينبغي أن تكون الفواصل قابلة للإزالة أو ذات تصميم يسمح بسهولة صيانتها وتنظيفها بشكل دوري.
+        </li>
+        <li data-ar="ينبغي أن تكون الوصلات بين الجدران نفسها، وتشمل الفواصل والحواجز الجدارية، وبين الجدران والأرضيات، مقوسة (بدون زوايا) لتسهيل التنظيف. يمكن استخدام المواد المشار إليها في الجداول (1)، (2)، و(3) لتشكيل الأقواس في مناطق الالتقاء." 
+            data-en="Joints between walls, including partitions and barriers, as well as between walls and floors, should be curved (without corners) to facilitate cleaning. Materials mentioned in Tables (1), (2), and (3) can be used to create these curves at intersections.">
         </li>
     </ol>
 </li>
+
 
 <h2 data-ar="جدول رقم 1: أمثلة لبعض المواد المسموح بها للجدران والفواصل" 
     data-en="Table 1: Examples of Permissible Wall and Partition Materials" 
@@ -778,32 +866,34 @@ html[lang="en"] .contact-info {
 <li class="requirement">
     <span class="key" data-ar="6.1.2.2 الأرضيات:" data-en="6.1.2.2 Floors:">6.1.2.2 الأرضيات:</span>
     <ol style="list-style-type: disc;">
-        <li data-ar="ينبغي أن تكون الأرضيات في مناطق العمل التي لا تتعرض في العادة إلى الرطوبة متينة، غير ماصة للماء، سهلة التنظيف، وتمنع الانزلاق." 
-            data-en="Floors in areas not typically exposed to moisture should be durable, non-porous, easy to clean, and slip-resistant.">
-            ينبغي أن تكون الأرضيات في مناطق العمل التي لا تتعرض في العادة إلى الرطوبة متينة، غير ماصة للماء، سهلة التنظيف، وتمنع الانزلاق.
+<li data-ar="يجب أن تكون الأرضيات مصنوعة من مواد غير سامة، مقاومة للماء والانزلاق، وغير ماصة، وقابلة للغسل. ينبغي أن تكون الأرضيات في مناطق الطهي والتجهيز من مواد غير منفذة للسوائل، مع توفير ميل كافٍ لتصريف السوائل إلى مصارف أرضية محكمة الإغلاق، وضمان وجود عدد كافٍ من فتحات التصريف." 
+    data-en="Floors must be made of non-toxic, water-resistant, non-slip, and non-absorbent washable materials. In cooking and preparation areas, floors must be made of non-permeable materials with sufficient slope for liquid drainage to sealed floor drains, ensuring an adequate number of drain openings.">
         </li>
-        <li data-ar="ينبغي أن تكون مناطق الالتقاء بين الأرضيات والجدران مقوسة لتسهيل التنظيف وتجنب تراكم الأوساخ." 
-            data-en="The junctions between floors and walls should be curved to facilitate cleaning and prevent dirt accumulation.">
-            ينبغي أن تكون مناطق الالتقاء بين الأرضيات والجدران مقوسة لتسهيل التنظيف وتجنب تراكم الأوساخ.
+        <li data-ar="يجب أن تكون الزوايا سواء بين الجدران نفسها أو بين الجدران والأرضيات أو بين الجدران والسقوف محكمة الإغلاق ومغطاة لتسهيل عمليات التنظيف." 
+            data-en="Corners between walls, between walls and floors, and between walls and ceilings must be sealed and covered to facilitate cleaning.">
         </li>
-        <li data-ar="يجب أن تكون الأرضيات في مناطق الطهي والتجهيز من المواد المسموح بها (مادة غير منفذة للسوائل) وبها ميل كافي لتصريف السوائل إلى مجاري أرضية، مع التأكد من وجود عدد كاف من فتحات التصريف." 
-            data-en="Floors in cooking and preparation areas should be made of permissible materials (non-permeable to liquids) and have sufficient slope for liquid drainage to floor drains, with enough drain openings.">
-            يجب أن تكون الأرضيات في مناطق الطهي والتجهيز من المواد المسموح بها (مادة غير منفذة للسوائل) وبها ميل كافي لتصريف السوائل إلى مجاري أرضية، مع التأكد من وجود عدد كاف من فتحات التصريف.
+        <li data-ar="ينبغي أن تكون الأرضيات مناسبة لجميع الأنشطة الغذائية التي تتم في المنشأة الغذائية، وينصح باستخدام مواد بناء الأرضيات المشار إليها في الجدول رقم (2)." 
+            data-en="Floors should be suitable for all food-related activities in the establishment, and it is recommended to use flooring materials mentioned in Table (2).">
+
         </li>
         <li data-ar="يجب أن تتحمل الأرضيات المواد الكيميائية التي قد تستخدم في التنظيف، بالإضافة إلى قدرتها على تحمل درجات الحرارة العالية في مناطق الطهي." 
-            data-en="Floors should be resistant to cleaning chemicals and capable of withstanding high temperatures in cooking areas.">
-            يجب أن تتحمل الأرضيات المواد الكيميائية التي قد تستخدم في التنظيف، بالإضافة إلى قدرتها على تحمل درجات الحرارة العالية في مناطق الطهي.
+            data-en="Floors must be resistant to cleaning chemicals and capable of withstanding high temperatures in cooking areas.">
         </li>
         <li data-ar="يجب حماية الأرضيات من الخدوش أو التآكل الذي قد يؤدي إلى تراكم الملوثات." 
-            data-en="Floors should be protected from scratches or wear that may lead to contamination buildup.">
-            يجب حماية الأرضيات من الخدوش أو التآكل الذي قد يؤدي إلى تراكم الملوثات.
+            data-en="Floors must be protected from scratches or wear that may lead to contamination buildup.">
         </li>
         <li data-ar="يجب أن تكون الأرضيات سهلة الصيانة وتتمتع بقدرة على مقاومة الأضرار الناتجة عن الأحمال الثقيلة." 
             data-en="Floors should be easy to maintain and capable of resisting damage from heavy loads.">
-            يجب أن تكون الأرضيات سهلة الصيانة وتتمتع بقدرة على مقاومة الأضرار الناتجة عن الأحمال الثقيلة.
+        </li>
+        <li data-ar="ينبغي أن تكون الأرضيات في المناطق الرطبة التي تتعرض في العادة إلى غسيل متكرر ذات لون فاتح وبها ميل كافٍ لتصريف السوائل إلى مجاري أرضية ذات حجم كافٍ، وينصح بأن يكون الانحدار بحد أدنى 2%." 
+            data-en="Floors in wet areas that are frequently washed should be of light color, have adequate slope for liquid drainage to appropriately sized floor drains, with a minimum gradient of 2%.">
+        </li>
+<li data-ar="في حال استخدام أغطية أرضيات من مطاط أو بلاستيك أو مواد مماثلة، ينبغي أن تكون سهلة الإزالة والتنظيف والتعقيم، ومصنوعة من مادة غير ماصة. ولا يجوز استخدام المواد الماصة مثل الورق المقوى (الكرتون)، أوراق الصحف، الإسفنج، أو المطاط الذي يمتص المياه." 
+    data-en="If using floor coverings made of rubber, plastic, or similar materials, they must be easy to remove, clean, and disinfect, and made from non-absorbent material. Absorbent materials such as cardboard, newspapers, sponges, or water-absorbing rubber must not be used.">
         </li>
     </ol>
 </li>
+
 <h2 data-ar="جدول رقم 2 يتناول أمثلة على بعض أنواع الأرضيات المسموح بها" 
     data-en="Table 2 shows examples of permissible flooring types" 
     style="text-align:center;">
@@ -915,29 +1005,34 @@ html[lang="en"] .contact-info {
 <!-- الأسطح العلوية (الأسقف) -->
 <li class="requirement">
     <span class="key" data-ar="6.1.2.3 الأسطح العلوية (الأسقف):" data-en="6.1.2.3 Overhead Surfaces (Ceilings):">6.1.2.3 الأسطح العلوية (الأسقف) | Overhead Surfaces (Ceilings):</span>
-    <p data-ar="يجب أن تكون الأسطح العلوية مثل الأسقف والتركيبات مقاومة للكسر والتآكل، ويجب أن تتم معالجتها بحيث تحد من تراكم الأوساخ والرطوبة التي قد تؤثر على البيئة." data-en="Overhead surfaces such as ceilings and fixtures must be break-resistant and treated to minimize dirt and moisture accumulation, which could impact the environment."></p>
+    <p data-ar="يجب أن تكون الأسطح العلوية مثل الأسقف والتركيبات مقاومة للكسر والتآكل، ويجب أن تتم معالجتها بحيث تحد من تراكم الأوساخ والرطوبة التي قد تؤثر على البيئة." 
+       data-en="Overhead surfaces such as ceilings and fixtures must be break-resistant and treated to minimize dirt and moisture accumulation, which could impact the environment."></p>
     <ol style="list-style-type: disc;">
-        <li data-ar="ينبغي أن تكون الأسطح العلوية في المناطق التي تحتوي على أنظمة تهوية أو تكييفات مقاومة للرطوبة لتجنب تراكم الميكروبات." 
-            data-en="Overhead surfaces in areas with ventilation or air conditioning systems should be moisture-resistant to prevent microbial buildup.">
-            ينبغي أن تكون الأسطح العلوية في المناطق التي تحتوي على أنظمة تهوية أو تكييفات مقاومة للرطوبة لتجنب تراكم الميكروبات.
-        </li>
-        <li data-ar="يجب أن تكون الأسطح العلوية سهلة الصيانة والتنظيف لضمان بيئة صحية وآمنة للمعدات والعاملين." 
-            data-en="Overhead surfaces should be easy to maintain and clean to ensure a healthy and safe environment for equipment and workers.">
-            يجب أن تكون الأسطح العلوية سهلة الصيانة والتنظيف لضمان بيئة صحية وآمنة للمعدات والعاملين.
-        </li>
-        <li data-ar="يجب أن تتم معالجة الأسطح العلوية بمواد مقاومة للأوساخ والروائح الكريهة لتجنب التأثيرات السلبية على جودة الهواء." 
-            data-en="Overhead surfaces should be treated with materials resistant to dirt and unpleasant odors to avoid negative impacts on air quality.">
-            يجب أن تتم معالجة الأسطح العلوية بمواد مقاومة للأوساخ والروائح الكريهة لتجنب التأثيرات السلبية على جودة الهواء.
-        </li>
-        <li data-ar="يجب أن تكون الأسطح العلوية على ارتفاع مناسب بحيث لا تتعرض للتلف نتيجة للأنشطة اليومية وتكون قابلة للوصول أثناء أعمال الصيانة." 
-            data-en="Overhead surfaces should be at an appropriate height to avoid damage from daily activities and be accessible during maintenance tasks.">
-            يجب أن تكون الأسطح العلوية على ارتفاع مناسب بحيث لا تتعرض للتلف نتيجة للأنشطة اليومية وتكون قابلة للوصول أثناء أعمال الصيانة.
-        </li>
-        <li data-ar="يجب أن تكون الأسطح العلوية مغطاة بمواد غير مسامية، وسهلة المسح، ومقاومة للبكتيريا للحفاظ على النظافة." 
-            data-en="Overhead surfaces should be covered with non-porous, easy-to-wipe, and bacteria-resistant materials to maintain cleanliness.">
-            يجب أن تكون الأسطح العلوية مغطاة بمواد غير مسامية، وسهلة المسح، ومقاومة للبكتيريا للحفاظ على النظافة.
-        </li>
+        <li data-ar="يجب أن تكون الأسقف مناسبة لجميع الأنشطة الغذائية التي تتم في المنشأة الغذائية، ويفضل استخدام أحد مواد بناء الجدران المشار إليها في الجدول رقم (3)." 
+            data-en="Ceilings must be suitable for all food-related activities carried out in the establishment, and it is recommended to use one of the wall construction materials listed in Table (3)."></li>
+        <li data-ar="في حالة طلاء الأسقف، يجب أن يكون الطلاء بلون فاتح وسهل التنظيف." 
+            data-en="If ceilings are painted, the paint must be light-colored and easy to clean."></li>
+        <li data-ar="يجب تصميم الأسقف بحيث لا توجد أي توصيلات صحية أعلى الأسقف في مناطق التحضير والإنتاج أو يتم حمايتها بوسائل حماية معتمدة." 
+            data-en="Ceilings must be designed to ensure no sanitary connections above preparation and production areas, or these connections must be protected by approved measures."></li>
+        <li data-ar="يجب أن تكون الأسقف أو تجهيزاتها العلوية مصنوعة من مواد لا تشكل مصدرًا محتملاً للتلوث، وسهلة التنظيف، ومصقولة لمنع تراكم الأوساخ." 
+            data-en="Ceilings or their overhead fittings must be made of materials that do not pose a potential contamination source, are easy to clean, and are polished to prevent dirt accumulation."></li>
+        <li data-ar="يجب أن تكون الأسقف خالية من الفواصل والوصلات في مناطق تحضير الغذاء، وسهلة التنظيف." 
+            data-en="Ceilings must be free of gaps and joints in food preparation areas and easy to clean."></li>
+        <li data-ar="يُنصح بأن تكون الأسقف عازلة للحرارة ومقاومة للحريق، خاصة في المطابخ وغرف الغذاء." 
+            data-en="It is recommended that ceilings be heat-insulated and fire-resistant, especially in kitchens and food rooms."></li>
+        <li data-ar="ينبغي أن تكون الأسطح المستعارة المستخدمة في مناطق تداول الأغذية ملساء، وسهلة التنظيف، وغير ماصة للسوائل." 
+            data-en="Suspended ceilings used in food handling areas should be smooth, easy to clean, and non-absorbent."></li>
+        <li data-ar="يجب توفير ممر للوصول إلى الفراغ الموجود فوق السقف المستعار لتسهيل التنظيف والصيانة." 
+            data-en="An access pathway should be provided to the space above the suspended ceiling for cleaning and maintenance."></li>
+        <li data-ar="يجب أن تكون الأسقف ذات ميول مناسب لمنع تراكم وتسرب المياه أو الأوساخ." 
+            data-en="Ceilings must have an appropriate slope to prevent the accumulation and leakage of water or dirt."></li>
+        <li data-ar="يجب اتخاذ التدابير الكافية لمنع تكثيف الأبخرة ونمو العفن غير المرغوب." 
+            data-en="Adequate measures must be taken to prevent vapor condensation and undesired mold growth."></li>
+        <li data-ar="يجب أن تكون مناطق الالتقاء بين الأسقف والجدران مقوسة باستخدام مواد مذكورة في الجداول (1)، (2)، و(3) لتسهيل التنظيف." 
+            data-en="The intersections between ceilings and walls must be curved using materials listed in Tables (1), (2), and (3) to facilitate cleaning."></li>
     </ol>
+
+
 </li>
 <h2 data-ar="جدول رقم 3 يتناول أمثلة على بعض أنواع المواد المسموح بها للأسقف" 
     data-en="Table 3 shows examples of permissible ceiling materials" 
@@ -1026,72 +1121,50 @@ html[lang="en"] .contact-info {
 
 
 
-<h3>المراجع | References:</h3>
-<ul>
-    <li><a href="https://www.iso.org/iso-22000-food-safety-management.html" target="_blank" style="color:green;">ISO 22000:2018 - أنظمة إدارة سلامة الغذاء | ISO 22000:2018 - Food Safety Management Systems</a></li>
-    <li><a href="https://www.raiderpainting.com/blog/fda-approved-floor-coatings-for-food-processing-facilities/" target="_blank" style="color:green;">FDA Approved Floor Coatings for Food Processing Facilities | Raider Painting</a></li>
-    <li><a href="https://californiacustomcoatings.com/usda-safety-requirements-and-epoxy-flooring/" target="_blank" style="color:green;">USDA Safety Requirements and Epoxy Flooring | California Custom Coatings</a></li>
-    <li><a href="https://www.fao.org/4/w8088e/w8088e04.htm" target="_blank" style="color:green;">Food Safety and Quality | FAO</a></li>
-    <li><a href="https://www.codexalimentarius.org" target="_blank" style="color:green;">Codex Alimentarius</a></li>
-</ul>
 
 
-<!-- أماكن التخزين -->
+
 <li class="requirement">
     <span class="key" data-ar="6.1.2.4 أماكن التخزين:" data-en="6.1.2.4 Storage:">6.1.2.4 أماكن التخزين | Storage:</span>
-    <p data-ar="ينبغي توفير مرافق كافية وكذلك منفصلة عند اللزوم للتخزين الآمن والصحي للمنتجات الغذائية والمكونات الغذائية، ومواد التعبئة، والمواد الكيميائية غير الغذائية بما يشمل مواد التنظيف، ومواد التشحيم، والوقود." 
-       data-en="Adequate and separate facilities must be provided, when necessary, for the safe and hygienic storage of food products, food ingredients, packaging materials, and non-food chemicals, including cleaning agents, lubricants, and fuels."></p>
-    <ol style="list-style-type: disc;">
-        <li data-ar="يجب أن يسمح التخزين بفصل الأغذية الخام عن الأغذية المطهية أو الأغذية المسببة لحساسية عن الأغذية غير المسببة لحساسية." 
-            data-en="Storage must allow for the separation of raw foods from cooked foods or allergenic foods from non-allergenic foods.">
-            يجب أن يسمح التخزين بفصل الأغذية الخام عن الأغذية المطهية أو الأغذية المسببة لحساسية عن الأغذية غير المسببة لحساسية.
-        </li>
-        <li data-ar="ينبغي تصميم المرافق وتشييدها على نحو يكفل تيسير الصيانة والتنظيف الكافيين." 
-            data-en="Facilities should be designed and constructed to facilitate adequate maintenance and cleaning.">
-            ينبغي تصميم المرافق وتشييدها على نحو يكفل تيسير الصيانة والتنظيف الكافيين.
-        </li>
-        <li data-ar="يجب تجنب دخول الآفات وإيوائها في مناطق التخزين." 
-            data-en="Storage areas must prevent the entry and harboring of pests.">
-            يجب تجنب دخول الآفات وإيوائها في مناطق التخزين.
-        </li>
-        <li data-ar="يجب حماية الأغذية بفعالية من التلوث بما يشمل انتقال مسببات الحساسية أثناء التخزين." 
-            data-en="Food must be effectively protected from contamination, including the transfer of allergens during storage.">
-            يجب حماية الأغذية بفعالية من التلوث بما يشمل انتقال مسببات الحساسية أثناء التخزين.
-        </li>
-        <li data-ar="ينبغي التحكم في درجات الحرارة والرطوبة لتقليل تدهور الأغذية عند الضرورة." 
-            data-en="Temperature and humidity should be controlled to minimize food degradation when necessary.">
-            ينبغي التحكم في درجات الحرارة والرطوبة لتقليل تدهور الأغذية عند الضرورة.
-        </li>
-        <li data-ar="يجب توفير مرافق تخزين منفصلة وآمنة لمواد التنظيف والمواد الخطرة." 
-            data-en="Separate and secure storage facilities must be provided for cleaning materials and hazardous substances.">
-            يجب توفير مرافق تخزين منفصلة وآمنة لمواد التنظيف والمواد الخطرة.
-        </li>
-        <li data-ar="يجب أن تكون المعدات الخاصة بالتخزين مقاومة للصدأ وسهلة التنظيف." 
-            data-en="Storage equipment must be rust-resistant and easy to clean.">
-            يجب أن تكون المعدات الخاصة بالتخزين مقاومة للصدأ وسهلة التنظيف.
-        </li>
-        <li data-ar="ينبغي أن يتم تخزين المواد الغذائية في ظروف تضمن الحفاظ على جودتها وسلامتها: التخزين الجاف بين 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل، مع الالتزام بمتطلبات التخزين لكل نوع من المواد." 
-            data-en="Food items should be stored under conditions that ensure their quality and safety: dry storage at 15-25°C, cold storage between 1-4°C, and frozen storage at -18°C or lower, adhering to the storage requirements for each type of material.">
-            ينبغي أن يتم تخزين المواد الغذائية في ظروف تضمن الحفاظ على جودتها وسلامتها: التخزين الجاف بين 15-25 درجة مئوية، التخزين البارد بين 1-4 درجات مئوية، والتخزين المجمد عند -18 درجة مئوية أو أقل، مع الالتزام بمتطلبات التخزين لكل نوع من المواد.
-        </li>
-        <li data-ar="يجب توفير معدات الحفظ المناسبة مثل الثلاجات والفريزر للأطعمة القابلة للتلف، وأجهزة التسخين (أو معدات الحفظ الساخن) للمرافق التي تقوم بالطهي، لضمان الحفاظ على الطعام في درجات حرارة آمنة." 
-            data-en="Appropriate storage equipment, such as refrigerators and freezers for perishable foods, and heating devices (or hot storage equipment) for facilities that engage in cooking, must be provided to ensure food is maintained at safe temperatures.">
-            يجب توفير معدات الحفظ المناسبة مثل الثلاجات والفريزر للأطعمة القابلة للتلف، وأجهزة التسخين (أو معدات الحفظ الساخن) للمرافق التي تقوم بالطهي، لضمان الحفاظ على الطعام في درجات حرارة آمنة.
-        </li>
-        <li data-ar="يجب أن تكون معدات الحفظ الباردة (مثل الثلاجات) قادرة على الحفاظ على درجة الحرارة المناسبة للأطعمة، ويجب فحصها بانتظام لضمان عملها بشكل سليم." 
-            data-en="Cold storage equipment (such as refrigerators) must be able to maintain the appropriate temperature for food, and should be regularly checked to ensure proper functioning.">
-            يجب أن تكون معدات الحفظ الباردة (مثل الثلاجات) قادرة على الحفاظ على درجة الحرارة المناسبة للأطعمة، ويجب فحصها بانتظام لضمان عملها بشكل سليم.
-        </li>
-        <li data-ar="يجب أن تكون معدات الحفظ الساخنة (مثل أجهزة التسخين) إلزامية في المنشآت التي تقوم بالطهي لضمان الحفاظ على درجة الحرارة المناسبة للأطعمة المطهية." 
-            data-en="Hot storage equipment (such as heating devices) is mandatory in establishments that engage in cooking to ensure hot foods are maintained at the appropriate temperature.">
-            يجب أن تكون معدات الحفظ الساخنة (مثل أجهزة التسخين) إلزامية في المنشآت التي تقوم بالطهي لضمان الحفاظ على درجة الحرارة المناسبة للأطعمة المطهية.
-        </li>
-        <li data-ar="يجب توفير سجل للرقابة على درجات الحرارة في جميع مناطق التخزين البارد والساخن لضمان مراقبة مستمرة." 
-            data-en="A temperature monitoring record should be provided for all cold and hot storage areas to ensure continuous monitoring.">
-            يجب توفير سجل للرقابة على درجات الحرارة في جميع مناطق التخزين البارد والساخن لضمان مراقبة مستمرة.
-        </li>
-    </ol>
+    <p data-ar="يجب أن تكون ظروف تخزين المواد الخام وجميع مكونات الغذاء في المنشأة الغذائية ملائمة لمنع التلوث والفساد. يتم توفير عدد وحجم كافٍ من المرافق المناسبة، بما في ذلك تلك المستخدمة في وسائل نقل وتوزيع الأغذية. يجب أن تكون الأسطح الداخلية لهذه المرافق سهلة التنظيف، مقاومة للصدأ وغير سامة، وقادرة على الحفاظ على درجات الحرارة والرطوبة اللازمة لضمان سلامة المواد الغذائية. في حال عدم توفر غرف مخصصة للتخزين، يمكن استخدام ثلاجات أو خزائن أو صناديق مصنوعة من مواد سهلة الصيانة وسهلة التنظيف." 
+        data-en="Storage conditions for raw materials and all food ingredients in food establishments must be suitable to prevent contamination and spoilage. Adequate and appropriately sized storage facilities must be provided, including those used for food transportation and distribution. The interior surfaces of these facilities must be easy to clean, rust-resistant, non-toxic, and capable of maintaining the required temperature and humidity to ensure food safety. If dedicated storage rooms are unavailable, refrigerators, cabinets, or boxes made from easy-to-clean, maintainable materials can be used.">
+    </p>
 </li>
+
+<ol style="list-style-type: disc;">
+    <li data-ar="يجب أن يكون تصميم المستودع محكماً لمنع دخول الحشرات والقوارض والطيور، مع توفير الحماية الكاملة من التلوث البيئي." 
+        data-en="The warehouse must be tightly sealed to prevent the entry of insects, rodents, and birds, providing full protection against environmental contamination.">
+    </li>
+    <li data-ar="يجب تخزين الأغذية المبردة عند درجة حرارة أقل من 4°م، والمجمدة عند -18°م، والجافة عند 25°م، مع تسجيل درجات الحرارة دورياً في سجلات خاصة." 
+        data-en="Refrigerated foods must be stored below 4°C, frozen foods at -18°C, and dry foods at 25°C, with temperatures recorded periodically in dedicated logs.">
+    </li>
+    <li data-ar="يتم تخزين المواد الغذائية بشكل منفصل ومغطى لمنع التلوث الخلطي وضمان الحفاظ على الجودة." 
+        data-en="Food items must be stored separately and covered to prevent cross-contamination and ensure quality preservation.">
+    </li>
+    <li data-ar="يجب فصل المواد الخام (مثل المواد الأولية ومواد التعبئة والتغليف) عن المنتج النهائي أثناء التخزين." 
+        data-en="Raw materials ( primary materials and packaging materials) must be stored separately from the finished product.">
+    </li>
+    <li data-ar="يجب تخزين المواد المستخدمة في التنظيف والتطهير في مستودع مستقل تماماً عن المواد الغذائية." 
+        data-en="Cleaning and disinfection materials must be stored in a separate warehouse entirely away from food items.">
+    </li>
+    <li data-ar="يجب رفع المواد الغذائية عن الأرض بمقدار لا يقل عن 20 سم وعن الجدران بمسافة 20 سم لتوفير التهوية والتنظيف المناسبين، وألا تصل المواد إلى السقف." 
+        data-en="Food items must be raised at least 20 cm off the ground and 20 cm away from walls to ensure proper ventilation and cleaning, and they should not reach the ceiling.">
+    </li>
+     <li data-ar="يجب تزويد المستودع بالإضاءة، التهوية، التكييف المناسب، وأدوات وأجهزة مكافحة الحريق." 
+        data-en="The warehouse must be equipped with adequate lighting, ventilation, air conditioning, and fire-fighting tools and equipment.">
+    </li>
+    <li data-ar="يجب أن يمنع تصميم المستودع تلوث الهواء الداخلي، مع ضمان تهوية مناسبة." 
+        data-en="The warehouse design must prevent indoor air contamination, ensuring adequate ventilation.">
+    </li>
+    <li data-ar="يجب أن تكون مواد إنشاء المستودع غير قابلة للاشتعال ومقاومة للأحمال والحرارة العالية، لضمان السلامة." 
+        data-en="Warehouse construction materials must be non-flammable and resistant to high loads and temperatures to ensure safety.">
+    </li>
+<li data-ar="يمكن استخدام المواد بالجداول (1، 2، و3) في تصميم الجدران والأرضيات والأسقف كما يجب الالتزام."
+    data-en="Materials in tables (1, 2, and 3) can be used in the design of walls, floors, and ceilings, and compliance must be ensured.">
+</li>
+
+</ol>
+
 
 <!-- طابق الميزانين والدرج -->
 <li class="requirement">
@@ -1414,7 +1487,7 @@ html[lang="en"] .contact-info {
     <!-- 4. إمدادات المياه -->
     <span class="key" data-ar="6.2.4 إمدادات المياه:" data-en="6.2.4 Water Supply:">6.2.4 إمدادات المياه | Water Supply:</span>
     <ol style="list-style-type: disc;">
-        <li data-ar="يجب توفير إمدادات كافية من المياه الصالحة للشرب مع مرافق مناسبة لتخزينها وتوزيعها والتحكم في درجة حرارتها في جميع الأوقات." 
+        <li data-ar="يجب توفير إمدادات كافية من المياه الصالحة للشرب مع مرافق مناسبة لتخزينها وتوزيعها والتحكم في درجة حرارتها في جميع الأوقات وان تكون مطابقة للمواصفات الخليجية." 
             data-en="Adequate supplies of potable water should be provided with appropriate facilities for storage, distribution, and temperature control at all times."></li>
         <li data-ar="يجب أن تكون إمدادات المياه الصالحة للشرب مفصولة عن شبكات ومرافق المياه غير الصالحة للشرب." 
             data-en="Potable water supplies must be separated from non-potable water systems and facilities."></li>
@@ -1428,9 +1501,13 @@ html[lang="en"] .contact-info {
             data-en="The steam used in direct contact with food must be free from any health hazards or potential sources of food contamination."></li>
         <li data-ar="يجب أن لا تكون المياه المستخدمة لتبريد عبوات الغذاء محكمة الإغلاق مصدرا لتلوث الغذاء، وذلك عند إجراء عمليات المعاملة الحرارية للعبوات." 
             data-en="Water used for cooling sealed food containers must not be a source of food contamination, especially when conducting thermal processing operations for the containers."></li>
-
+        <li data-ar="يجب أن تكون خزانات المياه مغلقة بإحكام لمنع التلوث وسهلة التنظيف وغير قابلة للصدأ وبعيدة عن مصادر التلوث." 
+            data-en="Water tanks must be tightly sealed to prevent contamination, easy to clean, non-corrosive, and kept away from sources of pollution."></li>
+        <li data-ar="يجب أن تكون خزانات وأنابيب المياه مصنعة من مواد غير قابلة للتفاعل معها، ومانعة للتسرب، وغير قابلة للصدأ أو تتفاعل أو تؤثر على الماء." 
+            data-en="Water tanks and pipes must be made from materials that are non-reactive, leak-proof, non-corrosive, and do not affect the water quality."></li>
     </ol>
 </li>
+
 
 <li class="requirement">
     <!-- 5. الصرف الصحي -->
@@ -1457,24 +1534,34 @@ html[lang="en"] .contact-info {
             data-en="The grease traps should be properly designed to effectively capture fats and grease without affecting water flow."></li>
         <li data-ar="يجب صيانة وتنظيف مصائد الشحوم بانتظام لضمان عملها بكفاءة وفعالية. يجب التأكد من التعامل مع الشركات المعتمدة من بلدية مدينة الشارقة فقط لتلبية المعايير المطلوبة." 
             data-en="Grease traps must be cleaned and maintained regularly to ensure efficient and effective operation. Only certified companies by Sharjah Municipality should be engaged to meet the required standards."></li>
-    </ol>
+</ol>
     <p><a href="https://zmohd1987.github.io/FCSM/Greasetrap.png" target="_blank" data-ar="رابط لصور وتصنيف مصائد الشحوم المعتمدة من بلدية الشارقة" data-en="Link to the types and classifications of grease traps certified by Sharjah Municipality"><strong>رابط لصور وتصنيف مصائد الشحوم المعتمدة من بلدية الشارقة</strong></a></p>
 </li>
 
+</ol>
+   <p><a href="https://maps.app.goo.gl/BHx5npqSdkKHVr6S8" target="_blank" data-ar="مكان تقديم الخدمة" data-en="Place of service provision"> <strong>رابط خرائط جوجل</strong></a></p>
+</li>
+
+
+
 <li class="requirement">
-    <!-- 7. مرافق النظافة الشخصية والمراحيض -->
+    <!-- 6.2.7 مرافق النظافة الشخصية والمراحيض -->
     <span class="key" data-ar="6.2.7 مرافق النظافة الشخصية والمراحيض:" data-en="6.2.7 Personal Hygiene and Toilet Facilities:">6.2.7 مرافق النظافة الشخصية والمراحيض | Personal Hygiene and Toilet Facilities:</span>
     <ol style="list-style-type: disc;">
-        <li data-ar="ينبغي توفير ما يكفي من مرافق الغسل والمراحيض للحفاظ على النظافة الشخصية وتجنب تلوث الغذاء." 
-            data-en="Sufficient handwashing and toilet facilities should be provided to maintain personal hygiene and prevent food contamination."></li>
-        <li data-ar="يجب أن تحتوي هذه المرافق على صابون (ويفضل أن يكون سائل) ومياه ساخنة وباردة إذا لزم الأمر." 
+        <li data-ar="يجب توفير عدد كافٍ من مرافق الغسل والمراحيض للحفاظ على النظافة الشخصية وتجنب تلوث الغذاء، مع الالتزام بحد أدنى حمام واحد لكل 15 عاملًا." 
+            data-en="A sufficient number of handwashing and toilet facilities must be provided to maintain personal hygiene and prevent food contamination, with a minimum of one toilet for every 15 workers."></li>
+         <li data-ar="يجب فصل الحمامات عن مناطق تحضير الطعام بممرات عازلة أو أبواب مزدوجة، مع تفضيل تصميمها في مواقع يسهل الوصول إليها للعاملين دون الحاجة إلى المرور بمناطق إعداد الطعام." 
+          data-en="Toilets must be separated from food preparation areas by buffer corridors or double doors, preferably located in easily accessible areas for staff without passing through food preparation zones."></li>
+
+        <li data-ar="يجب أن تحتوي هذه المرافق على صابون (ويفضل أن يكون سائلًا) ومياه ساخنة وباردة إذا لزم الأمر." 
             data-en="These facilities should include soap (preferably liquid soap) and both hot and cold water when required."></li>
         <li data-ar="ينبغي توفير أحواض غسل الأيدي المصممة بطريقة صحية مناسبة، ومن المثالي أن تكون مزودة بصنابير تعمل بدون استخدام الأيدي." 
             data-en="Handwashing sinks should be designed in a hygienic manner, ideally with hands-free faucets."></li>
-        <li data-ar="ينبغي عدم استخدام أحواض غسل الأيدي لغسل الأغذية أو الأواني." 
+        <li data-ar="يجب عدم استخدام أحواض غسل الأيدي لغسل الأغذية أو الأواني." 
             data-en="Handwashing sinks should not be used for washing food or utensils."></li>
     </ol>
 </li>
+
 <li class="requirement">
     <!-- 6.2.8 أدوات التنظيف والتطهير -->
     <span class="key" data-ar="6.2.8 أدوات التنظيف والتطهير:" data-en="6.2.8 Cleaning and Sanitizing Tools:">6.2.8 أدوات التنظيف والتطهير | Cleaning and Sanitizing Tools:</span>
@@ -1511,7 +1598,7 @@ html[lang="en"] .contact-info {
 
 <li class="requirement">
     <!-- 9. المخارج أو الفتحات التي تؤدي إلى خارج المنشأة -->
-    <span class="key" data-ar="6.2.10 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:" data-en="6.2.10 Exits or Openings:">6.2.9 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة | Exits or Openings:</span>
+    <span class="key" data-ar="6.2.10 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة:" data-en="6.2.10 Exits or Openings:">6.2.10 المخارج أو الفتحات التي تؤدي إلى خارج المنشأة | Exits or Openings:</span>
     <ol style="list-style-type: disc;">
         <li data-ar="يجب حماية الفتحات التي تؤدي إلى خارج المنشأة الغذائية من دخول الآفات بوسائل مناسبة مثل شبك الحماية، أو تثبيت ستائر هواء مصممة بشكل جيد." 
             data-en="Exits or openings leading outside the food establishment must be protected from pest entry with appropriate means such as protective screens or well-designed air curtains."></li>
@@ -1521,6 +1608,20 @@ html[lang="en"] .contact-info {
             data-en="Exits should be designed for ease of closing and regular maintenance."></li>
     </ol>
 </li>
+<li class="requirement">
+    <span class="key" data-ar="6.2.11 الأبواب:" data-en="6.2.11 Doors:">6.2.11 الأبواب | Doors:</span>
+    <ol style="list-style-type: disc;">
+        <li data-ar="يجب أن تكون الأبواب مصنوعة من الألمنيوم أو الزجاج غير القابل للكسر، بحيث تكون غير منفذة للماء وغير ماصة، ذات أسطح ملساء، وتغلق ذاتيًا بإحكام، ومصنعة من مواد مقاومة للصدأ."
+            data-en="Doors should be made of aluminum or shatterproof glass, ensuring they are waterproof, non-absorbent, smooth-surfaced, self-closing tightly, and made of rust-resistant materials."></li>
+        <li data-ar="يجب توفير ستائر هوائية أو بلاستيكية على المداخل الرئيسية (الخارجية) لمنع دخول الحشرات والآفات."
+            data-en="Air or plastic curtains should be provided at the main (external) entrances to prevent the entry of pests and insects."></li>
+        <li data-ar="الأبواب المؤدية إلى داخل المنشأة يجب أن تكون مزدوجة (عبارة عن بابين مع مسافة تقريباً متر بينهما) وتفتح إلى الخارج لضمان عدم دخول الحشرات والقوارض عند فتحها."
+            data-en="Doors leading into the establishment should be double (consisting of two doors with approximately a meter gap between them) and open outward to prevent pests and rodents from entering when opened."></li>
+        <li data-ar="يجب أن يتوفر عدد كافٍ من الأبواب في المنشأة، ويجب أن تكون الأبواب الداخلية من الأنواع ذاتية الإغلاق."
+            data-en="A sufficient number of doors must be available in the establishment, and internal doors should be of the self-closing type."></li>
+    </ol>
+</li>
+
 
 <li class="requirement">
     <!-- 10. التخلص من النفايات -->
@@ -1552,8 +1653,8 @@ html[lang="en"] .contact-info {
     <ol style="list-style-type: disc;">
         <li data-ar="يجب توفير معدات وأدوات مصنوعة من مواد آمنة ومناسبة لا تؤثر على سلامة الغذاء، ومقاومة للكسر والتشقق والانبعاج والانحناء، كما ينبغي أن تكون المعدات قابلة للتحريك والفك، مع إمكانية صيانتها وتنظيفها وتعقيمها بسهولة." 
             data-en="Equipment and tools must be made from safe and suitable materials that do not affect food safety, and must be resistant to breakage, cracking, denting, and bending. Additionally, the equipment should be movable and dismantlable, with the ability for easy maintenance, cleaning, and sanitization."></li>
-        <li data-ar="أما المعدات الثابتة فيجب أن تكون مناطق اتصالها مع الأرضيات والجدران والمعدات المجاورة محكمة الإغلاق، وأن تكون موضوعة على مسافات مناسبة تسمح بالتنظيف تحتها وحولها." 
-            data-en="For fixed equipment, its contact areas with floors, walls, and adjacent equipment should be sealed properly, and it should be placed at appropriate distances to allow cleaning underneath and around it."></li>
+        <li data-ar=" المعدات الثابتة فيجب أن تكون مناطق اتصالها مع الأرضيات والجدران والمعدات المجاورة محكمة الإغلاق، وأن تكون موضوعة على مسافات مناسبة تسمح بالتنظيف تحتها وحولها." 
+            data-en="fixed equipment, its contact areas with floors, walls, and adjacent equipment should be sealed properly, and it should be placed at appropriate distances to allow cleaning underneath and around it."></li>
         <li data-ar="يجب ترتيب المعدات بطريقة تمنع التلوث المتبادل بين المواد الخام والجاهزة." 
             data-en="Equipment must be arranged in a way that prevents cross-contamination between raw and ready-to-eat food."></li>
         <li data-ar="يجب تنظيم أماكن التجهيز بحيث تُترك مسافة لا تقل عن متر واحد بين الأدوات والمعدات الجانبية والمركزية، لتجنب التكدس وضمان سهولة الحركة وانسيابيتها للعاملين." 
@@ -1570,6 +1671,30 @@ html[lang="en"] .contact-info {
             data-en="Equipment that comes into contact with food should be regularly sanitized using approved and suitable materials to ensure health safety."></li>
     </ol>
 </li>
+<li class="requirement">
+    <span class="key" data-ar="6.3.1 الأسطح الملامسة للغذاء:" data-en="6.3.1 Food Contact Surfaces:">6.3.1 الأسطح الملامسة للغذاء | Food Contact Surfaces:</span>
+    <ol style="list-style-type: disc;">
+        <li data-ar="يجب أن تكون أسطح المعدات والأدوات الملامسة للغذاء مصنوعة من مواد مقاومة للصدأ وغير سامة، ولا تسبب روائح أو طعوم غير مرغوب فيها، وسهلة التنظيف."
+            data-en="The surfaces of equipment and tools in contact with food should be made of rust-resistant, non-toxic materials that do not produce undesirable odors or tastes, and should be easy to clean."></li>
+        <li data-ar="يجب أن تكون أسطح المعدات والأدوات مقاومة للتآكل وغير قابلة للتفاعل مع المنتجات، ومناسبة للاستخدام في المنشآت الغذائية، قادرة على تحمل الغسيل والتطهير المتكرر، وخالية من الحفر والشقوق أو الطلاء المتقشر."
+            data-en="The surfaces of equipment and tools should be corrosion-resistant, non-reactive with products, suitable for use in food establishments, able to withstand repeated washing and sanitizing, and free from pits, cracks, or peeling paint."></li>
+        <li data-ar="يجب أن تكون الأسطح ملساء، غير ماصة للماء، خالية من التشققات، مقاومة للخدش، وبدون أطراف أو زوايا حادة، وسهلة التنظيف."
+            data-en="The surfaces should be smooth, non-absorbent to water, free from cracks, scratch-resistant, with no sharp edges or corners, and easy to clean."></li>
+        <li data-ar="يجب أن تكون جميع المواد والأدوات الملامسة للغذاء، بما في ذلك أسطح الأواني، العبوات، والمعدات، مصنوعة من مواد مقاومة للصدأ وغير سامة، ويجب الحفاظ عليها بحالة جيدة، وقابلة للغسل بسهولة والتطهير عند الضرورة، باستثناء المواد المصممة للاستخدام لمرة واحدة."
+            data-en="All materials and tools that come into contact with food, including surfaces of containers, packaging, and equipment, should be made from rust-resistant, non-toxic materials, maintained in good condition, and be washable and cleanable easily, with sanitization when necessary, except for single-use items."></li>
+        <li data-ar="يجب أن تكون أسطح العمل والمعدات الملامسة للغذاء مصنوعة من مواد لا تشكل مصدرًا للتلوث، وسهلة التنظيف، ولا تحتوي على نتوءات أو شقوق قابلة للغسل، ومقاومة للصدأ، ويجب الحفاظ عليها بحالة سليمة تسمح بسهولة عملية التنظيف والتطهير."
+            data-en="Work surfaces and food-contact equipment should be made from materials that do not pose a contamination risk, are easy to clean, free from wash basins, and resistant to corrosion, while being maintained in good condition to allow for easy cleaning and sanitizing."></li>
+        <li data-ar="يجب عدم استخدام الأسطح الخشبية وألواح التقطيع المصنوعة من الخشب في مناطق التحضير الغذائية إلا إذا تم الموافقة عليها من قبل الجهات المعنية، مثل تلك المصممة للاستخدام في تحضير المعجنات."
+            data-en="Wooden surfaces and cutting boards made from wood should not be used in food preparation areas unless approved by the relevant authorities, such as those designed for pastry preparation."></li>
+        <li data-ar="ينبغي تمييز المعدات وأسطح العمل الملامسة للغذاء باستخدام ألوان مختلفة لتفادي التلوث المتبادل."
+            data-en="Food-contact equipment and work surfaces should be distinguished using different colors to prevent cross-contamination."></li>
+        <li data-ar="يجب إجراء اختبارات المسح لجميع الأسطح الملامسة للمنتج بشكل دوري كجزء من إجراءات التأكد من صحة وسلامة المنشأة."
+            data-en="Swab testing should be conducted periodically on all food-contact surfaces as part of ensuring the health and safety of the establishment."></li>
+    </ol>
+</li>
+
+
+
 <li class="requirement">
     <span class="key" data-ar="6.4 مكافحة الحشرات والقوارض:" data-en="Insect and Rodent Control 6.4:">6.4 مكافحة الحشرات والقوارض | Insect and Rodent Control 6.4:</span>
     <ol style="list-style-type: disc;">
@@ -1610,15 +1735,39 @@ html[lang="en"] .contact-info {
         <li data-ar="الشهادات الممنوحة للمنشآت الغذائية الخاصة بالممارسات الصحية الجيدة، نظام الهاسب، والمنيو سيف تُجدد سنويًا." 
             data-en="Certificates awarded to food establishments for Good Hygiene Practices (GHP), HACCP, and Menu Safe are renewed annually."></li>
     </ol>
+
+</ol>
+   <p><a href="https://maps.app.goo.gl/96fvnuFb9a2hmZJKA" target="_blank" data-ar="مكان تقديم الخدمة" data-en="Place of service provision"> <strong>رابط خرائط جوجل</strong></a></p>
 </li>
 
-<li class="requirement">
-    <span class="key" data-ar=" 6.7 اشتراطات خاصة:" data-en="Special requirements 6.7:"> 6.7 اشتراطات خاصة | Special requirements 6.7:</span>
-    <ol style="list-style-type: disc;">
 
+</li>
+<li class="requirement">
+    <span class="key" data-ar="6.7 الوضع الصحي للعاملين:" data-en="6.7 Worker Health Status:">6.7 الوضع الصحي للعاملين | Worker Health Status:</span>
+    <ol style="list-style-type: disc;">
+        <li data-ar="يجب أن يحصل جميع العاملين في المنشأة على بطاقة صحية مهنية سارية، على أن تصدر فقط من عيادات الصحة العامة التابعة لبلدية مدينة الشارقة، ولا يجوز إصدارها من أي إمارة أخرى." 
+            data-en="All workers in the establishment must have valid professional health certificates, issued exclusively by the public health clinics of Sharjah Municipality, and not from any other emirate."></li>
+        <li data-ar="يجب استبعاد العاملين الذين يعانون من جروح ملوثة أو قروح أو أي أمراض معدية حتى تمام شفائهم." 
+            data-en="Workers with infected wounds, sores, or any contagious diseases should be excluded until they fully recover."></li>
+        <li data-ar="يجب توفير الإسعافات الأولية المناسبة في المنشأة، والتي تشمل المواد الضرورية مثل المطهرات، الضمادات، الأدوية للجروح والحروق، ويجب أن يكون هناك عمال مدربون ومؤهلون في الإسعافات الأولية." 
+            data-en="Appropriate first aid supplies should be available in the establishment, including disinfectants, bandages, medicines for wounds and burns, and some workers should be trained and qualified in first aid procedures."></li>
+        <li data-ar="يفضل استخدام زي موحد للعاملين بحسب طبيعة العمل مثل عمال الإنتاج والصيانة، مع ضرورة الالتزام بارتداء الملابس الواقية المخصصة حسب طبيعة العمل." 
+            data-en="A uniform should be used for workers based on the nature of their tasks, such as for production or maintenance workers, and it is mandatory to wear protective clothing as required by the nature of the work." ></li>
+        <li data-ar="يجب المحافظة على نظافة زي العمل طوال ساعات العمل." 
+            data-en="Work uniforms must be kept clean throughout working hours."></li>
     </ol>
 </li>
 
+
+
+<h3>المراجع | References:</h3>
+<ul>
+    <li><a href="https://www.iso.org/iso-22000-food-safety-management.html" target="_blank" style="color:green;">ISO 22000:2018 - أنظمة إدارة سلامة الغذاء | ISO 22000:2018 - Food Safety Management Systems</a></li>
+    <li><a href="https://www.raiderpainting.com/blog/fda-approved-floor-coatings-for-food-processing-facilities/" target="_blank" style="color:green;">FDA Approved Floor Coatings for Food Processing Facilities | Raider Painting</a></li>
+    <li><a href="https://californiacustomcoatings.com/usda-safety-requirements-and-epoxy-flooring/" target="_blank" style="color:green;">USDA Safety Requirements and Epoxy Flooring | California Custom Coatings</a></li>
+    <li><a href="https://www.fao.org/4/w8088e/w8088e04.htm" target="_blank" style="color:green;">Food Safety and Quality | FAO</a></li>
+    <li><a href="https://www.codexalimentarius.org" target="_blank" style="color:green;">Codex Alimentarius</a></li>
+</ul>
 
 
 
@@ -1683,7 +1832,7 @@ html[lang="en"] .contact-info {
 </style>
 
 <div class="services-section">
-    <div class="section-title" onclick="toggleSection('servicesSection')" data-ar="الخدمات" data-en="Services">الخدمات</div>
+    <div class="section-title" onclick="toggleSection('servicesSection')" data-ar=" 7. الخدمات" data-en=" 7. Services">7. الخدمات</div>
     <div id="servicesSection" class="section-content">
 
         <!-- 1 - إصدار تقرير نهائي للمنشآت الغذائية -->
@@ -1753,7 +1902,8 @@ function applyForService(serviceAr, serviceEn) {
 
 
  <div class="activity-selection">
-    <label for="activity" data-ar="اختر النشاط:" data-en="Choose Activity:">اختر النشاط:</label>
+<label for="activity" data-ar="8. متطلبات واشترطات ترخيص المنشآت الغذائية بحسب نوع النشاط:" data-en="8. Requirements and conditions for licensing food establishments based on activity type:">8. متطلبات واشترطات ترخيص المنشآت الغذائية بحسب نوع النشاط:
+</label>
     <select id="activity" onchange="showSteps()">
         <option value="" data-ar="اختر النشاط" data-en="Choose Activity">اختر النشاط</option>
         <option value="restaurant" data-ar="مطعم" data-en="Restaurant">مطعم</option>
@@ -1768,6 +1918,10 @@ function applyForService(serviceAr, serviceEn) {
         <option value="factory" data-ar="مصنع" data-en="Factory">مصنع</option>
        <option value="food Supply Companies" data-ar="شركات التموين" data-en="food Supply Companies">شركات التموين</option>
       <option value="Temporary Food Activity Permit Kiosk" data-ar="تصريح نشاط غذائي مؤقت كشك" data-en="Temporary Food Activity Permit Kiosk">تصريح نشاط غذائي مؤقت كشك</option>
+      <option value="Safari Charcoal Grills" data-ar="مشاوي على الفحم سفاري" data-en="Safari Charcoal Grills">مشاوي على الفحم سفاري</option>
+      <option value="Grilling and Frying Fish and Seafood" data-ar="شوي وقلي الأسماك والحيوانات البحرية" data-en="Grilling and Frying Fish and Seafood">شوي وقلي الأسماك والحيوانات البحرية</option>
+
+
 
 
 
@@ -1870,21 +2024,15 @@ const activityRequirements = {
   factory: [
     {
       title: {
-        ar: "<span style='color: green; font-weight: bold;'>الحجم والمساحة:</span>",
-        en: "<span style='color: green; font-weight: bold;'>Size and Space:</span>"
+        ar: "<span style='color: green; font-weight: bold;'>مجال عمل المصنع:</span>",
+   en: "<span style='color: green; font-weight: bold;'>Factory Scope:</span>"
       },
       points: {
         ar: [
-          "يجب أن تكون المساحة واسعة ومناسبة.",
-          "أن تكون المساحات متناسبة مع مخطط إنشاء المصنع المعتمد.",
-          "أن يكون المبنى مصمماً بالحجم الكافي الذي يفي بالغرض المعد والمصمم من اجله دون حدوث تزاحم في المعدات والمكائن او العاملين او المواد.",
-          "أن يشمل المبنى مساحات كافية منها (المستودعات -صالات الانتاج -أماكن العاملين- المختبر- الصيانة- المكاتب الإدارية)."
+          "التصنيع واعادة التعبئة والتوزيع بالجملة.",
         ],
         en: [
-          "The space should be spacious and appropriate.",
-          "The areas should align with the approved factory layout plan.",
-          "The building should be designed with sufficient size to fulfill its intended purpose without overcrowding of equipment, machinery, workers, or materials.",
-          "The building should include adequate spaces such as warehouses, production halls, worker areas, laboratories, maintenance, and administrative offices."
+     "Manufacturing, repackaging, and wholesale distribution."
     ]
       }
     },
@@ -2969,91 +3117,67 @@ const activityRequirements = {
         en: "<span style='color: green; font-weight: bold;'>Restaurant Scope:</span>"
       },
       points: {
-        ar: [
-          "يشمل المحال التي تعمل في مجال إعداد الطعام وأنواع الوجبات الغذائية بما في ذلك الوجبات السريعة.",
-          "يشمل إعداد أنواع الشراب وتقديمه للاستهلاك الفوري من قبل الجمهور.",
-          "يجب أن تكون المحال مزودة بالتجهيزات المناسبة لتناول الوجبات الغذائية داخلها."
-        ],
-        en: [
-          "Includes establishments specializing in food preparation and a variety of meals, including fast food.",
-          "Covers the preparation and serving of beverages for immediate consumption by customers.",
-          "Establishments must be equipped with appropriate facilities for dining within the premises."
-        ]
-      }
+  "ar": [
+    "يشمل المحال التي تعمل في مجال إعداد الطعام وأنواع الوجبات الغذائية بما في ذلك الوجبات السريعة، وإعداد أنواع الشراب وتقديمه للاستهلاك الفوري من قبل الجمهور، ويجب أن تكون المحال مزودة بالتجهيزات المناسبة لتناول الوجبات الغذائية داخلها."
+  ],
+  "en": [
+    "This includes establishments that prepare food and types of meals, including fast food, as well as the preparation and immediate consumption of beverages by the public, and the establishments must be equipped with suitable facilities for dining inside."
+  ]
+}
+
     },
     {
       title: {
-        ar: "<span style='color: green; font-weight: bold;'>المساحة:</span>",
-        en: "<span style='color: green; font-weight: bold;'>Space:</span>"
+        ar: "<span style='color: green; font-weight: bold;'>الاقسام والمساحات:</span>",
+        en: "<span style='color: green; font-weight: bold;'>Sections and Spaces:</span>"
       },
       points: {
-        ar: [
-          "يجب أن لا تقل مساحة المحل عن (40) متر مربع، وعند وجود نشاط إضافي يجب توفير مساحة إضافية تتناسب مع حجم النشاط حسب المساحات المعتمدة.",
-          "يتكون المطعم من ثلاثة أقسام رئيسية (منطقة التجهيز، منطقة التخزين، منطقة استقبال الطلبات والزبائن)، على أن تكون منطقة التجهيز بمساحة لا تقل عن (25) متر مربع، وتخصص مساحة (10) أمتار مربعة لمنطقة التخزين على الأقل ومساحة (5) أمتار مربعة على الأقل لمنطقة استقبال الطلبات والزبائن، بحيث يكون هناك انسياب منتظم في سير العمليات."
-        ],
-        en: [
-          "The shop area must not be less than 40 square meters. If there is an additional activity, extra space must be provided in proportion to the size of the activity based on approved dimensions.",
-          "The restaurant consists of three main sections (preparation area, storage area, and customer order and reception area). The preparation area should not be less than 25 square meters, the storage area should have at least 10 square meters, and the reception area should have at least 5 square meters, ensuring smooth workflow."
-        ]
-      }
-    },
+  "ar": [
+    "منطقة التجهيز والطهي: يجب أن تكون مساحة منطقة التجهيز والطهي مرنة وتتناسب مع نوع النشاط وحجم الإنتاج اليومي، بحيث لا تقل عن 20 مترًا مربعًا للنشاطات الصغيرة، مع زيادتها تدريجيًا وفقًا لحجم المعدات وعدد العاملين والعمليات المختلفة.",
+    "منطقة التخزين: يجب تخصيص مساحة لا تقل عن 10 أمتار مربعة تشمل مناطق التخزين الجاف، وغرف التبريد، والتجميد. يوصى بتقسيم المساحة إلى أقسام مخصصة لكل نوع من المنتجات لضمان التحكم في درجة الحرارة والرطوبة وفقًا للمعايير.",
+    "منطقة استقبال الطلبات وخدمة العملاء: ينبغي أن تكون بمساحة لا تقل عن 5 أمتار مربعة لضمان تدفق العملاء بشكل آمن ومنظم.",
+   "صالات الطعام: في حالة تقديم الطعام بالمطعم، يجب توفير مساحات مناسبة لها وترتيبها بشكل منظم باستخدام طاولات مصنوعة من مواد معتمدة وعالية الجودة، تضمن عدم تراكم الحشرات والأوساخ."
 
+  ],
+  "en": [
+    "Preparation and cooking area: The space must be flexible and adaptable to the type of activity and daily production volume. It should not be less than 25 square meters for small-scale activities, with gradual increases based on equipment size, number of workers, and different operations.",
+    "Storage area: A minimum of 10 square meters should be allocated, including dry storage areas, cooling, and freezing rooms. It is recommended to divide the space into sections designated for each type of product to ensure temperature and humidity control according to standards.",
+    "Customer order and reception area: This area should be at least 5 square meters to ensure smooth and organized customer flow.",
+    "Dining areas: When food is served at the restaurant, adequate space must be provided and arranged in an organized manner using tables made from approved, high-quality materials to prevent the accumulation of pests and dirt."
+  ]
+}
 
-  {
-    "title": {
-      "ar": "<span style='color: green; font-weight: bold;'>المباني والمنشآت:</span>",
-      "en": "<span style='color: green; font-weight: bold;'>Buildings and Structures:</span>"
     },
+    {
+
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'> المباني والمنشآت:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Buildings and Structures:</span>"
+  },
   "points": {
     "ar": [
-      "يجـب أن يكـون موقـع المنشـأة الغذائيـة بعيـداً عـن الروائـح الكريهـة والدخـان والأتربـة أو الملوثـات الأخـرى التـي قـد تشـكل خطـراً صحيـاً علـى عملياتهـا التشـغيلية.",
-      "يجــب أن تكــون الأرضيــات مصنعــة مــن مــواد متينــة خاليــة مــن الشــقوق، ملســاء، فاتحــة اللــون، غيــر منفــذة أو ماصـة للسـوائل، سـهلة الغسـيل والتنظيـف، وبهـا ميـل كاف ٍ لتصريـف السـوائل إلـى مجـاري أرضيـة ،كمـا يفضل أن تكـون مناطـق الإلتقـاء بيـن الأرضيـات والجـدران مقوسـة (بـدون زوايـا) ليسـهل تنظيفهـا وتطهيرهـاولمنـع تراكـم الملوثـات.",
-      "يجـب أن تكـون الجـدران مشـيدة مـن مـواد متينـة خاليـة مـن الشـقوق، غيـر منفـذة أو ماصـة للسـوائل، سـهلة الغسـيل والتنظيـف، وأن تكـون الجـدران الداخليـة فـي أماكـن التجهيز مصنعـة مـن مـواد سـهلة التنظيـف،ملســاء (مثــل الســيراميك أو الرخام) ذات لــون فاتــح، علــى أن ترتفــع متريــن ونصــف علــى الأقــل مــن الأرض، ويمكـن طـلاء الجـزء العلـوي بطـلاء مناسـب قابـل للغسـيل ويسـهل تنظيفـه.",
-      "يجـب أن تكـون الأسـقف مشـيدة مـن مـواد متينـة خاليـة مـن الشـقوق مطليـة بطـلاء فاتـح اللـون مناسـب قابـل للغسـيل ويسـهل تنظيفـه، كمـا يمـكن اسـتخدام الأسـقف المسـتعارة شـرط أن تكـون ملسـاء سـهلة التنظيـف وأن تكـون مـن مـادة غيـر منفـذة أو ماصـة للسـوائل.",
-      "يجـب أن تكـون المجـاري الأرضيـة فعالـة فـي إزالـة ميـاه الصـرف، وذات أغطيـة قابلـة للفـك والتنظيـف، كمـا يجـب أن تكـون أنابيـب المجـاري منحـدرة بصـورة صحيحـة، وموصولـة بنظـام الصـرف الصحـي.",
-      "يجـب توفير التهويـة المناسـبة لمنـع ارتفـاع الحـرارة وتكاثـف البخـار ولإزالـة الهـواء الملـوث،وأن يكـون تصميـم وتركيـب نظـم التهويـة كافيـاً مـن حيـث العـدد والقـدرة(بتوفيرعدد كافي من المكيفات ومراوح الشفط).",
-      "يجـب توفير إضـاءة كافيـة سـواء كانـت طبيعية أم صناعية لضمـان إنتـاج الأغذيـة فـي بيئـة آمنـة وصحيـة، ولتسـهيل عمليـة التنظيـف فـي المنشـأة، كمـا يجـب أن تكـون المصابيـح ضـد الكسـر أو محميـةبأغطيـة ضـد الكسـر.",
+      "يجب الالتزام بالفقرة رقم (6) بالدليل الخاصة باشتراطات البنية التحتية والاشتراطات العامة لتراخيص المنشآت الغذائية.",
+      "في حالة وجود الشاورما داخل صالة الزبائن، يجب فصلها تمامًا عن الزبائن بباب مستقل ومغلق ويمنع فتح باب منفصل لها على الواجهة الرئيسية.",
+      "في حالة وجود كاونتر تقديم الخدمة مثل (البار، كاونتر العصائر والمشروبات) داخل صالة الزبائن، يجب فصله تمامًا عن الزبائن بباب مستقل ومغلق وتوفير مرافق غسل الأدوات والأواني، ويستثنى من ذلك الكاونترات التي تستخدم ماكينات آلية فقط.",
+      "في حالة وجود مشوي الفحم، يجب عزل جسم المشوي عن المعدات المجاورة وتخصيص مدخنة منفصلة تمامًا له بتوربين شفط منفصل، وعدم ربطها بمداخن أخرى داخل الموقع.",
+      "في حالة وجود تنور داخل المطعم يجب توفير عجانة مناسبة ولها غطاء مناسب لتغطية العجين موصول أعلى مصدر مياه، وتوفير مخدات خبز التنور من أقمشة بيضاء نظيفة ومخصصة للخبز فقط وبعدد كاف، وتوفير شبك معدني من الاستانلس ستيل (منخل) للطحين وتوفير طاولات عمل مخصصة له.",
       "يجب تثبيت قمع معدني فوق مواقد الطهي وأجهزة التجهيز مثل الشاورما، الافران، مشوي الفحم، القلايات، وغيرها من المعدات التي تُصدر أدخنة وأبخرة. يجب أن يتضمن القمع فلاتر مائلة لتكثيف الأبخرة، ويتصل بمدخنة موجهة للأعلى أو بنظام تصفية مزود بمحرك سحب فعال لإزالة الروائح والأبخرة او استخدام اي نظام وفقاً للوائح المعتمدة.",
-       "في حالة وجود تنور داخل المطعم يجب توفير عجانة مناسبة ولها غطاء مناسب لتغطية العجين موصول اعلها مصدر مياه، توفير مخدات خبز التنور من أقمشة بيضاء نظيفة ومخصصه للخبز فقط وبعدد كاف ، توفير شبك معدني من الاستانلس ستيل (منخل) للطحين.",
-      "في حالة وجود مشوي الفحم، يجب عزل جسم المشوي عن المعدات المجاورة وتخصيص مدخنة منفصلة تمامًا له، دون ربطها بمداخن أخرى.",
-      "في حالة وجود الشاورما أو أي نشاط داخل صالة الزبائن، يجب فصله تمامًا عن الزبائن بباب مستقل ومغلق ويمنع فتح باب منفصل لها علي الواجهة الرئيسية .",
-      "توفير مستودع لا تقل مساحته عن 10 متر مربع، مستوفٍ للمعايير الصحية، ومجهز بوسائل الحفظ والتخزين المناسبة، ويطبق عليه نفس اشتراطات البنية التحتية.",
-      "يجب توفير قاطع هوائي علي باب المدخل وإحكام إغلاق فتحات الأبواب ,والنوافذ .",
-      "ينبغي تصميم شباك المناولة في منطقة استقبال الزبائن وعدم تصميمة بباب المطبخ الخلفي .",
-      "عدم تصميم باب خلفي للمطبخ علي الواجهة الرئيسية و يُحظر استخدام الباب الخلفي للمطعم في استقبال الزبائن أو للبيع، ويجب أن يبقى مغلقًا بشكل دائم.",
-      "يجب توفير سخان مياه كهربائي.",
-      "يجب تركيب فلتر مياه على الوصلة الرئيسية لشبكة المياه.",
-      "يجب توفير مصدر آمن لمياه الشرب لأغراض التنظيف وإعداد الطعام.",
-      "في حالة تقديم الطعام في المطعم، يجب أن يتم ترتيب صالات الطعام بشكل منظم باستخدام طاولات مصنوعة من مواد معتمدة وعالية الجودة، تضمن عدم تراكم الحشرات. كما يجب ضمان توفير إضاءة وتهوية مناسبة بما يتوافق مع معايير الراحة البيئية للزبائن.",
-      "يجب توفير أماكن مخصصة لتبديل ملابس العمل، بالإضافة إلى خزائن لحفظ المتعلقات الشخصية للعاملين، بما يضمن الحفاظ على النظام والنظافة.",
-      "يجب توفير صندوق محاسبة مصنوع من مواد معتمدة ومسموح بها، بحيث يتم تصميمه من مواد تمنع تراكم الحشرات وتسهّل عملية التنظيف والصيانة.",
-      "يجب عدم استخدام الأخشاب في أماكن التجهيز والتخزين والطهي، وذلك لضمان الحفاظ على معايير السلامة والنظافة، ولتفادي تراكم الأوساخ أو الحشرات التي قد تنجم عن استخدام الخشب في هذه البيئات."
+      "وفقًا للمواصفة الخليجية GSO 1060:2016 ، يجب توفير مساحة مناسبة مع فصل بين مناطق تحضير اللحوم والأطعمة المعدة للاستهلاك المباشر، والتأكد من صلاحية الشاورما الجاهزة وتخزينها في درجات حرارة ملائمة، وفصل عمليات التتبيل عن تحضير الأطعمة الأخرى لتجنب التلوث المتبادل، واستخدام أدوات ومعدات مخصصة مع اتباع معايير صحية لضمان سلامة الطعام.",
+      "ينبغي تصميم شباك المناولة في منطقة استقبال الزبائن وعدم تصميمه بباب المطبخ الخلفي.",
+      "عدم تصميم باب خلفي للمطبخ على الواجهة الرئيسية ويُحظر استخدام الباب الخلفي للمطعم في استقبال الزبائن أو للبيع، ويجب أن يبقى مغلقًا بشكل دائم."
     ],
     "en": [
-      "The site of the food establishment must be away from unpleasant odors, smoke, dust, or other pollutants that could pose a health risk to its operations.",
-      "The flooring should be made of durable materials, free from cracks, smooth, light-colored, impermeable to liquids, easy to wash and clean, with a sufficient slope to drain liquids to the floor drains. Additionally, junctions between the floors and walls should be curved (without corners) to facilitate cleaning and prevent the accumulation of contaminants.",
-      "The walls should be made of durable materials, free from cracks, impermeable to liquids, and easy to wash and clean. Internal walls, especially in food preparation areas, should be made of materials that are easy to clean, smooth (such as ceramic tiles or marble), light-colored, and should rise at least 1.5 meters above the floor. The upper part can be painted with suitable washable paint.",
-      "The ceilings should be made of durable materials, free from cracks, and painted with a light-colored washable paint. Drop ceilings can be used, provided they are smooth, easy to clean, and made of materials that are impervious to liquids.",
-      "The floor drains must be effective in removing wastewater and should be equipped with removable covers for cleaning. The drainage pipes should be sloped properly and connected to the sanitary drainage system.",
-      "Adequate ventilation must be provided to prevent high temperatures, condensation of steam, and removal of contaminated air. The design and installation of the ventilation systems should be sufficient in terms of quantity and capacity (by providing enough air conditioners and exhaust fans).",
+      "Compliance with paragraph (6) of the guide for infrastructure requirements and general conditions for food establishment licenses is mandatory.",
+      "If shawarma is located in the customer area, it must be fully separated from the customers by a separate, closed door, and it is prohibited to have a separate door for it on the main facade.",
+      "If there is a service counter (such as a bar or juice and beverage counter) in the customer area, it must be fully separated from the customers by a separate, closed door and equipped with cleaning facilities for utensils and dishes. Counters that use automated machines are exempt from this requirement.",
+      "If a charcoal grill is present, it must be isolated from adjacent equipment and a separate exhaust system with its own suction fan must be provided, with no connection to other exhausts within the premises.",
+      "If there is a tandoor in the restaurant, it must be equipped with a suitable dough mixer with a proper cover, connected to a water source, and must provide clean, white fabric baking cushions dedicated only for bread, in sufficient quantities, as well as a stainless steel flour sifter and designated worktables.",
       "Adequate lighting must be provided, whether natural or artificial, to ensure safe food production in a clean environment. The lighting should also facilitate cleaning within the establishment. Light fixtures should be shatterproof or protected against breakage.",
-      "A metal hood should be installed above cooking equipment and devices that emit smoke and steam, such as shawarma grills, ovens, fryers, etc. The hood should have slanted filters to condense the steam and be connected to a chimney or a filtration system with a powerful fan to remove odors and steam, or use any system in accordance with approved regulations.",
-      "If there is a tandoor inside the restaurant, a suitable dough mixer with a cover should be provided, connected to a water supply. Clean, white cloths should be available exclusively for bread preparation, along with a sufficient number of mesh strainers for flour.",
-      "If a charcoal grill is present, it should be isolated from adjacent equipment, with a separate chimney system.",
-      "If shawarma or any activity is inside the customer dining area, it must be fully separated by a closed door and should not have an external door directly opening to the front of the establishment.",
-      "A storage room of at least 10 square meters should be provided, meeting health standards, equipped with appropriate storage and preservation facilities, and applying the same infrastructure requirements.",
-      "An air curtain should be installed at the entrance door, and openings in doors and windows must be properly sealed.",
-      "The serving window should be located in the customer reception area, and not at the back of the kitchen.",
-      "No back doors should be designed on the main restaurant facade, and the back door should not be used for customer entry or sales. It should remain closed permanently.",
-      "An electric water heater should be provided.",
-      "A water filter should be installed at the main water connection point.",
-      "A safe source of drinking water should be available for cleaning and food preparation.",
-      "If food is served in the restaurant, dining areas should be arranged in an organized manner using high-quality tables, ensuring that no insects accumulate. Adequate lighting and ventilation should be provided, in accordance with environmental comfort standards for customers.",
-      "Designated areas for staff clothing changes should be provided, along with lockers for personal belongings, to ensure order and cleanliness.",
-      "A cash register made of approved materials should be provided to prevent insect accumulation, and to facilitate cleaning and maintenance.",
-      "Wood should not be used in food preparation, storage, or cooking areas to maintain safety and hygiene standards and avoid the accumulation of dirt or pests."
-      ]
-    }
+      "According to Gulf Standard GSO 1060:2016 , an appropriate space must be provided with separation between meat preparation areas and ready-to-eat food areas, ensuring the safety of ready-to-eat shawarma and storing it at appropriate temperatures, separating marination processes from the preparation of other foods to avoid cross-contamination, and using dedicated tools and equipment while following strict sanitary standards to ensure food safety.",
+      "The serving window should be designed in the customer reception area, not at the back kitchen door.",
+      "It is prohibited to design a back door for the kitchen on the main facade, and the back door should not be used for customer reception or sales, and it must remain closed at all times."
+    ]
+   }
   },
   {
     "title": {
@@ -3080,7 +3204,7 @@ const activityRequirements = {
   {
 
     "title": {
-      "ar": "<span style='color: green; font-weight: bold;'>طرق إعداد وتجهيز وحفظ:</span>",
+      "ar": "<span style='color: green; font-weight: bold;'>طرق إعداد وتجهيز وحفظ:::</span>",
       "en": "<span style='color: green; font-weight: bold;'>Methods of Preparation, Processing, and Preservation:</span>"
     },
     "points": {
@@ -3089,7 +3213,9 @@ const activityRequirements = {
         "ترتيب المعدات بطريقة تمنع التلوث المتبادل بين المواد الخام والجاهزة.",
         "يجب تنظيم أماكن التجهيز بحيث تُترك مسافة لا تقل عن متر واحد بين الأدوات والمعدات الجانبية والمركزية، لتجنب التكدس وضمان سهولة الحركة وانسيابيتها للعاملين.",
         "توفير أرفف مناسبة للمواد الأولية.",
+        "يجب توفير برادات ملائمة وبأحجام مناسبة لذوبان المجمدات وحفظها عند درجة حرارة تتراوح بين 1 إلى 4 درجات مئوية.",
         "توفير طاولات إعداد وتجهيز مناسبة (استيل، رخام، ...).",
+      "توفير طاولات إعداد وتجهيز مناسبة (استيل، رخام، ...).",
         "توفير أرفف مناسبة لتخزين الأدوات.",
         "توفير قواعد مناسبة لرفع المواد وتكون بقوائم حتى يسهل التنظيف أسفل منها وبارتفاع مناسب عن الأرض لا يقل عن 25 سم.",
         "يجب توفير خزائن مناسبة لحفظ معدات ومواد التنظيف بحيث تكون بعيدة عن مناطق تداول الأغذية.",
@@ -3101,6 +3227,7 @@ const activityRequirements = {
         "Equipment and tools must be made from safe and suitable materials that do not affect food safety and are resistant to breakage, cracking, denting, or bending. Equipment should be movable and disassemblable, and there must be the ability to maintain, clean, and sterilize it easily.",
         "Arrange equipment in a way that prevents cross-contamination between raw and ready materials.",
         "Preparation areas should be organized so that there is at least a one-meter gap between side and central tools and equipment, to avoid congestion and ensure smooth movement for workers.",
+        "Suitable refrigerators of appropriate sizes must be provided to thaw frozen items and maintain them at a temperature range of 1 to 4 degrees Celsius.",
         "Provide suitable shelves for raw materials.",
         "Provide appropriate preparation tables (stainless steel, marble, etc.).",
         "Provide suitable shelves for storing tools.",
@@ -3160,82 +3287,56 @@ const activityRequirements = {
     },
     {
       title: {
-        ar: "<span style='color: green; font-weight: bold;'>المساحة:</span>",
-        en: "<span style='color: green; font-weight: bold;'>Space:</span>"
+        ar: "<span style='color: green; font-weight: bold;'>الاقسام والمساحات:</span>",
+        en: "<span style='color: green; font-weight: bold;'>Sections and Spaces:</span>"
       },
 
   "points": {
-    "ar": [
-      "المساحة الكلية للموقع حد أدنى 20 متر مربع تقسم كما يلي:",
-      " مساحة المطبخ 15 متر مربع في حال تجهيز وتقديم السندويتشات.",
-      "في حال وجود الشاورما أو مشوى فحم للسندويتشات فقط يجب أن تكون مساحة المطبخ 20 متر مربع.",
-      "مساحة الصالة (منطقة استقبال الطلبات والزبائن) حد أدنى 5 متر مربع.",
-      "ملاحظة: في حال إضافة أي أنشطة غذائية أخرى بما لا يتعارض مع النشاط الأساسي يجب أن تتوفر المساحة والشروط الصحية الكافية لممارسة النشاط المضاف."
-    ],
-    "en": [
-      "The total site area must be a minimum of 20 square meters, divided as follows:",
-      "Kitchen area: 15 square meters for preparing and serving sandwiches.",
-      "If shawarma or charcoal grill for sandwiches is included, the kitchen area must be 20 square meters.",
-      "Reception area (customer order and reception area): minimum of 5 square meters.",
-      "Note: If additional food activities are added, they must not conflict with the primary activity and sufficient space and health conditions must be ensured for the added activity."
-    ]
-      }
-    },
-
-
+  "ar": [
+    "يجب ألا تقل المساحة عن 15 مترًا مربعًا لتحضير الساندويتشات والمشروبات.",
+    "زيادة 5 أمتار مربعة لكل نشاط إضافي مثل (الشاورما، فرن المعجنات، مشوي فحم 1 متر للساندويتشات فقط، تنور لزبائن الموقع فقط).",
+    "يتطلب الحصول على موافقة مسبقة لإضافة الأنشطة المذكورة.",
+    "منطقة استقبال الطلبات وخدمة العملاء: ينبغي أن تكون بمساحة لا تقل عن 5 أمتار مربعة لضمان تدفق العملاء بشكل آمن ومنظم.",
+    "في حالة تقديم الطعام للزبائن: يجب توفير مساحات مناسبة لصالات الطعام ويتم ترتيبها بشكل منظم باستخدام طاولات مصنوعة من مواد معتمدة وعالية الجودة، تضمن عدم تراكم الحشرات والاوساخ."
+  ],
+  "en": [
+    "The area must not be less than 15 square meters for preparing sandwiches and beverages.",
+    "An additional 5 square meters is required for each additional activity such as (shawarma, pastry oven, 1 meter for sandwiches only, tandoor for on-site customers only).",
+    "Prior approval is required for adding the mentioned activities.",
+    "Order reception and customer service area: It should be at least 5 square meters to ensure the safe and organized flow of customers.",
+    "In case of serving food to customers: Adequate space should be provided for dining areas, organized with tables made from approved high-quality materials to prevent the accumulation of insects and dirt."
+]
+  }
+  },
   {
-    "title": {
-      "ar": "<span style='color: green; font-weight: bold;'>المباني والمنشآت:</span>",
-      "en": "<span style='color: green; font-weight: bold;'>Buildings and Structures:</span>"
-    },
+  "title": {
+    "ar": "<span style='color: green; font-weight: bold;'> المباني والمنشآت:</span>",
+    "en": "<span style='color: green; font-weight: bold;'>Buildings and Structures:</span>"
+  },
   "points": {
     "ar": [
-      "يجـب أن يكـون موقـع المنشـأة الغذائيـة بعيـداً عـن الروائـح الكريهـة والدخـان والأتربـة أو الملوثـات الأخـرى التـي قـد تشـكل خطـراً صحيـاً علـى عملياتهـا التشـغيلية.",
-      "يجــب أن تكــون الأرضيــات مصنعــة مــن مــواد متينــة خاليــة مــن الشــقوق، ملســاء، فاتحــة اللــون، غيــر منفــذة أو ماصـة للسـوائل، سـهلة الغسـيل والتنظيـف، وبهـا ميـل كاف ٍ لتصريـف السـوائل إلـى مجـاري أرضيـة ،كمـا يفضل أن تكـون مناطـق الإلتقـاء بيـن الأرضيـات والجـدران مقوسـة (بـدون زوايـا) ليسـهل تنظيفهـا وتطهيرهـاولمنـع تراكـم الملوثـات.",
-      "يجـب أن تكـون الجـدران مشـيدة مـن مـواد متينـة خاليـة مـن الشـقوق، غيـر منفـذة أو ماصـة للسـوائل، سـهلة الغسـيل والتنظيـف، وأن تكـون الجـدران الداخليـة فـي أماكـن التجهيز مصنعـة مـن مـواد سـهلة التنظيـف،ملســاء (مثــل الســيراميك أو الرخام) ذات لــون فاتــح، علــى أن ترتفــع متريــن ونصــف علــى الأقــل مــن الأرض، ويمكـن طـلاء الجـزء العلـوي بطـلاء مناسـب قابـل للغسـيل ويسـهل تنظيفـه.",
-      "يجـب أن تكـون الأسـقف مشـيدة مـن مـواد متينـة خاليـة مـن الشـقوق مطليـة بطـلاء فاتـح اللـون مناسـب قابـل للغسـيل ويسـهل تنظيفـه، كمـا يمـكن اسـتخدام الأسـقف المسـتعارة شـرط أن تكـون ملسـاء سـهلة التنظيـف وأن تكـون مـن مـادة غيـر منفـذة أو ماصـة للسـوائل.",
-      "يجـب أن تكـون المجـاري الأرضيـة فعالـة فـي إزالـة ميـاه الصـرف، وذات أغطيـة قابلـة للفـك والتنظيـف، كمـا يجـب أن تكـون أنابيـب المجـاري منحـدرة بصـورة صحيحـة، وموصولـة بنظـام الصـرف الصحـي.",
-      "يجـب توفير التهويـة المناسـبة لمنـع ارتفـاع الحـرارة وتكاثـف البخـار ولإزالـة الهـواء الملـوث،وأن يكـون تصميـم وتركيـب نظـم التهويـة كافيـاً مـن حيـث العـدد والقـدرة(بتوفيرعدد كافي من المكيفات ومراوح الشفط).",
-      "يجـب توفير إضـاءة كافيـة سـواء كانـت طبيعية أم صناعية لضمـان إنتـاج الأغذيـة فـي بيئـة آمنـة وصحيـة، ولتسـهيل عمليـة التنظيـف فـي المنشـأة، كمـا يجـب أن تكـون المصابيـح ضـد الكسـر أو محميـةبأغطيـة ضـد الكسـر.",
+      "يجب الالتزام بالفقرة رقم (6) بالدليل الخاصة باشتراطات البنية التحتية والاشتراطات العامة لتراخيص المنشآت الغذائية.",
+      "في حالة وجود الشاورما داخل صالة الزبائن، يجب فصلها تمامًا عن الزبائن بباب مستقل ومغلق ويمنع فتح باب منفصل لها على الواجهة الرئيسية.",
+      "في حالة وجود كاونتر تقديم الخدمة مثل (البار، كاونتر العصائر والمشروبات) داخل صالة الزبائن، يجب فصله تمامًا عن الزبائن بباب مستقل ومغلق وتوفير مرافق غسل الأدوات والأواني، ويستثنى من ذلك الكاونترات التي تستخدم ماكينات آلية فقط.",
+      "في حالة وجود مشوي الفحم، يجب عزل جسم المشوي عن المعدات المجاورة وتخصيص مدخنة منفصلة تمامًا له بتوربين شفط منفصل، وعدم ربطها بمداخن أخرى داخل الموقع.",
+      "في حالة وجود تنور داخل المطعم يجب توفير عجانة مناسبة ولها غطاء مناسب لتغطية العجين موصول أعلى مصدر مياه، وتوفير مخدات خبز التنور من أقمشة بيضاء نظيفة ومخصصة للخبز فقط وبعدد كاف، وتوفير شبك معدني من الاستانلس ستيل (منخل) للطحين وتوفير طاولات عمل مخصصة له.",
       "يجب تثبيت قمع معدني فوق مواقد الطهي وأجهزة التجهيز مثل الشاورما، الافران، مشوي الفحم، القلايات، وغيرها من المعدات التي تُصدر أدخنة وأبخرة. يجب أن يتضمن القمع فلاتر مائلة لتكثيف الأبخرة، ويتصل بمدخنة موجهة للأعلى أو بنظام تصفية مزود بمحرك سحب فعال لإزالة الروائح والأبخرة او استخدام اي نظام وفقاً للوائح المعتمدة.",
-      "في حالة وجود تنور داخل المطعم يجب توفير عجانة مناسبة ولها غطاء مناسب لتغطية العجين موصول اعلها مصدر مياه، توفير مخدات خبز التنور من أقمشة بيضاء نظيفة ومخصصه للخبز فقط وبعدد كاف ، توفير شبك معدني من الاستانلس ستيل (منخل) للطحين.",
-      "في حالة وجود مشوي الفحم، يجب عزل جسم المشوي عن المعدات المجاورة وتخصيص مدخنة منفصلة تمامًا له، دون ربطها بمداخن أخرى.",
-      "في حالة وجود الشاورما أو أي نشاط داخل صالة الزبائن، يجب فصله تمامًا عن الزبائن بباب مستقل ومغلق ويمنع فتح باب منفصل لها علي الواجهة الرئيسية .",
-      "يجب توفير قاطع هوائي علي باب المدخل وإحكام إغلاق فتحات الأبواب ,والنوافذ .",
-      "ينبغي تصميم شباك المناولة في منطقة استقبال الزبائن وعدم تصميمة بباب المطبخ الخلفي .",
-      "عدم تصميم باب خلفي للمطبخ علي الواجهة الرئيسية و يُحظر استخدام الباب الخلفي للمطعم في استقبال الزبائن أو للبيع، ويجب أن يبقى مغلقًا بشكل دائم.",
-      "يجب توفير سخان مياه كهربائي.",
-      "يجب تركيب فلتر مياه على الوصلة الرئيسية لشبكة المياه.",
-      "يجب توفير مصدر آمن لمياه الشرب لأغراض التنظيف وإعداد الطعام.",
-      "في حالة تقديم الطعام في المطعم، يجب أن يتم ترتيب صالات الطعام بشكل منظم باستخدام طاولات مصنوعة من مواد معتمدة وعالية الجودة، تضمن عدم تراكم الحشرات. كما يجب ضمان توفير إضاءة وتهوية مناسبة بما يتوافق مع معايير الراحة البيئية للزبائن.",
-      "يجب توفير أماكن مخصصة لتبديل ملابس العمل، بالإضافة إلى خزائن لحفظ المتعلقات الشخصية للعاملين، بما يضمن الحفاظ على النظام والنظافة.",
-      "يجب توفير صندوق محاسبة مصنوع من مواد معتمدة ومسموح بها، بحيث يتم تصميمه من مواد تمنع تراكم الحشرات وتسهّل عملية التنظيف والصيانة.",
-      "يجب عدم استخدام الأخشاب في أماكن التجهيز والتخزين والطهي، وذلك لضمان الحفاظ على معايير السلامة والنظافة، ولتفادي تراكم الأوساخ أو الحشرات التي قد تنجم عن استخدام الخشب في هذه البيئات."
+      "وفقًا للمواصفة الخليجية GSO 1060:2016 ، يجب توفير مساحة مناسبة مع فصل بين مناطق تحضير اللحوم والأطعمة المعدة للاستهلاك المباشر، والتأكد من صلاحية الشاورما الجاهزة وتخزينها في درجات حرارة ملائمة، وفصل عمليات التتبيل عن تحضير الأطعمة الأخرى لتجنب التلوث المتبادل، واستخدام أدوات ومعدات مخصصة مع اتباع معايير صحية لضمان سلامة الطعام.",
+      "ينبغي تصميم شباك المناولة في منطقة استقبال الزبائن وعدم تصميمه بباب المطبخ الخلفي.",
+      "عدم تصميم باب خلفي للمطبخ على الواجهة الرئيسية ويُحظر استخدام الباب الخلفي للمطعم في استقبال الزبائن أو للبيع، ويجب أن يبقى مغلقًا بشكل دائم."
     ],
     "en": [
-      "The site of the food establishment must be away from unpleasant odors, smoke, dust, or other pollutants that could pose a health risk to its operations.",
-      "The flooring should be made of durable materials, free from cracks, smooth, light-colored, impermeable to liquids, easy to wash and clean, with a sufficient slope to drain liquids to the floor drains. Additionally, junctions between the floors and walls should be curved (without corners) to facilitate cleaning and prevent the accumulation of contaminants.",
-      "The walls should be made of durable materials, free from cracks, impermeable to liquids, and easy to wash and clean. Internal walls, especially in food preparation areas, should be made of materials that are easy to clean, smooth (such as ceramic tiles or marble), light-colored, and should rise at least 1.5 meters above the floor. The upper part can be painted with suitable washable paint.",
-      "The ceilings should be made of durable materials, free from cracks, and painted with a light-colored washable paint. Drop ceilings can be used, provided they are smooth, easy to clean, and made of materials that are impervious to liquids.",
-      "The floor drains must be effective in removing wastewater and should be equipped with removable covers for cleaning. The drainage pipes should be sloped properly and connected to the sanitary drainage system.",
-      "Adequate ventilation must be provided to prevent high temperatures, condensation of steam, and removal of contaminated air. The design and installation of the ventilation systems should be sufficient in terms of quantity and capacity (by providing enough air conditioners and exhaust fans).",
+      "Compliance with paragraph (6) of the guide for infrastructure requirements and general conditions for food establishment licenses is mandatory.",
+      "If shawarma is located in the customer area, it must be fully separated from the customers by a separate, closed door, and it is prohibited to have a separate door for it on the main facade.",
+      "If there is a service counter (such as a bar or juice and beverage counter) in the customer area, it must be fully separated from the customers by a separate, closed door and equipped with cleaning facilities for utensils and dishes. Counters that use automated machines are exempt from this requirement.",
+      "If a charcoal grill is present, it must be isolated from adjacent equipment and a separate exhaust system with its own suction fan must be provided, with no connection to other exhausts within the premises.",
+      "If there is a tandoor in the restaurant, it must be equipped with a suitable dough mixer with a proper cover, connected to a water source, and must provide clean, white fabric baking cushions dedicated only for bread, in sufficient quantities, as well as a stainless steel flour sifter and designated worktables.",
       "Adequate lighting must be provided, whether natural or artificial, to ensure safe food production in a clean environment. The lighting should also facilitate cleaning within the establishment. Light fixtures should be shatterproof or protected against breakage.",
-      "A metal hood should be installed above cooking equipment and devices that emit smoke and steam, such as shawarma grills, ovens, fryers, etc. The hood should have slanted filters to condense the steam and be connected to a chimney or a filtration system with a powerful fan to remove odors and steam, or use any system in accordance with approved regulations.",
-      "If there is a tandoor inside the restaurant, a suitable dough mixer with a cover should be provided, connected to a water supply. Clean, white cloths should be available exclusively for bread preparation, along with a sufficient number of mesh strainers for flour.",
-      "If a charcoal grill is present, it should be isolated from adjacent equipment, with a separate chimney system.",
-      "If shawarma or any activity is inside the customer dining area, it must be fully separated by a closed door and should not have an external door directly opening to the front of the establishment.",
-      "An air curtain should be installed at the entrance door, and openings in doors and windows must be properly sealed.",
-      "The serving window should be located in the customer reception area, and not at the back of the kitchen.",
-      "No back doors should be designed on the main restaurant facade, and the back door should not be used for customer entry or sales. It should remain closed permanently.",
-      "An electric water heater should be provided.",
-      "A water filter should be installed at the main water connection point.",
-      "A safe source of drinking water should be available for cleaning and food preparation.",
-      "If food is served in the restaurant, dining areas should be arranged in an organized manner using high-quality tables, ensuring that no insects accumulate. Adequate lighting and ventilation should be provided, in accordance with environmental comfort standards for customers.",
-      "Designated areas for staff clothing changes should be provided, along with lockers for personal belongings, to ensure order and cleanliness.",
-      "A cash register made of approved materials should be provided to prevent insect accumulation, and to facilitate cleaning and maintenance.",
-      "Wood should not be used in food preparation, storage, or cooking areas to maintain safety and hygiene standards and avoid the accumulation of dirt or pests."
-      ]
-    }
+      "According to Gulf Standard GSO 1060:2016 , an appropriate space must be provided with separation between meat preparation areas and ready-to-eat food areas, ensuring the safety of ready-to-eat shawarma and storing it at appropriate temperatures, separating marination processes from the preparation of other foods to avoid cross-contamination, and using dedicated tools and equipment while following strict sanitary standards to ensure food safety.",
+      "The serving window should be designed in the customer reception area, not at the back kitchen door.",
+      "It is prohibited to design a back door for the kitchen on the main facade, and the back door should not be used for customer reception or sales, and it must remain closed at all times."
+    ]
+  }
   },
   {
 
@@ -3258,8 +3359,6 @@ const activityRequirements = {
     "A floor washing basin should be provided for cleaning tools.",
     "Hand washing basins should be provided, equipped with liquid soap dispensers and disposable paper towel dispensers, in appropriate numbers in preparation and cooking areas, reception areas, and bathrooms."
 ]
-
-
   }
   },
   {
@@ -3367,6 +3466,8 @@ const activityRequirements = {
     },
   "points": {
     "ar": [
+
+      "يجب الالتزام بالفقرة رقم (6) بالدليل الخاصة باشتراطات البنية التحتية والاشتراطات العامة لتراخيص المنشآت الغذائية.",
       "يجب أن تكون الأرضية من السيراميك فاتح اللون.",
       "أن تكون الجدران ملساء وخالية من الشقوق ومطلية بمادة زيتية بيضاء.",
       "أن يكون سقف الموقع من مادة ثابتة (أسمنتية) أو سقف مزدوج (ساندويتش بانل).",
@@ -3386,6 +3487,7 @@ const activityRequirements = {
       "أن يكون المبنى غير مجاور لمنشآت ذات خطورة على الصحة العامة."
     ],
     "en": [
+      "Compliance with paragraph (6) of the guide for infrastructure requirements and general conditions for food establishment licenses is mandatory.",
       "The flooring must be made of light-colored ceramic.",
       "Walls should be smooth, free of cracks, and painted with white oil-based paint.",
       "The ceiling must be made of fixed material (concrete) or a double ceiling (sandwich panel).",
@@ -3454,16 +3556,30 @@ const activityRequirements = {
     },
     {
       title: {
-        ar: "<span style='color: green; font-weight: bold;'>المساحة:</span>",
-        en: "<span style='color: green; font-weight: bold;'>Space:</span>"
+        ar: "<span style='color: green; font-weight: bold;'>الاقسام والمساحات:</span>",
+        en: "<span style='color: green; font-weight: bold;'>Sections and Spaces:</span>"
       },
 
   "points": {
     "ar": [
       "المساحة الكلية للموقع حد أدنى 60 متر مربع :",
-     ],
+      "سوبر ماركت بدون أنشطة إضافية: 60 م².",
+      "في حالة إضافة أنشطة أخرى مع الالتزام بالاشتراطات الخاصة بالنشاط المضاف من حيث المساحة المطلوبة والتجهيزات والأدوات والمعدات اللازمة لممارسة النشاط:",
+      "سوبر ماركت + ملحمة: 60 م² + 20 م² = 80 م².",
+      "سوبر ماركت + مسمكة: 60 م² + 16 م² = 76 م².",
+      "سوبر ماركت + ملحمة + مسمكة: 60 م² + 20 م² + 16 م² = 96 م².",
+      "سوبر ماركت + كافتيريا: 60 م² + 15 م² = 75 م².",
+      "سوبر ماركت + مطعم: 60 م² + 25 م² = 85 م² (لا يتطلب مستودع)."
+    ],
     "en": [
       "The total site area must be a minimum of 60 square meters:",
+      "Supermarket without additional activities: 60 m².",
+      "In case of adding other activities, compliance with the specific requirements of the added activity is mandatory, including the required space, preparations, and tools and equipment necessary to operate the activity:",
+      "Supermarket + Butchery: 60 m² + 20 m² = 80 m².",
+      "Supermarket + Fishery: 60 m² + 16 m² = 76 m².",
+      "Supermarket + Butchery + Fishery: 60 m² + 20 m² + 16 m² = 96 m².",
+      "Supermarket + Cafeteria: 60 m² + 15 m² = 75 m².",
+      "Supermarket + Restaurant: 60 m² + 25 m² = 85 m² (does not require a warehouse)."
     ]
       }
     },
@@ -3476,6 +3592,8 @@ const activityRequirements = {
     },
   "points": {
     "ar": [
+
+      "يجب الالتزام بالفقرة رقم (6) بالدليل الخاصة باشتراطات البنية التحتية والاشتراطات العامة لتراخيص المنشآت الغذائية.",
       "يجب أن تكون الأرضية من السيراميك فاتح اللون.",
       "أن تكون الجدران ملساء وخالية من الشقوق ومطلية بمادة زيتية بيضاء.",
       "أن يكون سقف الموقع من مادة ثابتة (أسمنتية) أو سقف مزدوج (ساندويتش بانل).",
@@ -3492,9 +3610,12 @@ const activityRequirements = {
       "توفير أرفف مناسبة معدنية لعبوات المياه (5) جالون ولا يسمح بالتصريح إلا بعد التأكد من توفير مساحة كافية بالموقع.",
       "ترك أسفل الرف الأول مساحة مع عدم التخزين بها لسهولة التنظيف أسفل الأرفف.",
       "توفير مصائد للحشرات.",
+      "في حالة وجود كاونتر بيع الجبن والمخللات: يجب توفير مغسلة أدوات ومغسلة أيدي.",
+      "في حالة وجود نشاط غسيل الخضروات (في حالة التقطيع): يجب توفير حوض غسيل مزدوج من الاستانلس ستيل ومغسلة أيدي.",
       "أن يكون المبنى غير مجاور لمنشآت ذات خطورة على الصحة العامة."
     ],
     "en": [
+      "Compliance with paragraph (6) of the guide for infrastructure requirements and general conditions for food establishment licenses is mandatory.",
       "The flooring must be made of light-colored ceramic.",
       "Walls should be smooth, free of cracks, and painted with white oil-based paint.",
       "The ceiling must be made of fixed material (concrete) or a double ceiling (sandwich panel).",
@@ -3511,6 +3632,8 @@ const activityRequirements = {
       "Provide suitable metal shelves for 5-gallon water containers, and approval will only be granted after ensuring adequate space is available on-site.",
       "Leave space under the first shelf and do not store items there to facilitate cleaning underneath.",
       "Provide insect traps.",
+      "In case of having a cheese and pickle sales counter: A utensil wash sink and a hand wash sink must be provided.",
+      "In case of vegetable washing (in case of cutting): A double stainless steel wash sink and a hand wash sink must be provided.",
       "The building must not be adjacent to establishments that pose a risk to public health."
     ]
     }
@@ -4036,10 +4159,25 @@ en: [
   }
  ],
   "food Supply Companies": [  // هنا يجب أن يكون هذا الاسم مطابق تمامًا لما هو في الـ <option>
+       {
+      title: {
+        ar: "<span style='color: green; font-weight: bold;'>مجال عمل شركات التموين بالمواد الغذائية:</span>",
+        en: "<span style='color: green; font-weight: bold;'>food supply companies Scope:</span>"
+      },
+      points: {
+     ar: [
+         "يشمل الشركات المختصة في التموين بالمواد الغذائية."
+      ],
+    en: [
+     "includes companies specialized in food supply."
+     
+        ]
+      }
+    },
     {
       title: {
-        ar: "<span style='color: green; font-weight: bold;'>التوريد:</span>",
-        en: "<span style='color: green; font-weight: bold;'>Supply:</span>"
+        ar: "<span style='color: green; font-weight: bold;'>الحجم والمساحة:</span>",
+        en: "<span style='color: green; font-weight: bold;'>Size and Space:</span>"
       },
       points: {
         ar: [
@@ -5305,16 +5443,41 @@ en: [
             </a>
         </li>
         <li>
-            <span class="key" data-ar="رسوم التقرير النهائي" data-en="Final report fees">رسوم التقرير النهائي:</span>
-            <span data-ar="250 درهم حتى 50 متر مربع، 500 درهم أكبر من ذلك." data-en="250 AED up to 50 square meters, 500 AED above that.">250 درهم حتى 50 متر مربع، 500 درهم أكبر من ذلك.</span>
+<span class="key" data-ar="رسوم التقرير النهائي" data-en="Final report fees">
+    رسوم التقرير النهائي:
+</span>
+<br>
+<span data-ar="1- رسوم منشأة صغيرة من 1 م2 إلى 50  م2" 
+      data-en="1- Small facility fees (1 m² to 50 m²)">
+    1- رسوم منشأة صغيرة من 1 م2 إلى 50 متر مربع
+</span>
+<br>
+<span data-ar="2- رسوم منشأة كبيرة أكبر من 50 م2" 
+      data-en="2- Large facility fees (above 50 m²)">
+    2- رسوم منشأة كبيرة أكبر من 50 م2
+</span>
+
             <a href="#" class="button" data-service-ar="التقرير النهائي" data-service-en="Final Report">
                 <i class="fa fa-envelope"></i> 
                 <span data-ar="دفع الرسوم" data-en="Pay Fees">دفع الرسوم</span>
             </a>
         </li>
         <li>
-            <span class="key" data-ar="رسوم التصريح الصحي" data-en="Health permit fees">رسوم التصريح الصحي:</span>
-            <span data-ar="500 درهم للترخيص التجاري، 250 درهم للترخيص المهني، 1000 درهم للترخيص الصناعي." data-en="500 AED for commercial license, 250 AED for professional license, 1000 AED for industrial license.">500 درهم للترخيص التجاري، 250 درهم للترخيص المهني، 1000 درهم للترخيص الصناعي.</span>
+<span class="key" data-ar="رسوم التصريح الصحي" data-en="Health permit fees">
+    رسوم التصريح الصحي:
+</span>
+<br>
+<span data-ar="500 درهم للترخيص التجاري" data-en="500 AED for commercial license">
+    500 درهم للترخيص التجاري
+</span>
+<br>
+<span data-ar="250 درهم للترخيص المهني" data-en="250 AED for professional license">
+    250 درهم للترخيص المهني
+</span>
+<br>
+<span data-ar="1000 درهم للترخيص الصناعي" data-en="1000 AED for industrial license">
+    1000 درهم للترخيص الصناعي
+</span>
             <a href="#" class="button" data-service-ar="التصريح الصحي" data-service-en="Health Permit">
                 <i class="fa fa-envelope"></i> 
                 <span data-ar="دفع الرسوم" data-en="Pay Fees">دفع الرسوم</span>
@@ -5350,97 +5513,93 @@ en: [
                 }
             }
 
-            const mailtoLink = `mailto:phls@shjmun.gov.ae?subject=${lang === "ar" ? "دفع الرسوم " + service : "Application for Service: " + service}&body=${message}`;
+            const mailtoLink = `mailto:HCS@shjmun.gov.ae?subject=${lang === "ar" ? "دفع الرسوم " + service : "Application for Service: " + service}&body=${message}`;
             window.location.href = mailtoLink;
         });
     });
 </script>
 
-<div id="spacesContent" class="fees-and-spaces">
-    <h3>
-        <span data-ar="المساحات" data-en="Spaces">المساحات</span>
-    </h3>
-    <p>
-        <span data-ar="يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار." data-en="Appropriate spaces must be provided for the establishment according to the selected activity.">يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار.</span>
-    </p>
-    <ul>
-        <li>
-            <span class="key" data-ar="مساحة مطعم:" data-en="Restaurant Space:">مساحة مطعم:</span>
-            <span data-ar="مطلوب 25 متر مربع للمطبخ و10 متر مربع للمستودع" data-en="25 m² for kitchen and 10 m² for storage">مطلوب 25 متر مربع للمطبخ و10 متر مربع للمستودع</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة كافتيريا:" data-en="Cafeteria Space:">مساحة كافتيريا:</span>
-            <span data-ar="15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط" data-en="15 m² for kitchen; additional 5 m² per extra activity like shawarma">15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة مطبخ شعبي:" data-en="Traditional Kitchen Space:">مساحة مطبخ شعبي:</span>
-            <span data-ar="مطلوب مساحة 150 متر مربع في الأماكن الصناعية والتجارية فقط" data-en="150 m² required in industrial and commercial areas only">مطلوب مساحة 150 متر مربع في الأماكن الصناعية والتجارية فقط</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة مقهي:" data-en="Cafe Space:">مساحة مقهي:</span>
-            <span data-ar="مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)" data-en="10 m² required (minimum display area of 10 m²)">مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة طهي وشوي الأسماك:" data-en="Fish Grilling Space:">مساحة طهي وشوي الأسماك:</span>
-            <span data-ar="مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الأسماك تحتاج مساحة عرض 5م² وتصبح المساحة المطلوبة 35 م²" data-en="30 m² required (25 m² for kitchen + 5 m² for storage); if displaying fish, total 35 m² needed.">مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الأسماك تحتاج مساحة عرض 5م² وتصبح المساحة المطلوبة 35 م²</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة مشاوي على الفحم:" data-en="Charcoal Grill Space:">مساحة مشاوي على الفحم:</span>
-            <span data-ar="مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)" data-en="30 m² required (20 m² kitchen + 5 m² storage + 5 m² grill area)">مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة تجهيز المعجنات والفطائر:" data-en="Pastry Preparation Space:">مساحة تجهيز المعجنات والفطائر:</span>
-            <span data-ar="مطلوب مساحة 20م² لموقع التحضير والتجهيز" data-en="20 m² for preparation and setup area">مطلوب مساحة 20م² لموقع التحضير والتجهيز</span>
-        </li>
-        <li>
-            <span class="key" data-ar="سوبر ماركت:" data-en="Supermarket:">سوبر ماركت:</span>
-            <span data-ar="مطلوب مساحة 60م² بدون ملحمة ومسمكة، في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²" data-en="60 m² required without butcher or fish section; add 20 m² for butcher and 16 m² for fish section">مطلوب مساحة 60م² بدون ملحمة ومسمكة، في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة بيع المثلجات:" data-en="Ice Cream Selling Space:">مساحة بيع المثلجات:</span>
-            <span data-ar="مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز، وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض" data-en="15 m² for selling only; 50 m² for preparation, selling, and display">مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز، وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة بيع الحلويات بالتجزئة:" data-en="Retail Sweets Selling Space:">مساحة بيع الحلويات بالتجزئة:</span>
-            <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة بيع الشوكولاتة بالتجزئة:" data-en="Retail Chocolate Selling Space:">مساحة بيع الشوكولاتة بالتجزئة:</span>
-            <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة بيع البن بالتجزئة:" data-en="Retail Coffee Selling Space:">مساحة بيع البن بالتجزئة:</span>
-            <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة بيع التوابل والبهارات بالتجزئة:" data-en="Retail Spices Selling Space:">مساحة بيع التوابل والبهارات بالتجزئة:</span>
-            <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة طحن وبيع البهارات:" data-en="Spices Grinding and Selling Space:">مساحة طحن وبيع البهارات:</span>
-            <span data-ar="مطلوب مساحة 40م²" data-en="40 m² required">مطلوب مساحة 40م²</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة بقالة:" data-en="Grocery Space:">مساحة بقالة:</span>
-            <span data-ar="مطلوب مساحة 30 م²" data-en="30 m² required">مطلوب مساحة 30 م²</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة بيع المواد الغذائية بالتجزئة:" data-en="Retail Food Selling Space:">مساحة بيع المواد الغذائية بالتجزئة:</span>
-            <span data-ar="مطلوب مساحة 20 متر مربع" data-en="20 m² required">مطلوب مساحة 20 متر مربع</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة بيع المواد الغذائية بالجملة:" data-en="Wholesale Food Selling Space:">مساحة بيع المواد الغذائية بالجملة:</span>
-            <span data-ar="مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية" data-en="70 m² required, must be in industrial areas">مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة تحضير وتجهيز الحلويات:" data-en="Sweets Preparation and Setup Space:">مساحة تحضير وتجهيز الحلويات:</span>
-            <span data-ar="مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع (مجموع 50 متر مربع)" data-en="40 m² for kitchen and 10 m² for storage (total 50 m²)">مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع (مجموع 50 متر مربع)</span>
-        </li>
-        <li>
-            <span class="key" data-ar="مساحة مصانع الأغذية:" data-en="Food Factory Space:">مساحة مصانع الأغذية:</span>
-            <span data-ar="مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الإنتاج المستخدمة" data-en="200 m² required depending on activity, equipment, and production lines used">مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الإنتاج المستخدمة</span>
-        </li>
-    </ul>
+    <div id="spacesContent" class="fees-and-spaces">
+        <h3>
+            <span data-ar="المساحات" data-en="Spaces">المساحات</span>
+        </h3>
+        <p>
+            <span data-ar="يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار." data-en="Appropriate spaces must be provided for the establishment according to the selected activity.">يجب توفير مساحات مناسبة للمنشأة حسب النشاط المختار.</span>
+        </p>
+        <ul>
+            <li>
+                <span class="key" data-ar="مساحة مطعم:" data-en="Restaurant Space:">مساحة مطعم:</span>
+                <span data-ar="مطلوب 25 م2 للمطبخ و10 م للمستودع + مساحة كاشير واستقبال للزبائن 5 م2 " data-en="It is required to allocate 25 m² for the kitchen, 10 m² for storage, and an additional 5 m² for the cashier and customer reception area.">مطلوب 25 م2 للمطبخ و10 م للمستودع + مساحة كاشير واستقبال للزبائن 5 م2 </span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة كافتيريا:" data-en="Cafeteria Space:">مساحة كافتيريا:</span>
+                <span data-ar="15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط" data-en="15 m² for kitchen; additional 5 m² per extra activity like shawarma">15 م² للمطبخ وفي حالة زيادة أنشطة أخرى مثل الشاورما وغيرها 5 متر مربع لكل نشاط</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة مطبخ شعبي:" data-en="Traditional Kitchen Space:">مساحة مطبخ شعبي:</span>
+                <span data-ar="مطلوب مساحة 150 متر مربع في الأماكن الصناعية والتجارية فقط" data-en="150 m² required in industrial and commercial areas only">مطلوب مساحة 150 متر مربع في الأماكن الصناعية والتجارية فقط</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة مقهي:" data-en="Cafe Space:">مساحة مقهي:</span>
+                <span data-ar="مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)" data-en="10 m² required (minimum display area of 10 m²)">مطلوب مساحة 10م² (لا تقل مساحة العرض والتقديم عن 10م²)</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة طهي وشوي الأسماك:" data-en="Fish Grilling Space:">مساحة طهي وشوي الأسماك:</span>
+                <span data-ar="مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الأسماك تحتاج مساحة عرض 5م² وتصبح المساحة المطلوبة 35 م²" data-en="30 m² required (25 m² for kitchen + 5 m² for storage); if displaying fish, total 35 m² needed.">مطلوب مساحة 30م² (المطبخ 25م² + منطقة تخزين 5م²) وفي حالة عرض الأسماك تحتاج مساحة عرض 5م² وتصبح المساحة المطلوبة 35 م²</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة مشاوي على الفحم:" data-en="Charcoal Grill Space:">مساحة مشاوي على الفحم:</span>
+                <span data-ar="مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)" data-en="30 m² required (20 m² kitchen + 5 m² storage + 5 m² grill area)">مطلوب مساحة 30م² (المطبخ 20م² + منطقة تخزين 5م² + منطقة مشوي 5م²)</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة تجهيز المعجنات والفطائر:" data-en="Pastry Preparation Space:">مساحة تجهيز المعجنات والفطائر:</span>
+                <span data-ar="مطلوب مساحة 20م² لموقع التحضير والتجهيز" data-en="20 m² for preparation and setup area">مطلوب مساحة 20م² لموقع التحضير والتجهيز</span>
+            </li>
+            <li>
+                <span class="key" data-ar="سوبر ماركت:" data-en="Supermarket:">سوبر ماركت:</span>
+                <span data-ar="مطلوب مساحة 60م² بدون ملحمة ومسمكة، في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²" data-en="60 m² required without butcher or fish section; add 20 m² for butcher and 16 m² for fish section">مطلوب مساحة 60م² بدون ملحمة ومسمكة، في حالة إضافة نشاط ملحمة تحتاج إضافة مساحة 20م² وفي حالة إضافة نشاط مسمكة تحتاج إضافة مساحة 16 م²</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة بيع المثلجات:" data-en="Ice Cream Selling Space:">مساحة بيع المثلجات:</span>
+                <span data-ar="مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز، وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض" data-en="15 m² for selling only; 50 m² for preparation, selling, and display">مطلوب مساحة 15م² بيع فقط ولا يسمح بالتجهيز، وفي حالة تجهيز وبيع المثلجات تحتاج مساحة 50 م² للبيع والتجهيز والعرض</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة بيع الحلويات بالتجزئة:" data-en="Retail Sweets Selling Space:">مساحة بيع الحلويات بالتجزئة:</span>
+                <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة بيع الشوكولاتة بالتجزئة:" data-en="Retail Chocolate Selling Space:">مساحة بيع الشوكولاتة بالتجزئة:</span>
+                <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة بيع البن بالتجزئة:" data-en="Retail Coffee Selling Space:">مساحة بيع البن بالتجزئة:</span>
+                <span data-ar="مطلوب مساحة 15م²" data-en="15 m² required">مطلوب مساحة 15م²</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة طحن وبيع البهارات:" data-en="Spices Grinding and Selling Space:">مساحة طحن وبيع البهارات:</span>
+                <span data-ar="مطلوب مساحة 40م²" data-en="40 m² required">مطلوب مساحة 40م²</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة بقالة:" data-en="Grocery Space:">مساحة بقالة:</span>
+                <span data-ar="مطلوب مساحة 30 م²" data-en="30 m² required">مطلوب مساحة 30 م²</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة بيع المواد الغذائية بالتجزئة:" data-en="Retail Food Selling Space:">مساحة بيع المواد الغذائية بالتجزئة:</span>
+                <span data-ar="مطلوب مساحة 20 متر مربع" data-en="20 m² required">مطلوب مساحة 20 متر مربع</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة بيع المواد الغذائية بالجملة:" data-en="Wholesale Food Selling Space:">مساحة بيع المواد الغذائية بالجملة:</span>
+                <span data-ar="مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية" data-en="70 m² required, must be in industrial areas">مطلوب مساحة 70 متر مربع ويشترط أن تكون في المناطق الصناعية</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة تحضير وتجهيز الحلويات:" data-en="Sweets Preparation and Setup Space:">مساحة تحضير وتجهيز الحلويات:</span>
+                <span data-ar="مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع (مجموع 50 متر مربع)" data-en="40 m² for kitchen and 10 m² for storage (total 50 m²)">مطلوب مساحة 40 متر مربع مطبخ و10 متر مربع مستودع (مجموع 50 متر مربع)</span>
+            </li>
+            <li>
+                <span class="key" data-ar="مساحة مصانع الأغذية:" data-en="Food Factory Space:">مساحة مصانع الأغذية:</span>
+                <span data-ar="مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الإنتاج المستخدمة" data-en="200 m² required depending on activity, equipment, and production lines used">مطلوب مساحة 200 م² حسب النشاط والمعدات وخطوط الإنتاج المستخدمة</span>
+            </li>
+        </ul>
 </div>
 <div class="icon-section">
     <!-- رسوم -->
@@ -5457,7 +5616,7 @@ en: [
 
     <!-- تواصل معنا -->
     <div class="icon-item">
-        <a href="tel:971565338013">
+        <a href="tel:97165068343">
             <i class="fas fa-phone-alt"></i>
             <span class="icon-text" data-ar="تواصل معنا" data-en="Contact Us"></span>
         </a>
@@ -5465,7 +5624,7 @@ en: [
 
     <!-- ارسال ايميل -->
     <div class="icon-item">
-        <a href="mailto:Phls@shjmun.gov.ae">
+        <a href="mailto:HCS@shjmun.gov.ae">
             <i class="fas fa-envelope"></i>
             <span class="icon-text" data-ar="ارسال ايميل" data-en="Send Email"></span>
         </a>
